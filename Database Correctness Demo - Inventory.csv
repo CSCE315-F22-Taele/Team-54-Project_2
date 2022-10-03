@@ -1,0 +1,27 @@
+Inventory,,,,,JUSTIFY ADDITION OF UNIT,
+Item ID,Name,Category,Expiration Date,Refridgeration required,Quantity,Unit
+1,Chicken Breast,Meat,11/30/2022,TRUE,50,lbs
+2,Bread,Dry,10/21/2022,FALSE,30,lbs
+3,Pickles,Vegtables,10/21/2022,TRUE,15,lbs
+4,Peanut Oil,Oil,11/30/2023,FALSE,30,gal
+5,Sesame Bread,Dry,10/21/2022,FALSE,30,lbs
+6,American Cheese,Dairy,10/21/2022,TRUE,15,lbs
+7,Tomato,Vegetables,10/21/2022,TRUE,20,lbs
+8,Lettuce,Vegetables,10/21/2022,TRUE,20,lbs
+9,Pepper Jack Cheese,Dairy,10/21/2022,TRUE,15,lbs
+10,Bacon,Meat,11/30/2022,TRUE,50,lbs
+11,Colby Jack Cheese,Dairy,10/21/2022,TRUE,15,lbs
+12,Chicken nuggets,Meat,11/30/2022,TRUE,50,lbs
+13,Chicken strips,Meat,11/30/2022,TRUE,50,lbs
+14,Cheddar Cheese,Dairy,10/21/2022,TRUE,15,lbs
+15,Cherry Tomatoes,Vegetables,10/21/2022,TRUE,15,lbs
+16,Lemonade,Drink,10/21/2022,TRUE,30,gal
+17,Chocolate Milk,Drink,10/21/2022,TRUE,20,gal
+18,Milk,Drink,10/22/2022,TRUE,20,gal
+19,Icecream Cone,Dry,10/23/2022,FALSE,100,number
+20,Vanilla Icecream,Dairy,10/24/2022,TRUE,50,gal
+21,Chick-Fil-A Sauce,Dairy,10/24/2022,FALSE,20000,number
+22,Waffle Fries,Vegetables,11/30/2022,TRUE,50,lbs
+23,Napkins,Utensils,01/01/3000,FALSE,5000,number
+24,Forks,Utensils,01/01/3000,FALSE,5000,number
+25,Spoons,Utensils,01/01/3000,FALSE,5000,number
