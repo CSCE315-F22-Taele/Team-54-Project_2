@@ -1,25 +1,25 @@
 Finances,,,,
 Transaction ID,Debit,Credit,Transaction Details,Amount
-1,TRUE,FALSE,Initial Fund ,20000
-2,TRUE,FALSE,Week 1 Day 1 Orders,2000
-3,TRUE,FALSE,Week 1 Day 2 Orders,2000
-4,TRUE,FALSE,Week 1 Day 3 Orders,2000
-5,TRUE,FALSE,Week 1 Day 4 Orders,2000
-6,TRUE,FALSE,Week 1 Day 5 Orders,2000
-7,TRUE,FALSE,Week 1 Day 6 Orders,3000
-8,FALSE,TRUE,Supply Order,5000
-9,TRUE,FALSE,Week 2 Day 1 Orders,2000
-10,TRUE,FALSE,Week 2 Day 2 Orders,2000
-11,TRUE,FALSE,Week 2 Day 3 Orders,2000
-12,TRUE,FALSE,Week 2 Day 4 Orders,2000
-13,TRUE,FALSE,Week 2 Day 5 Orders,2000
-14,TRUE,FALSE,Week 2 Day 6 Orders,3000
-15,FALSE,TRUE,Supply Order,5000
-16,FALSE,TRUE,Employee Payroll,2400
-17,FALSE,TRUE,Manager Payroll,1600
-18,TRUE,FALSE,Week 3 Day 1 Orders,2000
-19,TRUE,FALSE,Week 3 Day 2 Orders,2000
-20,TRUE,FALSE,Week 3 Day 3 Orders,2000
-21,TRUE,FALSE,Week 3 Day 4 Orders,2000
-22,TRUE,FALSE,Week 3 Day 5 Orders,2000
-23,TRUE,FALSE,Week 3 Day 6 Orders,3000
+1,true,false,Initial Fund ,20000
+2,true,false,Week 1 Day 1 Orders,2000
+3,true,false,Week 1 Day 2 Orders,2000
+4,true,false,Week 1 Day 3 Orders,2000
+5,true,false,Week 1 Day 4 Orders,2000
+6,true,false,Week 1 Day 5 Orders,2000
+7,true,false,Week 1 Day 6 Orders,3000
+8,false,true,Supply Order,5000
+9,true,false,Week 2 Day 1 Orders,2000
+10,true,false,Week 2 Day 2 Orders,2000
+11,true,false,Week 2 Day 3 Orders,2000
+12,true,false,Week 2 Day 4 Orders,2000
+13,true,false,Week 2 Day 5 Orders,2000
+14,true,false,Week 2 Day 6 Orders,3000
+15,false,true,Supply Order,5000
+16,false,true,Employee Payroll,2400
+17,false,true,Manager Payroll,1600
+18,true,false,Week 3 Day 1 Orders,2000
+19,true,false,Week 3 Day 2 Orders,2000
+20,true,false,Week 3 Day 3 Orders,2000
+21,true,false,Week 3 Day 4 Orders,2000
+22,true,false,Week 3 Day 5 Orders,2000
+23,true,false,Week 3 Day 6 Orders,3000

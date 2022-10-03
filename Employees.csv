@@ -1,7 +1,7 @@
 Employees,,,,,,
 Employee ID,First Name,Last Name,Pay Rate,Role,Start Date,Manager
-1,Tom,Johnson,20,Manager,8/1/2022,TRUE
-2,Bob,Mathew,15,Cashier,9/20/2022,FALSE
-3,Scarlett,Smith,15,Cashier,05/02/2021,FALSE
-4,Beth,Stewart,15,Kitchen staff,08/14/2021,FALSE
-5,John,Quincy,15,Kitchen staff,01/25/2022,FALSE
+1,Tom,Johnson,20,Manager,8/1/2022,true
+2,Bob,Mathew,15,Cashier,9/20/2022,false
+3,Scarlett,Smith,15,Cashier,05/02/2021,false
+4,Beth,Stewart,15,Kitchen staff,08/14/2021,false
+5,John,Quincy,15,Kitchen staff,01/25/2022,false
