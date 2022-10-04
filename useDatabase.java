@@ -69,7 +69,7 @@ public class useDatabase {
      System.out.println("Opened database successfully");
 
      // Populate database
-     try{
+     try {
        // Create a statement object
        Statement stmt = conn.createStatement();
 
@@ -181,7 +181,7 @@ public class useDatabase {
         }
 
        System.out.println("--------------------Query Results--------------------");
-   } catch (Exception e){
+   } catch (Exception e) {
        e.printStackTrace();
        System.err.println(e.getClass().getName()+": "+e.getMessage());
        System.exit(0);

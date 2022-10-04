@@ -62,6 +62,7 @@ cWrite = csv.writer(csvFile)
 IDlength = 6
 getRandomID = lambda IDlength: randint(10 ** (IDlength - 1), 10 ** (IDlength))
 
+
 # Week 1 - 9/4 to 9/10 and 9/10 is a gameday
 orders = []
 ordersPerDay = 200
@@ -81,7 +82,7 @@ for w in range(3): # Iterate through the weeks
   
         for order in range(ordersPerDay):
             total += (var:=uniform(5, 20))
-            print(choice(list(menu_items.keys())))
+            # print(choice(list(menu_items.keys())))
             orders.append([getRandomID(3), getRandomID(3), f"{var:.2f}", currDay, str(getRandomID(6)), getRandomID(6), True, choice(list(menu_items.keys())).replace('–','')])        
 
 cWrite.writerows(orders)
