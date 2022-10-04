@@ -1,2 +1,2102 @@
 Orders,,,,,,,
 Order ID,Order Number,Total Price Due,Date,Employee ID,Customer ID,Order Satisfied,Items Ordered
+689,561,11.75,230434,642592,True,Spicy Chicken Sandwich  Combo
+908,305,8.41,187360,768321,True,Substitute Medium Premium Side
+486,421,15.11,182778,613994,True,Chicken Salad Cup
+812,503,8.62,317779,599750,True,Chicken Soup
+287,274,7.11,762023,664922,True,Soup & Salad (Large Chicken Soup and Side Salad)
+914,476,18.45,970147,700819,True,Grilled Chicken Club Sandwich  Combo
+282,358,16.91,348223,398702,True,Substitute Medium Premium Side
+799,874,17.33,176725,896236,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+393,732,5.82,835733,545649,True,Yogurt Parfait
+524,445,17.72,992263,847683,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+211,816,17.80,171945,306270,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+506,591,17.39,395150,891979,True,Grilled Chicken Club Sandwich  Combo
+256,598,18.97,637323,408877,True,Grilled Chicken Club Sandwich  Combo
+612,209,13.86,762949,869715,True,Chick-n-Strips  Combo	3 Pc.
+985,779,5.89,263198,559784,True,Substitute Medium Premium Side
+325,196,7.79,811975,851629,True,Chicken Soup
+470,379,14.60,935745,949083,True,Chicken Salad Sandwich  Combo
+247,840,10.52,523193,913247,True,Grilled Chicken Club Sandwich  Combo
+274,244,5.30,677311,863013,True,Side Salad
+483,338,16.39,835577,671341,True,Spicy Chicken Deluxe Sandwich
+814,640,5.79,529411,368350,True,Spicy Chicken Deluxe Sandwich  Combo
+882,980,13.44,525561,478424,True,Yogurt Parfait
+547,140,13.87,520477,729350,True,Grilled Chicken Sandwich  Combo
+128,181,14.82,561999,927808,True,Spicy Chicken Deluxe Sandwich  Combo
+939,414,15.46,389045,862264,True,Chick-fil-A Nuggets  Combo 8 Pc.
+297,718,14.86,971635,808477,True,Chicken Salad Sandwich
+865,223,14.63,768759,560858,True,Spicy Chicken Sandwich  Combo
+836,875,5.25,592373,977639,True,Chick-fil-A Chicken Sandwich  Combo
+449,521,11.54,569095,943205,True,Grilled Chicken Club Sandwich
+666,650,13.63,595158,321726,True,Chick-fil-A Nuggets 8 Pc.
+379,370,13.68,785254,929845,True,Spicy Chicken Deluxe Sandwich  Combo
+648,365,11.76,596349,484046,True,Spicy Chicken Sandwich  Combo
+522,748,14.84,551739,360827,True,Chicken Salad Sandwich  Combo
+576,743,19.34,984179,569024,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+507,698,12.52,542911,920463,True,Spicy Chicken Deluxe Sandwich
+391,663,19.78,959847,969048,True,Chick-fil-A Chicken Sandwich
+797,591,17.28,383299,539382,True,Chick-n-Strips	3 Pc.
+764,430,16.80,520437,971021,True,Spicy Chicken Deluxe Sandwich  Combo
+825,315,18.40,335943,175723,True,Yogurt Parfait
+743,493,9.13,390631,893889,True,Chicken Salad Sandwich  Combo
+204,207,12.98,854879,395460,True,Chick-fil-A Nuggets 8 Pc.
+672,129,19.71,128750,776025,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+442,202,15.73,931262,321403,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+271,702,7.94,377336,380546,True,Soup & Salad (Large Chicken Soup and Side Salad)
+614,879,15.24,957753,732380,True,Spicy Chicken Sandwich  Combo
+102,857,5.18,849558,406752,True,Grilled Chicken Sandwich
+497,553,7.21,571308,860113,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+987,219,19.93,253501,110425,True,Chick-n-Strips	3 Pc.
+207,640,13.37,428317,909323,True,Spicy Chicken Sandwich  Combo
+480,277,19.02,208259,338499,True,Chicken Salad Cup
+995,957,7.96,336358,961850,True,Spicy Chicken Deluxe Sandwich
+518,293,18.88,764792,803077,True,Spicy Chicken Deluxe Sandwich
+640,106,9.12,659184,422618,True,Grilled Chicken Club Sandwich  Combo
+712,769,7.90,912352,755947,True,Chick-fil-A Chicken Deluxe Sandwich
+462,815,18.80,343448,325366,True,Yogurt Parfait
+349,377,16.57,898315,284902,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+954,250,16.04,169232,114973,True,Substitute Medium Premium Side
+798,786,5.57,644268,219638,True,Chicken Salad Cup
+155,735,17.70,790871,689362,True,Chicken Salad Sandwich
+617,247,12.05,183174,696709,True,Grilled Chicken Club Sandwich
+516,989,19.31,913882,567040,True,Substitute Medium Premium Side
+806,788,13.27,895651,717297,True,Chicken Salad Sandwich  Combo
+107,508,16.19,553107,553616,True,Spicy Chicken Deluxe Sandwich
+821,284,19.19,797351,131376,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+865,264,14.82,696836,534797,True,Spicy Chicken Sandwich
+993,771,12.01,517179,234542,True,Chick-n-Strips	3 Pc.
+984,135,6.53,983507,353685,True,Chicken Salad Sandwich  Combo
+731,484,15.37,763943,501985,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+640,942,6.21,114475,409739,True,Grilled Chicken Club Sandwich
+549,266,6.39,953894,595568,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+867,862,18.10,865211,828090,True,Chicken Soup
+865,600,12.78,249045,208401,True,Chick-fil-A Chicken Deluxe Sandwich
+506,142,13.64,205158,111451,True,Spicy Chicken Deluxe Sandwich  Combo
+381,914,11.47,641015,693828,True,Grilled Chicken Club Sandwich  Combo
+344,124,8.36,204584,844706,True,Grilled Chicken Club Sandwich
+876,905,14.60,815603,209324,True,Chick-fil-A Chicken Sandwich  Combo
+125,420,18.70,913904,786075,True,Grilled Chicken Sandwich  Combo
+121,395,5.52,823287,850237,True,Side Salad
+165,376,9.56,397084,257179,True,Chicken Soup
+274,581,6.67,696996,446383,True,Grilled Chicken Cool Wrap
+929,112,13.05,227228,310339,True,Chicken Salad Cup
+363,271,6.50,174188,859437,True,Chick-fil-A Chicken Deluxe Sandwich
+663,620,11.57,793015,404403,True,Grilled Chicken Sandwich
+543,507,18.59,269148,213881,True,Grilled Chicken Cool Wrap
+305,407,10.78,326898,286449,True,Substitute Medium Premium Side
+160,222,18.45,848217,687974,True,Soup & Salad (Large Chicken Soup and Side Salad)
+538,632,14.93,813662,660058,True,Chick-fil-A Chicken Sandwich  Combo
+183,719,14.55,389790,217713,True,Chicken Salad Sandwich
+211,567,17.09,248404,643889,True,Chick-fil-A Chicken Deluxe Sandwich
+165,154,7.88,368124,301996,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+195,214,17.16,617847,419195,True,Grilled Chicken Sandwich
+950,811,14.43,878168,727731,True,Chick-n-Strips  Combo	3 Pc.
+723,562,12.12,432974,682937,True,Chick-fil-A Chicken Sandwich  Combo
+658,237,12.02,136176,776043,True,Chick-fil-A Nuggets  Combo 8 Pc.
+193,285,10.34,574775,794896,True,Yogurt Parfait
+541,541,12.29,868512,731113,True,Grilled Chicken Club Sandwich  Combo
+656,393,11.05,300997,398492,True,Spicy Chicken Sandwich
+868,101,17.41,180287,197410,True,Spicy Chicken Sandwich  Combo
+150,813,8.01,443332,892596,True,Spicy Chicken Sandwich  Combo
+436,680,11.69,894206,332319,True,Grilled Chicken Sandwich
+948,518,19.90,308428,356191,True,Chick-fil-A Chicken Sandwich
+169,160,12.28,239277,871380,True,Spicy Chicken Deluxe Sandwich  Combo
+584,611,10.33,443255,269215,True,Chick-fil-A Nuggets  Combo 8 Pc.
+924,528,19.58,310613,758165,True,Chicken Salad Cup
+215,678,15.61,949820,969565,True,Chicken Salad Sandwich
+585,774,7.92,862549,778598,True,Spicy Chicken Sandwich
+721,259,7.70,500225,805551,True,Upsize Fries & Drink
+156,291,10.70,570970,947921,True,Chick-fil-A Chicken Deluxe Sandwich
+396,598,14.72,736770,738560,True,Chicken Salad Sandwich  Combo
+322,986,14.10,522197,218242,True,Chicken Soup
+533,403,6.53,676297,891983,True,Grilled Chicken Sandwich
+252,581,13.11,467430,786975,True,Grilled Chicken Sandwich  Combo
+575,511,9.01,881160,152231,True,Chick-fil-A Chicken Deluxe Sandwich
+785,326,11.88,629142,813625,True,Chick-fil-A Chicken Sandwich  Combo
+250,374,7.59,465699,124837,True,Chick-n-Strips  Combo	3 Pc.
+463,900,9.94,781966,463000,True,Chick-fil-A Chicken Deluxe Sandwich
+702,542,17.97,176633,894350,True,Side Salad
+688,606,16.16,691413,652572,True,Grilled Chicken Club Sandwich
+224,142,8.36,547986,226713,True,Chick-fil-A Chicken Sandwich
+690,184,7.33,454682,177304,True,Spicy Chicken Sandwich
+603,588,19.96,378164,353098,True,Chicken Salad Cup
+833,774,19.96,422884,776253,True,Spicy Chicken Sandwich
+666,973,18.38,911785,678872,True,Chicken Salad Sandwich  Combo
+111,371,11.09,211630,364597,True,Soup & Salad (Large Chicken Soup and Side Salad)
+449,524,6.02,233891,833073,True,Substitute Medium Premium Side
+404,463,14.67,742343,893257,True,Spicy Chicken Deluxe Sandwich
+970,544,15.41,640292,734179,True,Chicken Salad Cup
+513,643,9.17,785314,596470,True,Grilled Chicken Club Sandwich
+542,639,14.04,753890,742281,True,Chick-fil-A Nuggets 8 Pc.
+968,783,19.98,544708,377453,True,Grilled Chicken Cool Wrap
+165,923,10.07,526067,184933,True,Chick-n-Strips  Combo	3 Pc.
+441,671,11.29,121945,442915,True,Chick-fil-A Chicken Deluxe Sandwich
+287,716,9.02,750331,649445,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+418,818,19.63,521134,715952,True,Upsize Fries & Drink
+245,374,18.00,199782,714835,True,Spicy Chicken Sandwich
+521,330,9.97,296575,470246,True,Upsize Fries & Drink
+709,345,7.14,661790,706570,True,Spicy Chicken Sandwich  Combo
+567,441,7.25,347785,860444,True,Upsize Fries & Drink
+262,823,10.42,446736,776005,True,Grilled Chicken Sandwich
+634,690,17.81,689136,894818,True,Spicy Chicken Deluxe Sandwich
+961,668,11.33,762154,986772,True,Yogurt Parfait
+669,404,10.20,570920,628562,True,Yogurt Parfait
+375,275,18.96,571814,902005,True,Grilled Chicken Cool Wrap
+556,290,9.31,984336,708963,True,Chick-fil-A Chicken Sandwich  Combo
+654,383,15.22,760813,827477,True,Soup & Salad (Large Chicken Soup and Side Salad)
+117,183,17.31,852170,147408,True,Chicken Salad Sandwich
+194,431,7.39,907279,778990,True,Yogurt Parfait
+292,315,17.87,213839,588413,True,Chick-n-Strips	3 Pc.
+812,240,5.05,976481,480523,True,Grilled Chicken Club Sandwich
+556,489,5.13,499300,636816,True,Chick-fil-A Chicken Deluxe Sandwich
+303,866,11.15,521311,775550,True,Chick-fil-A Nuggets  Combo 8 Pc.
+115,413,6.72,667026,732988,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+103,667,6.50,372358,305089,True,Chick-n-Strips  Combo	3 Pc.
+486,493,12.14,769153,155252,True,Chicken Salad Sandwich
+171,876,11.02,979408,666934,True,Yogurt Parfait
+564,849,18.51,296819,962485,True,Chicken Salad Cup
+159,581,11.02,779940,879267,True,Upsize Fries & Drink
+481,454,18.86,780848,138226,True,Grilled Chicken Sandwich  Combo
+700,260,18.51,719514,629220,True,Chick-fil-A Chicken Deluxe Sandwich
+681,265,9.28,843823,581401,True,Substitute Medium Premium Side
+706,244,7.52,684500,628692,True,Spicy Chicken Sandwich
+496,625,6.74,833155,518337,True,Grilled Chicken Cool Wrap
+780,757,5.90,402491,261804,True,Upsize Fries & Drink
+173,561,19.48,282023,350171,True,Grilled Chicken Club Sandwich
+139,278,7.73,169701,646499,True,Chicken Salad Sandwich
+486,201,19.25,503956,811811,True,Spicy Chicken Sandwich  Combo
+263,894,11.75,143335,466103,True,Grilled Chicken Club Sandwich
+181,224,18.69,214981,585926,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+248,686,15.25,395855,349161,True,Spicy Chicken Deluxe Sandwich
+554,327,10.58,255544,706788,True,Soup & Salad (Large Chicken Soup and Side Salad)
+463,760,9.90,909108,192016,True,Chick-fil-A Chicken Sandwich  Combo
+963,134,6.20,627407,935670,True,Spicy Chicken Sandwich  Combo
+215,494,10.50,590812,690228,True,Spicy Chicken Sandwich
+356,417,14.87,531512,327131,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+113,118,7.35,359435,877764,True,Chick-fil-A Chicken Deluxe Sandwich
+202,446,19.57,808365,442725,True,Chick-n-Strips  Combo	3 Pc.
+328,589,18.37,392297,486406,True,Chick-fil-A Chicken Deluxe Sandwich
+851,647,8.13,322241,248176,True,Grilled Chicken Club Sandwich
+726,702,17.83,793482,419516,True,Grilled Chicken Sandwich
+112,226,13.39,753237,435956,True,Chicken Salad Cup
+533,878,18.53,573535,722352,True,Chick-fil-A Chicken Sandwich  Combo
+615,879,11.25,931322,494003,True,Chicken Salad Cup
+669,253,15.26,582371,351965,True,Soup & Salad (Large Chicken Soup and Side Salad)
+389,418,12.45,293235,294784,True,Substitute Medium Premium Side
+389,867,19.13,790022,692414,True,Grilled Chicken Cool Wrap
+566,908,10.23,763802,108168,True,Chicken Salad Sandwich  Combo
+503,965,5.38,388813,218621,True,Spicy Chicken Deluxe Sandwich  Combo
+888,276,10.70,700993,201975,True,Grilled Chicken Sandwich
+974,412,9.40,876544,659462,True,Chick-n-Strips	3 Pc.
+706,843,19.50,206314,966412,True,Chick-n-Strips  Combo	3 Pc.
+995,139,9.29,452297,707248,True,Chicken Salad Sandwich  Combo
+840,575,15.78,109587,127820,True,Chick-fil-A Nuggets  Combo 8 Pc.
+552,738,5.89,209976,757424,True,Grilled Chicken Sandwich  Combo
+234,168,19.22,694349,513779,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+874,147,18.98,796338,797779,True,Grilled Chicken Sandwich
+610,606,10.41,948499,309234,True,Chicken Salad Cup
+915,432,15.79,387928,428713,True,Side Salad
+261,944,12.04,691365,391201,True,Chick-fil-A Nuggets  Combo 8 Pc.
+588,818,16.20,513118,258195,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+450,721,13.64,575915,382537,True,Side Salad
+342,573,18.28,619523,906454,True,Grilled Chicken Cool Wrap
+508,801,7.34,160493,564624,True,Chick-fil-A Nuggets 8 Pc.
+507,727,19.72,400275,883705,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+774,314,8.93,406878,981218,True,Chick-fil-A Nuggets  Combo 8 Pc.
+588,655,19.32,287578,322207,True,Chick-fil-A Chicken Deluxe Sandwich
+897,372,8.61,681245,416961,True,Side Salad
+341,199,19.39,157880,750670,True,Chick-fil-A Chicken Sandwich
+106,834,13.62,267589,652273,True,Grilled Chicken Sandwich
+173,741,10.49,609988,766326,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+958,149,15.84,279140,305088,True,Substitute Medium Premium Side
+116,454,12.69,522090,791569,True,Chick-fil-A Chicken Sandwich  Combo
+477,498,8.13,431090,524700,True,Spicy Chicken Sandwich  Combo
+167,173,6.28,579762,842876,True,Side Salad
+835,381,15.47,105808,156566,True,Chicken Soup
+996,131,10.41,907813,254189,True,Spicy Chicken Deluxe Sandwich  Combo
+294,524,12.27,905636,357545,True,Grilled Chicken Club Sandwich  Combo
+676,291,11.89,518028,896503,True,Chick-fil-A Chicken Deluxe Sandwich
+997,654,16.18,731450,235492,True,Yogurt Parfait
+725,787,11.03,841095,524163,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+717,492,11.75,628856,898693,True,Chick-fil-A Nuggets 8 Pc.
+742,801,17.86,126997,696278,True,Grilled Chicken Sandwich  Combo
+167,871,7.69,245903,731879,True,Chick-fil-A Nuggets  Combo 8 Pc.
+423,921,6.66,941898,594952,True,Chicken Salad Sandwich
+450,389,19.71,653903,542140,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+336,120,13.02,803960,891675,True,Grilled Chicken Sandwich  Combo
+360,633,6.58,851966,788051,True,Grilled Chicken Club Sandwich  Combo
+871,520,11.04,916361,123985,True,Upsize Fries & Drink
+633,343,17.88,782219,657214,True,Spicy Chicken Sandwich
+778,188,6.67,448676,306001,True,Soup & Salad (Large Chicken Soup and Side Salad)
+883,344,8.08,703913,939763,True,Chicken Salad Sandwich
+510,867,6.68,621632,731417,True,Grilled Chicken Sandwich  Combo
+473,564,10.56,592573,923072,True,Chicken Soup
+537,465,15.88,974558,869966,True,Chick-fil-A Nuggets  Combo 8 Pc.
+888,740,18.29,948248,840844,True,Chick-fil-A Chicken Sandwich  Combo
+735,497,14.99,267009,545981,True,Side Salad
+693,560,15.85,955160,445369,True,Chicken Soup
+732,298,16.96,667902,510991,True,Grilled Chicken Club Sandwich
+707,720,20.00,357982,513749,True,Chick-fil-A Chicken Sandwich
+471,301,10.79,968950,386634,True,Soup & Salad (Large Chicken Soup and Side Salad)
+535,697,6.18,430109,255617,True,Substitute Medium Premium Side
+862,161,17.72,211420,713149,True,Chicken Soup
+477,126,14.93,472141,945717,True,Yogurt Parfait
+876,495,11.78,527019,253737,True,Upsize Fries & Drink
+700,780,15.55,867324,210771,True,Chick-fil-A Nuggets  Combo 8 Pc.
+770,769,15.91,142541,357042,True,Chick-n-Strips	3 Pc.
+832,160,13.12,218818,282263,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+470,663,13.74,647352,490088,True,Chicken Salad Sandwich
+853,375,5.19,556469,337412,True,Chick-fil-A Chicken Sandwich
+714,339,12.31,201024,173454,True,Grilled Chicken Sandwich
+489,764,5.49,949205,764117,True,Chicken Salad Cup
+587,663,11.54,695847,969001,True,Soup & Salad (Large Chicken Soup and Side Salad)
+669,403,10.18,530053,271736,True,Chick-fil-A Chicken Sandwich
+487,926,5.59,148342,442716,True,Grilled Chicken Sandwich
+346,919,8.67,209905,235235,True,Grilled Chicken Club Sandwich  Combo
+987,879,9.65,418579,965230,True,Chicken Salad Sandwich
+948,330,15.69,763055,473477,True,Side Salad
+469,141,5.03,134818,869548,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+326,377,18.79,257687,692691,True,Chick-n-Strips  Combo	3 Pc.
+151,740,16.99,611875,245621,True,Chick-fil-A Chicken Sandwich
+330,423,16.24,900832,878875,True,Spicy Chicken Deluxe Sandwich  Combo
+425,484,10.40,942571,308322,True,Chick-fil-A Chicken Sandwich  Combo
+425,273,17.35,380468,147567,True,Yogurt Parfait
+955,606,10.08,775021,179509,True,Chick-fil-A Nuggets 8 Pc.
+707,797,16.18,184677,259899,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+210,371,15.91,121769,163470,True,Grilled Chicken Club Sandwich  Combo
+427,626,15.91,843178,941701,True,Yogurt Parfait
+969,796,11.51,988771,977609,True,Spicy Chicken Deluxe Sandwich  Combo
+443,655,19.06,675156,624627,True,Chicken Salad Sandwich  Combo
+114,726,18.17,918644,554336,True,Upsize Fries & Drink
+536,515,10.48,220907,571753,True,Spicy Chicken Sandwich  Combo
+973,512,19.02,540655,128092,True,Side Salad
+384,569,12.52,791633,143614,True,Spicy Chicken Sandwich
+265,581,8.47,285112,686992,True,Grilled Chicken Sandwich
+256,431,12.09,299158,413292,True,Chicken Salad Cup
+789,366,5.26,799332,627663,True,Chicken Soup
+754,426,16.41,557129,587268,True,Soup & Salad (Large Chicken Soup and Side Salad)
+425,512,11.88,157537,448444,True,Upsize Fries & Drink
+338,713,13.85,196723,544285,True,Chick-n-Strips  Combo	3 Pc.
+232,474,9.11,508971,453991,True,Substitute Medium Premium Side
+901,387,8.39,280108,623787,True,Substitute Medium Premium Side
+764,779,5.88,888934,398216,True,Yogurt Parfait
+736,365,13.98,255194,224951,True,Chick-fil-A Chicken Sandwich
+716,949,9.86,315318,919563,True,Grilled Chicken Club Sandwich  Combo
+611,296,19.85,482811,984117,True,Chick-n-Strips	3 Pc.
+331,959,15.62,548920,729117,True,Spicy Chicken Sandwich
+362,487,10.65,660241,173896,True,Yogurt Parfait
+795,871,18.13,738499,926326,True,Grilled Chicken Club Sandwich
+101,944,12.65,340047,526436,True,Grilled Chicken Sandwich
+194,908,14.18,163908,779995,True,Chick-n-Strips	3 Pc.
+321,917,13.07,608648,119625,True,Spicy Chicken Deluxe Sandwich  Combo
+881,935,13.70,531418,243179,True,Chick-fil-A Nuggets 8 Pc.
+246,659,19.91,979643,436511,True,Yogurt Parfait
+380,437,15.19,802171,188868,True,Spicy Chicken Deluxe Sandwich
+644,500,14.65,647952,510899,True,Chick-fil-A Chicken Sandwich
+628,400,15.80,415340,919011,True,Spicy Chicken Deluxe Sandwich  Combo
+111,543,11.44,939507,913842,True,Chicken Salad Cup
+191,553,15.86,635861,568984,True,Grilled Chicken Club Sandwich
+201,298,9.00,801451,953430,True,Chicken Soup
+678,183,14.83,555616,237362,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+732,768,12.44,205931,811357,True,Chicken Soup
+691,453,14.65,861961,553138,True,Spicy Chicken Sandwich
+598,686,19.27,302823,208687,True,Chick-n-Strips  Combo	3 Pc.
+695,947,19.25,460705,281905,True,Side Salad
+107,171,18.20,341155,454017,True,Substitute Medium Premium Side
+446,387,11.58,876166,490717,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+610,144,13.88,905391,119808,True,Soup & Salad (Large Chicken Soup and Side Salad)
+160,378,5.85,617607,609572,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+179,791,16.91,150088,956267,True,Grilled Chicken Sandwich
+140,928,19.62,423199,552661,True,Chick-n-Strips  Combo	3 Pc.
+232,672,15.26,623989,787023,True,Chicken Salad Sandwich
+124,337,5.92,834169,179583,True,Side Salad
+525,382,10.74,117006,822655,True,Chicken Salad Sandwich
+689,496,7.21,629528,548938,True,Spicy Chicken Deluxe Sandwich  Combo
+467,479,15.98,125374,945695,True,Chick-n-Strips	3 Pc.
+236,547,14.99,590379,945397,True,Chick-n-Strips  Combo	3 Pc.
+614,599,9.16,697493,136795,True,Grilled Chicken Club Sandwich  Combo
+758,468,14.46,929038,484799,True,Side Salad
+717,298,17.94,590903,442793,True,Yogurt Parfait
+282,742,14.54,147545,746270,True,Chick-fil-A Chicken Sandwich  Combo
+823,737,17.95,351158,696881,True,Chick-n-Strips	3 Pc.
+124,365,11.51,706986,529348,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+239,975,14.43,341703,699430,True,Chick-fil-A Chicken Sandwich  Combo
+454,652,9.59,472216,409525,True,Side Salad
+455,742,19.20,850711,212287,True,Spicy Chicken Sandwich  Combo
+841,882,12.21,621890,704130,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+584,245,10.49,556369,993055,True,Yogurt Parfait
+599,896,15.95,980726,947616,True,Chick-fil-A Chicken Deluxe Sandwich
+502,424,15.71,901851,617799,True,Chicken Salad Cup
+765,395,15.25,738241,229468,True,Spicy Chicken Deluxe Sandwich
+385,779,9.31,865050,637454,True,Chick-n-Strips	3 Pc.
+829,745,8.00,962164,889298,True,Grilled Chicken Cool Wrap
+351,817,18.46,737552,144706,True,Yogurt Parfait
+616,716,10.86,616199,565408,True,Chicken Salad Sandwich  Combo
+803,310,13.61,176246,354212,True,Spicy Chicken Deluxe Sandwich
+971,720,19.20,789642,448870,True,Chick-fil-A Nuggets  Combo 8 Pc.
+123,453,18.43,414342,434774,True,Soup & Salad (Large Chicken Soup and Side Salad)
+412,242,17.31,490761,419178,True,Substitute Medium Premium Side
+230,257,8.53,632158,678905,True,Grilled Chicken Sandwich
+130,614,14.73,619555,247099,True,Chicken Soup
+288,185,9.10,471583,476011,True,Chicken Salad Sandwich
+332,916,8.96,201525,484509,True,Chicken Salad Cup
+942,780,14.87,284020,309613,True,Spicy Chicken Deluxe Sandwich
+625,850,5.35,227573,727754,True,Chicken Soup
+155,204,9.78,543434,885464,True,Spicy Chicken Sandwich  Combo
+186,349,12.22,630520,873099,True,Chicken Salad Sandwich
+378,332,10.56,660500,612641,True,Chick-fil-A Chicken Sandwich
+314,451,13.68,167889,354559,True,Chick-fil-A Chicken Sandwich  Combo
+962,918,5.83,200377,550600,True,Grilled Chicken Club Sandwich
+163,460,13.45,760678,939618,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+897,133,11.32,379034,795624,True,Spicy Chicken Deluxe Sandwich  Combo
+452,976,12.76,225349,683084,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+481,198,16.06,890676,138613,True,Chick-n-Strips  Combo	3 Pc.
+294,726,18.52,435346,805014,True,Chicken Salad Sandwich
+587,826,12.56,797358,850850,True,Grilled Chicken Sandwich
+853,650,11.33,525787,551807,True,Chick-n-Strips	3 Pc.
+930,723,5.86,581864,959213,True,Spicy Chicken Sandwich
+419,176,17.88,637605,463016,True,Grilled Chicken Cool Wrap
+374,499,16.63,850038,934644,True,Grilled Chicken Club Sandwich  Combo
+933,301,8.37,410067,574615,True,Chicken Soup
+485,400,8.24,148688,726186,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+905,440,11.27,813448,550519,True,Grilled Chicken Sandwich  Combo
+570,174,17.23,617886,845109,True,Grilled Chicken Sandwich  Combo
+469,488,14.97,249517,176349,True,Grilled Chicken Sandwich
+651,869,10.39,789242,890040,True,Spicy Chicken Deluxe Sandwich  Combo
+357,293,16.51,554906,130169,True,Spicy Chicken Deluxe Sandwich
+728,158,14.06,930341,687752,True,Chicken Salad Sandwich
+462,667,9.02,416513,657845,True,Grilled Chicken Sandwich
+911,513,19.35,843615,144924,True,Spicy Chicken Sandwich  Combo
+608,262,11.86,178738,604467,True,Chick-fil-A Chicken Deluxe Sandwich
+362,393,16.59,980836,387473,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+301,500,7.51,138554,143035,True,Chick-n-Strips	3 Pc.
+249,217,14.73,691342,427858,True,Substitute Medium Premium Side
+446,397,12.82,594807,273411,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+534,942,15.52,256385,331564,True,Side Salad
+643,407,19.39,656434,254794,True,Chicken Soup
+907,144,17.25,756931,283491,True,Chicken Salad Sandwich
+399,522,19.80,414334,554137,True,Grilled Chicken Club Sandwich
+430,479,7.34,236432,987380,True,Chick-fil-A Chicken Sandwich
+396,732,6.19,332442,115254,True,Grilled Chicken Sandwich
+219,746,18.60,222441,383861,True,Chicken Salad Sandwich  Combo
+325,983,15.35,715809,306799,True,Chick-fil-A Nuggets 8 Pc.
+878,738,9.48,843728,432900,True,Spicy Chicken Sandwich  Combo
+296,504,6.60,495526,684948,True,Grilled Chicken Club Sandwich
+466,850,10.09,134648,585025,True,Side Salad
+897,291,14.94,131026,949656,True,Spicy Chicken Sandwich  Combo
+959,597,17.30,520740,540303,True,Chick-fil-A Chicken Deluxe Sandwich
+916,308,5.97,247378,939993,True,Yogurt Parfait
+468,221,13.63,846305,926273,True,Grilled Chicken Club Sandwich  Combo
+859,791,17.54,103979,703464,True,Chick-fil-A Nuggets 8 Pc.
+857,275,19.62,741323,305351,True,Spicy Chicken Deluxe Sandwich  Combo
+212,979,6.97,680209,366492,True,Grilled Chicken Sandwich
+675,787,15.55,213024,567197,True,Chick-fil-A Chicken Deluxe Sandwich
+276,306,5.68,577807,422360,True,Grilled Chicken Cool Wrap
+363,161,19.30,475104,289508,True,Yogurt Parfait
+809,983,5.24,454970,298568,True,Chick-n-Strips  Combo	3 Pc.
+795,942,7.05,876958,676881,True,Yogurt Parfait
+758,141,15.00,832826,228205,True,Chick-fil-A Chicken Sandwich
+804,122,18.40,993929,447727,True,Chick-fil-A Chicken Sandwich  Combo
+495,513,10.98,483443,134772,True,Grilled Chicken Cool Wrap
+641,184,7.44,194067,538255,True,Chicken Salad Cup
+893,451,16.14,990211,435005,True,Spicy Chicken Deluxe Sandwich  Combo
+796,277,13.40,334925,666712,True,Grilled Chicken Cool Wrap
+719,686,8.70,547204,229983,True,Grilled Chicken Club Sandwich
+712,319,15.91,867604,215286,True,Chicken Salad Sandwich  Combo
+908,731,17.23,842409,243595,True,Chicken Soup
+335,395,18.62,116982,585432,True,Spicy Chicken Sandwich  Combo
+747,413,17.09,117129,678015,True,Chicken Salad Sandwich  Combo
+710,525,18.59,903641,277688,True,Chick-fil-A Chicken Sandwich
+613,619,10.24,787672,187520,True,Grilled Chicken Cool Wrap
+274,143,14.47,202138,610647,True,Chick-fil-A Nuggets  Combo 8 Pc.
+475,506,5.91,104001,978432,True,Spicy Chicken Deluxe Sandwich
+687,449,18.78,844835,678186,True,Chick-fil-A Chicken Sandwich
+177,835,18.45,816122,823564,True,Chick-fil-A Chicken Sandwich
+991,314,17.07,187584,519474,True,Grilled Chicken Sandwich  Combo
+213,287,7.11,994794,347150,True,Side Salad
+805,461,18.51,882807,410527,True,Chick-n-Strips	3 Pc.
+928,963,13.93,412629,974456,True,Spicy Chicken Deluxe Sandwich
+207,779,13.68,502689,899009,True,Upsize Fries & Drink
+612,127,11.75,139311,213392,True,Chick-fil-A Nuggets 8 Pc.
+949,651,14.88,777470,500925,True,Chicken Salad Cup
+181,279,9.83,311165,342571,True,Chick-fil-A Nuggets 8 Pc.
+795,297,7.78,404348,196017,True,Grilled Chicken Sandwich  Combo
+208,900,12.74,918892,699080,True,Grilled Chicken Club Sandwich  Combo
+278,707,13.49,553417,838760,True,Chick-fil-A Chicken Sandwich  Combo
+913,809,19.66,504673,964184,True,Chicken Salad Cup
+770,690,7.95,711547,479944,True,Chick-fil-A Nuggets 8 Pc.
+829,667,6.57,448152,102125,True,Spicy Chicken Sandwich  Combo
+268,546,7.98,833429,812753,True,Spicy Chicken Deluxe Sandwich  Combo
+927,962,11.07,124247,330530,True,Yogurt Parfait
+777,421,9.16,265994,591748,True,Grilled Chicken Sandwich  Combo
+959,978,6.19,985696,349979,True,Chick-n-Strips  Combo	3 Pc.
+950,432,9.29,377485,869426,True,Grilled Chicken Sandwich  Combo
+933,659,12.14,575362,119691,True,Chick-n-Strips  Combo	3 Pc.
+996,112,7.71,686077,206191,True,Spicy Chicken Deluxe Sandwich
+976,951,9.64,181359,240761,True,Spicy Chicken Sandwich
+275,758,7.67,314591,796910,True,Soup & Salad (Large Chicken Soup and Side Salad)
+125,574,6.46,467387,317938,True,Spicy Chicken Deluxe Sandwich
+702,194,9.13,454381,619905,True,Substitute Medium Premium Side
+570,749,14.18,470029,141502,True,Grilled Chicken Cool Wrap
+613,185,16.65,777302,182972,True,Spicy Chicken Deluxe Sandwich
+818,450,16.59,505496,959391,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+647,695,13.81,947188,994242,True,Substitute Medium Premium Side
+108,750,17.86,255908,522860,True,Grilled Chicken Sandwich
+444,143,17.83,941083,256211,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+647,991,18.68,649766,805935,True,Grilled Chicken Sandwich
+591,899,7.64,925595,792601,True,Chicken Soup
+315,717,16.25,703123,622803,True,Grilled Chicken Sandwich  Combo
+670,765,13.78,982933,706077,True,Grilled Chicken Club Sandwich  Combo
+835,583,19.65,908756,381656,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+709,940,18.49,546674,849531,True,Chick-n-Strips	3 Pc.
+325,980,18.74,625657,253739,True,Soup & Salad (Large Chicken Soup and Side Salad)
+802,631,19.63,405718,257985,True,Chicken Salad Cup
+473,469,5.95,364889,353127,True,Grilled Chicken Club Sandwich  Combo
+778,439,16.52,321489,280500,True,Chick-n-Strips	3 Pc.
+813,496,10.24,412678,152093,True,Chick-fil-A Nuggets  Combo 8 Pc.
+509,882,12.56,379711,690207,True,Grilled Chicken Club Sandwich  Combo
+856,197,7.71,387345,907971,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+541,542,5.51,449895,247562,True,Soup & Salad (Large Chicken Soup and Side Salad)
+903,986,16.28,203561,729514,True,Chick-fil-A Chicken Sandwich  Combo
+288,113,16.01,186999,508686,True,Side Salad
+399,673,10.13,608291,355305,True,Spicy Chicken Sandwich
+314,707,6.75,186995,971402,True,Spicy Chicken Deluxe Sandwich  Combo
+895,277,5.60,445508,416104,True,Chick-fil-A Chicken Sandwich  Combo
+968,819,10.44,552055,661839,True,Side Salad
+767,901,7.62,245015,533813,True,Chick-n-Strips  Combo	3 Pc.
+346,428,17.89,877992,895978,True,Yogurt Parfait
+178,115,6.67,952653,309035,True,Chick-fil-A Chicken Sandwich
+133,547,18.50,717775,114327,True,Chicken Salad Cup
+297,723,7.89,431576,643117,True,Spicy Chicken Sandwich  Combo
+957,563,16.50,400474,622184,True,Chick-fil-A Chicken Sandwich
+291,763,19.99,476890,130495,True,Grilled Chicken Sandwich  Combo
+661,435,10.93,342393,122615,True,Chick-fil-A Chicken Deluxe Sandwich
+422,320,16.23,727300,287629,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+773,355,13.52,295491,857717,True,Chick-n-Strips	3 Pc.
+139,579,8.90,632719,477096,True,Chicken Salad Cup
+581,673,5.53,504703,127935,True,Chick-fil-A Chicken Sandwich
+756,995,5.33,305582,783188,True,Grilled Chicken Sandwich
+191,280,12.38,893461,279503,True,Chicken Salad Sandwich  Combo
+204,336,7.02,565386,152054,True,Grilled Chicken Sandwich
+503,420,7.99,630901,596164,True,Chicken Salad Cup
+620,237,14.53,514181,594432,True,Spicy Chicken Deluxe Sandwich
+517,743,11.61,981983,145419,True,Upsize Fries & Drink
+159,420,5.44,620427,132362,True,Yogurt Parfait
+515,140,5.34,633707,784535,True,Chick-fil-A Nuggets  Combo 8 Pc.
+426,541,14.47,822825,690980,True,Grilled Chicken Club Sandwich  Combo
+264,718,5.46,563022,371076,True,Chicken Salad Sandwich  Combo
+617,804,13.63,616568,125338,True,Spicy Chicken Sandwich  Combo
+497,642,8.88,705519,272977,True,Grilled Chicken Club Sandwich  Combo
+107,564,12.90,689736,534243,True,Grilled Chicken Sandwich
+770,605,19.52,698183,447931,True,Chick-n-Strips  Combo	3 Pc.
+273,280,5.61,687453,394214,True,Chick-fil-A Nuggets 8 Pc.
+738,945,12.08,776515,765432,True,Chicken Salad Sandwich
+802,716,11.89,105161,474725,True,Spicy Chicken Sandwich
+486,424,12.92,933727,648304,True,Grilled Chicken Club Sandwich
+112,721,7.96,204485,534637,True,Grilled Chicken Sandwich  Combo
+260,885,9.50,232591,620819,True,Chick-fil-A Nuggets 8 Pc.
+347,774,18.57,854309,372634,True,Yogurt Parfait
+973,413,19.99,146567,279348,True,Chick-n-Strips  Combo	3 Pc.
+825,251,11.71,437961,434697,True,Spicy Chicken Deluxe Sandwich
+514,788,18.23,538970,192623,True,Chick-fil-A Chicken Sandwich
+982,842,19.19,332443,718560,True,Grilled Chicken Club Sandwich  Combo
+843,572,14.35,770527,672703,True,Grilled Chicken Cool Wrap
+515,911,16.54,653583,275217,True,Chick-fil-A Nuggets  Combo 8 Pc.
+532,943,11.60,379710,556480,True,Chick-fil-A Chicken Sandwich  Combo
+641,963,11.54,713134,503447,True,Grilled Chicken Club Sandwich  Combo
+831,913,5.58,305648,710511,True,Chick-fil-A Chicken Sandwich  Combo
+187,754,8.12,434557,519479,True,Grilled Chicken Sandwich  Combo
+572,552,9.76,551143,805257,True,Grilled Chicken Cool Wrap
+627,861,18.50,706643,611426,True,Chick-fil-A Nuggets  Combo 8 Pc.
+198,645,14.66,443239,861859,True,Substitute Medium Premium Side
+197,511,14.37,621903,621169,True,Grilled Chicken Sandwich  Combo
+407,944,7.20,351731,748377,True,Chick-fil-A Nuggets 8 Pc.
+802,610,5.81,335738,366354,True,Side Salad
+179,718,12.77,622695,485855,True,Chick-fil-A Nuggets 8 Pc.
+828,970,8.33,768227,814369,True,Chicken Salad Sandwich
+459,593,12.05,799573,964141,True,Grilled Chicken Sandwich  Combo
+274,230,17.22,615678,572489,True,Grilled Chicken Sandwich  Combo
+283,908,7.77,530276,235474,True,Spicy Chicken Deluxe Sandwich  Combo
+722,595,9.74,231145,593382,True,Spicy Chicken Deluxe Sandwich
+418,135,18.38,592509,646326,True,Chick-n-Strips  Combo	3 Pc.
+433,205,13.33,473831,298399,True,Soup & Salad (Large Chicken Soup and Side Salad)
+632,334,6.51,799714,772089,True,Substitute Medium Premium Side
+767,360,15.28,107605,909916,True,Chick-fil-A Nuggets 8 Pc.
+244,919,12.08,769151,500638,True,Grilled Chicken Sandwich
+908,790,8.70,854326,854707,True,Spicy Chicken Sandwich
+308,858,8.11,201629,426619,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+189,248,18.66,565261,914873,True,Chick-n-Strips	3 Pc.
+879,827,12.32,742035,587621,True,Yogurt Parfait
+380,717,9.37,530747,812610,True,Grilled Chicken Club Sandwich
+406,497,18.95,824718,901892,True,Chicken Salad Sandwich  Combo
+100,151,8.81,246064,832416,True,Chick-fil-A Chicken Deluxe Sandwich
+202,396,19.17,580478,865967,True,Chicken Salad Sandwich
+445,999,8.09,886625,491667,True,Grilled Chicken Club Sandwich
+865,878,7.49,825599,210968,True,Grilled Chicken Sandwich
+117,606,17.16,129654,491727,True,Upsize Fries & Drink
+798,722,8.48,819683,318664,True,Chicken Soup
+385,674,14.35,213462,248985,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+974,472,18.79,720682,205614,True,Grilled Chicken Club Sandwich  Combo
+407,521,11.36,884136,460996,True,Grilled Chicken Cool Wrap
+269,525,14.57,400884,681347,True,Grilled Chicken Sandwich  Combo
+418,290,14.26,699685,889140,True,Chick-fil-A Chicken Deluxe Sandwich
+744,916,16.94,210028,262760,True,Yogurt Parfait
+181,163,16.72,499074,208268,True,Upsize Fries & Drink
+458,490,7.83,228610,844209,True,Side Salad
+182,661,5.06,641232,504465,True,Chick-n-Strips	3 Pc.
+829,883,10.63,620253,861153,True,Spicy Chicken Sandwich
+795,267,11.05,327121,240117,True,Spicy Chicken Deluxe Sandwich
+578,859,18.69,489496,864830,True,Chicken Salad Sandwich  Combo
+731,560,10.49,679524,658155,True,Soup & Salad (Large Chicken Soup and Side Salad)
+538,617,9.42,707357,266254,True,Side Salad
+566,902,18.16,135064,177612,True,Chick-fil-A Chicken Sandwich  Combo
+942,544,18.01,160586,637297,True,Upsize Fries & Drink
+925,604,14.02,931809,824585,True,Spicy Chicken Deluxe Sandwich
+420,186,17.26,744736,928721,True,Substitute Medium Premium Side
+792,360,13.18,265131,823557,True,Chick-fil-A Chicken Deluxe Sandwich
+512,254,11.67,531604,156523,True,Chick-fil-A Chicken Sandwich
+254,878,10.28,811611,311865,True,Chick-fil-A Nuggets  Combo 8 Pc.
+627,582,10.43,409489,365229,True,Grilled Chicken Club Sandwich
+840,299,17.73,805461,372275,True,Chick-fil-A Chicken Sandwich  Combo
+516,445,16.43,685265,913898,True,Grilled Chicken Club Sandwich  Combo
+624,171,11.25,679139,184402,True,Grilled Chicken Club Sandwich  Combo
+294,804,18.58,158941,246822,True,Grilled Chicken Cool Wrap
+931,698,18.01,504549,612336,True,Chicken Salad Sandwich  Combo
+166,778,14.59,243499,331690,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+609,378,16.15,773818,485174,True,Chicken Salad Sandwich
+104,167,8.70,799436,932691,True,Substitute Medium Premium Side
+736,667,14.17,187124,969828,True,Chicken Salad Cup
+761,579,5.94,852682,802607,True,Chicken Soup
+314,676,11.06,230897,598487,True,Grilled Chicken Sandwich
+890,947,10.26,189473,476798,True,Soup & Salad (Large Chicken Soup and Side Salad)
+301,221,9.28,149686,930818,True,Upsize Fries & Drink
+418,598,18.86,785818,481509,True,Chick-n-Strips	3 Pc.
+414,869,11.68,769480,631615,True,Substitute Medium Premium Side
+987,144,18.77,160971,214382,True,Grilled Chicken Cool Wrap
+441,875,19.74,420574,117573,True,Grilled Chicken Sandwich
+456,817,7.39,992864,296465,True,Grilled Chicken Sandwich
+224,777,6.13,267593,610482,True,Soup & Salad (Large Chicken Soup and Side Salad)
+620,598,15.54,452081,776632,True,Spicy Chicken Sandwich
+655,333,14.96,898140,392295,True,Soup & Salad (Large Chicken Soup and Side Salad)
+381,483,7.13,579287,304787,True,Side Salad
+642,530,13.08,812238,953047,True,Grilled Chicken Sandwich
+732,763,6.37,960397,277699,True,Chicken Salad Sandwich  Combo
+117,377,6.37,982015,342639,True,Soup & Salad (Large Chicken Soup and Side Salad)
+419,298,17.63,505612,241490,True,Chick-fil-A Nuggets 8 Pc.
+555,378,12.95,464483,848988,True,Chick-fil-A Chicken Sandwich
+266,834,16.06,675459,701008,True,Chick-fil-A Nuggets  Combo 8 Pc.
+535,403,15.07,789448,498297,True,Grilled Chicken Club Sandwich
+439,382,18.59,251246,600253,True,Chick-fil-A Nuggets  Combo 8 Pc.
+580,552,14.96,123296,857222,True,Side Salad
+970,373,15.55,553977,236547,True,Soup & Salad (Large Chicken Soup and Side Salad)
+662,449,13.47,912964,583134,True,Chick-n-Strips	3 Pc.
+196,907,5.75,187821,754822,True,Spicy Chicken Deluxe Sandwich
+864,133,9.79,573871,235458,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+451,867,12.51,678724,394951,True,Chicken Soup
+993,342,6.21,621226,134547,True,Chicken Salad Sandwich  Combo
+276,922,12.80,149056,603544,True,Chick-n-Strips  Combo	3 Pc.
+859,503,5.84,786453,110780,True,Chick-fil-A Chicken Sandwich
+861,662,14.22,109149,227063,True,Grilled Chicken Sandwich  Combo
+520,250,6.76,223538,748469,True,Chicken Salad Sandwich  Combo
+942,655,13.97,780388,908144,True,Chicken Salad Sandwich  Combo
+400,661,6.27,164486,489129,True,Soup & Salad (Large Chicken Soup and Side Salad)
+475,462,5.45,251829,692081,True,Chick-n-Strips	3 Pc.
+318,381,15.88,200685,915832,True,Grilled Chicken Cool Wrap
+763,970,6.11,971401,338479,True,Substitute Medium Premium Side
+557,490,7.73,734196,614648,True,Chick-fil-A Chicken Sandwich  Combo
+584,953,9.43,519263,247319,True,Chicken Salad Sandwich  Combo
+503,566,8.55,100183,156426,True,Chick-n-Strips  Combo	3 Pc.
+938,648,6.17,595365,665225,True,Grilled Chicken Club Sandwich  Combo
+994,860,15.99,804130,887664,True,Spicy Chicken Sandwich
+675,717,19.02,904097,765835,True,Chicken Soup
+218,931,8.95,391185,214396,True,Soup & Salad (Large Chicken Soup and Side Salad)
+900,203,13.12,480924,650821,True,Chicken Salad Cup
+252,170,13.77,205529,860703,True,Yogurt Parfait
+483,875,6.36,619707,206340,True,Chick-fil-A Nuggets  Combo 8 Pc.
+188,442,13.10,461153,858706,True,Grilled Chicken Cool Wrap
+612,285,13.52,660004,653823,True,Grilled Chicken Club Sandwich  Combo
+643,412,16.98,557345,663309,True,Yogurt Parfait
+818,161,7.95,842961,525476,True,Side Salad
+567,505,5.82,412674,297010,True,Soup & Salad (Large Chicken Soup and Side Salad)
+676,429,11.58,448658,392266,True,Chick-n-Strips	3 Pc.
+273,675,18.56,102035,305277,True,Chick-n-Strips	3 Pc.
+997,944,13.49,164505,927291,True,Spicy Chicken Sandwich  Combo
+240,988,13.31,531236,562824,True,Chicken Soup
+174,324,12.91,663600,254504,True,Yogurt Parfait
+524,690,6.81,659017,656380,True,Grilled Chicken Sandwich
+741,558,15.87,281424,225744,True,Spicy Chicken Sandwich  Combo
+227,313,16.30,270924,468814,True,Grilled Chicken Sandwich  Combo
+627,561,6.39,810335,437984,True,Chicken Salad Sandwich
+284,295,6.98,848734,300895,True,Chicken Salad Cup
+511,596,16.91,504833,869750,True,Chick-fil-A Chicken Sandwich  Combo
+467,195,16.39,517494,153612,True,Chicken Salad Sandwich  Combo
+1000,447,19.92,661096,194699,True,Chicken Salad Sandwich  Combo
+996,769,14.60,190631,515685,True,Grilled Chicken Club Sandwich
+791,104,5.83,932819,793225,True,Chicken Salad Cup
+183,689,6.69,858672,568231,True,Grilled Chicken Sandwich  Combo
+145,133,17.73,458700,112469,True,Grilled Chicken Club Sandwich
+788,307,14.22,160638,807157,True,Spicy Chicken Sandwich  Combo
+829,911,19.86,586229,831782,True,Spicy Chicken Deluxe Sandwich
+475,924,12.32,782144,754536,True,Chick-fil-A Nuggets  Combo 8 Pc.
+411,435,9.47,275806,122529,True,Substitute Medium Premium Side
+222,881,17.52,701300,741497,True,Chick-fil-A Nuggets  Combo 8 Pc.
+272,149,14.81,687223,465089,True,Spicy Chicken Deluxe Sandwich  Combo
+497,877,8.90,414506,947347,True,Grilled Chicken Sandwich  Combo
+473,142,10.38,542739,298055,True,Chicken Salad Sandwich  Combo
+724,601,8.61,116329,127847,True,Spicy Chicken Deluxe Sandwich  Combo
+936,297,18.81,593636,755449,True,Substitute Medium Premium Side
+440,365,5.89,685670,104613,True,Grilled Chicken Club Sandwich  Combo
+322,283,6.83,903469,878537,True,Yogurt Parfait
+611,215,19.07,483600,510477,True,Chick-fil-A Chicken Sandwich
+139,541,13.55,892908,291412,True,Substitute Medium Premium Side
+730,888,15.77,537203,179978,True,Grilled Chicken Sandwich  Combo
+405,978,18.28,930506,178381,True,Chick-fil-A Chicken Sandwich  Combo
+562,318,18.83,785341,585431,True,Spicy Chicken Deluxe Sandwich
+175,197,5.14,569604,774782,True,Chick-fil-A Chicken Sandwich
+149,498,5.42,808508,999125,True,Chick-fil-A Nuggets  Combo 8 Pc.
+848,164,11.99,354159,936811,True,Chick-fil-A Nuggets  Combo 8 Pc.
+163,489,11.85,807063,920030,True,Spicy Chicken Sandwich
+592,645,10.31,329228,122457,True,Grilled Chicken Sandwich  Combo
+432,753,9.01,795412,759212,True,Grilled Chicken Club Sandwich
+522,528,5.66,340472,561258,True,Substitute Medium Premium Side
+739,592,13.54,908574,987153,True,Spicy Chicken Sandwich  Combo
+157,307,14.24,251842,682940,True,Substitute Medium Premium Side
+712,170,17.66,633080,208531,True,Chick-fil-A Nuggets  Combo 8 Pc.
+301,130,8.10,211062,708523,True,Spicy Chicken Deluxe Sandwich  Combo
+821,125,17.97,430972,674344,True,Grilled Chicken Sandwich
+916,752,13.89,251003,123962,True,Chick-fil-A Chicken Deluxe Sandwich
+360,365,11.05,906558,311733,True,Chick-n-Strips  Combo	3 Pc.
+568,933,12.57,480761,566214,True,Yogurt Parfait
+137,612,18.63,855037,351846,True,Spicy Chicken Deluxe Sandwich  Combo
+641,482,18.02,120477,117655,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+557,783,19.87,314158,220872,True,Spicy Chicken Deluxe Sandwich  Combo
+262,610,13.82,861196,202249,True,Chick-fil-A Chicken Deluxe Sandwich
+258,224,18.81,434970,194573,True,Side Salad
+250,156,16.30,659521,298973,True,Side Salad
+790,482,7.83,713741,866551,True,Chick-n-Strips	3 Pc.
+698,615,15.42,119222,710958,True,Yogurt Parfait
+690,429,15.20,569463,399980,True,Chick-fil-A Nuggets  Combo 8 Pc.
+470,649,18.37,755348,383154,True,Chick-fil-A Chicken Deluxe Sandwich
+621,984,11.78,905653,504847,True,Chick-n-Strips	3 Pc.
+918,249,16.95,686483,230247,True,Chicken Salad Cup
+456,287,10.77,192287,466081,True,Chicken Salad Sandwich
+909,941,15.07,468299,848794,True,Spicy Chicken Deluxe Sandwich  Combo
+221,460,11.79,213932,900672,True,Grilled Chicken Cool Wrap
+164,285,15.13,589024,539599,True,Grilled Chicken Sandwich  Combo
+724,784,12.64,779724,529448,True,Grilled Chicken Cool Wrap
+365,935,12.49,245443,867808,True,Chicken Salad Sandwich
+476,518,17.42,201174,641670,True,Soup & Salad (Large Chicken Soup and Side Salad)
+747,471,17.65,775578,826311,True,Grilled Chicken Cool Wrap
+194,461,5.87,496304,934448,True,Chick-fil-A Nuggets 8 Pc.
+505,980,17.29,210229,646779,True,Chick-fil-A Nuggets  Combo 8 Pc.
+960,319,19.72,540862,536361,True,Chicken Salad Cup
+651,162,14.92,395437,671656,True,Chicken Salad Sandwich  Combo
+904,384,19.30,357952,633776,True,Side Salad
+821,759,9.24,355009,675877,True,Chick-fil-A Nuggets  Combo 8 Pc.
+687,345,6.05,256891,452693,True,Chick-fil-A Chicken Sandwich
+567,243,6.37,420134,828782,True,Spicy Chicken Deluxe Sandwich
+125,735,5.69,223675,851715,True,Chick-fil-A Chicken Deluxe Sandwich
+422,697,8.13,879282,545695,True,Chicken Salad Cup
+919,179,17.44,195214,838203,True,Chick-fil-A Chicken Deluxe Sandwich
+356,815,19.99,136802,588054,True,Grilled Chicken Club Sandwich
+466,498,16.91,703236,596894,True,Yogurt Parfait
+121,366,8.41,627577,990154,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+818,279,6.34,638224,602917,True,Chicken Soup
+606,575,6.19,935405,493225,True,Grilled Chicken Club Sandwich
+514,784,12.83,925862,437508,True,Chicken Salad Sandwich  Combo
+919,823,8.39,458605,628281,True,Spicy Chicken Deluxe Sandwich  Combo
+170,312,19.44,794043,321108,True,Chick-fil-A Chicken Deluxe Sandwich
+511,953,10.61,758393,983112,True,Chicken Salad Sandwich  Combo
+508,818,13.60,994177,938554,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+306,431,15.50,435800,295950,True,Side Salad
+688,810,6.87,549612,923578,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+540,991,16.22,409647,743271,True,Chick-fil-A Chicken Sandwich  Combo
+673,191,18.92,666840,778943,True,Chick-fil-A Chicken Sandwich  Combo
+146,427,13.81,583334,142398,True,Grilled Chicken Club Sandwich  Combo
+590,551,6.36,443628,812500,True,Chick-fil-A Nuggets  Combo 8 Pc.
+470,978,11.73,579147,678707,True,Chicken Soup
+118,297,7.63,936614,898499,True,Grilled Chicken Sandwich
+314,409,12.90,393203,950047,True,Chick-fil-A Chicken Sandwich
+924,967,16.19,820688,795483,True,Chick-fil-A Chicken Deluxe Sandwich
+700,791,19.33,754951,886860,True,Chicken Salad Sandwich  Combo
+419,109,13.47,269121,601276,True,Chick-fil-A Nuggets 8 Pc.
+619,874,8.45,420875,605111,True,Spicy Chicken Sandwich  Combo
+817,738,11.00,785267,843585,True,Chick-fil-A Nuggets 8 Pc.
+727,297,9.41,969593,788059,True,Yogurt Parfait
+342,441,12.32,739024,975293,True,Yogurt Parfait
+228,125,17.96,955507,488074,True,Yogurt Parfait
+973,214,14.10,255627,194196,True,Side Salad
+862,491,5.24,384931,162334,True,Grilled Chicken Club Sandwich  Combo
+958,181,15.81,721456,375963,True,Grilled Chicken Cool Wrap
+992,117,6.18,622917,190045,True,Substitute Medium Premium Side
+369,515,8.57,923791,325151,True,Spicy Chicken Deluxe Sandwich  Combo
+609,825,18.72,461341,304792,True,Grilled Chicken Cool Wrap
+248,745,18.38,732256,895435,True,Soup & Salad (Large Chicken Soup and Side Salad)
+905,901,6.39,947468,545005,True,Yogurt Parfait
+146,772,14.42,287706,844750,True,Grilled Chicken Sandwich
+844,231,7.13,263571,822106,True,Chicken Soup
+469,414,19.52,363437,474422,True,Soup & Salad (Large Chicken Soup and Side Salad)
+801,671,19.23,661129,632308,True,Chicken Salad Cup
+652,762,16.73,745212,759874,True,Substitute Medium Premium Side
+563,652,13.63,170220,960897,True,Chick-n-Strips  Combo	3 Pc.
+419,628,5.73,372009,760492,True,Spicy Chicken Sandwich
+888,485,17.63,106808,760089,True,Yogurt Parfait
+502,291,6.98,357901,876658,True,Chick-n-Strips  Combo	3 Pc.
+126,822,14.36,672139,268272,True,Chick-n-Strips  Combo	3 Pc.
+705,831,11.54,336839,216776,True,Chick-fil-A Chicken Sandwich  Combo
+356,782,17.03,820717,672574,True,Grilled Chicken Sandwich
+485,353,6.64,880858,327116,True,Chick-fil-A Chicken Sandwich
+757,639,12.61,586670,708584,True,Spicy Chicken Sandwich
+191,924,12.02,237651,974792,True,Spicy Chicken Sandwich
+148,274,8.78,840472,824651,True,Chick-n-Strips	3 Pc.
+420,879,15.89,381500,445224,True,Grilled Chicken Club Sandwich  Combo
+345,961,8.75,725674,271285,True,Chick-n-Strips	3 Pc.
+682,791,10.65,485040,971276,True,Chick-fil-A Chicken Deluxe Sandwich
+251,379,10.71,945706,634585,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+555,591,6.15,954921,528377,True,Spicy Chicken Sandwich
+259,581,10.20,823119,308180,True,Chick-n-Strips  Combo	3 Pc.
+762,860,15.02,443747,723162,True,Grilled Chicken Sandwich  Combo
+907,887,17.92,827095,108082,True,Chick-fil-A Chicken Sandwich  Combo
+737,438,15.52,623313,955702,True,Chick-fil-A Nuggets 8 Pc.
+309,987,13.22,384079,186067,True,Chicken Soup
+791,991,5.90,904074,795726,True,Chicken Salad Cup
+879,586,17.90,434980,404283,True,Chicken Soup
+786,678,11.36,797640,660485,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+968,126,17.93,502364,721364,True,Chicken Salad Sandwich
+643,206,12.60,550756,731329,True,Chicken Salad Sandwich  Combo
+465,381,10.03,271430,805098,True,Chick-n-Strips	3 Pc.
+322,215,15.53,135902,231945,True,Chicken Salad Sandwich  Combo
+209,786,10.47,384961,158788,True,Chicken Salad Sandwich
+175,651,9.41,650874,373893,True,Chick-n-Strips  Combo	3 Pc.
+265,139,11.10,607394,269585,True,Chick-fil-A Chicken Sandwich
+607,837,11.55,412168,152828,True,Chicken Salad Sandwich  Combo
+787,949,15.53,287945,689601,True,Chick-fil-A Chicken Deluxe Sandwich
+791,785,19.47,981718,549697,True,Grilled Chicken Sandwich  Combo
+390,974,11.29,605120,988053,True,Chick-fil-A Chicken Deluxe Sandwich
+563,210,9.74,361349,149894,True,Grilled Chicken Club Sandwich  Combo
+620,375,6.47,187058,922874,True,Spicy Chicken Deluxe Sandwich
+816,592,15.91,215782,888256,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+327,444,18.18,241088,937472,True,Grilled Chicken Club Sandwich
+218,360,5.83,644562,534563,True,Grilled Chicken Sandwich  Combo
+496,403,11.24,978548,840295,True,Chick-fil-A Chicken Sandwich  Combo
+998,261,6.36,857514,152898,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+421,201,5.71,404104,955586,True,Chick-fil-A Chicken Sandwich
+455,200,8.14,965431,625668,True,Chicken Soup
+716,172,14.63,465367,127904,True,Chicken Salad Sandwich
+441,155,7.78,333625,717549,True,Chicken Soup
+330,806,12.25,981039,160813,True,Chick-n-Strips	3 Pc.
+783,695,5.49,343463,632864,True,Chick-n-Strips  Combo	3 Pc.
+342,106,15.52,833144,994780,True,Yogurt Parfait
+883,353,13.16,616859,716399,True,Spicy Chicken Deluxe Sandwich  Combo
+361,591,14.51,855062,630722,True,Grilled Chicken Club Sandwich
+945,647,17.35,271100,969915,True,Chick-n-Strips	3 Pc.
+622,833,16.14,860327,222801,True,Grilled Chicken Club Sandwich  Combo
+364,151,19.65,979557,254245,True,Grilled Chicken Sandwich
+175,115,8.60,822566,159658,True,Spicy Chicken Sandwich
+576,773,18.73,341597,246209,True,Chicken Soup
+544,313,17.25,933356,745047,True,Substitute Medium Premium Side
+713,314,5.79,438669,748627,True,Chick-fil-A Chicken Deluxe Sandwich
+842,479,7.18,895491,837673,True,Chicken Soup
+623,929,6.06,181583,195968,True,Chicken Salad Sandwich  Combo
+960,314,15.76,922435,473896,True,Chicken Salad Sandwich  Combo
+191,393,14.78,638432,145425,True,Chick-fil-A Nuggets  Combo 8 Pc.
+693,435,11.86,422491,386909,True,Soup & Salad (Large Chicken Soup and Side Salad)
+257,128,14.82,995857,959284,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+728,471,11.35,976193,161497,True,Spicy Chicken Deluxe Sandwich  Combo
+774,128,7.65,609425,509632,True,Chicken Salad Cup
+815,417,8.32,930298,645371,True,Chick-fil-A Nuggets  Combo 8 Pc.
+406,403,6.69,913978,358343,True,Grilled Chicken Club Sandwich
+381,519,18.78,957528,474117,True,Chick-fil-A Nuggets  Combo 8 Pc.
+332,571,5.86,256594,929564,True,Grilled Chicken Sandwich  Combo
+616,149,7.81,616826,660447,True,Spicy Chicken Sandwich
+352,554,15.72,669624,509048,True,Grilled Chicken Cool Wrap
+608,514,7.59,187494,220574,True,Substitute Medium Premium Side
+616,563,6.45,530691,134634,True,Chick-fil-A Chicken Sandwich  Combo
+330,439,7.06,340219,264649,True,Yogurt Parfait
+739,319,7.98,780256,892021,True,Yogurt Parfait
+101,173,6.32,517501,619908,True,Chicken Salad Sandwich  Combo
+738,163,7.38,739316,416754,True,Spicy Chicken Deluxe Sandwich  Combo
+586,563,15.35,952135,422314,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+671,200,7.75,747884,526667,True,Chick-n-Strips  Combo	3 Pc.
+857,442,15.14,777575,445460,True,Chicken Salad Cup
+224,649,12.59,729390,922264,True,Chick-n-Strips	3 Pc.
+809,844,5.13,217390,940584,True,Spicy Chicken Sandwich
+921,444,18.91,341006,284722,True,Spicy Chicken Deluxe Sandwich
+653,109,18.66,837509,546857,True,Spicy Chicken Deluxe Sandwich  Combo
+804,298,13.68,176397,616315,True,Chick-fil-A Chicken Deluxe Sandwich
+542,505,13.96,980231,349884,True,Chick-n-Strips	3 Pc.
+765,816,6.27,807858,832538,True,Chick-fil-A Chicken Sandwich
+394,892,9.85,663011,735829,True,Side Salad
+407,528,5.81,624882,604146,True,Upsize Fries & Drink
+323,893,12.79,142187,802873,True,Chicken Salad Sandwich
+723,459,13.83,737041,252894,True,Spicy Chicken Sandwich  Combo
+592,974,15.76,713928,679609,True,Soup & Salad (Large Chicken Soup and Side Salad)
+434,403,17.84,577809,711383,True,Grilled Chicken Club Sandwich  Combo
+910,514,15.02,368096,813167,True,Chicken Salad Sandwich
+127,540,13.52,767393,457210,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+351,184,9.27,752812,540768,True,Chick-fil-A Nuggets  Combo 8 Pc.
+304,980,5.30,588840,294149,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+722,292,9.19,973330,602692,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+558,615,15.44,112823,540522,True,Chicken Salad Sandwich  Combo
+411,343,12.29,772111,992235,True,Chick-fil-A Chicken Sandwich  Combo
+176,789,5.71,715256,872358,True,Chicken Salad Cup
+309,238,17.19,387247,495219,True,Chick-fil-A Nuggets  Combo 8 Pc.
+278,630,13.00,804925,335291,True,Spicy Chicken Deluxe Sandwich  Combo
+634,536,17.10,973425,559893,True,Grilled Chicken Sandwich  Combo
+476,758,7.24,253018,710258,True,Spicy Chicken Sandwich
+157,825,18.33,447891,326724,True,Grilled Chicken Cool Wrap
+604,945,17.19,338925,374973,True,Grilled Chicken Sandwich
+236,254,16.14,777805,764244,True,Soup & Salad (Large Chicken Soup and Side Salad)
+304,355,5.50,817171,676182,True,Chicken Salad Sandwich  Combo
+249,604,16.59,980801,789852,True,Upsize Fries & Drink
+187,183,8.70,325636,480686,True,Grilled Chicken Club Sandwich  Combo
+907,562,19.82,985084,659556,True,Chick-fil-A Nuggets 8 Pc.
+715,185,10.25,860324,977598,True,Chicken Soup
+639,635,13.11,683784,572052,True,Upsize Fries & Drink
+600,644,7.98,764357,419445,True,Chick-fil-A Chicken Sandwich
+722,222,14.56,954922,441995,True,Spicy Chicken Deluxe Sandwich
+947,670,6.55,356360,543528,True,Substitute Medium Premium Side
+868,235,8.04,521704,258422,True,Grilled Chicken Sandwich
+671,323,5.14,856013,394556,True,Chick-fil-A Chicken Sandwich
+837,705,12.92,888273,862509,True,Grilled Chicken Club Sandwich  Combo
+405,474,11.57,397959,483374,True,Chick-fil-A Chicken Deluxe Sandwich
+622,893,13.92,621142,808846,True,Chicken Salad Sandwich
+987,761,16.92,810724,351887,True,Substitute Medium Premium Side
+687,406,6.91,119285,384792,True,Chick-fil-A Nuggets 8 Pc.
+852,357,16.57,849271,596822,True,Chicken Salad Sandwich  Combo
+404,947,8.61,853810,665208,True,Chick-n-Strips  Combo	3 Pc.
+704,291,12.07,402502,442018,True,Chick-fil-A Nuggets 8 Pc.
+692,465,10.48,410526,353400,True,Chick-fil-A Nuggets 8 Pc.
+689,667,7.99,368521,813679,True,Spicy Chicken Sandwich
+510,328,14.31,205417,747259,True,Chicken Salad Sandwich  Combo
+155,226,15.18,893576,733076,True,Chick-fil-A Chicken Sandwich
+805,118,7.46,236523,893262,True,Chicken Salad Sandwich
+585,437,12.24,614062,604444,True,Yogurt Parfait
+777,580,13.44,692128,673978,True,Grilled Chicken Club Sandwich
+740,646,13.06,770884,591163,True,Grilled Chicken Cool Wrap
+981,850,18.35,321343,887943,True,Upsize Fries & Drink
+718,328,10.98,301481,887938,True,Upsize Fries & Drink
+380,679,7.97,138268,285637,True,Spicy Chicken Deluxe Sandwich
+770,270,8.81,696130,675469,True,Substitute Medium Premium Side
+636,695,6.43,686572,715094,True,Chick-fil-A Nuggets  Combo 8 Pc.
+627,274,19.07,727443,974091,True,Chick-fil-A Chicken Deluxe Sandwich
+709,565,9.96,375513,752654,True,Substitute Medium Premium Side
+279,733,17.93,658365,845931,True,Chick-n-Strips	3 Pc.
+133,841,12.62,290733,407675,True,Chick-fil-A Chicken Deluxe Sandwich
+735,346,5.11,780021,377179,True,Chick-fil-A Chicken Sandwich  Combo
+211,882,17.38,360286,853401,True,Spicy Chicken Deluxe Sandwich  Combo
+392,586,19.10,953724,536204,True,Chick-fil-A Nuggets 8 Pc.
+127,903,6.31,665253,214718,True,Chicken Soup
+256,440,10.36,836511,945344,True,Chick-n-Strips	3 Pc.
+690,710,5.35,727361,468972,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+150,949,17.78,542993,506744,True,Chick-fil-A Chicken Sandwich
+234,988,19.16,971603,475326,True,Spicy Chicken Deluxe Sandwich
+396,523,17.13,791748,214075,True,Chicken Salad Sandwich
+613,1000,14.72,372710,118003,True,Grilled Chicken Sandwich  Combo
+390,815,12.17,362692,542058,True,Substitute Medium Premium Side
+985,407,17.32,807103,411089,True,Spicy Chicken Deluxe Sandwich
+906,326,5.94,660470,143586,True,Chicken Salad Cup
+802,947,5.17,717841,711524,True,Chick-fil-A Nuggets 8 Pc.
+355,704,19.95,337433,690335,True,Grilled Chicken Cool Wrap
+741,775,10.57,511781,882534,True,Upsize Fries & Drink
+112,394,12.87,114623,780968,True,Spicy Chicken Sandwich  Combo
+740,681,11.60,590538,158837,True,Upsize Fries & Drink
+211,410,9.03,252161,394584,True,Spicy Chicken Deluxe Sandwich
+720,853,5.18,929658,940874,True,Grilled Chicken Club Sandwich
+434,661,19.15,363931,947651,True,Spicy Chicken Sandwich
+175,293,13.46,870276,565106,True,Spicy Chicken Sandwich
+233,310,10.23,276604,989187,True,Chicken Salad Sandwich
+987,266,6.99,941655,226325,True,Chick-fil-A Chicken Deluxe Sandwich
+396,871,8.74,269985,906181,True,Chicken Salad Sandwich  Combo
+955,199,6.17,380003,321130,True,Spicy Chicken Deluxe Sandwich  Combo
+292,790,14.22,901072,807350,True,Chick-n-Strips	3 Pc.
+595,1000,9.56,701199,465746,True,Grilled Chicken Cool Wrap
+684,525,9.92,975321,535041,True,Spicy Chicken Sandwich  Combo
+390,574,6.72,345321,269291,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+296,367,18.29,562708,584051,True,Chicken Salad Sandwich
+560,282,6.18,307100,977916,True,Upsize Fries & Drink
+896,233,8.29,420603,673340,True,Grilled Chicken Sandwich  Combo
+802,988,9.54,414029,187033,True,Chicken Salad Cup
+503,585,16.11,854659,550638,True,Chicken Salad Sandwich  Combo
+879,171,16.95,178922,769339,True,Grilled Chicken Cool Wrap
+561,160,9.20,697340,733544,True,Spicy Chicken Sandwich  Combo
+112,232,7.47,977280,908330,True,Grilled Chicken Sandwich
+938,413,12.15,209153,944989,True,Grilled Chicken Club Sandwich  Combo
+757,246,10.61,521158,978621,True,Chick-fil-A Nuggets  Combo 8 Pc.
+850,579,11.25,366420,783575,True,Yogurt Parfait
+354,495,9.84,314317,421960,True,Chicken Soup
+952,233,12.81,464444,909859,True,Yogurt Parfait
+150,550,13.01,275498,823748,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+972,640,19.10,177200,947581,True,Spicy Chicken Sandwich
+777,803,13.73,143947,575235,True,Grilled Chicken Sandwich
+498,110,7.67,374603,795653,True,Chicken Salad Cup
+846,689,14.71,242962,871049,True,Grilled Chicken Club Sandwich
+219,483,17.51,339202,273873,True,Chick-fil-A Nuggets 8 Pc.
+132,453,13.34,628841,576407,True,Chicken Salad Sandwich
+611,769,12.52,661992,891384,True,Grilled Chicken Sandwich
+267,500,16.95,404338,500684,True,Chick-fil-A Nuggets  Combo 8 Pc.
+470,625,18.92,801942,923361,True,Substitute Medium Premium Side
+196,219,17.78,609977,870916,True,Chick-fil-A Chicken Sandwich
+724,239,7.71,751882,468480,True,Chicken Salad Sandwich
+817,143,11.58,841853,689701,True,Spicy Chicken Sandwich  Combo
+499,820,13.70,919818,242868,True,Upsize Fries & Drink
+913,943,12.15,108201,635332,True,Upsize Fries & Drink
+262,909,10.50,511012,445485,True,Chick-n-Strips	3 Pc.
+856,478,11.56,584011,732095,True,Chick-fil-A Chicken Sandwich
+533,465,8.32,556700,864194,True,Chicken Salad Sandwich  Combo
+237,843,12.48,973371,378578,True,Grilled Chicken Cool Wrap
+259,695,16.86,845271,830291,True,Chicken Salad Sandwich  Combo
+602,292,10.66,650314,386745,True,Chicken Salad Cup
+943,118,19.01,437905,900255,True,Chicken Salad Cup
+342,495,18.61,223354,789764,True,Spicy Chicken Deluxe Sandwich  Combo
+926,438,11.12,257977,366650,True,Grilled Chicken Club Sandwich
+905,906,13.28,354378,262682,True,Grilled Chicken Club Sandwich
+171,339,10.65,101047,343728,True,Spicy Chicken Sandwich
+987,927,12.61,312750,768321,True,Spicy Chicken Deluxe Sandwich  Combo
+915,511,14.35,348115,654337,True,Grilled Chicken Club Sandwich
+720,335,10.41,298191,145901,True,Side Salad
+346,156,6.95,422667,276050,True,Chick-fil-A Nuggets  Combo 8 Pc.
+134,695,5.55,533811,279913,True,Substitute Medium Premium Side
+376,327,5.93,325283,854315,True,Grilled Chicken Sandwich
+524,630,12.70,345828,476631,True,Soup & Salad (Large Chicken Soup and Side Salad)
+825,857,15.63,566984,889841,True,Upsize Fries & Drink
+970,450,16.96,921538,998799,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+989,747,6.36,186416,240396,True,Grilled Chicken Club Sandwich  Combo
+327,888,7.04,787031,568344,True,Chick-fil-A Nuggets  Combo 8 Pc.
+519,349,14.39,183851,339462,True,Chick-fil-A Nuggets  Combo 8 Pc.
+413,233,18.89,469405,634097,True,Chick-n-Strips	3 Pc.
+634,976,5.14,695423,237324,True,Chick-fil-A Chicken Sandwich  Combo
+365,599,14.69,689971,317278,True,Spicy Chicken Deluxe Sandwich
+506,885,18.20,930474,974642,True,Chick-n-Strips  Combo	3 Pc.
+347,712,18.56,909729,119421,True,Chicken Salad Sandwich  Combo
+724,552,18.59,322052,964445,True,Chick-fil-A Nuggets  Combo 8 Pc.
+917,511,15.70,130772,832018,True,Spicy Chicken Sandwich
+116,264,8.99,142247,476026,True,Spicy Chicken Sandwich
+689,513,7.78,238614,833219,True,Grilled Chicken Cool Wrap
+531,523,18.00,519694,437205,True,Spicy Chicken Sandwich
+600,631,19.29,270115,901052,True,Grilled Chicken Cool Wrap
+533,492,14.90,920793,990758,True,Spicy Chicken Deluxe Sandwich  Combo
+722,115,15.93,657771,311398,True,Chick-fil-A Chicken Sandwich  Combo
+185,620,12.18,915269,843919,True,Spicy Chicken Sandwich
+327,347,9.43,274388,961805,True,Chick-fil-A Chicken Deluxe Sandwich
+404,207,5.01,950589,188058,True,Yogurt Parfait
+460,431,14.78,550504,349866,True,Grilled Chicken Cool Wrap
+590,761,13.05,827553,915042,True,Upsize Fries & Drink
+667,282,19.34,314994,997230,True,Chick-fil-A Nuggets  Combo 8 Pc.
+998,519,7.45,362601,277397,True,Chick-fil-A Nuggets  Combo 8 Pc.
+697,990,5.58,375937,387061,True,Side Salad
+300,844,19.21,474112,703731,True,Side Salad
+437,298,6.36,513983,475845,True,Grilled Chicken Club Sandwich  Combo
+882,593,14.37,513030,924960,True,Upsize Fries & Drink
+803,825,5.93,129732,935096,True,Grilled Chicken Sandwich
+302,810,17.58,851019,709464,True,Grilled Chicken Sandwich
+732,448,10.87,794030,509640,True,Chicken Salad Sandwich
+845,853,9.60,915733,615393,True,Chick-fil-A Chicken Deluxe Sandwich
+788,629,6.41,254886,341516,True,Chick-fil-A Nuggets 8 Pc.
+281,478,16.68,915941,510972,True,Spicy Chicken Sandwich
+127,132,17.40,815826,832067,True,Side Salad
+782,938,16.41,360358,553730,True,Side Salad
+492,899,17.01,759061,228998,True,Spicy Chicken Deluxe Sandwich
+800,270,8.92,819309,465726,True,Soup & Salad (Large Chicken Soup and Side Salad)
+352,475,5.05,617915,831924,True,Side Salad
+241,940,7.62,284733,115271,True,Spicy Chicken Deluxe Sandwich  Combo
+476,116,14.45,687342,604210,True,Chicken Salad Cup
+797,417,18.40,153103,897221,True,Chicken Soup
+830,117,13.43,619194,271088,True,Grilled Chicken Sandwich
+703,708,13.53,245399,248061,True,Grilled Chicken Sandwich  Combo
+508,176,9.63,282841,197641,True,Yogurt Parfait
+626,627,17.26,456376,452450,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+794,796,19.39,708746,690346,True,Grilled Chicken Cool Wrap
+100,105,18.67,827431,666331,True,Chick-n-Strips  Combo	3 Pc.
+299,778,8.50,112138,321037,True,Chicken Salad Cup
+951,241,14.06,835502,500894,True,Upsize Fries & Drink
+813,271,19.65,751685,739581,True,Side Salad
+368,715,18.40,189797,786453,True,Grilled Chicken Sandwich
+367,545,10.75,980135,952474,True,Chick-n-Strips	3 Pc.
+986,669,7.57,889460,819630,True,Substitute Medium Premium Side
+520,465,8.42,938932,493891,True,Grilled Chicken Club Sandwich
+130,965,15.16,865621,999928,True,Spicy Chicken Sandwich  Combo
+950,671,6.30,360606,977763,True,Substitute Medium Premium Side
+340,722,5.52,768673,757303,True,Spicy Chicken Sandwich
+426,278,13.44,467219,971174,True,Chick-fil-A Chicken Sandwich  Combo
+211,295,5.38,625666,293976,True,Spicy Chicken Sandwich
+270,387,17.91,446943,876312,True,Spicy Chicken Deluxe Sandwich
+902,535,15.31,564012,880548,True,Chicken Soup
+441,825,9.01,214372,305820,True,Chick-fil-A Nuggets 8 Pc.
+652,758,19.26,722583,145062,True,Chick-n-Strips  Combo	3 Pc.
+870,360,12.77,280912,818732,True,Chick-fil-A Nuggets  Combo 8 Pc.
+693,840,19.42,168003,656369,True,Chick-fil-A Nuggets 8 Pc.
+432,687,19.93,223448,394561,True,Grilled Chicken Sandwich  Combo
+468,302,18.91,817433,764314,True,Chicken Soup
+557,184,13.74,127166,684470,True,Substitute Medium Premium Side
+150,297,17.50,702300,853732,True,Chick-fil-A Nuggets 8 Pc.
+469,900,7.33,297289,348513,True,Chicken Soup
+417,711,8.69,993740,911813,True,Chicken Salad Cup
+292,735,16.27,911031,321118,True,Chick-fil-A Chicken Sandwich  Combo
+828,753,9.83,369439,289669,True,Substitute Medium Premium Side
+193,461,13.50,738123,200163,True,Spicy Chicken Sandwich
+971,263,6.30,767605,914846,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+647,673,8.89,338444,922694,True,Soup & Salad (Large Chicken Soup and Side Salad)
+680,207,13.09,833841,655248,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+109,403,5.78,623791,674654,True,Chicken Salad Sandwich
+725,825,5.27,158443,854489,True,Chick-fil-A Nuggets  Combo 8 Pc.
+489,696,16.43,132361,462145,True,Spicy Chicken Sandwich  Combo
+296,473,17.65,745602,503431,True,Chick-fil-A Chicken Sandwich
+548,526,13.75,407123,805370,True,Spicy Chicken Sandwich  Combo
+448,752,6.88,909573,328787,True,Grilled Chicken Sandwich  Combo
+790,592,5.77,117057,983670,True,Grilled Chicken Sandwich  Combo
+754,968,14.88,384468,594803,True,Chick-fil-A Chicken Deluxe Sandwich
+602,897,12.71,410874,972615,True,Grilled Chicken Sandwich  Combo
+211,333,17.15,250275,104249,True,Chicken Salad Sandwich
+800,352,14.88,281038,714075,True,Spicy Chicken Deluxe Sandwich  Combo
+694,190,5.84,321151,882180,True,Grilled Chicken Sandwich
+556,580,18.13,671676,421941,True,Chicken Soup
+745,465,14.22,845993,980893,True,Soup & Salad (Large Chicken Soup and Side Salad)
+574,310,7.46,579102,715285,True,Grilled Chicken Cool Wrap
+525,619,6.36,815941,313977,True,Yogurt Parfait
+261,308,5.08,255975,187576,True,Upsize Fries & Drink
+435,351,18.58,903167,840286,True,Chick-fil-A Nuggets  Combo 8 Pc.
+764,879,15.43,382833,719254,True,Chick-fil-A Nuggets  Combo 8 Pc.
+205,394,14.41,754323,819475,True,Spicy Chicken Deluxe Sandwich  Combo
+813,418,17.27,146082,308168,True,Soup & Salad (Large Chicken Soup and Side Salad)
+596,431,5.58,147025,645152,True,Spicy Chicken Deluxe Sandwich  Combo
+167,560,17.40,626698,482755,True,Chick-fil-A Chicken Deluxe Sandwich
+800,413,18.38,944004,607334,True,Chicken Soup
+591,729,6.03,205534,285392,True,Chicken Salad Cup
+193,388,13.74,925559,946046,True,Yogurt Parfait
+153,908,11.44,620184,834056,True,Grilled Chicken Sandwich
+885,966,13.15,700936,754302,True,Upsize Fries & Drink
+732,741,13.34,377483,441278,True,Chicken Soup
+864,510,9.82,854108,787599,True,Spicy Chicken Sandwich  Combo
+634,648,6.52,847000,861835,True,Spicy Chicken Deluxe Sandwich
+767,939,5.52,719380,974313,True,Chick-fil-A Chicken Sandwich
+166,553,8.85,936634,188851,True,Spicy Chicken Sandwich  Combo
+333,191,12.15,552569,660856,True,Grilled Chicken Sandwich  Combo
+233,256,18.16,303321,357756,True,Grilled Chicken Sandwich
+786,828,13.69,271121,692842,True,Side Salad
+669,211,16.79,514073,811702,True,Chick-fil-A Nuggets  Combo 8 Pc.
+723,898,9.94,597431,233643,True,Grilled Chicken Sandwich  Combo
+681,410,14.29,760332,487239,True,Chick-n-Strips  Combo	3 Pc.
+895,829,8.05,677090,431088,True,Spicy Chicken Deluxe Sandwich  Combo
+278,725,8.06,161945,926356,True,Grilled Chicken Sandwich
+716,124,18.69,615524,209653,True,Chicken Salad Sandwich  Combo
+750,320,6.73,389358,109861,True,Chick-fil-A Nuggets 8 Pc.
+804,908,8.53,649082,757787,True,Spicy Chicken Sandwich  Combo
+813,365,5.64,388162,953993,True,Grilled Chicken Sandwich
+271,754,19.75,338635,243142,True,Spicy Chicken Sandwich  Combo
+114,477,11.36,298809,547823,True,Grilled Chicken Sandwich
+286,764,11.15,505469,596636,True,Side Salad
+122,135,7.07,433263,656848,True,Grilled Chicken Cool Wrap
+382,863,17.38,333386,308228,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+624,439,5.36,371574,637742,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+201,760,6.28,969373,789072,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+495,866,16.30,733983,988894,True,Grilled Chicken Cool Wrap
+961,792,12.02,462666,751826,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+598,961,11.28,538994,462501,True,Soup & Salad (Large Chicken Soup and Side Salad)
+696,797,8.17,567671,464207,True,Grilled Chicken Club Sandwich
+841,414,9.83,905985,240290,True,Spicy Chicken Deluxe Sandwich  Combo
+446,124,7.38,341441,348959,True,Chick-fil-A Chicken Sandwich  Combo
+723,672,10.02,978420,667078,True,Spicy Chicken Deluxe Sandwich
+600,143,18.76,159555,505160,True,Side Salad
+104,181,15.68,202661,989936,True,Side Salad
+495,190,11.33,669155,658448,True,Grilled Chicken Club Sandwich
+947,993,11.13,667278,734582,True,Chick-fil-A Chicken Sandwich
+748,209,19.80,803249,878173,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+275,788,5.33,500300,745025,True,Chicken Salad Sandwich  Combo
+277,133,19.03,551947,365768,True,Grilled Chicken Sandwich  Combo
+255,198,7.60,693606,604944,True,Chick-fil-A Chicken Sandwich
+122,834,17.98,507974,177506,True,Soup & Salad (Large Chicken Soup and Side Salad)
+661,410,12.11,297126,912117,True,Yogurt Parfait
+241,452,18.66,928518,131706,True,Chick-n-Strips	3 Pc.
+373,620,13.54,453912,245567,True,Spicy Chicken Deluxe Sandwich  Combo
+463,219,6.87,228148,701121,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+366,523,18.42,338579,496969,True,Grilled Chicken Sandwich
+193,693,9.70,135199,175871,True,Chick-fil-A Chicken Sandwich
+218,755,7.07,191527,558994,True,Spicy Chicken Sandwich
+504,822,13.08,419499,216305,True,Chicken Salad Sandwich
+700,463,8.23,270186,806075,True,Chick-n-Strips  Combo	3 Pc.
+765,268,17.95,361512,339744,True,Soup & Salad (Large Chicken Soup and Side Salad)
+535,742,11.71,700182,872990,True,Grilled Chicken Club Sandwich
+233,255,10.54,264236,498505,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+150,555,5.21,388134,620910,True,Chicken Salad Cup
+796,134,9.00,636310,697659,True,Chicken Salad Sandwich  Combo
+471,359,7.36,428059,190308,True,Chicken Salad Sandwich
+162,827,9.32,278914,698460,True,Grilled Chicken Sandwich  Combo
+487,379,15.18,413241,291366,True,Chick-fil-A Chicken Deluxe Sandwich
+520,669,9.53,768443,892970,True,Chick-n-Strips  Combo	3 Pc.
+486,614,15.81,800270,480891,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+956,304,9.61,622573,860268,True,Chick-fil-A Chicken Sandwich  Combo
+279,803,15.31,633803,636564,True,Yogurt Parfait
+639,916,8.29,999154,293264,True,Grilled Chicken Cool Wrap
+837,278,5.62,574660,575439,True,Spicy Chicken Deluxe Sandwich  Combo
+765,142,5.09,686024,965409,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+466,367,16.93,429393,492366,True,Spicy Chicken Sandwich
+621,787,15.74,524810,320770,True,Chick-fil-A Nuggets 8 Pc.
+396,221,6.75,330225,303228,True,Grilled Chicken Club Sandwich
+114,813,11.05,789210,737734,True,Chick-fil-A Nuggets  Combo 8 Pc.
+859,189,19.66,496370,903715,True,Spicy Chicken Deluxe Sandwich
+376,119,16.24,334814,650902,True,Chick-fil-A Chicken Sandwich  Combo
+254,369,18.53,357710,892535,True,Substitute Medium Premium Side
+473,149,5.59,406585,688700,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+413,997,7.40,381185,591602,True,Spicy Chicken Deluxe Sandwich  Combo
+344,980,19.58,690129,115553,True,Chick-fil-A Chicken Sandwich
+570,288,5.96,673758,133273,True,Soup & Salad (Large Chicken Soup and Side Salad)
+756,930,7.13,228545,591846,True,Upsize Fries & Drink
+720,515,11.39,283210,242849,True,Chicken Salad Sandwich
+529,549,15.94,853899,437751,True,Grilled Chicken Club Sandwich  Combo
+772,812,15.47,210449,498771,True,Chick-fil-A Chicken Deluxe Sandwich
+473,255,15.81,548447,836595,True,Upsize Fries & Drink
+199,679,9.75,689666,597280,True,Chick-fil-A Nuggets  Combo 8 Pc.
+604,467,9.18,101428,818803,True,Chicken Salad Sandwich
+324,528,13.77,929032,852298,True,Spicy Chicken Sandwich  Combo
+721,200,7.70,661339,203143,True,Chicken Salad Sandwich  Combo
+773,923,17.75,115892,640103,True,Chick-fil-A Chicken Sandwich
+400,355,16.13,496662,517066,True,Spicy Chicken Sandwich  Combo
+808,374,18.91,784582,512721,True,Grilled Chicken Sandwich
+948,923,11.52,251005,335194,True,Upsize Fries & Drink
+670,221,18.60,775157,776651,True,Grilled Chicken Club Sandwich
+336,719,13.00,620900,889227,True,Spicy Chicken Sandwich  Combo
+866,234,14.85,399505,930504,True,Chick-n-Strips  Combo	3 Pc.
+349,212,12.78,761576,230265,True,Chick-n-Strips	3 Pc.
+500,142,8.11,397267,327388,True,Chick-fil-A Chicken Deluxe Sandwich
+410,447,18.60,611082,255643,True,Chick-fil-A Nuggets 8 Pc.
+833,425,5.84,789894,476411,True,Spicy Chicken Sandwich  Combo
+105,607,10.75,695699,411624,True,Chick-fil-A Chicken Sandwich  Combo
+576,840,11.81,215123,733260,True,Upsize Fries & Drink
+146,173,5.91,951383,469348,True,Yogurt Parfait
+877,832,11.51,880319,952235,True,Grilled Chicken Sandwich
+912,899,12.74,626999,927817,True,Grilled Chicken Sandwich  Combo
+141,480,17.88,571999,262710,True,Grilled Chicken Cool Wrap
+249,957,15.34,968319,771095,True,Chick-fil-A Chicken Sandwich
+423,871,7.68,327302,690397,True,Spicy Chicken Sandwich  Combo
+388,335,6.50,523205,712580,True,Grilled Chicken Club Sandwich  Combo
+490,919,5.02,365304,944391,True,Chick-fil-A Chicken Sandwich  Combo
+830,280,10.54,805408,860354,True,Chick-fil-A Chicken Sandwich  Combo
+232,369,6.60,718429,220956,True,Chick-n-Strips  Combo	3 Pc.
+101,431,7.04,884916,172267,True,Grilled Chicken Cool Wrap
+503,166,16.37,417569,580577,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+892,496,6.12,793927,126867,True,Side Salad
+270,934,17.67,241539,400395,True,Chick-fil-A Chicken Sandwich
+143,852,9.53,285220,778603,True,Chicken Salad Cup
+538,300,12.19,297647,265702,True,Grilled Chicken Club Sandwich
+459,302,15.36,967596,556938,True,Grilled Chicken Club Sandwich  Combo
+255,825,9.74,342290,711976,True,Chicken Salad Sandwich  Combo
+534,900,11.14,522053,521047,True,Chicken Salad Cup
+190,250,6.78,365474,535690,True,Spicy Chicken Sandwich
+800,418,15.35,984458,514428,True,Grilled Chicken Sandwich  Combo
+237,206,11.22,630149,141306,True,Chick-fil-A Chicken Deluxe Sandwich
+306,852,10.42,715425,813400,True,Grilled Chicken Cool Wrap
+748,597,10.16,366491,730066,True,Chick-n-Strips	3 Pc.
+511,593,5.50,417950,247874,True,Soup & Salad (Large Chicken Soup and Side Salad)
+698,717,11.68,612470,823646,True,Chick-fil-A Chicken Sandwich
+930,567,12.17,305749,663038,True,Spicy Chicken Deluxe Sandwich
+234,354,14.78,702208,385154,True,Chick-fil-A Chicken Sandwich
+370,847,18.42,594960,849425,True,Chicken Salad Sandwich
+229,340,15.27,614677,653029,True,Spicy Chicken Deluxe Sandwich
+906,369,5.26,722100,383993,True,Chick-fil-A Nuggets  Combo 8 Pc.
+636,241,11.79,892732,851985,True,Chicken Salad Cup
+508,116,5.47,614065,636120,True,Chicken Soup
+254,348,12.73,105116,827196,True,Grilled Chicken Sandwich
+777,788,19.48,946148,987228,True,Chick-fil-A Chicken Sandwich
+912,517,13.35,674996,357948,True,Substitute Medium Premium Side
+475,244,18.67,339766,240025,True,Substitute Medium Premium Side
+148,955,19.34,669867,202699,True,Yogurt Parfait
+308,429,13.70,541267,917495,True,Chick-n-Strips  Combo	3 Pc.
+309,904,19.44,561420,971755,True,Chicken Salad Cup
+781,442,13.31,107174,702359,True,Substitute Medium Premium Side
+999,524,12.81,785844,233649,True,Chick-fil-A Nuggets 8 Pc.
+962,304,7.75,365393,366083,True,Chick-n-Strips	3 Pc.
+149,753,10.92,573755,122723,True,Upsize Fries & Drink
+587,110,7.00,840902,697558,True,Chick-fil-A Chicken Sandwich
+670,734,15.99,941618,230695,True,Chicken Salad Cup
+199,364,9.47,223977,772314,True,Chick-n-Strips	3 Pc.
+335,464,19.62,647019,858014,True,Chick-fil-A Chicken Deluxe Sandwich
+772,986,13.18,786374,164526,True,Soup & Salad (Large Chicken Soup and Side Salad)
+462,887,10.84,298791,763636,True,Chicken Salad Sandwich  Combo
+506,991,9.04,738051,792446,True,Grilled Chicken Sandwich  Combo
+314,437,12.49,642873,225147,True,Chick-fil-A Chicken Sandwich
+701,310,11.64,284201,924962,True,Chick-fil-A Chicken Sandwich  Combo
+769,931,10.77,607085,442484,True,Grilled Chicken Club Sandwich  Combo
+895,780,11.94,202605,782169,True,Chicken Salad Sandwich
+314,352,7.29,957388,796256,True,Grilled Chicken Club Sandwich  Combo
+207,923,10.39,875624,290887,True,Chick-fil-A Chicken Deluxe Sandwich
+876,685,12.21,227236,337076,True,Grilled Chicken Sandwich
+212,765,18.01,725664,149380,True,Spicy Chicken Sandwich
+904,215,5.03,504680,653624,True,Chicken Salad Sandwich  Combo
+981,548,16.58,452857,530189,True,Grilled Chicken Sandwich
+320,190,7.97,707069,359328,True,Chick-fil-A Nuggets 8 Pc.
+414,121,7.24,801596,610600,True,Spicy Chicken Sandwich
+284,208,18.43,431026,484427,True,Grilled Chicken Sandwich
+451,215,7.78,870894,682379,True,Substitute Medium Premium Side
+751,633,8.07,745347,830638,True,Grilled Chicken Sandwich
+668,217,11.25,297425,599612,True,Substitute Medium Premium Side
+736,344,7.58,518864,522200,True,Grilled Chicken Cool Wrap
+265,235,10.31,841052,122563,True,Spicy Chicken Sandwich  Combo
+139,412,6.64,404706,416720,True,Spicy Chicken Sandwich
+316,175,7.14,460347,711774,True,Grilled Chicken Sandwich  Combo
+464,613,11.67,489123,943980,True,Grilled Chicken Cool Wrap
+664,667,8.36,685434,716232,True,Chick-n-Strips  Combo	3 Pc.
+238,748,16.40,110488,183557,True,Upsize Fries & Drink
+264,162,7.63,572665,331594,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+394,346,16.62,549144,669217,True,Chicken Salad Sandwich
+918,554,14.85,980766,478555,True,Grilled Chicken Sandwich  Combo
+261,129,19.49,193236,867868,True,Chicken Soup
+467,439,6.67,498269,427492,True,Chicken Salad Sandwich
+927,826,13.95,872949,924820,True,Soup & Salad (Large Chicken Soup and Side Salad)
+259,640,14.82,530980,518207,True,Chick-n-Strips	3 Pc.
+977,726,14.01,154728,807150,True,Substitute Medium Premium Side
+156,910,7.17,628903,969940,True,Chicken Salad Cup
+674,400,15.27,102377,886229,True,Spicy Chicken Deluxe Sandwich
+946,447,16.12,541507,422787,True,Yogurt Parfait
+201,269,10.90,951051,455436,True,Spicy Chicken Sandwich
+425,383,7.51,750165,539794,True,Chick-fil-A Chicken Sandwich  Combo
+469,856,19.33,978860,811155,True,Chick-fil-A Nuggets 8 Pc.
+470,307,12.04,134254,381488,True,Chick-n-Strips	3 Pc.
+354,140,7.63,884159,517362,True,Chick-fil-A Nuggets 8 Pc.
+256,202,12.24,614007,133305,True,Yogurt Parfait
+164,993,9.82,427161,670106,True,Spicy Chicken Sandwich  Combo
+115,190,9.45,223653,743031,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+675,870,16.63,395313,615789,True,Chicken Soup
+812,780,8.29,550361,975004,True,Soup & Salad (Large Chicken Soup and Side Salad)
+516,764,18.07,772423,731340,True,Spicy Chicken Sandwich  Combo
+912,825,14.87,987973,835020,True,Spicy Chicken Sandwich
+781,563,13.41,452000,978619,True,Chicken Soup
+187,536,16.76,422490,692344,True,Grilled Chicken Sandwich
+583,150,9.94,601661,406817,True,Chick-fil-A Chicken Deluxe Sandwich
+422,458,16.43,715772,695141,True,Chick-fil-A Chicken Sandwich  Combo
+720,839,10.24,962740,813920,True,Chick-n-Strips  Combo	3 Pc.
+552,808,10.69,841200,674865,True,Chicken Salad Cup
+667,880,6.49,385686,999962,True,Side Salad
+596,236,19.55,193410,735820,True,Upsize Fries & Drink
+529,743,6.97,249759,552495,True,Chick-fil-A Nuggets 8 Pc.
+145,986,6.79,331654,706837,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+282,494,5.19,292819,100671,True,Yogurt Parfait
+421,924,6.20,701991,321132,True,Chicken Soup
+893,188,15.59,473697,239771,True,Chicken Salad Sandwich
+227,480,10.11,790193,240448,True,Chick-fil-A Chicken Sandwich
+730,724,13.68,600019,176390,True,Spicy Chicken Deluxe Sandwich
+876,410,15.90,930164,553827,True,Spicy Chicken Sandwich
+286,117,15.60,702539,869615,True,Chicken Salad Sandwich  Combo
+700,893,15.05,764233,745575,True,Grilled Chicken Cool Wrap
+885,442,11.91,123484,827347,True,Chick-n-Strips	3 Pc.
+360,653,18.28,598327,483600,True,Grilled Chicken Sandwich  Combo
+277,486,18.90,312079,246351,True,Soup & Salad (Large Chicken Soup and Side Salad)
+321,953,10.36,198294,926068,True,Chick-fil-A Chicken Deluxe Sandwich
+674,395,11.45,336731,871933,True,Spicy Chicken Deluxe Sandwich  Combo
+630,338,18.85,651674,955201,True,Chicken Salad Sandwich  Combo
+682,745,5.26,159802,803222,True,Chick-fil-A Nuggets  Combo 8 Pc.
+793,929,6.85,574933,231801,True,Grilled Chicken Sandwich
+735,693,11.06,686913,510978,True,Chick-fil-A Nuggets 8 Pc.
+850,617,5.38,710060,195171,True,Grilled Chicken Sandwich
+729,564,16.43,793613,363035,True,Chicken Soup
+141,461,11.06,358776,997040,True,Chick-fil-A Chicken Sandwich  Combo
+740,122,10.91,879493,504468,True,Grilled Chicken Cool Wrap
+459,181,6.48,642111,575803,True,Chicken Soup
+719,314,12.73,398813,848930,True,Side Salad
+305,579,19.96,797111,284912,True,Chicken Salad Sandwich  Combo
+320,826,7.42,332755,743544,True,Yogurt Parfait
+719,301,17.37,698385,443749,True,Spicy Chicken Sandwich  Combo
+514,569,10.08,893756,942101,True,Chicken Salad Sandwich  Combo
+502,501,15.30,339428,397340,True,Upsize Fries & Drink
+912,396,10.51,585091,841483,True,Grilled Chicken Sandwich  Combo
+922,432,15.53,589247,529931,True,Spicy Chicken Deluxe Sandwich
+747,630,15.08,988513,546972,True,Side Salad
+131,584,6.64,607410,930620,True,Grilled Chicken Club Sandwich
+863,335,17.64,770316,146916,True,Chicken Salad Cup
+687,393,8.56,798564,193042,True,Chick-n-Strips  Combo	3 Pc.
+453,749,10.08,418369,914477,True,Chick-fil-A Chicken Sandwich  Combo
+169,545,17.76,544590,530409,True,Grilled Chicken Sandwich
+775,547,14.66,179290,965816,True,Grilled Chicken Club Sandwich
+247,582,13.89,362254,357023,True,Grilled Chicken Club Sandwich
+560,682,11.00,224684,155626,True,Chick-fil-A Chicken Sandwich
+619,909,10.59,974260,607447,True,Chick-n-Strips  Combo	3 Pc.
+918,233,5.19,409109,683212,True,Upsize Fries & Drink
+121,709,15.13,961090,194097,True,Spicy Chicken Deluxe Sandwich  Combo
+597,203,18.94,648538,557936,True,Spicy Chicken Sandwich  Combo
+288,585,19.72,789986,864590,True,Grilled Chicken Club Sandwich
+829,799,16.56,304536,869314,True,Chicken Salad Sandwich  Combo
+955,692,16.89,692798,537205,True,Spicy Chicken Deluxe Sandwich
+560,682,11.54,572573,684511,True,Chick-n-Strips	3 Pc.
+875,817,11.70,938413,707657,True,Grilled Chicken Cool Wrap
+357,414,6.75,833645,765600,True,Chick-fil-A Nuggets 8 Pc.
+475,883,16.43,781308,592338,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+254,331,9.82,667683,845730,True,Chick-fil-A Chicken Deluxe Sandwich
+451,239,18.19,807621,272375,True,Chicken Salad Sandwich
+382,175,7.14,422589,505398,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+683,274,16.35,249530,190527,True,Chicken Salad Sandwich  Combo
+330,821,6.74,923206,178864,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+552,804,15.47,835851,951188,True,Chick-fil-A Chicken Sandwich  Combo
+459,902,19.74,352450,961119,True,Spicy Chicken Deluxe Sandwich  Combo
+820,475,9.57,489558,486427,True,Chicken Salad Cup
+842,498,12.48,849608,283375,True,Chick-fil-A Chicken Sandwich
+447,612,6.33,459094,530186,True,Spicy Chicken Sandwich
+608,958,16.03,919947,454621,True,Chick-n-Strips	3 Pc.
+285,933,7.24,685882,363651,True,Chick-n-Strips	3 Pc.
+651,388,8.79,977028,174268,True,Grilled Chicken Club Sandwich
+545,392,14.86,173263,967553,True,Spicy Chicken Sandwich
+388,583,13.52,708421,738397,True,Chick-fil-A Chicken Sandwich
+789,914,14.11,220122,973565,True,Substitute Medium Premium Side
+835,679,9.39,389102,624529,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+103,911,8.87,278501,255695,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+703,628,9.35,649895,565654,True,Chicken Salad Cup
+883,677,19.53,188747,171329,True,Spicy Chicken Deluxe Sandwich
+295,549,6.58,438951,430718,True,Chick-fil-A Nuggets  Combo 8 Pc.
+777,271,7.22,509967,544535,True,Spicy Chicken Sandwich
+719,295,15.91,643871,208208,True,Grilled Chicken Club Sandwich  Combo
+536,898,15.50,462995,738202,True,Grilled Chicken Club Sandwich
+339,599,15.29,292491,262824,True,Grilled Chicken Club Sandwich
+465,893,7.67,278789,533992,True,Yogurt Parfait
+757,904,6.10,511568,643246,True,Side Salad
+244,940,16.95,495358,841273,True,Chick-fil-A Chicken Sandwich
+921,236,6.29,371551,528454,True,Grilled Chicken Club Sandwich
+272,392,15.08,681584,181262,True,Chicken Salad Sandwich
+907,438,19.75,770567,203987,True,Grilled Chicken Club Sandwich
+720,288,7.12,637781,662827,True,Chick-fil-A Chicken Deluxe Sandwich
+850,821,5.23,433538,844145,True,Chick-fil-A Chicken Deluxe Sandwich
+266,174,13.96,546633,125783,True,Chicken Salad Sandwich
+465,788,13.70,381519,615717,True,Side Salad
+395,293,19.92,599973,402971,True,Side Salad
+215,606,18.36,291036,525391,True,Chicken Soup
+934,342,14.25,435110,124427,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+356,894,12.81,202073,794005,True,Chicken Salad Sandwich  Combo
+367,865,12.99,532514,817167,True,Chick-n-Strips  Combo	3 Pc.
+962,446,7.00,832370,427498,True,Chick-fil-A Chicken Deluxe Sandwich
+592,350,7.50,660894,419519,True,Grilled Chicken Sandwich  Combo
+770,486,10.78,375896,401910,True,Spicy Chicken Sandwich
+963,852,10.56,124351,457314,True,Chick-fil-A Chicken Sandwich
+118,843,8.26,862672,718899,True,Grilled Chicken Sandwich  Combo
+720,656,8.52,696517,621297,True,Spicy Chicken Sandwich  Combo
+985,966,12.36,139895,174224,True,Chick-fil-A Nuggets 8 Pc.
+192,282,8.22,369238,645026,True,Grilled Chicken Club Sandwich  Combo
+860,684,18.17,771329,815431,True,Substitute Medium Premium Side
+109,213,18.94,427714,523134,True,Spicy Chicken Sandwich  Combo
+457,582,13.45,841656,577958,True,Chick-n-Strips  Combo	3 Pc.
+466,900,16.53,942645,277828,True,Chick-fil-A Nuggets  Combo 8 Pc.
+641,764,10.01,836753,874480,True,Chick-fil-A Chicken Sandwich  Combo
+821,845,8.33,230415,806881,True,Soup & Salad (Large Chicken Soup and Side Salad)
+898,580,8.02,740300,206676,True,Side Salad
+966,497,8.21,741648,147496,True,Upsize Fries & Drink
+510,917,5.94,213586,962427,True,Chicken Soup
+997,834,6.00,115024,564516,True,Upsize Fries & Drink
+416,695,16.12,478441,955002,True,Chick-fil-A Nuggets 8 Pc.
+289,626,15.27,670625,224975,True,Chicken Soup
+613,406,6.12,569661,584785,True,Chicken Salad Sandwich
+947,504,11.24,564271,407435,True,Chick-fil-A Chicken Sandwich  Combo
+816,572,15.01,729394,915770,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+483,330,15.90,986494,884346,True,Chicken Salad Sandwich
+370,660,19.48,949878,398880,True,Grilled Chicken Sandwich  Combo
+453,489,8.75,235648,258951,True,Chick-n-Strips	3 Pc.
+231,619,15.47,148741,205385,True,Yogurt Parfait
+923,559,19.02,314936,714034,True,Grilled Chicken Club Sandwich
+174,359,15.81,748884,608235,True,Grilled Chicken Cool Wrap
+955,940,5.99,283034,462453,True,Grilled Chicken Sandwich  Combo
+985,243,5.11,913622,547002,True,Spicy Chicken Deluxe Sandwich  Combo
+305,595,11.17,480625,425103,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+143,784,15.27,986536,291827,True,Chicken Salad Cup
+607,512,15.19,473206,714826,True,Chick-fil-A Nuggets 8 Pc.
+462,578,17.70,526306,314816,True,Chicken Salad Sandwich  Combo
+963,956,12.27,364347,827420,True,Chick-fil-A Nuggets 8 Pc.
+508,311,15.55,617497,347613,True,Chicken Salad Sandwich  Combo
+937,154,9.01,268709,800210,True,Chick-fil-A Nuggets  Combo 8 Pc.
+186,259,8.61,126796,877944,True,Spicy Chicken Sandwich
+230,142,10.49,549225,154769,True,Upsize Fries & Drink
+247,685,15.61,647263,476282,True,Upsize Fries & Drink
+112,190,9.02,451143,410557,True,Substitute Medium Premium Side
+593,476,10.88,569964,655547,True,Chicken Salad Cup
+665,531,13.71,869467,405946,True,Chick-n-Strips  Combo	3 Pc.
+384,152,18.55,771043,286883,True,Substitute Medium Premium Side
+947,109,14.14,481483,220277,True,Grilled Chicken Cool Wrap
+808,550,11.66,895220,430143,True,Grilled Chicken Club Sandwich  Combo
+138,733,14.10,321837,158975,True,Spicy Chicken Sandwich
+316,348,14.22,573732,555904,True,Chick-fil-A Chicken Deluxe Sandwich
+797,382,9.40,525863,603681,True,Soup & Salad (Large Chicken Soup and Side Salad)
+355,782,14.36,337727,938661,True,Chicken Soup
+928,712,14.02,737617,194646,True,Chicken Salad Sandwich
+255,573,12.24,200222,965376,True,Spicy Chicken Deluxe Sandwich
+267,475,17.44,591669,925390,True,Spicy Chicken Deluxe Sandwich
+513,325,17.12,923930,689828,True,Grilled Chicken Club Sandwich  Combo
+561,294,6.78,640771,236195,True,Spicy Chicken Sandwich
+732,420,17.49,309532,809843,True,Chick-fil-A Nuggets 8 Pc.
+905,208,5.33,799866,834763,True,Chicken Salad Sandwich
+708,458,6.43,520779,993025,True,Spicy Chicken Sandwich
+325,139,11.28,727764,832861,True,Chicken Soup
+535,796,15.82,153161,276088,True,Grilled Chicken Club Sandwich  Combo
+230,666,12.93,205666,424028,True,Chick-fil-A Chicken Deluxe Sandwich
+953,334,12.02,907351,436428,True,Spicy Chicken Deluxe Sandwich  Combo
+135,810,8.04,483409,814590,True,Grilled Chicken Club Sandwich  Combo
+789,517,8.59,937001,542885,True,Grilled Chicken Sandwich  Combo
+584,695,11.30,777990,792899,True,Chick-n-Strips	3 Pc.
+995,323,16.16,931115,593022,True,Chick-fil-A Chicken Sandwich  Combo
+429,350,10.48,746908,570806,True,Spicy Chicken Sandwich  Combo
+516,595,19.32,603430,321839,True,Chick-fil-A Chicken Sandwich
+232,528,19.98,510987,704067,True,Chick-fil-A Nuggets  Combo 8 Pc.
+793,428,12.80,695976,109458,True,Chicken Salad Sandwich  Combo
+210,410,7.23,432642,673126,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+717,132,6.83,220267,869396,True,Spicy Chicken Sandwich
+424,798,10.56,545319,325181,True,Yogurt Parfait
+104,919,17.19,192023,810082,True,Chicken Salad Sandwich  Combo
+970,263,19.15,244989,903811,True,Substitute Medium Premium Side
+911,806,12.00,240175,571993,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+111,587,5.08,508848,182545,True,Grilled Chicken Cool Wrap
+963,659,19.21,777512,154629,True,Chicken Soup
+322,318,14.22,965762,618893,True,Spicy Chicken Deluxe Sandwich  Combo
+806,846,9.87,532066,560715,True,Chick-fil-A Chicken Sandwich  Combo
+943,196,10.66,111552,978502,True,Chick-n-Strips  Combo	3 Pc.
+566,442,19.10,964053,732151,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+945,974,19.11,504602,483831,True,Chick-fil-A Nuggets  Combo 8 Pc.
+914,837,7.88,899739,706851,True,Chick-fil-A Nuggets 8 Pc.
+436,836,13.79,846961,824477,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+413,958,9.16,836676,614691,True,Substitute Medium Premium Side
+972,522,14.13,899233,142423,True,Grilled Chicken Sandwich  Combo
+276,779,10.82,160460,309768,True,Spicy Chicken Sandwich  Combo
+862,900,6.94,985040,488910,True,Chick-fil-A Chicken Deluxe Sandwich
+156,305,11.47,283155,158063,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+763,396,11.69,614894,583717,True,Grilled Chicken Cool Wrap
+350,808,11.54,971521,786271,True,Spicy Chicken Sandwich
+809,557,15.79,714620,757631,True,Chicken Salad Cup
+887,603,10.32,758098,837334,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+413,999,6.95,566063,249584,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+948,869,18.35,370809,894945,True,Grilled Chicken Cool Wrap
+687,401,7.90,973305,180116,True,Grilled Chicken Sandwich
+475,785,10.31,554578,909607,True,Spicy Chicken Sandwich
+994,415,10.88,873967,237788,True,Grilled Chicken Club Sandwich
+428,925,8.70,130136,552843,True,Chick-n-Strips	3 Pc.
+341,526,12.83,632788,675410,True,Chicken Salad Sandwich
+912,437,15.19,625531,844760,True,Yogurt Parfait
+633,408,8.79,603661,748776,True,Grilled Chicken Cool Wrap
+608,892,8.19,908766,993561,True,Chicken Soup
+957,273,11.44,367861,860342,True,Spicy Chicken Deluxe Sandwich  Combo
+246,867,16.89,332163,253046,True,Grilled Chicken Sandwich  Combo
+898,447,14.40,690238,835821,True,Grilled Chicken Cool Wrap
+999,770,15.00,663278,275459,True,Chicken Soup
+945,831,6.35,131533,154278,True,Chick-fil-A Chicken Sandwich
+614,731,10.38,627150,446507,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+633,465,12.34,174512,168146,True,Spicy Chicken Deluxe Sandwich  Combo
+886,913,11.59,459729,319339,True,Spicy Chicken Sandwich
+325,789,7.74,823028,887187,True,Substitute Medium Premium Side
+405,202,6.18,512442,315160,True,Chick-n-Strips	3 Pc.
+907,513,19.15,500088,802547,True,Chick-fil-A Chicken Sandwich  Combo
+720,468,7.07,498917,898442,True,Chick-fil-A Chicken Deluxe Sandwich
+845,165,16.20,383393,711662,True,Chick-fil-A Chicken Deluxe Sandwich
+366,969,6.55,894034,462367,True,Chicken Salad Cup
+984,582,10.18,708076,787664,True,Soup & Salad (Large Chicken Soup and Side Salad)
+590,642,19.42,284320,813041,True,Grilled Chicken Sandwich  Combo
+900,273,16.64,320338,245315,True,Chick-fil-A Chicken Deluxe Sandwich
+946,329,16.87,825511,328322,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+175,627,17.07,404227,450938,True,Spicy Chicken Deluxe Sandwich  Combo
+904,207,14.33,973167,795048,True,Side Salad
+920,100,17.24,959120,401141,True,Grilled Chicken Sandwich
+698,709,7.86,940203,140807,True,Chicken Salad Sandwich  Combo
+906,879,17.71,850045,804937,True,Chick-fil-A Chicken Sandwich
+253,161,6.62,235962,596941,True,Yogurt Parfait
+385,335,13.89,467424,292801,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+1000,478,17.56,258246,915582,True,Chicken Salad Cup
+870,334,5.25,563454,605044,True,Upsize Fries & Drink
+228,367,15.62,810254,351816,True,Upsize Fries & Drink
+235,544,12.89,308677,534431,True,Chick-fil-A Chicken Sandwich  Combo
+645,127,15.89,526598,250383,True,Chick-fil-A Nuggets 8 Pc.
+923,520,9.62,907876,182522,True,Upsize Fries & Drink
+697,448,10.97,190271,425688,True,Spicy Chicken Deluxe Sandwich
+133,347,13.35,209866,670783,True,Grilled Chicken Club Sandwich  Combo
+688,398,12.58,831513,720096,True,Spicy Chicken Sandwich  Combo
+978,744,13.65,582513,467763,True,Chicken Salad Sandwich  Combo
+757,984,17.46,719205,394137,True,Chick-n-Strips  Combo	3 Pc.
+996,808,11.74,810657,886284,True,Chicken Soup
+689,142,15.41,341101,377226,True,Yogurt Parfait
+271,134,11.04,254375,531050,True,Chicken Salad Sandwich
+305,662,9.38,783113,597136,True,Spicy Chicken Deluxe Sandwich  Combo
+428,114,18.91,495835,683154,True,Chicken Salad Sandwich  Combo
+183,866,5.81,788485,295852,True,Chick-fil-A Nuggets  Combo 8 Pc.
+997,154,9.79,840691,152570,True,Chick-n-Strips	3 Pc.
+373,765,17.65,455583,774564,True,Chick-fil-A Nuggets  Combo 8 Pc.
+998,212,12.35,915445,193401,True,Grilled Chicken Club Sandwich
+279,910,16.57,103392,707690,True,Chick-fil-A Chicken Sandwich  Combo
+646,429,7.08,193291,978811,True,Soup & Salad (Large Chicken Soup and Side Salad)
+721,502,18.48,893036,951710,True,Chick-fil-A Chicken Deluxe Sandwich
+277,443,16.61,364228,862360,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+638,270,9.27,254894,118160,True,Chicken Salad Sandwich
+594,136,12.93,706120,639686,True,Chick-fil-A Chicken Sandwich  Combo
+793,659,15.78,719899,852906,True,Substitute Medium Premium Side
+174,843,7.06,653930,441512,True,Chick-fil-A Chicken Sandwich  Combo
+813,651,10.56,468767,366694,True,Chicken Salad Sandwich  Combo
+463,739,14.11,546809,468103,True,Chick-fil-A Chicken Deluxe Sandwich
+617,660,18.31,972372,288423,True,Chick-fil-A Chicken Sandwich  Combo
+922,689,10.72,553130,281881,True,Chick-n-Strips  Combo	3 Pc.
+327,102,8.10,768642,960905,True,Grilled Chicken Club Sandwich
+336,347,17.73,407749,185758,True,Yogurt Parfait
+259,328,19.01,313401,835654,True,Spicy Chicken Deluxe Sandwich  Combo
+773,265,13.29,560018,732134,True,Yogurt Parfait
+739,963,14.81,810295,395493,True,Spicy Chicken Sandwich
+646,976,17.66,267891,648232,True,Grilled Chicken Club Sandwich
+290,625,12.72,337993,530517,True,Chick-fil-A Chicken Deluxe Sandwich
+358,887,16.12,618763,388032,True,Side Salad
+667,331,9.27,892095,563209,True,Spicy Chicken Sandwich  Combo
+709,526,6.50,984647,505834,True,Substitute Medium Premium Side
+140,271,17.93,201798,238748,True,Grilled Chicken Sandwich  Combo
+221,960,19.26,516683,766864,True,Spicy Chicken Sandwich
+120,326,13.80,116523,491000,True,Grilled Chicken Club Sandwich
+801,504,9.97,549445,862829,True,Chick-fil-A Nuggets 8 Pc.
+468,255,17.59,345255,661225,True,Chicken Salad Cup
+462,757,13.01,897279,596718,True,Chicken Soup
+185,475,9.89,375197,698725,True,Spicy Chicken Sandwich  Combo
+873,182,16.10,645064,455675,True,Chick-fil-A Chicken Sandwich  Combo
+248,164,15.53,292754,807323,True,Side Salad
+554,690,16.83,345681,854421,True,Spicy Chicken Deluxe Sandwich  Combo
+119,712,7.63,166147,315325,True,Spicy Chicken Deluxe Sandwich  Combo
+377,238,16.28,104277,756688,True,Spicy Chicken Sandwich  Combo
+715,259,5.90,987092,318775,True,Spicy Chicken Deluxe Sandwich  Combo
+546,664,6.03,757666,305056,True,Chick-n-Strips	3 Pc.
+235,243,11.57,744994,842534,True,Spicy Chicken Sandwich
+328,745,16.69,469003,803249,True,Spicy Chicken Sandwich  Combo
+941,361,7.76,235593,287404,True,Chicken Salad Sandwich
+920,668,12.48,847416,318585,True,Chick-n-Strips  Combo	3 Pc.
+625,568,9.04,992051,495089,True,Chick-fil-A Chicken Sandwich  Combo
+708,672,6.20,986024,636780,True,Chicken Salad Sandwich  Combo
+218,800,10.05,418560,556484,True,Soup & Salad (Large Chicken Soup and Side Salad)
+943,493,12.85,193967,640973,True,Spicy Chicken Deluxe Sandwich
+516,745,10.89,526934,541804,True,Yogurt Parfait
+599,339,11.84,161316,930759,True,Grilled Chicken Club Sandwich  Combo
+176,266,18.46,222323,452501,True,Spicy Chicken Sandwich
+550,350,14.85,618939,910945,True,Chicken Soup
+813,493,8.54,931214,865368,True,Chick-n-Strips	3 Pc.
+591,824,5.50,668272,700058,True,Chick-n-Strips  Combo	3 Pc.
+631,205,16.88,510324,755842,True,Soup & Salad (Large Chicken Soup and Side Salad)
+516,230,15.86,816292,996966,True,Spicy Chicken Deluxe Sandwich
+371,527,12.11,435430,441447,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+209,326,7.29,828153,341226,True,Yogurt Parfait
+296,115,15.11,251820,359754,True,Grilled Chicken Club Sandwich
+536,551,16.03,782747,879925,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+267,764,19.42,924702,344150,True,Grilled Chicken Sandwich
+274,557,6.27,671598,410843,True,Upsize Fries & Drink
+216,813,7.35,854482,872852,True,Chick-fil-A Chicken Sandwich
+605,695,5.72,947754,514567,True,Grilled Chicken Sandwich
+275,297,7.24,141633,412666,True,Yogurt Parfait
+208,103,8.40,880113,832429,True,Chicken Salad Sandwich  Combo
+363,476,14.76,933149,153266,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+326,389,11.11,782705,725821,True,Chick-n-Strips	3 Pc.
+178,252,19.83,144004,147030,True,Yogurt Parfait
+679,814,14.10,430489,713021,True,Chicken Soup
+227,300,19.18,806323,442671,True,Grilled Chicken Sandwich  Combo
+597,148,17.36,328606,586799,True,Grilled Chicken Sandwich
+807,374,9.89,896875,972091,True,Yogurt Parfait
+376,504,15.97,611636,346919,True,Side Salad
+959,703,17.49,897119,989556,True,Grilled Chicken Cool Wrap
+905,280,16.26,319521,374372,True,Chick-fil-A Nuggets  Combo 8 Pc.
+202,445,10.99,209727,208202,True,Chick-n-Strips	3 Pc.
+987,261,18.60,195937,717549,True,Spicy Chicken Sandwich
+338,107,11.03,565266,717495,True,Grilled Chicken Sandwich
+651,497,16.94,567776,374239,True,Grilled Chicken Club Sandwich
+354,253,9.32,840287,850992,True,Substitute Medium Premium Side
+663,415,19.31,420441,130747,True,Yogurt Parfait
+179,561,14.32,225107,439585,True,Chicken Salad Sandwich
+262,903,14.67,927502,599210,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+563,126,6.77,206527,468758,True,Grilled Chicken Sandwich  Combo
+207,613,14.51,762402,190634,True,Chick-fil-A Chicken Sandwich
+133,594,7.11,987038,947510,True,Soup & Salad (Large Chicken Soup and Side Salad)
+201,894,9.57,244288,455578,True,Chicken Salad Sandwich
+447,798,17.67,208139,435293,True,Grilled Chicken Club Sandwich  Combo
+578,643,9.31,851470,959525,True,Chick-fil-A Chicken Deluxe Sandwich
+381,498,19.51,270204,935123,True,Upsize Fries & Drink
+285,915,18.16,252721,244871,True,Upsize Fries & Drink
+596,536,9.09,854159,634118,True,Grilled Chicken Cool Wrap
+580,969,8.40,789957,189650,True,Chick-fil-A Chicken Deluxe Sandwich
+625,950,9.51,200462,765790,True,Chicken Salad Sandwich
+980,288,16.80,523999,221095,True,Chick-fil-A Chicken Deluxe Sandwich
+916,571,9.38,575326,209068,True,Chick-fil-A Chicken Sandwich
+518,810,9.57,302545,534983,True,Chicken Salad Sandwich
+405,332,18.01,606532,642481,True,Spicy Chicken Deluxe Sandwich  Combo
+912,667,16.56,160791,350278,True,Yogurt Parfait
+129,487,18.28,180750,205992,True,Chick-n-Strips	3 Pc.
+593,449,15.63,235840,281682,True,Chick-fil-A Nuggets 8 Pc.
+995,813,12.40,539287,385252,True,Chick-fil-A Chicken Sandwich  Combo
+217,841,18.86,616546,318634,True,Chicken Salad Cup
+749,441,9.94,300705,632177,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+471,933,19.36,905420,107991,True,Chicken Salad Sandwich  Combo
+759,258,17.76,280306,776367,True,Chick-fil-A Chicken Deluxe Sandwich
+155,201,7.77,855033,487215,True,Chick-fil-A Chicken Deluxe Sandwich
+111,480,6.52,338855,114555,True,Grilled Chicken Sandwich  Combo
+803,784,11.62,796405,851641,True,Chick-n-Strips  Combo	3 Pc.
+680,565,11.66,645127,609756,True,Grilled Chicken Cool Wrap
+710,293,19.06,414109,448172,True,Chicken Salad Sandwich
+646,185,10.58,501079,892493,True,Side Salad
+871,679,16.28,402484,953401,True,Soup & Salad (Large Chicken Soup and Side Salad)
+935,721,19.18,198034,332896,True,Chicken Salad Sandwich
+409,661,8.33,402963,447063,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+448,898,12.50,288129,475852,True,Soup & Salad (Large Chicken Soup and Side Salad)
+448,835,18.92,702892,108480,True,Grilled Chicken Sandwich
+575,202,16.62,317954,998507,True,Chick-n-Strips	3 Pc.
+719,484,11.62,651663,660844,True,Side Salad
+114,769,19.63,601746,662644,True,Soup & Salad (Large Chicken Soup and Side Salad)
+351,245,8.03,865007,242415,True,Grilled Chicken Club Sandwich  Combo
+967,977,17.32,636002,941481,True,Chicken Salad Sandwich
+238,168,19.63,349795,625334,True,Chick-fil-A Chicken Sandwich
+226,431,10.15,211676,904119,True,Chick-fil-A Nuggets 8 Pc.
+302,312,11.31,388193,330017,True,Soup & Salad (Large Chicken Soup and Side Salad)
+634,819,18.22,622811,751779,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+421,691,11.49,224364,469331,True,Chick-n-Strips  Combo	3 Pc.
+300,612,11.22,534514,512968,True,Grilled Chicken Sandwich  Combo
+286,312,12.78,302304,283033,True,Spicy Chicken Deluxe Sandwich
+789,185,14.86,127496,260458,True,Yogurt Parfait
+601,326,17.30,160108,659779,True,Chicken Soup
+304,981,9.58,184871,226969,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+286,608,13.45,150629,315437,True,Grilled Chicken Sandwich  Combo
+732,893,15.82,196875,196723,True,Side Salad
+504,152,13.57,327978,104955,True,Yogurt Parfait
+479,617,10.77,933804,969015,True,Side Salad
+761,261,15.59,404760,465263,True,Upsize Fries & Drink
+630,198,8.89,562140,562914,True,Chick-fil-A Chicken Deluxe Sandwich
+730,630,13.67,481796,695977,True,Spicy Chicken Deluxe Sandwich
+849,102,14.84,274879,990138,True,Chick-fil-A Chicken Deluxe Sandwich
+611,249,13.92,923551,848441,True,Spicy Chicken Sandwich  Combo
+233,295,10.01,660424,484456,True,Spicy Chicken Sandwich
+862,768,10.20,628745,936473,True,Spicy Chicken Deluxe Sandwich  Combo
+652,746,14.18,881328,258416,True,Substitute Medium Premium Side
+882,722,16.28,144084,617591,True,Chick-n-Strips	3 Pc.
+493,507,6.60,501657,632070,True,Soup & Salad (Large Chicken Soup and Side Salad)
+775,571,18.57,623340,740472,True,Upsize Fries & Drink
+270,677,16.30,636740,229545,True,Yogurt Parfait
+474,345,6.19,420968,945636,True,Spicy Chicken Sandwich
+963,152,16.57,838904,349837,True,Grilled Chicken Club Sandwich  Combo
+394,358,9.95,459770,880935,True,Grilled Chicken Club Sandwich
+167,167,18.80,596725,505135,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+357,116,16.45,959708,187490,True,Chick-fil-A Chicken Sandwich
+268,727,9.09,706775,833341,True,Grilled Chicken Sandwich
+701,899,7.12,774817,116853,True,Grilled Chicken Club Sandwich
+451,642,7.49,929169,286607,True,Soup & Salad (Large Chicken Soup and Side Salad)
+845,555,16.81,822005,675534,True,Grilled Chicken Club Sandwich
+356,677,8.63,359070,736762,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+110,475,8.73,693856,138786,True,Substitute Medium Premium Side
+103,732,6.78,946328,687295,True,Chick-fil-A Chicken Sandwich  Combo
+415,648,5.90,757438,103225,True,Chick-n-Strips  Combo	3 Pc.
+472,929,17.60,158756,377373,True,Chick-fil-A Chicken Sandwich  Combo
+505,534,16.55,466370,566886,True,Chicken Salad Cup
+720,243,16.75,865053,230705,True,Chick-fil-A Nuggets 8 Pc.
+517,632,6.05,656655,450862,True,Yogurt Parfait
+194,854,7.57,119292,157943,True,Chicken Salad Cup
+407,876,15.88,345032,626731,True,Chicken Salad Cup
+137,589,13.33,167105,434680,True,Soup & Salad (Large Chicken Soup and Side Salad)
+922,535,9.82,199389,508102,True,Spicy Chicken Deluxe Sandwich
+915,795,18.29,505504,925950,True,Spicy Chicken Sandwich
+980,425,11.83,949068,238631,True,Spicy Chicken Deluxe Sandwich
+710,397,19.73,365776,467262,True,Spicy Chicken Deluxe Sandwich
+437,199,13.29,329212,142568,True,Chick-fil-A Nuggets 8 Pc.
+887,897,16.43,527370,135402,True,Soup & Salad (Large Chicken Soup and Side Salad)
+254,241,6.77,316576,691127,True,Grilled Chicken Club Sandwich
+418,941,17.20,366487,520134,True,Grilled Chicken Cool Wrap
+946,528,18.82,240383,176485,True,Grilled Chicken Club Sandwich
+613,681,8.15,237228,956946,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+837,756,17.91,536798,831895,True,Chick-n-Strips	3 Pc.
+682,176,11.78,129227,805337,True,Upsize Fries & Drink
+859,905,15.28,951413,568353,True,Grilled Chicken Sandwich  Combo
+333,245,5.91,316721,887284,True,Side Salad
+826,887,5.42,866396,567738,True,Grilled Chicken Cool Wrap
+717,147,5.94,123113,366255,True,Chick-n-Strips  Combo	3 Pc.
+217,962,5.53,874206,811837,True,Chick-fil-A Nuggets  Combo 8 Pc.
+541,566,17.52,312087,940416,True,Chicken Salad Cup
+731,415,6.27,551465,228673,True,Chicken Salad Cup
+524,175,17.18,992377,715494,True,Chick-fil-A Chicken Deluxe Sandwich
+948,728,17.58,107215,635327,True,Chick-n-Strips  Combo	3 Pc.
+771,916,9.12,642796,987289,True,Spicy Chicken Deluxe Sandwich
+684,227,6.77,451797,382846,True,Chicken Soup
+622,873,11.60,936530,911441,True,Chick-fil-A Chicken Sandwich  Combo
+181,153,14.40,913946,332720,True,Chicken Soup
+409,590,16.65,952103,639599,True,Chick-n-Strips  Combo	3 Pc.
+613,367,12.96,712684,613074,True,Yogurt Parfait
+642,435,6.27,699194,916599,True,Spicy Chicken Sandwich
+960,947,12.22,324636,243800,True,Chick-n-Strips  Combo	3 Pc.
+356,403,7.15,299287,356608,True,Spicy Chicken Deluxe Sandwich  Combo
+999,230,8.04,277722,416113,True,Chick-fil-A Chicken Deluxe Sandwich
+145,132,15.42,856802,885686,True,Chicken Salad Cup
+992,630,15.33,292783,764321,True,Yogurt Parfait
+635,529,10.04,761536,486668,True,Soup & Salad (Large Chicken Soup and Side Salad)
+597,547,15.00,457364,331284,True,Soup & Salad (Large Chicken Soup and Side Salad)
+521,874,12.55,512334,444187,True,Grilled Chicken Sandwich  Combo
+281,178,13.23,782561,822771,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+301,929,12.43,431206,194282,True,Chicken Salad Cup
+930,524,19.13,688747,518723,True,Chick-fil-A Nuggets  Combo 8 Pc.
+484,258,13.89,240180,666260,True,Spicy Chicken Deluxe Sandwich
+961,763,15.79,926854,995838,True,Grilled Chicken Cool Wrap
+698,515,7.25,430071,982984,True,Chick-n-Strips	3 Pc.
+455,391,14.30,200023,170381,True,Chick-fil-A Nuggets  Combo 8 Pc.
+925,660,11.50,635541,143500,True,Spicy Chicken Sandwich
+216,118,11.35,538914,732398,True,Chick-fil-A Nuggets  Combo 8 Pc.
+357,238,10.25,809924,924815,True,Chick-n-Strips  Combo	3 Pc.
+302,487,19.23,182337,508212,True,Chicken Salad Sandwich
+477,191,8.59,294342,955490,True,Chick-fil-A Nuggets  Combo 8 Pc.
+745,227,8.52,343039,678941,True,Spicy Chicken Deluxe Sandwich
+746,872,10.14,942807,862875,True,Chicken Salad Cup
+744,895,10.07,175453,873330,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+343,350,6.84,698213,591852,True,Chick-fil-A Chicken Sandwich  Combo
+937,771,10.25,191869,316729,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+483,735,12.39,554451,273925,True,Grilled Chicken Sandwich
+943,955,11.72,455071,547599,True,Chick-fil-A Nuggets  Combo 8 Pc.
+799,337,9.08,956881,426042,True,Grilled Chicken Club Sandwich  Combo
+799,765,16.15,351374,586177,True,Soup & Salad (Large Chicken Soup and Side Salad)
+885,218,18.62,740042,816644,True,Soup & Salad (Large Chicken Soup and Side Salad)
+866,789,6.98,209992,826709,True,Chick-fil-A Nuggets 8 Pc.
+355,975,12.17,909795,910270,True,Grilled Chicken Club Sandwich  Combo
+752,536,9.42,435594,850461,True,Substitute Medium Premium Side
+196,470,18.55,612997,241367,True,Chick-fil-A Chicken Sandwich
+172,413,15.53,112247,988905,True,Chicken Salad Sandwich
+745,872,8.24,661399,850494,True,Grilled Chicken Club Sandwich  Combo
+988,164,10.98,837929,417414,True,Grilled Chicken Club Sandwich
+732,360,13.21,522604,506551,True,Chicken Soup
+657,232,5.61,734851,435002,True,Substitute Medium Premium Side
+532,200,9.79,181810,632285,True,Chicken Salad Sandwich  Combo
+714,688,11.15,927405,822391,True,Spicy Chicken Sandwich
+900,303,6.78,291191,409465,True,Chick-fil-A Nuggets 8 Pc.
+554,466,10.01,286029,752155,True,Chick-fil-A Chicken Deluxe Sandwich
+311,353,17.31,473583,260425,True,Chick-n-Strips  Combo	3 Pc.
+198,910,12.01,204216,203764,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+657,929,6.08,938623,814812,True,Chicken Salad Sandwich
+942,236,17.24,918190,598618,True,Upsize Fries & Drink
+871,269,18.35,276208,164257,True,Chicken Salad Sandwich
+372,965,19.89,960198,249288,True,Side Salad
+501,787,17.28,796936,989521,True,Chick-fil-A Chicken Sandwich  Combo
+200,400,5.95,855112,799844,True,Grilled Chicken Sandwich
+262,660,7.41,299478,850271,True,Substitute Medium Premium Side
+390,979,5.22,803523,219827,True,Yogurt Parfait
+720,192,8.69,965019,321261,True,Chick-n-Strips	3 Pc.
+894,836,9.67,337540,514453,True,Spicy Chicken Sandwich  Combo
+970,876,18.16,315095,248310,True,Chick-n-Strips	3 Pc.
+766,373,15.53,740392,613274,True,Grilled Chicken Sandwich
+674,511,19.35,817736,887066,True,Chicken Soup
+814,960,17.54,777933,171892,True,Chicken Salad Sandwich
+498,242,9.66,766183,832475,True,Chicken Salad Sandwich
+579,959,8.24,977769,893920,True,Chick-fil-A Nuggets  Combo 8 Pc.
+125,158,16.41,879202,654368,True,Chicken Salad Sandwich
+106,445,10.85,883543,171614,True,Grilled Chicken Cool Wrap
+660,772,19.06,929881,324864,True,Spicy Chicken Deluxe Sandwich
+985,186,5.05,555315,945847,True,Side Salad
+921,942,14.61,980839,406740,True,Grilled Chicken Cool Wrap
+114,251,11.74,976938,609480,True,Chick-fil-A Nuggets  Combo 8 Pc.
+188,588,16.97,119443,444785,True,Chicken Salad Sandwich  Combo
+609,634,7.10,521812,841727,True,Chick-fil-A Chicken Sandwich
+174,747,7.76,914367,314597,True,Grilled Chicken Club Sandwich
+842,354,19.49,234026,360222,True,Chick-fil-A Chicken Sandwich  Combo
+785,404,6.15,139497,475944,True,Spicy Chicken Deluxe Sandwich  Combo
+992,659,13.89,884614,100726,True,Chick-n-Strips	3 Pc.
+868,193,18.71,767470,870366,True,Spicy Chicken Sandwich
+154,294,6.60,109771,673039,True,Substitute Medium Premium Side
+266,564,17.16,595288,783057,True,Upsize Fries & Drink
+628,568,13.44,617264,958312,True,Upsize Fries & Drink
+656,166,17.31,200403,579480,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+650,119,17.21,639773,234128,True,Chicken Salad Sandwich
+798,681,16.96,263295,550020,True,Chick-fil-A Nuggets  Combo 8 Pc.
+141,398,17.34,876522,134576,True,Upsize Fries & Drink
+381,657,6.56,582004,538211,True,Grilled Chicken Club Sandwich
+893,171,9.66,285484,388429,True,Soup & Salad (Large Chicken Soup and Side Salad)
+167,379,6.01,820132,472711,True,Chick-n-Strips	3 Pc.
+295,649,18.53,688207,797645,True,Upsize Fries & Drink
+703,191,11.85,369062,910783,True,Yogurt Parfait
+503,963,12.31,504689,223393,True,Grilled Chicken Club Sandwich
+577,987,5.62,294058,683498,True,Chick-fil-A Nuggets  Combo 8 Pc.
+296,950,8.04,310686,236717,True,Side Salad
+210,251,15.58,100167,993560,True,Chick-fil-A Chicken Sandwich  Combo
+875,845,11.46,569552,437044,True,Grilled Chicken Sandwich  Combo
+767,573,6.04,458921,868625,True,Soup & Salad (Large Chicken Soup and Side Salad)
+833,580,6.70,651922,920444,True,Grilled Chicken Sandwich
+591,319,10.66,768600,233770,True,Grilled Chicken Club Sandwich  Combo
+314,885,9.05,107782,412500,True,Grilled Chicken Club Sandwich  Combo
+772,389,7.34,815165,901663,True,Soup & Salad (Large Chicken Soup and Side Salad)
+636,885,11.56,307757,182463,True,Chick-n-Strips	3 Pc.
+971,718,7.58,806161,932582,True,Chick-fil-A Nuggets 8 Pc.
+150,204,8.42,147607,779643,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+808,959,10.86,804836,434719,True,Chick-fil-A Chicken Deluxe Sandwich
+175,384,9.59,194711,133452,True,Grilled Chicken Sandwich  Combo
+812,549,15.75,693494,193484,True,Chick-fil-A Chicken Sandwich  Combo
+208,353,12.58,841781,703823,True,Chick-fil-A Chicken Sandwich
+747,630,11.36,602325,463160,True,Upsize Fries & Drink
+703,292,12.54,122666,522174,True,Grilled Chicken Sandwich
+951,214,9.40,800448,709760,True,Chicken Salad Cup
+210,140,15.54,867530,959601,True,Spicy Chicken Sandwich
+276,993,10.42,768969,628691,True,Spicy Chicken Deluxe Sandwich  Combo
+593,301,13.71,123400,110174,True,Grilled Chicken Club Sandwich
+472,341,8.48,893812,555200,True,Side Salad
+921,299,16.54,861308,287445,True,Chicken Salad Sandwich  Combo
+470,656,15.46,221379,377820,True,Side Salad
+943,342,17.16,222293,137798,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+217,180,10.42,505154,586749,True,Chick-fil-A Chicken Sandwich  Combo
+502,945,12.05,840886,150492,True,Chick-n-Strips  Combo	3 Pc.
+230,784,13.94,922474,691898,True,Chick-fil-A Chicken Sandwich
+471,596,6.56,884307,873419,True,Chick-fil-A Nuggets 8 Pc.
+225,217,19.89,620720,273229,True,Spicy Chicken Deluxe Sandwich  Combo
+714,990,6.95,950477,332952,True,Chick-fil-A Chicken Sandwich
+458,926,15.91,144211,576685,True,Grilled Chicken Club Sandwich
+873,635,6.13,928344,304923,True,Chick-fil-A Chicken Sandwich  Combo
+248,273,7.66,185119,582675,True,Grilled Chicken Club Sandwich  Combo
+361,931,6.45,179662,741693,True,Yogurt Parfait
+771,309,16.62,441142,493874,True,Yogurt Parfait
+389,876,17.81,861941,997296,True,Chicken Salad Cup
+372,117,7.96,170018,877795,True,Soup & Salad (Large Chicken Soup and Side Salad)
+314,859,5.84,658697,956509,True,Grilled Chicken Club Sandwich  Combo
+966,900,15.14,584839,655030,True,Side Salad
+340,717,8.31,645705,892913,True,Spicy Chicken Sandwich  Combo
+900,679,18.90,132973,550239,True,Side Salad
+700,105,10.46,887595,262790,True,Chick-fil-A Chicken Sandwich
+123,645,20.00,506640,512327,True,Chick-fil-A Nuggets  Combo 8 Pc.
+958,688,6.86,338068,450809,True,Chick-n-Strips  Combo	3 Pc.
+660,132,16.06,692955,768096,True,Spicy Chicken Deluxe Sandwich
+361,770,8.46,124217,853104,True,Grilled Chicken Sandwich  Combo
+358,600,12.69,474673,315910,True,Spicy Chicken Deluxe Sandwich  Combo
+359,432,9.98,178799,294475,True,Chicken Soup
+997,400,14.52,579442,379234,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+560,569,17.09,814162,562530,True,Chick-n-Strips  Combo	3 Pc.
+714,635,7.15,298927,840577,True,Chick-fil-A Chicken Sandwich  Combo
+347,914,11.87,750165,271501,True,Chick-fil-A Nuggets 8 Pc.
+119,250,12.11,959801,674624,True,Side Salad
+949,885,5.95,954027,449021,True,Yogurt Parfait
+202,889,9.90,953881,886864,True,Grilled Chicken Cool Wrap
+739,988,8.87,118346,798959,True,Upsize Fries & Drink
+874,556,9.88,302790,340284,True,Chick-fil-A Chicken Sandwich
+666,427,14.69,821875,379487,True,Chicken Soup
+997,333,11.47,221049,205646,True,Spicy Chicken Sandwich
+457,584,14.80,919872,664351,True,Chick-fil-A Nuggets  Combo 8 Pc.
+644,942,10.51,761847,510306,True,Chicken Soup
+194,734,15.03,865305,606681,True,Spicy Chicken Deluxe Sandwich  Combo
+659,836,16.47,154049,987061,True,Soup & Salad (Large Chicken Soup and Side Salad)
+781,354,9.74,959629,567224,True,Spicy Chicken Deluxe Sandwich  Combo
+864,142,19.46,400184,461164,True,Grilled Chicken Club Sandwich  Combo
+386,734,5.34,785080,575191,True,Chicken Salad Sandwich
+747,924,7.33,418791,977294,True,Grilled Chicken Cool Wrap
+660,965,6.17,163441,778593,True,Substitute Medium Premium Side
+500,671,17.76,868315,651770,True,Yogurt Parfait
+768,920,10.74,119510,312480,True,Chicken Soup
+316,510,6.99,598858,721562,True,Substitute Medium Premium Side
+707,419,12.19,464092,863652,True,Side Salad
+329,321,19.27,929267,743625,True,Grilled Chicken Club Sandwich
+158,473,5.15,814056,475404,True,Chick-fil-A Chicken Sandwich
+146,703,17.40,718958,736934,True,Spicy Chicken Sandwich
+645,836,13.74,275240,183897,True,Grilled Chicken Sandwich  Combo
+764,451,18.87,447889,987979,True,Chick-fil-A Chicken Sandwich
+803,842,17.61,136784,479206,True,Chick-fil-A Chicken Sandwich
+969,823,6.00,759378,295279,True,Chick-n-Strips  Combo	3 Pc.
+543,180,13.67,288997,237387,True,Upsize Fries & Drink
+422,968,8.86,219752,909520,True,Substitute Medium Premium Side
+119,955,10.45,974875,802452,True,Chick-fil-A Nuggets 8 Pc.
+170,833,15.47,717961,798246,True,Chick-fil-A Chicken Sandwich
+229,568,15.15,641055,578152,True,Spicy Chicken Sandwich  Combo
+339,396,19.14,419140,116356,True,Chick-n-Strips	3 Pc.
+892,838,5.48,664496,494475,True,Grilled Chicken Sandwich
+520,494,13.40,807884,310165,True,Soup & Salad (Large Chicken Soup and Side Salad)
+711,492,14.19,455233,699118,True,Chicken Soup
+450,878,6.37,794405,673246,True,Chicken Soup
+683,737,6.13,605509,378515,True,Chick-n-Strips  Combo	3 Pc.
+756,380,15.74,862169,981735,True,Spicy Chicken Sandwich  Combo
+513,191,6.17,896570,611583,True,Soup & Salad (Large Chicken Soup and Side Salad)
+920,396,6.33,567878,374458,True,Chick-fil-A Chicken Sandwich
+890,522,13.00,937310,109735,True,Spicy Chicken Deluxe Sandwich  Combo
+133,141,14.93,213658,403702,True,Side Salad
+978,160,16.78,604473,462118,True,Chicken Soup
+243,709,5.95,333552,929541,True,Chick-fil-A Chicken Sandwich  Combo
+849,858,5.27,732767,804752,True,Chicken Salad Cup
+174,283,18.36,539026,201142,True,Chick-fil-A Chicken Deluxe Sandwich
+662,162,9.22,586684,960660,True,Grilled Chicken Sandwich  Combo
+993,540,17.25,498546,645502,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+686,958,16.83,153582,757056,True,Yogurt Parfait
+134,658,18.23,146340,998941,True,Chicken Salad Sandwich
+624,242,8.74,104754,561163,True,Spicy Chicken Deluxe Sandwich
+860,186,13.57,794123,136080,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+980,374,13.70,118386,158069,True,Grilled Chicken Club Sandwich  Combo
+381,894,14.30,639984,644224,True,Spicy Chicken Sandwich
+650,187,17.57,133625,557631,True,Substitute Medium Premium Side
+281,339,9.72,854656,857243,True,Grilled Chicken Sandwich
+206,713,11.08,351536,187821,True,Grilled Chicken Sandwich
+391,344,6.94,947280,207687,True,Spicy Chicken Sandwich
+518,285,7.30,286211,284677,True,Chick-fil-A Nuggets 8 Pc.
+483,255,19.93,215591,466983,True,Side Salad
+524,260,19.40,715781,627080,True,Chicken Salad Sandwich  Combo
+661,797,13.77,215350,515720,True,Side Salad
+929,921,5.64,985916,457689,True,Chick-fil-A Nuggets  Combo 8 Pc.
+169,196,18.19,241104,881626,True,Upsize Fries & Drink
+106,533,5.63,313717,982283,True,Chick-n-Strips  Combo	3 Pc.
+383,807,16.96,600357,248184,True,Grilled Chicken Club Sandwich
+401,220,11.27,541889,604139,True,Chicken Salad Cup
+975,344,16.98,554225,672946,True,Chick-n-Strips	3 Pc.
+236,623,12.09,730712,179172,True,Yogurt Parfait
+352,996,11.62,736714,340805,True,Chick-n-Strips	3 Pc.
+127,654,9.35,260078,882722,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+213,103,18.35,530285,696019,True,Chick-fil-A Nuggets  Combo 8 Pc.
+250,100,17.44,776935,206959,True,Chick-n-Strips  Combo	3 Pc.
+516,564,13.41,663505,151753,True,Yogurt Parfait
+350,385,7.15,323175,564238,True,Chick-fil-A Chicken Sandwich  Combo
+979,267,16.55,827421,450539,True,Chick-fil-A Nuggets  Combo 8 Pc.
+174,252,19.28,989981,262918,True,Upsize Fries & Drink
+169,218,7.95,649534,837507,True,Spicy Chicken Sandwich
+140,948,15.98,878588,292366,True,Chick-fil-A Chicken Deluxe Sandwich
+398,797,5.27,523244,598762,True,Chicken Salad Sandwich
+949,578,14.84,430464,483024,True,Spicy Chicken Sandwich  Combo
+931,519,8.73,136819,184460,True,Spicy Chicken Sandwich  Combo
+737,922,8.74,333759,763153,True,Chick-fil-A Chicken Sandwich  Combo
+120,946,17.08,483904,527593,True,Yogurt Parfait
+543,601,15.92,961067,490244,True,Chick-n-Strips  Combo	3 Pc.
+208,790,18.38,464689,569185,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+592,406,10.71,621724,737355,True,Substitute Medium Premium Side
+931,469,19.40,339858,229866,True,Upsize Fries & Drink
+737,806,12.56,130640,981751,True,Grilled Chicken Club Sandwich  Combo
+895,949,7.77,152565,245184,True,Chick-n-Strips  Combo	3 Pc.
+253,718,6.70,414753,480778,True,Chicken Salad Sandwich  Combo
+448,905,5.20,545045,903489,True,Chicken Soup
+884,788,11.38,391349,340167,True,Upsize Fries & Drink
+879,182,5.46,886034,676677,True,Side Salad
+137,372,14.99,278405,932935,True,Spicy Chicken Deluxe Sandwich
+646,618,16.98,377849,585263,True,Spicy Chicken Sandwich
+645,138,6.23,410402,524147,True,Side Salad
+212,181,12.77,130281,541672,True,Chick-fil-A Chicken Sandwich
+656,361,6.28,337840,929526,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+834,219,11.46,408526,334155,True,Chicken Salad Cup
+322,771,6.68,840750,656941,True,Chick-fil-A Nuggets  Combo 8 Pc.
+942,353,7.32,229471,566317,True,Grilled Chicken Club Sandwich
+782,668,17.60,210864,699824,True,Chicken Salad Sandwich
+894,232,15.39,435126,451652,True,Chicken Salad Cup
+912,101,17.97,897672,757493,True,Grilled Chicken Sandwich  Combo
+919,303,7.12,151121,591983,True,Chick-fil-A Nuggets 8 Pc.
+518,686,11.18,608108,866811,True,Chick-fil-A Nuggets  Combo 8 Pc.
+329,836,17.68,915035,813350,True,Spicy Chicken Sandwich
+670,674,18.59,498357,651837,True,Chicken Salad Sandwich
+864,427,19.27,247197,886534,True,Grilled Chicken Club Sandwich
+539,352,7.39,456512,478580,True,Substitute Medium Premium Side
+766,692,11.23,457399,205772,True,Chicken Soup
+783,133,16.35,952097,514425,True,Grilled Chicken Sandwich
+434,584,17.73,216893,982339,True,Grilled Chicken Club Sandwich
+691,594,9.69,589828,234461,True,Chick-n-Strips	3 Pc.
+813,719,10.78,372188,121320,True,Spicy Chicken Sandwich  Combo
+944,822,15.61,823668,619251,True,Chicken Salad Cup
+821,632,7.47,280503,968651,True,Chicken Salad Sandwich
+304,794,5.91,758245,440250,True,Spicy Chicken Sandwich  Combo
+429,119,8.69,386822,924311,True,Chick-fil-A Nuggets  Combo 8 Pc.
+946,189,19.01,942263,377780,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+536,149,14.48,307771,363614,True,Chick-fil-A Chicken Sandwich  Combo
+959,660,14.63,640624,398595,True,Spicy Chicken Deluxe Sandwich
+263,252,15.18,790417,538342,True,Grilled Chicken Club Sandwich
+761,609,13.55,347661,100553,True,Chick-fil-A Chicken Sandwich
+673,317,19.05,340528,623224,True,Chicken Soup
+936,459,18.89,797375,577380,True,Chick-fil-A Chicken Sandwich  Combo
+686,514,7.77,658676,624141,True,Chick-fil-A Chicken Sandwich
+726,893,13.14,647030,770998,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+171,412,17.04,634578,364080,True,Upsize Fries & Drink
+552,826,7.57,769680,424977,True,Chick-fil-A Chicken Deluxe Sandwich
+385,767,5.18,224509,432808,True,Chicken Salad Sandwich  Combo
+439,114,16.77,145891,137094,True,Chicken Salad Cup
+542,637,19.83,634954,711168,True,Chick-fil-A Nuggets  Combo 8 Pc.
+351,763,11.39,937321,249880,True,Spicy Chicken Deluxe Sandwich  Combo
+596,450,18.42,109165,294745,True,Substitute Medium Premium Side
+524,145,6.84,881277,418996,True,Chicken Salad Sandwich  Combo
+634,737,5.14,116725,604200,True,Upsize Fries & Drink
+653,391,10.28,866824,347533,True,Grilled Chicken Club Sandwich  Combo
+885,218,11.62,670334,444326,True,Grilled Chicken Sandwich  Combo
+862,194,11.68,297018,256198,True,Chicken Salad Cup
+266,776,8.56,329875,638937,True,Chicken Salad Sandwich
+821,764,19.97,326748,698365,True,Chick-fil-A Chicken Sandwich  Combo
+875,743,6.25,865036,148764,True,Grilled Chicken Sandwich
+889,254,5.93,346200,800715,True,Chick-fil-A Nuggets 8 Pc.
+411,443,19.37,753607,355150,True,Chick-n-Strips	3 Pc.
+328,898,17.53,312107,199693,True,Spicy Chicken Sandwich
+885,857,17.97,580614,647988,True,Chick-n-Strips  Combo	3 Pc.
+547,389,10.70,281546,455697,True,Chick-fil-A Nuggets  Combo 8 Pc.
+666,794,15.20,782738,256559,True,Chick-fil-A Chicken Sandwich  Combo
+817,534,13.99,934436,486920,True,Grilled Chicken Sandwich  Combo
+434,113,10.90,758515,508317,True,Spicy Chicken Deluxe Sandwich  Combo
+299,805,16.81,682007,690745,True,Yogurt Parfait
+948,895,7.38,857098,818553,True,Grilled Chicken Cool Wrap
+253,374,13.54,398269,285026,True,Grilled Chicken Club Sandwich  Combo
+748,688,6.22,481306,688081,True,Spicy Chicken Deluxe Sandwich
+658,147,9.04,325393,870271,True,Grilled Chicken Club Sandwich  Combo
+829,765,19.74,125816,434300,True,Spicy Chicken Sandwich
+731,198,19.09,720632,631370,True,Spicy Chicken Deluxe Sandwich  Combo
+518,474,18.45,577170,277575,True,Chick-n-Strips	3 Pc.
+977,295,11.62,838045,106213,True,Chicken Salad Sandwich  Combo
+239,554,13.27,595433,599278,True,Chick-n-Strips	3 Pc.
+829,726,12.27,219557,180399,True,Chicken Salad Sandwich
+723,617,9.05,522506,210438,True,Chicken Soup
+933,613,9.59,828739,668404,True,Substitute Medium Premium Side
+542,337,12.01,963241,434511,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+255,605,19.85,912438,559444,True,Chick-fil-A Chicken Sandwich
+262,208,6.05,522808,430695,True,Chicken Salad Cup
+421,252,16.37,288210,216389,True,Grilled Chicken Club Sandwich
+264,435,15.95,668936,241854,True,Side Salad
+905,519,5.63,770321,576190,True,Upsize Fries & Drink
+311,403,15.97,523108,148473,True,Chick-fil-A Chicken Deluxe Sandwich  Combo
+519,286,14.06,741379,203527,True,Grilled Chicken Cool Wrap
+825,135,13.79,151823,693785,True,Chick-fil-A Nuggets 8 Pc.
+386,113,13.85,676703,262114,True,Chicken Salad Sandwich
+876,301,8.11,291268,664305,True,Chick-fil-A Nuggets 8 Pc.
+812,553,15.57,489444,820706,True,Grilled Chicken Cool Wrap
+505,545,8.24,191831,158334,True,Chicken Salad Cup
+145,965,16.87,437283,912132,True,Spicy Chicken Sandwich
+754,124,7.86,584121,430457,True,Chick-n-Strips  Combo	3 Pc.
+598,758,19.10,407682,596990,True,Substitute Medium Premium Side
+372,739,9.80,479438,433463,True,Spicy Chicken Deluxe Sandwich
+230,179,5.45,363701,808911,True,Substitute Medium Premium Side
+438,943,9.95,543420,815504,True,Upsize Fries & Drink
+103,944,19.68,692249,867909,True,Chicken Soup
+307,101,12.46,527019,553098,True,Chick-fil-A Nuggets 8 Pc.
+454,613,18.37,505680,580045,True,Chick-fil-A Chicken Sandwich
+616,124,13.21,967697,142699,True,Spicy Chicken Deluxe Sandwich
+308,250,19.38,975366,656715,True,Chick-fil-A Nuggets 8 Pc.
+795,707,8.02,219996,792804,True,Spicy Chicken Deluxe Sandwich
+297,393,11.90,807035,169744,True,Upsize Fries & Drink
+759,999,16.91,187161,553869,True,Chick-fil-A Nuggets  Combo 8 Pc.
+586,967,17.53,276096,333458,True,Spicy Chicken Deluxe Sandwich
+816,542,10.82,252811,507160,True,Chick-fil-A Chicken Sandwich
+789,797,5.98,474313,719523,True,Grilled Chicken Cool Wrap
+369,532,12.05,496453,951460,True,Side Salad
+359,381,19.38,411965,984702,True,Yogurt Parfait
+674,563,16.65,454100,978946,True,Chick-fil-A Chicken Sandwich
+271,870,7.68,649361,178391,True,Chick-n-Strips  Combo	3 Pc.
+912,664,9.10,821899,912976,True,Grilled Chicken Sandwich  Combo
+360,455,7.41,530115,393093,True,Grilled Chicken Sandwich
+324,610,6.04,440122,927698,True,Chick-fil-A Chicken Sandwich  Combo
+894,145,19.93,801970,645871,True,Chick-n-Strips	3 Pc.
+540,171,11.33,653031,422253,True,Grilled Chicken Sandwich
+565,615,11.40,100150,589430,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+842,281,18.35,627058,806495,True,Spicy Chicken Deluxe Sandwich
+217,185,18.13,126169,929647,True,Chick-fil-A Chicken Sandwich  Combo
+990,190,10.01,395213,669035,True,Chick-fil-A Nuggets  Combo 8 Pc.
+964,383,16.32,957004,621884,True,Chick-fil-A Chicken Deluxe Sandwich
+734,747,18.67,828068,314299,True,Chick-n-Strips	3 Pc.
+468,801,8.60,109665,133962,True,Grilled Chicken Cool Wrap
+873,817,19.69,328509,365002,True,Grilled Chicken Sandwich  Combo
+875,903,6.75,421865,650153,True,Substitute Medium Premium Side
+832,473,5.95,657602,762316,True,Grilled Chicken Sandwich  Combo
+754,631,19.70,597558,843061,True,Grilled Chicken Sandwich  Combo
+714,292,19.46,705418,571994,True,Chick-fil-A Chicken Deluxe Sandwich
+104,305,11.17,151839,578670,True,Grilled Chicken Sandwich
+951,483,12.98,519046,360526,True,Spicy Chicken Sandwich  Combo
+922,360,18.43,152756,139323,True,Grilled Chicken Sandwich
+497,618,10.30,156263,468449,True,Grilled Chicken Cool Wrap
+321,995,10.82,316903,535195,True,Grilled Chicken Cool Wrap
+912,307,7.10,115759,743603,True,Side Salad
+800,954,16.92,674722,955396,True,Substitute Medium Premium Side
+116,951,18.93,437626,752226,True,Chick-fil-A Chicken Sandwich
+694,395,10.19,802349,920841,True,Grilled Chicken Sandwich
+932,226,6.69,931822,381986,True,Chick-fil-A Nuggets (Grilled) 8 Pc.
+484,322,18.02,300139,352738,True,Upsize Fries & Drink
+743,615,18.20,869279,833994,True,Chicken Salad Sandwich
+168,535,15.45,894761,960268,True,Chick-fil-A Nuggets 8 Pc.
+868,731,19.01,811206,971295,True,Upsize Fries & Drink
+528,861,10.27,789739,896412,True,Grilled Chicken Club Sandwich  Combo
+731,486,11.55,917570,104744,True,Chick-fil-A Chicken Deluxe Sandwich
+810,134,11.06,521030,649997,True,Chicken Salad Sandwich  Combo
+139,817,10.99,570754,908936,True,Yogurt Parfait
+569,957,13.71,453389,394430,True,Chick-n-Strips  Combo	3 Pc.
+929,495,13.38,331689,806188,True,Chicken Soup
+100,658,9.39,287989,234503,True,Chick-fil-A Nuggets 8 Pc.
+319,228,6.89,838270,171433,True,Spicy Chicken Deluxe Sandwich
+481,721,16.61,720966,892675,True,Spicy Chicken Sandwich  Combo
+432,294,10.70,601319,635412,True,Chicken Soup
+612,821,6.21,372829,750455,True,Chick-n-Strips  Combo	3 Pc.
+600,380,8.34,988900,895878,True,Chick-fil-A Nuggets  Combo 8 Pc.
+540,177,10.53,590589,491101,True,Chick-fil-A Chicken Sandwich
+410,369,17.23,151372,199058,True,Grilled Chicken Sandwich  Combo
+837,778,7.60,905803,915990,True,Grilled Chicken Sandwich  Combo
+117,993,12.34,253809,700727,True,Side Salad
+754,100,14.81,633637,430982,True,Chick-fil-A Chicken Deluxe Sandwich
+647,525,15.59,217510,422385,True,Chicken Soup
+985,779,18.54,388391,662017,True,Grilled Chicken Club Sandwich
+354,270,18.57,913825,642572,True,Chick-fil-A Chicken Sandwich
+566,718,16.93,518367,730118,True,Side Salad
+968,326,16.30,489018,182707,True,Chick-fil-A Chicken Sandwich
+166,553,18.26,545795,865054,True,Side Salad
+223,568,9.28,612411,125296,True,Chick-n-Strips	3 Pc.

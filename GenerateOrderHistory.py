@@ -1,6 +1,6 @@
 from datetime import datetime
 import csv
-from random import randint
+from random import choice, randint, uniform
 
 menu_items = {
     "Chick-fil-A Chicken Sandwich":	3.05,
@@ -51,25 +51,31 @@ print("Number of items in the menu:", len(menu_items))
 
 
 # The orders table needs to be: Order ID, Order Number, Total Price Due, Date, Employee ID, Customer ID, Order Satisfied, Items Ordered
-csvFile = open("Orders.csv", "w")
+csvFile = open("Orders.csv", "a", newline = "")
 cWrite = csv.writer(csvFile)
-
-cWrite.writerow(["Order ID", "Order Number", "Total Price Due", "Date", "Employee ID", "Customer ID", "Order Satisfied", "Items Ordered"])
+# cWrite.writerow(["Order",,,,,,])
+# cWrite.writerow(["Order ID", "Order Number", "Total Price Due", "Date", "Employee ID", "Customer ID", "Order Satisfied", "Items Ordered"])
 # For now, we are going to let Order ID == Order Number
 
 
 # Parameters required to fill up the order table.
 IDlength = 6
+getRandomID = lambda IDlength: randint(10**(IDlength-1), 10**(IDlength))
 
 # Week 1 - 9/4 to 9/10 and 9/10 is a gameday
-
+orders = []
 ordersPerDay = 100
 orderID = 0
 for w in range(3): # Iterate through the weeks
     for d in range(7): # Iterate through the days in a week
+        
         # currDay = datetime.day(year=2021, month=10, day=4+7*w+d)
         currDay = f"10/{4+7*w+d}/2021"
+        for order in range(ordersPerDay):
+            print(choice(list(menu_items.keys())))
+            orders.append([getRandomID(3), getRandomID(3), f"{uniform(5,20):.2f}", str(getRandomID(6)), getRandomID(6), True, choice(list(menu_items.keys())).replace('–','')])        
 
+cWrite.writerows(orders)
         
 
 # Week 2 - 9/11 - 9/17 and 9/17 is a gameday

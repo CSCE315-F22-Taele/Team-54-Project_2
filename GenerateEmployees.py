@@ -30,12 +30,14 @@ employees = []
 CASHIERPAYRATE = 15
 KITCHENPAYRATE = 15
 
-getRandomID = lambda IDlength: randint(10**IDlength-1, 10**IDlength)
+getRandomID = lambda IDlength: randint(10**(IDlength-1), 10**(IDlength))
+
 genders = ["Male", "Female"] # Only options provided by the library. Do not reflect my views.
+
 for i in range(2): # We need 2 more cashiers
     g = choice(genders)
     employees.append([getRandomID(6), names.get_first_name(gender = g), names.get_last_name(),  CASHIERPAYRATE, "Cashier", "10/4/21", False])
 
 csvWrite.writerows(employees)
-
+f.close()
 
