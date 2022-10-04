@@ -29,9 +29,9 @@ menu_items = {
     "Chicken Salad Sandwich – Combo": 6.79,
     "Grilled Chicken Cool Wrap": 5.19,
     "Soup & Salad (Large Chicken Soup and Side Salad)":	8.35,
-    "Substitute Medium Premium Side":	1.00,
-    "Upsize Fries & Drink":0.46,
-    "Yogurt Parfait":	2.45,
+    "Substitute Medium Premium Side": 1.00,
+    "Upsize Fries & Drink": 0.46,
+    "Yogurt Parfait": 2.45,
     # Fruit Cup	Small	$2.05
     # Fruit Cup	Medium	$2.75
     # Fruit Cup	Large	$4.25
@@ -60,7 +60,7 @@ cWrite = csv.writer(csvFile)
 
 # Parameters required to fill up the order table.
 IDlength = 6
-getRandomID = lambda IDlength: randint(10**(IDlength-1), 10**(IDlength))
+getRandomID = lambda IDlength: randint(10 ** (IDlength - 1), 10 ** (IDlength))
 
 # Week 1 - 9/4 to 9/10 and 9/10 is a gameday
 orders = []
@@ -71,12 +71,16 @@ year = '2022'
 month = '10'
 for w in range(3): # Iterate through the weeks
     for d in range(7): # Iterate through the days in a week
-        day = 4+7*w+d
+        day = 4 + (7 * w) + d
 
         currDay = month + "/" + str(day) + "/" + year
-        n = ordersPerDay if 4+7*w + d == 7 else 450
+        if (4 + (7 * w) + d) == 7:
+            n = ordersPerDay
+        else:
+            n = 450
+  
         for order in range(ordersPerDay):
-            total += (var:=uniform(5,20))
+            total += (var:=uniform(5, 20))
             print(choice(list(menu_items.keys())))
             orders.append([getRandomID(3), getRandomID(3), f"{var:.2f}", currDay, str(getRandomID(6)), getRandomID(6), True, choice(list(menu_items.keys())).replace('–','')])        
 

@@ -31,11 +31,11 @@ employees = []
 CASHIERPAYRATE = 15
 KITCHENPAYRATE = 15
 
-getRandomID = lambda IDlength: randint(10**(IDlength-1), 10**(IDlength))
+getRandomID = lambda IDlength: randint(10 ** (IDlength - 1), 10 ** (IDlength))
 
 genders = ["Male", "Female"] # Only options provided by the library. Do not reflect my views.
 
-currDay = datetime.day(year=2021, month=8, day=randint(1, 31))
+currDay = datetime.day(year = '2021', month = '8', day = str(randint(1, 31)))
 
 for i in range(2): # We need 2 more cashiers
     g = choice(genders)
