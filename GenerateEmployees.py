@@ -41,6 +41,10 @@ for i in range(2): # We need 2 more cashiers
     g = choice(genders)
     employees.append([getRandomID(6), names.get_first_name(gender = g), names.get_last_name(),  CASHIERPAYRATE, "Cashier", currDay, False])
 
+for i in range(15):
+    g = choice(genders)
+    employees.append([getRandomID(6), names.get_first_name(gender = g), names.get_last_name(),  KITCHENPAYRATE, "Kitchen staff", currDay, False])
+
 csvWrite.writerows(employees)
 f.close()
 
