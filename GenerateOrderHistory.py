@@ -2,10 +2,6 @@ from datetime import datetime
 import csv
 
 
-
-
-# The orders table needs to be: Order ID, Order Number, Total Price Due, Date, Employee ID, Customer ID, Order Satisfied, Items Ordered
-
 menu_items = {
     "Chick-fil-A Chicken Sandwich":	3.05,
     "Chick-fil-A Chicken Sandwich – Combo":	5.95,
@@ -46,10 +42,28 @@ menu_items = {
     # Chicken Tortilla Soup (Limited Time)	Large	$6.05
     # Superfood Salad (Limited Time)	Medium	$2.89
     # Superfood Salad (Limited Time)	Large	$3.89
-   " Chicken Salad Cup": 3.19, 
+   "Chicken Salad Cup": 3.19, 
     # Chicken Salad Cup	Large	$5.1
     # Loaded Baked Potato (Limited Time)		$2.65
 }
+
+print("Number of items in the menu:", len(menu_items))
+
+
+# The orders table needs to be: Order ID, Order Number, Total Price Due, Date, Employee ID, Customer ID, Order Satisfied, Items Ordered
+csvFile = open("Orders.csv", "w")
+cWrite = csv.writer(csvFile)
+
+cWrite.writerow(["Order ID", "Order Number", "Total Price Due", "Date", "Employee ID", "Customer ID", "Order Satisfied", "Items Ordered"])
+
+# Week 1 - 9/4 to 9/10 and 9/10 is a gameday
+d = datetime.day(year=2021, month=10, day=9)
+
+
+# Week 2 - 9/11 - 9/17 and 9/17 is a gameday
+
+# Week 3 - 9/18 - 9/24
+
 
 
 
