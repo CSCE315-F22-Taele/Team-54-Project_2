@@ -1,3 +1,4 @@
+from datetime import datetime
 import csv
 from random import randint, choice
 import names # pip install names 
@@ -34,9 +35,11 @@ getRandomID = lambda IDlength: randint(10**(IDlength-1), 10**(IDlength))
 
 genders = ["Male", "Female"] # Only options provided by the library. Do not reflect my views.
 
+currDay = datetime.day(year=2021, month=8, day=randint(1, 31))
+
 for i in range(2): # We need 2 more cashiers
     g = choice(genders)
-    employees.append([getRandomID(6), names.get_first_name(gender = g), names.get_last_name(),  CASHIERPAYRATE, "Cashier", "10/4/21", False])
+    employees.append([getRandomID(6), names.get_first_name(gender = g), names.get_last_name(),  CASHIERPAYRATE, "Cashier", currDay, False])
 
 csvWrite.writerows(employees)
 f.close()
