@@ -64,26 +64,28 @@ getRandomID = lambda IDlength: randint(10**(IDlength-1), 10**(IDlength))
 
 # Week 1 - 9/4 to 9/10 and 9/10 is a gameday
 orders = []
-ordersPerDay = 100
+ordersPerDay = 200
 orderID = 0
+total =  0
+year = '2022'
+month = '10'
 for w in range(3): # Iterate through the weeks
     for d in range(7): # Iterate through the days in a week
-        
-        # currDay = datetime.day(year=2021, month=10, day=4+7*w+d)
-        currDay = f"10/{4+7*w+d}/2021"
+        day = 4+7*w+d
+
+        currDay = month + "/" + str(day) + "/" + year
+        n = ordersPerDay if 4+7*w + d == 7 else 450
         for order in range(ordersPerDay):
+            total += (var:=uniform(5,20))
             print(choice(list(menu_items.keys())))
-            orders.append([getRandomID(3), getRandomID(3), f"{uniform(5,20):.2f}", str(getRandomID(6)), getRandomID(6), True, choice(list(menu_items.keys())).replace('–','')])        
+            orders.append([getRandomID(3), getRandomID(3), f"{var:.2f}", currDay, str(getRandomID(6)), getRandomID(6), True, choice(list(menu_items.keys())).replace('–','')])        
 
 cWrite.writerows(orders)
         
-
+print(total)
 # Week 2 - 9/11 - 9/17 and 9/17 is a gameday
 
 # Week 3 - 9/18 - 9/24
 
 
 csvFile.close()
-
-
-
