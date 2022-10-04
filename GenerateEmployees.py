@@ -1,5 +1,5 @@
 import csv
-from random import randint
+from random import randint, choice
 import names # pip install names 
 
 
@@ -15,14 +15,27 @@ import names # pip install names
 # 4,Beth,Stewart,15,Kitchen staff,08/14/2021,false
 # 5,John,Quincy,15,Kitchen staff,01/25/2022,false
 
-f = open("Employee.csv", "w")
+f = open("Employees.csv", "a") # Appends to the file
 csvWrite = csv.writer(f)
-csvWrite.writerow(['Employees'])
-csvWrite.writerow(['Employee ID, First Name, Last Name, Pay Rate, Role, Start Date, Manager'])
+# Uncomment if building file from scratch
+# csvWrite.writerow(['Employees'])
+# csvWrite.writerow(['Employee ID, First Name, Last Name, Pay Rate, Role, Start Date, Manager'])
 
 # Example Format - 4,Beth,Stewart,15,Kitchen staff,08/14/2021,false
 
 # Fields: Employee ID,First Name,Last Name,Pay Rate,Role,Start Date,Manager
 
+employees = []
+
+CASHIERPAYRATE = 15
+KITCHENPAYRATE = 15
+
 getRandomID = lambda IDlength: randint(10**IDlength-1, 10**IDlength)
+genders = ["Male", "Female"] # Only options provided by the library. Do not reflect my views.
+for i in range(2): # We need 2 more cashiers
+    g = choice(genders)
+    employees.append([getRandomID(6), names.get_first_name(gender = g), names.get_last_name(),  CASHIERPAYRATE, "Cashier", "10/4/21", False])
+
+csvWrite.writerows(employees)
+
 

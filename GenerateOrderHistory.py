@@ -1,6 +1,6 @@
 from datetime import datetime
 import csv
-
+from random import randint
 
 menu_items = {
     "Chick-fil-A Chicken Sandwich":	3.05,
@@ -55,16 +55,29 @@ csvFile = open("Orders.csv", "w")
 cWrite = csv.writer(csvFile)
 
 cWrite.writerow(["Order ID", "Order Number", "Total Price Due", "Date", "Employee ID", "Customer ID", "Order Satisfied", "Items Ordered"])
+# For now, we are going to let Order ID == Order Number
+
+
+# Parameters required to fill up the order table.
+IDlength = 6
 
 # Week 1 - 9/4 to 9/10 and 9/10 is a gameday
-d = datetime.day(year=2021, month=10, day=9)
 
+ordersPerDay = 100
+orderID = 0
+for w in range(3): # Iterate through the weeks
+    for d in range(7): # Iterate through the days in a week
+        # currDay = datetime.day(year=2021, month=10, day=4+7*w+d)
+        currDay = f"10/{4+7*w+d}/2021"
+
+        
 
 # Week 2 - 9/11 - 9/17 and 9/17 is a gameday
 
 # Week 3 - 9/18 - 9/24
 
 
+csvFile.close()
 
 
 
