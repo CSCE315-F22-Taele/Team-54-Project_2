@@ -57,7 +57,6 @@ cWrite = csv.writer(csvFile)
 # cWrite.writerow(["Order ID", "Order Number", "Total Price Due", "Date", "Employee ID", "Customer ID", "Order Satisfied", "Items Ordered"])
 # For now, we are going to let Order ID == Order Number
 
-
 # Parameters required to fill up the order table.
 IDlength = 6
 getRandomID = lambda IDlength: randint(10 ** (IDlength - 1), 10 ** (IDlength))
@@ -70,24 +69,33 @@ orderID = 0
 total =  0
 year = '2022'
 month = '10'
+
+finances = []
+dayTotal = 0
+
 for w in range(3): # Iterate through the weeks
     for d in range(7): # Iterate through the days in a week
         day = 4 + (7 * w) + d
+        dayTotal = 0
 
         currDay = month + "/" + str(day) + "/" + year
-        if (4 + (7 * w) + d) == 7:
-            n = ordersPerDay
-        else:
+        if d == 6 and w != 2: # (4 + (7 * w) + d)
             n = 450
+        else:
+            n = ordersPerDay
   
-        for order in range(ordersPerDay):
-            total += (var:=uniform(5, 20))
+        for order in range(n):
+            total = (var:=uniform(5, 20))
+            dayTotal += total
             # print(choice(list(menu_items.keys())))
-            orders.append([getRandomID(3), getRandomID(3), f"{var:.2f}", currDay, str(getRandomID(6)), getRandomID(6), True, choice(list(menu_items.keys())).replace('–','')])        
+            orders.append([getRandomID(3), getRandomID(3), f"{var:.2f}", currDay, str(getRandomID(6)), getRandomID(6), True, choice(list(menu_items.keys())).replace('–','')])  
+        
+        finances.append(dayTotal)      
 
 cWrite.writerows(orders)
         
 print(total)
+print('finances:', finances)
 # Week 2 - 9/11 - 9/17 and 9/17 is a gameday
 
 # Week 3 - 9/18 - 9/24
