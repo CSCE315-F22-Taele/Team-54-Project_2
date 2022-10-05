@@ -27,7 +27,6 @@ public class useDatabase {
 
             data.remove(0); // removes title row from CSV
             data.remove(0); // removes attributes list
-            // System.out.println(data);
         sc.close();  //closes the scanner
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -75,23 +74,23 @@ public class useDatabase {
 
        // Create tables (create strings and execute)
         // Customers
-        String createCustomerTable = "CREATE TABLE Customers (customerID int, firstName text, lastName text);";
+        String createCustomerTable = "CREATE TABLE customers (customerID int, firstName text, lastName text);";
         stmt.executeUpdate(createCustomerTable);
 
         // Employees
-        String createEmployeeTable = "CREATE TABLE Employees (employeeID int, firstName varchar, lastName varchar, payRate float, role varchar, startDate date, isManager boolean);";
+        String createEmployeeTable = "CREATE TABLE employees (employeeID int, firstName varchar, lastName varchar, payRate float, role varchar, startDate date, isManager boolean);";
         stmt.executeUpdate(createEmployeeTable);
 
         // //Inventory
-        String createInventoryTable = "CREATE TABLE Inventory (itemID int, name text, category text, expirationDate date, fridgeRequired boolean, quantity int, unit text);";
+        String createInventoryTable = "CREATE TABLE inventory (itemID int, name text, category text, expirationDate date, fridgeRequired boolean, quantity int, unit text);";
         stmt.executeUpdate(createInventoryTable);
 
         // Finances
-        String createFinanceTable = "CREATE TABLE Finances (transactionID int, isDebit boolean, isCredit boolean, details text, amount float);";
+        String createFinanceTable = "CREATE TABLE finances (transactionID int, isDebit boolean, isCredit boolean, details text, amount float);";
         stmt.executeUpdate(createFinanceTable);
 
         // Orders
-        String createOrdersTable = "CREATE TABLE Orders (orderID int, orderNumber int, totalPrice float, saleDate date, employeeID int, customerID int, satisfied boolean, itemsOrdered text);";
+        String createOrdersTable = "CREATE TABLE orders (orderID int, orderNumber int, totalPrice float, saleDate date, employeeID int, customerID int, satisfied boolean, itemsOrdered text);";
         stmt.executeUpdate(createOrdersTable);
 
         // POPULATE TABLES IN DATABASE
@@ -103,7 +102,7 @@ public class useDatabase {
             String lastName = customerList.get(i).get(2);
 
             // Query String
-            String query = String.format("INSERT INTO Customers VALUES ('%s', '%s', '%s');", customerID, firstName, lastName);
+            String query = String.format("INSERT INTO customers VALUES ('%s', '%s', '%s');", customerID, firstName, lastName);
 
             // Execute the query on the server
             stmt.executeUpdate(query);
@@ -121,7 +120,7 @@ public class useDatabase {
             String isManager = employeeList.get(i).get(6);
 
             // Query String
-            String query = String.format("INSERT INTO Employees VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s');", employeeID, firstName, lastName, payRate, role, startDate, isManager);
+            String query = String.format("INSERT INTO employees VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s');", employeeID, firstName, lastName, payRate, role, startDate, isManager);
 
             // Execute query
             stmt.executeUpdate(query);
@@ -139,7 +138,7 @@ public class useDatabase {
             String unit = inventoryList.get(i).get(6);
 
             // Query String
-            String query = String.format("INSERT INTO Inventory VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s');", itemID, name, category, expDate, needsFridge, quantity, unit);
+            String query = String.format("INSERT INTO inventory VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s');", itemID, name, category, expDate, needsFridge, quantity, unit);
 
             // Execute query
             stmt.executeUpdate(query);
@@ -155,7 +154,7 @@ public class useDatabase {
             String amount = financesList.get(i).get(4);
 
             // Query String
-            String query = String.format("INSERT INTO Finances VALUES ('%s', '%s', '%s', '%s', '%s');", tranID, isDebit, isCredit, details, amount);
+            String query = String.format("INSERT INTO finances VALUES ('%s', '%s', '%s', '%s', '%s');", tranID, isDebit, isCredit, details, amount);
 
             // Execute query
             stmt.executeUpdate(query);
@@ -174,7 +173,7 @@ public class useDatabase {
             String items = ordersList.get(i).get(7);
 
             // Query string
-            String query = String.format("INSERT INTO Orders VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');", orderID, orderNum, totPrice, date, empID, custID, satisfied, items);
+            String query = String.format("INSERT INTO orders VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');", orderID, orderNum, totPrice, date, empID, custID, satisfied, items);
 
             // Execute query
             stmt.executeUpdate(query);
