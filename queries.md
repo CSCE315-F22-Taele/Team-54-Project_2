@@ -13,3 +13,4 @@ DELETE FROM employees WHERE firstName='Dee';
 DELETE FROM finances WHERE details='Week 10 Day 1 Orders';
 DELETE FROM inventory WHERE name='Icecream cup';
 DELETE FROM orders WHERE saleDate='12/4/2022';
+SELECT * FROM finances WHERE Amount>3000;
