@@ -7,16 +7,15 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class GUI implements ActionListener{
-    
-    private int count = 0;
+public class LaunchPage implements ActionListener{
     
     // Boilerplate Code
-    private JLabel label;
     private JFrame frame;
     private JPanel panel;
+    JButton cashier_button = new JButton("Cashier");
+    JButton manager_button = new JButton("Manager");
 
-    public GUI()
+    public LaunchPage()
     {
         
         frame = new JFrame();
@@ -24,14 +23,11 @@ public class GUI implements ActionListener{
         panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 30));
         panel.setLayout(new GridLayout(0,1));
         
+        cashier_button.addActionListener(this);
+        manager_button.addActionListener(this);
         
-        
-        JButton button = new JButton("Click Me");
-        button.addActionListener(this);
-        label = new JLabel("Number of Clicks: 0");
-        
-        panel.add(button);
-        panel.add(label);
+        panel.add(cashier_button);
+        panel.add(manager_button);
 
 
         // Setting up panel with the frame and displaying frame
@@ -42,24 +38,21 @@ public class GUI implements ActionListener{
         frame.setVisible(true);
     }
 
-
-
-
-
     public static void main(String args[])
     {
-        new GUI();
+        new LaunchPage();
     }
-
-
-
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
-        count++;
-        label.setText("Number of clicks: " + count);
-        
+        if (e.getSource() == cashier_button) {
+            frame.dispose();
+            Cashier cashier_window = new Cashier();
+        }
+        if (e.getSource() == manager_button) {
+            frame.dispose();
+            Manager manager_window = new Manager();
+        }
     }
+
 }
