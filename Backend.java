@@ -17,7 +17,8 @@ public class Backend {
         String dbName = "csce331_" + sectionNumber + "_" + teamNumber; 
         String dbConnectionString = "jdbc:postgresql://csce-315-db.engr.tamu.edu/" + dbName;
         dbSetup myCredentials = new dbSetup(); 
-
+        System.out.println("Username" + myCredentials.user);
+        System.out.println("Password" + myCredentials.pswd);
         //Connecting to the database
         try {
             conn = DriverManager.getConnection(dbConnectionString, myCredentials.user, myCredentials.pswd);
