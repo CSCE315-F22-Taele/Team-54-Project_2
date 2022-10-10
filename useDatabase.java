@@ -13,7 +13,7 @@ public class useDatabase {
     public static ArrayList<ArrayList<String>> readCSVFileName(String filename)  {
         ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
         ArrayList<String> rows = new ArrayList<String>();
-
+        
         Scanner sc;
 
         try {
@@ -40,10 +40,12 @@ public class useDatabase {
   //This command tells the file where to find the postgres jar which it needs to execute postgres commands, then executes the code
   //Windows: java -cp ".;postgresql-42.2.8.jar" jdbcpostgreSQL
   //Mac/Linux: java -cp ".:postgresql-42.2.8.jar" jdbcpostgreSQL
+  /* 
+    THINGS OUR BACKEND NEEDS TO ACCOMPLISH
+    1. Check and Return element if it exists in table.
+    2. Add an element to a table. 
+  */  
 
-  /*
-   * Create a global hashmap to link menu items to ingredient/inventory items
-   */
 
 
   public static void main(String args[]) {
@@ -54,7 +56,7 @@ public class useDatabase {
      String sectionNumber = "904";
      String dbName = "csce331_" + sectionNumber + "_" + teamNumber; 
      String dbConnectionString = "jdbc:postgresql://csce-315-db.engr.tamu.edu/" + dbName;
-     dbSetup myCredentials = new dbSetup(); 
+    dbSetup myCredentials = new dbSetup(); 
 
     //Connecting to the database
     try {

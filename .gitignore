@@ -23,3 +23,6 @@ hs_err_pid*
 
 # all db credential files
 dbSetup.java
+
+# Bash Scripts
+*.sh
