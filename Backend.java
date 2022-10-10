@@ -130,11 +130,35 @@ public class Backend {
         return null;
     }
 
-    static String[][] getNValues(String tableName, String fieldName, String value)
+    static ArrayList<HashMap<String, String>> getNValues(String tableName, String fieldName, String value, int n)
     {
         // If a connection to the query does not already exist, we need to create that connection. 
         if(conn == null || stmt == null) createConnection();
+        
+        String query = "nothing";
+        try {
+            // The Query to check if a record exists within the table where fieldName = value. 
+            query = String.format("SELECT * FROM %s WHERE %s = \'%s\' LIMIT %d;", tableName, fieldName, value, n);
+            stmt = createStatement(query);
+            ResultSet result = stmt.executeQuery();
+            String[] fields = tableFields.get(tableName);
+            ArrayList<HashMap<String, String>> nRecords =  new ArrayList<HashMap<String, String>>();
+            while(result.next())
+            {
+                int i = 0;
+                HashMap<String, String> record = new HashMap<>();
+                for(String field : fields)
+                    record.put(field, result.getString(++i));
+                nRecords.add(record);
+            }
 
+            return nRecords;
+        } catch (Exception e) {
+            System.err.println("QUERY :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
         return null;
     }
 
@@ -172,6 +196,9 @@ public class Backend {
         // System.out.println(isValue("employees", "firstname","Grace")); // Not in Employees Table
         // System.out.println(isValue("employees", "lastname","George")); // In Employees Table
         // HashMap<String, String> temp = getValue("employees", "firstname", "Tom");
+        ArrayList<HashMap<String, String>> temp = getNValues("employees", "firstname", "Tom", 2);
+        for(HashMap<String, String> x : temp)
+            System.out.println(x);
         // System.out.println(temp);
 
     }
