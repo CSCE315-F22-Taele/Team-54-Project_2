@@ -26,3 +26,4 @@ dbSetup.java
 
 # Bash Scripts
 *.sh
+*.cmd
