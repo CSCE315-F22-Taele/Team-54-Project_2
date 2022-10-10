@@ -6,9 +6,11 @@ import java.util.ArrayList;
 
 public class Backend {
     
-    static Connection conn = null; // This is the connection that will be utilized by the rest of the Java Connections. 
-    
-    private static Connection createConnection() {
+    static Connection conn; // This is the connection that will be utilized by the rest of the Java Connections. 
+    static Statement stmt; 
+
+    public static void createConnection() 
+    {
         //Building the connection with your credentials
         String teamNumber = "54";
         String sectionNumber = "904";
@@ -26,15 +28,21 @@ public class Backend {
         }
 
         System.out.println("Opened database successfully");
-        
-        return conn;
-        
+
+        try {
+            // Create a statement object
+            stmt = conn.createStatement();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
     }
 
 
     boolean isValue(String tableName, String fieldName, String value)
     {
-
+        
         return true;
     }
 
@@ -67,7 +75,7 @@ public class Backend {
     // Built for testing purposes. Should be commented out in the final version. 
     public static void main(String args[]) 
     {
-        conn = createConnection();
+        createConnection();
 
     }
 }
