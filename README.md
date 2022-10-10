@@ -19,6 +19,7 @@ The following are the backend functions and their respective purpose.
 ### List of Private Methods
 - `private static void createConnection()` establishes a connection between the database and Java by using JDBC. Furthermore, it saves the connection state in `conn`, which is a static variable.
 - `private static PreparedStatement createStatement(String query)` is used to prepare the query before execution by each of the existing public methods. This improves the efficiency because it preloads the query instead of processing later. This statement can be created individually for each function call, and uses the common connection established: `conn`.
+- `private static void populateFields()` is used to create a `HashMap<String, String[]>`, where `key=tableName` and `value=Fields[]`. This function needs to modified whenever any changes to the tables are being made or any tables are added to the database.
 
 If you have any other functions that you would like to have added, PLEASE LET ME KNOW! This will remain open until the end of the project!
 
