@@ -47,11 +47,11 @@ public class LaunchPage implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == cashier_button) {
             frame.dispose();
-            Cashier cashier_window = new Cashier();
+            new Cashier();
         }
         if (e.getSource() == manager_button) {
             frame.dispose();
-            Manager manager_window = new Manager();
+            new Manager();
         }
     }
 

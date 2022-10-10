@@ -1,14 +1,15 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-public class Cashier extends JFrame {
+public class Cashier {
     
-    JFrame frame = new JFrame();
+    static JFrame frame;
     static JToolBar tb;
     static JButton breakfast, entree, salads, sides, kids, treats, drinks, dipping;
 
-    Cashier() {
+    Cashier()  {
         // frame.add(label);
+        frame = new JFrame();
         frame.setLayout(new BorderLayout());
         tb = new JToolBar();
  
@@ -34,6 +35,7 @@ public class Cashier extends JFrame {
         p.add(drinks);
         p.add(dipping);
 
+        frame.add(p, BorderLayout.CENTER);
         frame.add(tb, BorderLayout.NORTH);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Cashier GUI");
