@@ -7,7 +7,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class LaunchPage implements ActionListener{
+public class LaunchPage implements ActionListener {
     
     // Boilerplate Code
     private JFrame frame;
@@ -54,5 +54,4 @@ public class LaunchPage implements ActionListener{
             new Manager();
         }
     }
-
 }

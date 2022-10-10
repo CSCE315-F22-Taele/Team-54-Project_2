@@ -1,10 +1,11 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+
 import java.util.HashMap;
 import java.util.ArrayList;
 
-public class Cashier {
+public class Cashier extends JFrame {
     
     static JFrame frame;
     static JToolBar tb;
@@ -79,6 +80,9 @@ public class Cashier {
         
         frame.add(menu_panel, BorderLayout.PAGE_START);
         frame.add(tb, BorderLayout.NORTH);
+
+        frame.add(orderPanel(), BorderLayout.AFTER_LINE_ENDS);
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Cashier GUI");
         frame.setSize(500, 500);
@@ -119,5 +123,42 @@ public class Cashier {
         }
         return breakfast_panel;
 
+    }
+
+    private JPanel orderPanel() {
+        JPanel p = new JPanel();
+
+        JPanel innerPanel = new JPanel(new GridBagLayout());
+		innerPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+		Font titleFont = p.getFont().deriveFont(Font.BOLD, 16f);
+		
+		GridBagConstraints gbc = new GridBagConstraints();
+		gbc.anchor = GridBagConstraints.LINE_START;
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		gbc.insets = new Insets(5, 5, 5, 5);
+		gbc.weightx = 0d;
+		gbc.gridwidth = 2;
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		
+		JLabel label = new JLabel("Order");
+		label.setFont(titleFont);
+		innerPanel.add(label, gbc);
+
+        gbc.gridwidth = 1;
+		gbc.gridy++;
+		JLabel totalLabel = new JLabel("Total:");
+		innerPanel.add(totalLabel, gbc);
+		
+		gbc.weightx = 1d;
+		gbc.gridx++;
+		JTextField totalField = new JTextField(10);
+		totalField.setEditable(false);
+		totalField.setHorizontalAlignment(JTextField.TRAILING);
+		innerPanel.add(totalField, gbc);
+
+        p.add(innerPanel);
+
+        return p;
     }
 }

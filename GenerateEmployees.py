@@ -3,7 +3,6 @@ import csv
 from random import randint, choice
 import names # pip install names 
 
-
 # This to add more workers.
 # 20 Kitchen Staff
 # 4 Cashiers

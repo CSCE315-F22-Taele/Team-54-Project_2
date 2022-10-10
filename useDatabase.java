@@ -4,7 +4,6 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
 
-
 /*
  * Function to read in data from csv files and store in database
  */
