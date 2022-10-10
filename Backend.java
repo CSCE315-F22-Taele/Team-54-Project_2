@@ -3,13 +3,15 @@ import java.io.*;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.lang.String.*;
+import java.lang.reflect.Field;
 
 public class Backend {
     
     static Connection conn; // This is the connection that will be utilized by the rest of the Java Connections. 
-    static Statement stmt;
+    static PreparedStatement stmt;
 
-    public static void createConnection() 
+    private static void createConnection() 
     {
         //Building the connection with your credentials
         String teamNumber = "54";
@@ -29,27 +31,48 @@ public class Backend {
         }
 
         System.out.println("Opened database successfully");
+    }
 
+    private static PreparedStatement createStatement(String query)
+    {
+        PreparedStatement temp;
         try {
             // Create a statement object
-            stmt = conn.createStatement();
+            temp = conn.prepareStatement(query);
+            return temp;
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             System.exit(0);
         }
+        return null;
     }
 
 
-    boolean isValue(String tableName, String fieldName, String value)
+    static boolean isValue(String tableName, String fieldName, String value)
     {
         // If a connection to the query does not already exist, we need to create that connection. 
         if(conn == null || stmt == null) createConnection();
         
-        return true;
+        String query = "nothing";
+        try {
+        // The Query to check if a record exists within the table where fieldName = value. 
+        query = String.format("SELECT * FROM %s WHERE %s = \'%s\';", tableName, fieldName, value);
+        stmt = createStatement(query);
+        ResultSet result = stmt.executeQuery();
+        return result.next();
+
+        } catch (Exception e) {
+            System.err.println("QUERY :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+
+        return false;
     }
 
-    String[] getValue(String tableName, String fieldName, String value)
+    static String[] getValue(String tableName, String fieldName, String value)
     {
         // If a connection to the query does not already exist, we need to create that connection. 
         if(conn == null || stmt == null) createConnection();
@@ -57,7 +80,7 @@ public class Backend {
         return null;
     }
 
-    String[][] getNValues(String tableName, String fieldName, String value)
+    static String[][] getNValues(String tableName, String fieldName, String value)
     {
         // If a connection to the query does not already exist, we need to create that connection. 
         if(conn == null || stmt == null) createConnection();
@@ -65,7 +88,7 @@ public class Backend {
         return null;
     }
 
-    boolean addValue(String tableName, String[] record)
+    static boolean addValue(String tableName, String[] record)
     {
         // If a connection to the query does not already exist, we need to create that connection. 
         if(conn == null || stmt == null) createConnection();
@@ -74,7 +97,7 @@ public class Backend {
     }
 
 
-    boolean[] addNValues(String tableName, String[][] records)
+    static boolean[] addNValues(String tableName, String[][] records)
     {
         // If a connection to the query does not already exist, we need to create that connection. 
         if(conn == null || stmt == null) createConnection();
@@ -82,11 +105,11 @@ public class Backend {
         return null;
     }
     
-    ResultSet runQuery(String sqlQuery)
+    static ResultSet runQuery(String sqlQuery)
     {
         // If a connection to the query does not already exist, we need to create that connection. 
         if(conn == null || stmt == null) createConnection();
-        
+
         return null;
     }
     
@@ -94,6 +117,14 @@ public class Backend {
     public static void main(String args[]) 
     {
         createConnection();
+        // System.out.println(isValue("employees", "firstname","Tom")); // In Employees Table
+        // System.out.println(isValue("employees", "lastname","Quincy")); // In Employees Table
+        // System.out.println(isValue("employees", "firstname","Grace")); // Not in Employees Table
+        // System.out.println(isValue("employees", "lastname","George")); // In Employees Table
+
+
+        
+        
 
     }
 }
