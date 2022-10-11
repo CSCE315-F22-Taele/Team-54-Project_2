@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
 public class Manager implements ActionListener {
     
     // Boilerplate Code
@@ -80,6 +81,7 @@ public class Manager implements ActionListener {
      */
     private JPanel inventoryPanel() {
         Object[][] data = { // url: https://docs.oracle.com/javase/tutorial/uiswing/components/table.html
+                            // url: https://stackoverflow.com/questions/27815400/retrieving-data-from-jdbc-database-into-jtable
                             }; // import from SQL table????? Function in middleware table?????
         String[] colNames = {"Item ID",
                              "Name",
