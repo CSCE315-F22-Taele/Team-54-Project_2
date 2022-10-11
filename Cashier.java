@@ -12,7 +12,7 @@ public class Cashier implements ActionListener {
     static JButton breakfast, entree, salads, sides, kids, treats, drinks, dipping;
     static HashMap<String, ArrayList<String[]>> menuItems = new HashMap<>(); 
     CardLayout cardLayout;
-    JPanel card_panel;
+    JPanel cardPanel;
 
     // variables for the control panel
     static ArrayList<String> ordersList = new ArrayList<>();
@@ -80,7 +80,7 @@ public class Cashier implements ActionListener {
         tb = new JToolBar();
  
         // create a panel
-        JPanel menu_panel = new JPanel();
+        JPanel menuPanel = new JPanel();
 
         breakfast = new JButton("Breakfast");
         entree = new JButton("Entree");
@@ -92,14 +92,14 @@ public class Cashier implements ActionListener {
         dipping = new JButton("Sauces");
 
         // add buttons
-        menu_panel.add(breakfast);
-        menu_panel.add(entree);
-        menu_panel.add(salads);
-        menu_panel.add(sides);
-        menu_panel.add(kids);
-        menu_panel.add(treats);
-        menu_panel.add(drinks);
-        menu_panel.add(dipping);
+        menuPanel.add(breakfast);
+        menuPanel.add(entree);
+        menuPanel.add(salads);
+        menuPanel.add(sides);
+        menuPanel.add(kids);
+        menuPanel.add(treats);
+        menuPanel.add(drinks);
+        menuPanel.add(dipping);
 
         breakfast.addActionListener(this);
         entree.addActionListener(this);
@@ -110,20 +110,20 @@ public class Cashier implements ActionListener {
         drinks.addActionListener(this);
         dipping.addActionListener(this);
         
-        frame.add(menu_panel, BorderLayout.PAGE_START);
+        frame.add(menuPanel, BorderLayout.PAGE_START);
         frame.add(tb, BorderLayout.NORTH);
         cardLayout = new CardLayout();
-        card_panel = new JPanel(cardLayout);
-        card_panel.add(breakfast_panel(), "breakfast");
-        card_panel.add(entree_panel(), "entree");
-        card_panel.add(salads_panel(), "salads");
-        card_panel.add(sides_panel(), "sides");
-        card_panel.add(kids_panel(), "kids");
-        card_panel.add(treats_panel(), "treats");
-        card_panel.add(drinks_panel(), "drinks");
-        card_panel.add(sauces_panel(), "sauces");
+        cardPanel = new JPanel(cardLayout);
+        cardPanel.add(breakfast_panel(), "breakfast");
+        cardPanel.add(entree_panel(), "entree");
+        cardPanel.add(salads_panel(), "salads");
+        cardPanel.add(sides_panel(), "sides");
+        cardPanel.add(kids_panel(), "kids");
+        cardPanel.add(treats_panel(), "treats");
+        cardPanel.add(drinks_panel(), "drinks");
+        cardPanel.add(sauces_panel(), "sauces");
         
-        frame.add(card_panel, BorderLayout.CENTER);
+        frame.add(cardPanel, BorderLayout.CENTER);
         frame.add(controlPanel(), BorderLayout.AFTER_LINE_ENDS);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -139,28 +139,28 @@ public class Cashier implements ActionListener {
     public void actionPerformed(ActionEvent e)
     {
         if (e.getSource() == breakfast) {
-            cardLayout.show(card_panel, "breakfast");
+            cardLayout.show(cardPanel, "breakfast");
         }
         else if (e.getSource() == entree) {
-            cardLayout.show(card_panel, "entree");
+            cardLayout.show(cardPanel, "entree");
         }
         else if (e.getSource() == salads) {
-            cardLayout.show(card_panel, "salads");
+            cardLayout.show(cardPanel, "salads");
         }
         else if (e.getSource() == sides) {
-            cardLayout.show(card_panel, "sides");
+            cardLayout.show(cardPanel, "sides");
         }
         else if (e.getSource() == kids) {
-            cardLayout.show(card_panel, "kids");
+            cardLayout.show(cardPanel, "kids");
         }
         else if (e.getSource() == treats) {
-            cardLayout.show(card_panel, "treats");
+            cardLayout.show(cardPanel, "treats");
         }
         else if (e.getSource() == drinks) {
-            cardLayout.show(card_panel, "drinks");
+            cardLayout.show(cardPanel, "drinks");
         }
         else if (e.getSource() == dipping) {
-            cardLayout.show(card_panel, "sauces");
+            cardLayout.show(cardPanel, "sauces");
         }
     }
 
@@ -194,7 +194,7 @@ public class Cashier implements ActionListener {
     private JPanel entree_panel()
     {
 
-        JPanel entree_panel = new JPanel(new GridLayout(10, 3, 10, 10));
+        JPanel entreePanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Entree").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
@@ -212,16 +212,16 @@ public class Cashier implements ActionListener {
             price.setHorizontalAlignment(JLabel.CENTER);
             innerPanel.add(price);
             innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
-            entree_panel.add(innerPanel);
+            entreePanel.add(innerPanel);
         }
-        return entree_panel;
+        return entreePanel;
 
     }
 
     private JPanel salads_panel()
     {
 
-        JPanel salads_panel = new JPanel(new GridLayout(10, 3, 10, 10));
+        JPanel saladsPanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Salads").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
@@ -239,16 +239,16 @@ public class Cashier implements ActionListener {
             price.setHorizontalAlignment(JLabel.CENTER);
             innerPanel.add(price);
             innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
-            salads_panel.add(innerPanel);
+            saladsPanel.add(innerPanel);
         }
-        return salads_panel;
+        return saladsPanel;
 
     }
 
     private JPanel sides_panel()
     {
 
-        JPanel sides_panel = new JPanel(new GridLayout(10, 3, 10, 10));
+        JPanel sidesPanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Sides").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
@@ -266,16 +266,16 @@ public class Cashier implements ActionListener {
             price.setHorizontalAlignment(JLabel.CENTER);
             innerPanel.add(price);
             innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
-            sides_panel.add(innerPanel);
+            sidesPanel.add(innerPanel);
         }
-        return sides_panel;
+        return sidesPanel;
 
     }
 
     private JPanel kids_panel()
     {
 
-        JPanel kids_panel = new JPanel(new GridLayout(10, 3, 10, 10));
+        JPanel kidsPanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Kids_Meals").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
@@ -293,16 +293,16 @@ public class Cashier implements ActionListener {
             price.setHorizontalAlignment(JLabel.CENTER);
             innerPanel.add(price);
             innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
-            kids_panel.add(innerPanel);
+            kidsPanel.add(innerPanel);
         }
-        return kids_panel;
+        return kidsPanel;
 
     }
 
     private JPanel treats_panel()
     {
 
-        JPanel treats_panel = new JPanel(new GridLayout(10, 3, 10, 10));
+        JPanel treatsPanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Treats").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
@@ -320,16 +320,16 @@ public class Cashier implements ActionListener {
             price.setHorizontalAlignment(JLabel.CENTER);
             innerPanel.add(price);
             innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
-            treats_panel.add(innerPanel);
+            treatsPanel.add(innerPanel);
         }
-        return treats_panel;
+        return treatsPanel;
 
     }
 
     private JPanel drinks_panel()
     {
 
-        JPanel drinks_panel = new JPanel(new GridLayout(10, 3, 10, 10));
+        JPanel drinksPanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Drinks").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
@@ -347,16 +347,16 @@ public class Cashier implements ActionListener {
             price.setHorizontalAlignment(JLabel.CENTER);
             innerPanel.add(price);
             innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
-            drinks_panel.add(innerPanel);
+            drinksPanel.add(innerPanel);
         }
-        return drinks_panel;
+        return drinksPanel;
 
     }
 
     private JPanel sauces_panel()
     {
 
-        JPanel sauces_panel = new JPanel(new GridLayout(10, 3, 10, 10));
+        JPanel saucesPanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Sauces").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
@@ -374,9 +374,9 @@ public class Cashier implements ActionListener {
             price.setHorizontalAlignment(JLabel.CENTER);
             innerPanel.add(price);
             innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
-            sauces_panel.add(innerPanel);
+            saucesPanel.add(innerPanel);
         }
-        return sauces_panel;
+        return saucesPanel;
 
     }
 
