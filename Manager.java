@@ -37,7 +37,7 @@ public class Manager implements ActionListener {
 
         // make cards for switching logic and add actual material to each view
         cardLayout = new CardLayout();
-        cardPanel = new JPanel();
+        cardPanel = new JPanel(cardLayout);
 
         cardPanel.add(inventoryPanel(), "inventory");
         cardPanel.add(menuPanel(), "menu editor");
