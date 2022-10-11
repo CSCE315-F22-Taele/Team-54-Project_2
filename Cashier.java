@@ -425,6 +425,53 @@ public class Cashier implements ActionListener {
         return p;
     }
 
+    // starter code for middleware functions for updating orders list and payment box
+
+    // private void updateOrderPanel() {
+	// 	orderListModel.removeAllElements();
+		
+	// 	int subTotal = 0;
+	// 	for (Item item : order.getItems()) {
+	// 		subTotal += item.getPrice();
+	// 		orderListModel.addElement(createLine(item.getName(), 
+	// 				item.getPrice()));
+	// 	}
+		
+	// 	double total = subTotal * 0.01d;
+	// 	double tax = total * 0.09d;
+	// 	total += tax;
+	// 	order.setOrderTotal(total);
+	// 	totalField.setText(String.format("%#.2f", total)); 
+		
+		
+	// 	paymentListener.makeChange();
+	// }
+
+    // public class OrderListener implements ActionListener {
+
+	// 	@Override
+	// 	public void actionPerformed(ActionEvent event) {
+	// 		JButton button = (JButton) event.getSource();
+	// 		if (button.getText().equals("Remove Item")) {
+	// 			removeItem(Integer.valueOf(event.getActionCommand()));
+	// 		} else {
+	// 			addItem(Integer.valueOf(event.getActionCommand()));
+	// 		}
+	// 		updateOrderPanel();
+	// 	}
+		
+	// 	private void removeItem(int index) {
+	// 		Item item = inventory.getItem(index);
+	// 		order.removeItem(item);
+	// 	}
+		
+	// 	private void addItem(int index) {
+	// 		Item item = inventory.getItem(index);
+	// 		order.addItem(item);
+	// 	}
+		
+	// }
+
     private JPanel paymentPanel()
     {
         JPanel p = new JPanel();

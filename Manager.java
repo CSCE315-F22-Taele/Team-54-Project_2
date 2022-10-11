@@ -19,7 +19,7 @@ public class Manager implements ActionListener {
         JPanel functionPanel = new JPanel();
 
         // Setting up panel with the frame and displaying frame
-        frame.add(panel, BorderLayout.CENTER);
+        // frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Manager Launchpad");
         frame.pack();
