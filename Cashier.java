@@ -14,6 +14,19 @@ public class Cashier implements ActionListener {
     CardLayout cardLayout;
     JPanel cardPanel;
 
+    // variables for the control panel
+    static ArrayList<String> ordersList = new ArrayList<>();
+    private JTextField totalField;
+
+    public static void populateOrderList()
+    {
+        ordersList.add("Item#1");
+        ordersList.add("Item#2");
+        ordersList.add("Item#3");
+        ordersList.add("Item#4");
+        ordersList.add("Item#5");
+    }
+
     public static void populateHashMap()
     {
         ArrayList<String[]> tempBreakfast = new ArrayList<>();
@@ -57,8 +70,11 @@ public class Cashier implements ActionListener {
         menuItems.put("Sauces", sauces);
     }
 
-    Cashier()  {
+    Cashier()
+    {
         populateHashMap();
+        populateOrderList();
+
         frame = new JFrame();
         frame.setLayout(new BorderLayout());
         tb = new JToolBar();
@@ -98,14 +114,14 @@ public class Cashier implements ActionListener {
         frame.add(tb, BorderLayout.NORTH);
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
-        cardPanel.add(breakfastPanel(), "breakfast");
-        cardPanel.add(entreePanel(), "entree");
-        cardPanel.add(saladsPanel(), "salads");
-        cardPanel.add(sidesPanel(), "sides");
-        cardPanel.add(kidsPanel(), "kids");
-        cardPanel.add(treatsPanel(), "treats");
-        cardPanel.add(drinksPanel(), "drinks");
-        cardPanel.add(saucesPanel(), "sauces");
+        cardPanel.add(breakfast_panel(), "breakfast");
+        cardPanel.add(entree_panel(), "entree");
+        cardPanel.add(salads_panel(), "salads");
+        cardPanel.add(sides_panel(), "sides");
+        cardPanel.add(kids_panel(), "kids");
+        cardPanel.add(treats_panel(), "treats");
+        cardPanel.add(drinks_panel(), "drinks");
+        cardPanel.add(sauces_panel(), "sauces");
         
         frame.add(cardPanel, BorderLayout.CENTER);
         frame.add(controlPanel(), BorderLayout.AFTER_LINE_ENDS);
@@ -120,7 +136,8 @@ public class Cashier implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e)
+    {
         if (e.getSource() == breakfast) {
             cardLayout.show(cardPanel, "breakfast");
         }
@@ -355,7 +372,8 @@ public class Cashier implements ActionListener {
 
     }
 
-    private JPanel controlPanel() {
+    private JPanel controlPanel()
+    {
         JPanel p = new JPanel();
 
         p.add(orderPanel(), BorderLayout.BEFORE_FIRST_LINE);
@@ -364,7 +382,8 @@ public class Cashier implements ActionListener {
         return p;
     }
 
-    private JPanel orderPanel() {
+    private JPanel orderPanel()
+    {
         JPanel p = new JPanel();
 
         JPanel innerPanel = new JPanel(new GridBagLayout());
@@ -375,33 +394,78 @@ public class Cashier implements ActionListener {
 		gbc.anchor = GridBagConstraints.LINE_START;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		gbc.insets = new Insets(5, 5, 5, 5);
-		gbc.weightx = 0d;
-		gbc.gridwidth = 2;
+		gbc.gridwidth = 1;
 		gbc.gridx = 0;
 		gbc.gridy = 0;
 		
 		JLabel label = new JLabel("Order");
 		label.setFont(titleFont);
 		innerPanel.add(label, gbc);
-
-        gbc.gridwidth = 1;
-		gbc.gridy++;
-		JLabel totalLabel = new JLabel("Total:");
-		innerPanel.add(totalLabel, gbc);
 		
-		gbc.weightx = 1d;
-		gbc.gridx++;
-		JTextField totalField = new JTextField(10);
-		totalField.setEditable(false);
-		totalField.setHorizontalAlignment(JTextField.TRAILING);
-		innerPanel.add(totalField, gbc);
+		gbc.gridy++;
 
-        p.add(innerPanel);
+        String[] str = new String[ordersList.size()];
+        // Assuming there is data in the list
+        JList<String> orderList = new JList<>(ordersList.toArray(str));
+
+		orderList.setVisibleRowCount(12);
+		JScrollPane scrollPane = new JScrollPane(orderList);
+		innerPanel.add(scrollPane, gbc);
+		
+		p.add(innerPanel);
 
         return p;
     }
 
-    private JPanel paymentPanel() {
+    // starter code for middleware functions for updating orders list and payment box
+
+    // private void updateOrderPanel() {
+	// 	orderListModel.removeAllElements();
+		
+	// 	int subTotal = 0;
+	// 	for (Item item : order.getItems()) {
+	// 		subTotal += item.getPrice();
+	// 		orderListModel.addElement(createLine(item.getName(), 
+	// 				item.getPrice()));
+	// 	}
+		
+	// 	double total = subTotal * 0.01d;
+	// 	double tax = total * 0.09d;
+	// 	total += tax;
+	// 	order.setOrderTotal(total);
+	// 	totalField.setText(String.format("%#.2f", total)); 
+		
+		
+	// 	paymentListener.makeChange();
+	// }
+
+    // public class OrderListener implements ActionListener {
+
+	// 	@Override
+	// 	public void actionPerformed(ActionEvent event) {
+	// 		JButton button = (JButton) event.getSource();
+	// 		if (button.getText().equals("Remove Item")) {
+	// 			removeItem(Integer.valueOf(event.getActionCommand()));
+	// 		} else {
+	// 			addItem(Integer.valueOf(event.getActionCommand()));
+	// 		}
+	// 		updateOrderPanel();
+	// 	}
+		
+	// 	private void removeItem(int index) {
+	// 		Item item = inventory.getItem(index);
+	// 		order.removeItem(item);
+	// 	}
+		
+	// 	private void addItem(int index) {
+	// 		Item item = inventory.getItem(index);
+	// 		order.addItem(item);
+	// 	}
+		
+	// }
+
+    private JPanel paymentPanel()
+    {
         JPanel p = new JPanel();
 
         JPanel innerPanel = new JPanel(new GridBagLayout());
@@ -417,7 +481,7 @@ public class Cashier implements ActionListener {
 		gbc.gridx = 0;
 		gbc.gridy = 0;
 		
-		JLabel label = new JLabel("Order");
+		JLabel label = new JLabel("Payment");
 		label.setFont(titleFont);
 		innerPanel.add(label, gbc);
 
@@ -428,7 +492,7 @@ public class Cashier implements ActionListener {
 		
 		gbc.weightx = 1d;
 		gbc.gridx++;
-		JTextField totalField = new JTextField(10);
+		totalField = new JTextField(10);
 		totalField.setEditable(false);
 		totalField.setHorizontalAlignment(JTextField.TRAILING);
 		innerPanel.add(totalField, gbc);

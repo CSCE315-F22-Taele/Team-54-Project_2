@@ -45,14 +45,20 @@ public class LaunchPage implements ActionListener {
     }
 
     @Override
+<<<<<<< HEAD
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == cashierButton) {
+=======
+    public void actionPerformed(ActionEvent e)
+    {
+        if (e.getSource() == cashier_button) {
+>>>>>>> c6003b560fc1b9a9905604ff068f0ae384d20374
             frame.dispose();
             new Cashier();
         }
         if (e.getSource() == managerButton) {
             frame.dispose();
-            new Manager();
+            new ManagerLaunch();
         }
     }
 }
