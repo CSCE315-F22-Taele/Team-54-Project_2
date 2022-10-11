@@ -10,9 +10,11 @@ public class Cashier implements ActionListener {
     static JFrame frame;
     static JToolBar tb;
     static JButton breakfast, entree, salads, sides, kids, treats, drinks, dipping;
-    static HashMap<String, ArrayList<String[]>> menuItems = new HashMap<>(); 
+    static HashMap<String, ArrayList<String[]>> menuItems = new HashMap<>();
     CardLayout cardLayout;
     JPanel cardPanel;
+
+    private JButton backButton = new JButton("Go Back");
 
     // variables for the control panel
     static ArrayList<String> ordersList = new ArrayList<>();
@@ -131,6 +133,9 @@ public class Cashier implements ActionListener {
         frame.setPreferredSize(new Dimension(700, 700));
         frame.pack();
         frame.setLocationByPlatform(true);
+        
+        frame.add(backButton, BorderLayout.PAGE_START);
+        backButton.addActionListener(this);
         frame.setVisible(true);
 
     }
@@ -161,6 +166,10 @@ public class Cashier implements ActionListener {
         }
         else if (e.getSource() == dipping) {
             cardLayout.show(cardPanel, "sauces");
+        }
+        else if (e.getSource() == backButton) {
+            frame.dispose();
+            new LaunchPage();
         }
     }
 
