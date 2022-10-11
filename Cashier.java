@@ -382,7 +382,7 @@ public class Cashier implements ActionListener {
 
     private JPanel controlPanel()
     {
-        JPanel p = new JPanel();
+        JPanel p = new JPanel(new BorderLayout());
 
         p.add(orderPanel(), BorderLayout.BEFORE_FIRST_LINE);
 		p.add(paymentPanel(), BorderLayout.AFTER_LAST_LINE);
