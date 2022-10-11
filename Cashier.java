@@ -112,10 +112,10 @@ public class Cashier implements ActionListener {
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Cashier GUI");
-        frame.setSize(500, 500);
-        frame.setVisible(true);
+        frame.setPreferredSize(new Dimension(700, 700));
         frame.pack();
         frame.setLocationByPlatform(true);
+        frame.setVisible(true);
 
     }
 

@@ -34,6 +34,7 @@ public class LaunchPage implements ActionListener {
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Cashier GUI");
+        frame.setPreferredSize(new Dimension(700, 700));
         frame.pack();
         frame.setVisible(true);
     }

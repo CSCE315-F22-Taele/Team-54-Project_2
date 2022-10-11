@@ -26,6 +26,7 @@ public class ManagerLaunch implements ActionListener {
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Manager Launchpad");
+        frame.setPreferredSize(new Dimension(700, 700));
         frame.pack();
         frame.setVisible(true);
 
