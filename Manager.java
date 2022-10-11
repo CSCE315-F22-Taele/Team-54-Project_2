@@ -7,8 +7,11 @@ public class Manager implements ActionListener {
     private JFrame frame;
     private JToolBar tb;
     static JButton inventoryButton, menuButton, trendsButton;
+
     CardLayout cardLayout;
     JPanel cardPanel;
+
+    private JButton backButton = new JButton("Go Back");
 
     Manager() {
         frame = new JFrame();
@@ -23,6 +26,7 @@ public class Manager implements ActionListener {
         menuButton = new JButton("Menu Editor");
         trendsButton = new JButton("View Order Trends"); // NOTE: this button does not work yet (coming in Phase 4)
 
+        functionPanel.add(backButton);
         functionPanel.add(inventoryButton);
         functionPanel.add(menuButton);
         functionPanel.add(trendsButton);
@@ -30,6 +34,7 @@ public class Manager implements ActionListener {
         inventoryButton.addActionListener(this);
         menuButton.addActionListener(this);
         trendsButton.addActionListener(this);
+        backButton.addActionListener(this);
 
         // Setting up panel with the frame and displaying frame
         frame.add(functionPanel, BorderLayout.PAGE_START);
@@ -64,6 +69,9 @@ public class Manager implements ActionListener {
             cardLayout.show(cardPanel, "menu editor");
         } else if (e.getSource() == trendsButton) {
             cardLayout.show(cardPanel, "trends");
+        } else if (e.getSource() == backButton) {
+            frame.dispose();
+            new LaunchPage();
         }
     }
 
@@ -91,7 +99,18 @@ public class Manager implements ActionListener {
     }
 
     private JPanel menuPanel() {
+        Object[][] data = { // see inventoryPanel(); also we need a menu table in SQL ASAP
+                            };
+        String[] colNames = {"Item ID",
+                             "Name",
+                             "Category",
+                             "Price"};
+        
+        JTable items = new JTable(data, colNames);                    
         JPanel menuPanel = new JPanel();
+        items.setFillsViewportHeight(true);
+
+        menuPanel.add(new JScrollPane(items));
 
         return menuPanel;
     }
