@@ -108,7 +108,7 @@ public class Cashier implements ActionListener {
         card_panel.add(sauces_panel(), "sauces");
         
         frame.add(card_panel, BorderLayout.CENTER);
-        frame.add(orderPanel(), BorderLayout.AFTER_LINE_ENDS);
+        frame.add(controlPanel(), BorderLayout.AFTER_LINE_ENDS);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Cashier GUI");
@@ -355,7 +355,53 @@ public class Cashier implements ActionListener {
 
     }
 
+    private JPanel controlPanel() {
+        JPanel p = new JPanel();
+
+        p.add(orderPanel(), BorderLayout.BEFORE_FIRST_LINE);
+		p.add(paymentPanel(), BorderLayout.AFTER_LAST_LINE);
+
+        return p;
+    }
+
     private JPanel orderPanel() {
+        JPanel p = new JPanel();
+
+        JPanel innerPanel = new JPanel(new GridBagLayout());
+		innerPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+		Font titleFont = p.getFont().deriveFont(Font.BOLD, 16f);
+		
+		GridBagConstraints gbc = new GridBagConstraints();
+		gbc.anchor = GridBagConstraints.LINE_START;
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		gbc.insets = new Insets(5, 5, 5, 5);
+		gbc.weightx = 0d;
+		gbc.gridwidth = 2;
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		
+		JLabel label = new JLabel("Order");
+		label.setFont(titleFont);
+		innerPanel.add(label, gbc);
+
+        gbc.gridwidth = 1;
+		gbc.gridy++;
+		JLabel totalLabel = new JLabel("Total:");
+		innerPanel.add(totalLabel, gbc);
+		
+		gbc.weightx = 1d;
+		gbc.gridx++;
+		JTextField totalField = new JTextField(10);
+		totalField.setEditable(false);
+		totalField.setHorizontalAlignment(JTextField.TRAILING);
+		innerPanel.add(totalField, gbc);
+
+        p.add(innerPanel);
+
+        return p;
+    }
+
+    private JPanel paymentPanel() {
         JPanel p = new JPanel();
 
         JPanel innerPanel = new JPanel(new GridBagLayout());
