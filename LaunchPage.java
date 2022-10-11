@@ -51,7 +51,7 @@ public class LaunchPage implements ActionListener {
         }
         if (e.getSource() == manager_button) {
             frame.dispose();
-            new Manager();
+            new ManagerLaunch();
         }
     }
 }

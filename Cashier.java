@@ -5,12 +5,14 @@ import java.awt.event.*;
 import java.util.HashMap;
 import java.util.ArrayList;
 
-public class Cashier extends JFrame {
+public class Cashier implements ActionListener {
     
     static JFrame frame;
     static JToolBar tb;
     static JButton breakfast, entree, salads, sides, kids, treats, drinks, dipping;
     static HashMap<String, ArrayList<String[]>> menuItems = new HashMap<>(); 
+    CardLayout cardLayout;
+    JPanel card_panel;
 
     public static void populateHashMap()
     {
@@ -77,37 +79,53 @@ public class Cashier extends JFrame {
         menu_panel.add(treats);
         menu_panel.add(drinks);
         menu_panel.add(dipping);
+
+        breakfast.addActionListener(this);
+        entree.addActionListener(this);
+        salads.addActionListener(this);
         
         frame.add(menu_panel, BorderLayout.PAGE_START);
         frame.add(tb, BorderLayout.NORTH);
-
+        cardLayout = new CardLayout();
+        card_panel = new JPanel(cardLayout);
+        card_panel.add(breakfast_panel(), "breakfast");
+        card_panel.add(entree_panel(), "entree");
+        card_panel.add(salads_panel(), "salads");
+        
+        frame.add(card_panel, BorderLayout.CENTER);
         frame.add(orderPanel(), BorderLayout.AFTER_LINE_ENDS);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Cashier GUI");
         frame.setSize(500, 500);
         frame.setVisible(true);
+        frame.pack();
+        frame.setLocationByPlatform(true);
 
-        breakfast.addActionListener(new ActionListener() {
+    }
 
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame.add(breakfast_panel(), BorderLayout.CENTER);
-            }
-        });
-
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == breakfast) {
+            cardLayout.show(card_panel, "breakfast");
+        }
+        if (e.getSource() == entree) {
+            cardLayout.show(card_panel, "entree");
+        }
+        if (e.getSource() == salads) {
+            cardLayout.show(card_panel, "salads");
+        }
     }
 
     private JPanel breakfast_panel() {
 
-        JPanel breakfast_panel = new JPanel(new GridLayout(2, 2, 10, 10));
+        JPanel breakfast_panel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Breakfast").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
-            // [Breakfast: [[apple, 2], [orange, 3]]]
             JLabel name = new JLabel(menuItems.get("Breakfast").get(i)[0]);
             JLabel price = new JLabel(menuItems.get("Breakfast").get(i)[1]);
-            JTextField quantity = new JTextField(10);
+            JTextField quantity = new JTextField(25);
             name.setHorizontalAlignment(JLabel.CENTER);
 			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
             // quantity.addActionListener(new ActionListener() {
@@ -122,6 +140,58 @@ public class Cashier extends JFrame {
             breakfast_panel.add(innerPanel);
         }
         return breakfast_panel;
+
+    }
+
+    private JPanel entree_panel() {
+
+        JPanel entree_panel = new JPanel(new GridLayout(10, 3, 10, 10));
+        for (int i = 0; i < menuItems.get("Entree").size(); i++) {
+            JPanel innerPanel = new JPanel(new BorderLayout());
+			innerPanel.setBackground(Color.WHITE);
+            JLabel name = new JLabel(menuItems.get("Entree").get(i)[0]);
+            JLabel price = new JLabel(menuItems.get("Entree").get(i)[1]);
+            JTextField quantity = new JTextField(10);
+            name.setHorizontalAlignment(JLabel.CENTER);
+			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
+            // quantity.addActionListener(new ActionListener() {
+            //     public void actionPerformed(ActionEvent e) {
+            //         String input = quantity.getText();
+            //         quantity.setText(input);
+            //     }
+            // });
+            price.setHorizontalAlignment(JLabel.CENTER);
+            innerPanel.add(price);
+            innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            entree_panel.add(innerPanel);
+        }
+        return entree_panel;
+
+    }
+
+    private JPanel salads_panel() {
+
+        JPanel salads_panel = new JPanel(new GridLayout(10, 3, 10, 10));
+        for (int i = 0; i < menuItems.get("Salads").size(); i++) {
+            JPanel innerPanel = new JPanel(new BorderLayout());
+			innerPanel.setBackground(Color.WHITE);
+            JLabel name = new JLabel(menuItems.get("Salads").get(i)[0]);
+            JLabel price = new JLabel(menuItems.get("Salads").get(i)[1]);
+            JTextField quantity = new JTextField(10);
+            name.setHorizontalAlignment(JLabel.CENTER);
+			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
+            // quantity.addActionListener(new ActionListener() {
+            //     public void actionPerformed(ActionEvent e) {
+            //         String input = quantity.getText();
+            //         quantity.setText(input);
+            //     }
+            // });
+            price.setHorizontalAlignment(JLabel.CENTER);
+            innerPanel.add(price);
+            innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            salads_panel.add(innerPanel);
+        }
+        return salads_panel;
 
     }
 
