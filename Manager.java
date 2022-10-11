@@ -43,6 +43,9 @@ public class Manager implements ActionListener {
         cardPanel.add(menuPanel(), "menu editor");
         cardPanel.add(trendsPanel(), "trends");
 
+        frame.add(cardPanel, BorderLayout.CENTER);
+        frame.add(controlPanel(), BorderLayout.AFTER_LINE_ENDS);
+
         // set basic frame dimensions/characteristics
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Manager GUI");
@@ -68,7 +71,21 @@ public class Manager implements ActionListener {
      * Functions to create panels for each functionality: inventory, menu editing, and trends
      */
     private JPanel inventoryPanel() {
+        Object[][] data = { // url: https://docs.oracle.com/javase/tutorial/uiswing/components/table.html
+                            }; // import from SQL table????? Function in middleware table?????
+        String[] colNames = {"Item ID",
+                             "Name",
+                             "Category",
+                             "Expiration Date",
+                             "Refrigeration Required",
+                             "Quantity",
+                             "Unit"};
+
+        JTable items = new JTable(data, colNames);
         JPanel inventoryPanel = new JPanel();
+        items.setFillsViewportHeight(true);
+
+        inventoryPanel.add(new JScrollPane(items));
 
         return inventoryPanel;
     }
@@ -79,9 +96,20 @@ public class Manager implements ActionListener {
         return menuPanel;
     }
 
+    // NOTE: will not be implemented until Phase 4
     private JPanel trendsPanel() {
         JPanel trendsPanel = new JPanel ();
 
         return trendsPanel;
+    }
+
+    private JPanel controlPanel()
+    {
+        JPanel p = new JPanel(new BorderLayout());
+
+        // p.add(orderPanel(), BorderLayout.BEFORE_FIRST_LINE);
+		// p.add(paymentPanel(), BorderLayout.AFTER_LAST_LINE);
+
+        return p;
     }
 }
