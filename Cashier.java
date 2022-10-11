@@ -98,14 +98,14 @@ public class Cashier implements ActionListener {
         frame.add(tb, BorderLayout.NORTH);
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
-        cardPanel.add(breakfast_panel(), "breakfast");
-        cardPanel.add(entree_panel(), "entree");
-        cardPanel.add(salads_panel(), "salads");
-        cardPanel.add(sides_panel(), "sides");
-        cardPanel.add(kids_panel(), "kids");
-        cardPanel.add(treats_panel(), "treats");
-        cardPanel.add(drinks_panel(), "drinks");
-        cardPanel.add(sauces_panel(), "sauces");
+        cardPanel.add(breakfastPanel(), "breakfast");
+        cardPanel.add(entreePanel(), "entree");
+        cardPanel.add(saladsPanel(), "salads");
+        cardPanel.add(sidesPanel(), "sides");
+        cardPanel.add(kidsPanel(), "kids");
+        cardPanel.add(treatsPanel(), "treats");
+        cardPanel.add(drinksPanel(), "drinks");
+        cardPanel.add(saucesPanel(), "sauces");
         
         frame.add(cardPanel, BorderLayout.CENTER);
         frame.add(controlPanel(), BorderLayout.AFTER_LINE_ENDS);
@@ -147,9 +147,9 @@ public class Cashier implements ActionListener {
         }
     }
 
-    private JPanel breakfast_panel() {
+    private JPanel breakfastPanel() {
 
-        JPanel breakfast_panel = new JPanel(new GridLayout(10, 3, 10, 10));
+        JPanel breakfastPanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Breakfast").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
@@ -167,13 +167,13 @@ public class Cashier implements ActionListener {
             price.setHorizontalAlignment(JLabel.CENTER);
             innerPanel.add(price);
             innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
-            breakfast_panel.add(innerPanel);
+            breakfastPanel.add(innerPanel);
         }
-        return breakfast_panel;
+        return breakfastPanel;
 
     }
 
-    private JPanel entree_panel() {
+    private JPanel entreePanel() {
 
         JPanel entreePanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Entree").size(); i++) {
@@ -199,7 +199,7 @@ public class Cashier implements ActionListener {
 
     }
 
-    private JPanel salads_panel() {
+    private JPanel saladsPanel() {
 
         JPanel saladsPanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Salads").size(); i++) {
@@ -225,7 +225,7 @@ public class Cashier implements ActionListener {
 
     }
 
-    private JPanel sides_panel() {
+    private JPanel sidesPanel() {
 
         JPanel sidesPanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Sides").size(); i++) {
@@ -251,7 +251,7 @@ public class Cashier implements ActionListener {
 
     }
 
-    private JPanel kids_panel() {
+    private JPanel kidsPanel() {
 
         JPanel kidsPanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Kids_Meals").size(); i++) {
@@ -277,7 +277,7 @@ public class Cashier implements ActionListener {
 
     }
 
-    private JPanel treats_panel() {
+    private JPanel treatsPanel() {
 
         JPanel treatsPanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Treats").size(); i++) {
@@ -303,7 +303,7 @@ public class Cashier implements ActionListener {
 
     }
 
-    private JPanel drinks_panel() {
+    private JPanel drinksPanel() {
 
         JPanel drinksPanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Drinks").size(); i++) {
@@ -329,7 +329,7 @@ public class Cashier implements ActionListener {
 
     }
 
-    private JPanel sauces_panel() {
+    private JPanel saucesPanel() {
 
         JPanel saucesPanel = new JPanel(new GridLayout(10, 3, 10, 10));
         for (int i = 0; i < menuItems.get("Sauces").size(); i++) {
