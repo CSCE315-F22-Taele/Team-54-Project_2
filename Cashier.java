@@ -114,14 +114,14 @@ public class Cashier implements ActionListener {
         frame.add(tb, BorderLayout.NORTH);
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
-        cardPanel.add(breakfast_panel(), "breakfast");
-        cardPanel.add(entree_panel(), "entree");
-        cardPanel.add(salads_panel(), "salads");
-        cardPanel.add(sides_panel(), "sides");
-        cardPanel.add(kids_panel(), "kids");
-        cardPanel.add(treats_panel(), "treats");
-        cardPanel.add(drinks_panel(), "drinks");
-        cardPanel.add(sauces_panel(), "sauces");
+        cardPanel.add(breakfastPanel(), "breakfast");
+        cardPanel.add(entreePanel(), "entree");
+        cardPanel.add(saladsPanel(), "salads");
+        cardPanel.add(sidesPanel(), "sides");
+        cardPanel.add(kidsPanel(), "kids");
+        cardPanel.add(treatsPanel(), "treats");
+        cardPanel.add(drinksPanel(), "drinks");
+        cardPanel.add(saucesPanel(), "sauces");
         
         frame.add(cardPanel, BorderLayout.CENTER);
         frame.add(controlPanel(), BorderLayout.AFTER_LINE_ENDS);
