@@ -15,8 +15,7 @@ public class LaunchPage implements ActionListener {
     JButton cashierButton = new JButton("Cashier");
     JButton managerButton = new JButton("Manager");
 
-    public LaunchPage()
-    {
+    public LaunchPage() {
         
         frame = new JFrame();
         panel = new JPanel();
@@ -39,8 +38,7 @@ public class LaunchPage implements ActionListener {
         frame.setVisible(true);
     }
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         new LaunchPage();
     }
 
