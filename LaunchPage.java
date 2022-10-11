@@ -45,7 +45,8 @@ public class LaunchPage implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e)
+    {
         if (e.getSource() == cashier_button) {
             frame.dispose();
             new Cashier();
