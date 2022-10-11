@@ -93,6 +93,10 @@ public class Cashier implements ActionListener {
         drinks = new JButton("Drinks");
         dipping = new JButton("Sauces");
 
+        // add back button
+        menuPanel.add(backButton);
+        backButton.addActionListener(this);
+
         // add buttons
         menuPanel.add(breakfast);
         menuPanel.add(entree);
@@ -133,9 +137,6 @@ public class Cashier implements ActionListener {
         frame.setPreferredSize(new Dimension(700, 700));
         frame.pack();
         frame.setLocationByPlatform(true);
-        
-        frame.add(backButton, BorderLayout.PAGE_START);
-        backButton.addActionListener(this);
         frame.setVisible(true);
 
     }
