@@ -430,7 +430,8 @@ public class Cashier implements ActionListener {
 
     
     /** 
-     * @return JPanel
+     * Creates the control panel, which is the panel on the side that shows the order and payment panels.
+     * @return JPanel, specifically the control panel that contains order and payment
      */
     private JPanel controlPanel()
     {
@@ -444,7 +445,8 @@ public class Cashier implements ActionListener {
 
     
     /** 
-     * @return JPanel
+     * Creates and returns the order panel, which shows what the user has selected to order in the GUI.
+     * @return JPanel, specifically the order panel
      */
     private JPanel orderPanel()
     {
@@ -530,7 +532,8 @@ public class Cashier implements ActionListener {
 	// }
 
     /** 
-     * @return JPanel
+     * Creates and returns the payment panel, which shows the total payment of all the ordered items the user made.
+     * @return JPanel, specifically the payment panel
      */
     private JPanel paymentPanel()
     {
