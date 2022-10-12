@@ -145,7 +145,7 @@ public class Cashier implements ActionListener {
     /** 
      *  This method allows for the logic of panel switching upon
      *  the clicking of a specific menu category.
-     *  @param ActionEvent
+     *  @param ActionEvent of buttons
      */
     @Override
     public void actionPerformed(ActionEvent e)
@@ -183,7 +183,7 @@ public class Cashier implements ActionListener {
     
     /** 
      * Returns panel that shows breakfast menu items.
-     * @return JPanel
+     * @return JPanel breakfast panel
      */
     private JPanel breakfastPanel() {
 
@@ -214,7 +214,7 @@ public class Cashier implements ActionListener {
     
     /** 
      * Returns panel that shows entree menu items.
-     * @return JPanel
+     * @return JPanel entree panel
      */
     private JPanel entreePanel() {
 
@@ -245,7 +245,7 @@ public class Cashier implements ActionListener {
     
     /** 
      * Returns panel that shows salads menu items.
-     * @return JPanel
+     * @return JPanel salads panel
      */
     private JPanel saladsPanel() {
 
@@ -276,7 +276,7 @@ public class Cashier implements ActionListener {
     
     /** 
      * Returns panel that shows sides menu items.
-     * @return JPanel
+     * @return JPanel sides panel
      */
     private JPanel sidesPanel() {
 
@@ -307,7 +307,7 @@ public class Cashier implements ActionListener {
     
     /** 
      * Returns panel that shows Kids Menu items.
-     * @return JPanel
+     * @return JPanel kids menu panel
      */
     private JPanel kidsPanel() {
 
@@ -338,7 +338,7 @@ public class Cashier implements ActionListener {
     
     /** 
      * Returns panel that shows treats menu items.
-     * @return JPanel
+     * @return JPanel treats panel
      */
     private JPanel treatsPanel() {
 
@@ -369,7 +369,7 @@ public class Cashier implements ActionListener {
     
     /** 
      * Returns panel that shows drinks menu items.
-     * @return JPanel
+     * @return JPanel drinks panel
      */
     private JPanel drinksPanel() {
 
@@ -400,7 +400,7 @@ public class Cashier implements ActionListener {
     
     /** 
      * Returns panel that shows sauces menu items.
-     * @return JPanel
+     * @return JPanel sauces panel
      */
     private JPanel saucesPanel() {
 

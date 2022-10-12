@@ -1,3 +1,12 @@
+/**
+ * This function populates the team's SQL database with tables to track
+ * store inventory, menu, customers, employees, order records, and finances.
+ * Contains a function to parse CSV files to get table data, then establishes a 
+ * connection to the remote database and builds tables in the main function.
+ * Uses SQL, Util, and IO libraries.
+ * 
+ * @author Mohona Ghosh
+ */
 import java.sql.*;
 import java.io.*;  
 import java.util.Scanner;
