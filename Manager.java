@@ -1,3 +1,11 @@
+/**
+ * This class implements the Manager GUI using the Swing and AWT libraries.
+ * At a high level, the GUI lets the manager switch between different views that
+ * allow them to view and edit inventory, view and edit the store menu, and 
+ * view order trends with parameter filtration capacity.
+ * 
+ * @author Mohona Ghosh
+ */
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -62,6 +70,12 @@ public class Manager implements ActionListener {
 
     }
 
+    
+    /** 
+     * Calls functions based on which button is pressed by the user.
+     * Overrides the actionPerformed method from the interface ActionListener.
+     * @param e the action performed by the user
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == inventoryButton) {
@@ -76,8 +90,10 @@ public class Manager implements ActionListener {
         }
     }
 
-    /*
-     * Functions to create panels for each functionality: inventory, menu editing, and trends
+    
+    /** 
+     * Creates GUI view for the Manager to view inventory data and edit inventory records.
+     * @return JPanel containing the inventory data with editing capabilities
      */
     private JPanel inventoryPanel() {
         Object[][] data = { // url: https://docs.oracle.com/javase/tutorial/uiswing/components/table.html
@@ -100,6 +116,11 @@ public class Manager implements ActionListener {
         return inventoryPanel;
     }
 
+    
+    /** 
+     * Creates GUI view for the Manager to view the store's full menu and add items to it.
+     * @return JPanel containing data from SQL menu items table with editing capabilities
+     */
     private JPanel menuPanel() {
         Object[][] data = { // see inventoryPanel(); also we need a menu table in SQL ASAP
                             };
@@ -117,6 +138,12 @@ public class Manager implements ActionListener {
         return menuPanel;
     }
 
+    
+    /** 
+     * Creates GUI view for the Manager to view order trends, filtering data
+     * by parameters such as menu item name.
+     * @return JPanel containing interface to view order trends
+     */
     // NOTE: will not be implemented until Phase 4
     private JPanel trendsPanel() {
         JPanel trendsPanel = new JPanel ();
@@ -124,6 +151,13 @@ public class Manager implements ActionListener {
         return trendsPanel;
     }
 
+    
+    /** 
+     * This function creates the default view for the Manager GUI that
+     * is active upon logging into the GUI as the Manager. Essentially an
+     * empty JPanel with only the button toolbar showing.
+     * @return JPanel containing the default view for the Manager GUI
+     */
     private JPanel controlPanel()
     {
         JPanel p = new JPanel(new BorderLayout());

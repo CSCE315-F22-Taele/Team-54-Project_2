@@ -38,10 +38,18 @@ public class LaunchPage implements ActionListener {
         frame.setVisible(true);
     }
 
-    public static void main(String args[]) {
+    
+    public static void main(String args[])
+    {
         new LaunchPage();
     }
 
+    
+    /** 
+     * Overrides the actionPerformed function from the ActionListener class.
+     * This makes it so that when certain buttons are clicked, they link to either the Cashier GUI or Manager GUI.
+     * @param e the action performed by the user, which is an ActionListener
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == cashierButton) {

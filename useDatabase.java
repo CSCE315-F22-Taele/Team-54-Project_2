@@ -1,3 +1,12 @@
+/**
+ * This function populates the team's SQL database with tables to track
+ * store inventory, menu, customers, employees, order records, and finances.
+ * Contains a function to parse CSV files to get table data, then establishes a 
+ * connection to the remote database and builds tables in the main function.
+ * Uses SQL, Util, and IO libraries.
+ * 
+ * @author Mohona Ghosh
+ */
 import java.sql.*;
 import java.io.*;  
 import java.util.Scanner;
@@ -6,9 +15,18 @@ import java.util.ArrayList;
 
 /*
  * Function to read in data from csv files and store in database
+ * @return ArrayList of ArrayList of strings of parsed CSV data
  */
 public class useDatabase {
 
+    
+    /** 
+     * Opens CSV file passed by user and parses data delimiting by commas.
+     * Returns a 2D ArrayList of Strings to represent the parsed data, intended
+     * to convert to a SQL table in the main function.
+     * @param filename
+     * @return ArrayList<ArrayList<String>> of parsed data
+     */
     public static ArrayList<ArrayList<String>> readCSVFileName(String filename)  {
         ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
         ArrayList<String> rows = new ArrayList<String>();
@@ -39,8 +57,6 @@ public class useDatabase {
   //This command tells the file where to find the postgres jar which it needs to execute postgres commands, then executes the code
   //Windows: java -cp ".;postgresql-42.2.8.jar" jdbcpostgreSQL
   //Mac/Linux: java -cp ".:postgresql-42.2.8.jar" jdbcpostgreSQL
-
-
 
   public static void main(String args[]) {
 

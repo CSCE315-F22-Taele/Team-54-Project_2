@@ -141,6 +141,12 @@ public class Cashier implements ActionListener {
 
     }
 
+    
+    /** 
+     *  This method allows for the logic of panel switching upon
+     *  the clicking of a specific menu category.
+     *  @param ActionEvent of buttons
+     */
     @Override
     public void actionPerformed(ActionEvent e)
     {
@@ -174,6 +180,11 @@ public class Cashier implements ActionListener {
         }
     }
 
+    
+    /** 
+     * Returns panel that shows breakfast menu items.
+     * @return JPanel breakfast panel
+     */
     private JPanel breakfastPanel() {
 
         JPanel breakfastPanel = new JPanel(new GridLayout(10, 3, 10, 10));
@@ -200,6 +211,11 @@ public class Cashier implements ActionListener {
 
     }
 
+    
+    /** 
+     * Returns panel that shows entree menu items.
+     * @return JPanel entree panel
+     */
     private JPanel entreePanel() {
 
         JPanel entreePanel = new JPanel(new GridLayout(10, 3, 10, 10));
@@ -226,6 +242,11 @@ public class Cashier implements ActionListener {
 
     }
 
+    
+    /** 
+     * Returns panel that shows salads menu items.
+     * @return JPanel salads panel
+     */
     private JPanel saladsPanel() {
 
         JPanel saladsPanel = new JPanel(new GridLayout(10, 3, 10, 10));
@@ -252,6 +273,11 @@ public class Cashier implements ActionListener {
 
     }
 
+    
+    /** 
+     * Returns panel that shows sides menu items.
+     * @return JPanel sides panel
+     */
     private JPanel sidesPanel() {
 
         JPanel sidesPanel = new JPanel(new GridLayout(10, 3, 10, 10));
@@ -278,6 +304,11 @@ public class Cashier implements ActionListener {
 
     }
 
+    
+    /** 
+     * Returns panel that shows Kids Menu items.
+     * @return JPanel kids menu panel
+     */
     private JPanel kidsPanel() {
 
         JPanel kidsPanel = new JPanel(new GridLayout(10, 3, 10, 10));
@@ -304,6 +335,11 @@ public class Cashier implements ActionListener {
 
     }
 
+    
+    /** 
+     * Returns panel that shows treats menu items.
+     * @return JPanel treats panel
+     */
     private JPanel treatsPanel() {
 
         JPanel treatsPanel = new JPanel(new GridLayout(10, 3, 10, 10));
@@ -330,6 +366,11 @@ public class Cashier implements ActionListener {
 
     }
 
+    
+    /** 
+     * Returns panel that shows drinks menu items.
+     * @return JPanel drinks panel
+     */
     private JPanel drinksPanel() {
 
         JPanel drinksPanel = new JPanel(new GridLayout(10, 3, 10, 10));
@@ -356,6 +397,11 @@ public class Cashier implements ActionListener {
 
     }
 
+    
+    /** 
+     * Returns panel that shows sauces menu items.
+     * @return JPanel sauces panel
+     */
     private JPanel saucesPanel() {
 
         JPanel saucesPanel = new JPanel(new GridLayout(10, 3, 10, 10));
@@ -382,6 +428,10 @@ public class Cashier implements ActionListener {
 
     }
 
+    
+    /** 
+     * @return JPanel
+     */
     private JPanel controlPanel()
     {
         JPanel p = new JPanel(new BorderLayout());
@@ -392,6 +442,10 @@ public class Cashier implements ActionListener {
         return p;
     }
 
+    
+    /** 
+     * @return JPanel
+     */
     private JPanel orderPanel()
     {
         JPanel p = new JPanel();
@@ -427,6 +481,7 @@ public class Cashier implements ActionListener {
         return p;
     }
 
+    
     // starter code for middleware functions for updating orders list and payment box
 
     // private void updateOrderPanel() {
@@ -474,6 +529,9 @@ public class Cashier implements ActionListener {
 		
 	// }
 
+    /** 
+     * @return JPanel
+     */
     private JPanel paymentPanel()
     {
         JPanel p = new JPanel();
