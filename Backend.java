@@ -16,9 +16,12 @@ public class Backend {
     static HashMap<String, String[]> tableFields = new HashMap<>();
     // static HashMap<String, Integer> primaryKeys = new HashMap<>();
 
-    // THIS FUNCTION NEEDS TO MODIFIED WHENEVER ANY CHANGES TO THE TABLES ARE BEING MADE OR ANY TABLES ARE ADDED TO THE DATABASE.      
+    /** 
+     * Populates the tableFiields hashmap
+     */
     private static void populateFields()
     {
+        // THIS FUNCTION NEEDS TO MODIFIED WHENEVER ANY CHANGES TO THE TABLES ARE BEING MADE OR ANY TABLES ARE ADDED TO THE DATABASE.
         String[] customers = new String[]{"customerid", "firstname", "lastname"};
         tableFields.put("customers", customers);
 
@@ -35,6 +38,9 @@ public class Backend {
         tableFields.put("orders", orders);
     }
 
+    /** 
+     * @param query Establishes a connection with the database.
+     */
     private static void createConnection() 
     {
         //Building the connection with your credentials
@@ -59,6 +65,14 @@ public class Backend {
         populateFields(); // Since a connection is only established once, we can populate all fields once.
     }
 
+    
+    /** 
+     * Generates a PreparedStatement object that embodies a SQL query and can then be executed on database 
+     * for which connection already exists.
+     *  
+     * @param query  SQL query to be run on database.
+     * @return PreparedStatement : object that can then be executed on database.
+     */
     private static PreparedStatement createStatement(String query)
     {
         PreparedStatement temp;
@@ -74,6 +88,16 @@ public class Backend {
         return null;
     }
 
+    
+    /**
+     * outputs the list of objects in a format required for SQL queries. 
+     * If quotes == False then the output would look like (vals[0], vals[1], vals[2], ..., vals[n]) 
+     * else the output would look like ('vals[0]', 'vals[1]', 'vals[2]', ..., 'vals[n]').
+     *  
+     * @param vals    values that need to be processes.
+     * @param quotes  Whether or not you want quotes surronding each object in the list.
+     * @return String Return formatted String. 
+     */
     private static String QueryFormat(Object[] vals, boolean quotes)
     {
         String output = "(";
@@ -87,6 +111,15 @@ public class Backend {
         return output;
     }
 
+    
+    /** 
+     * Checks to see if there is a record in database where value == record[fieldName].
+     * 
+     * @param tableName Table in the database which needs to be checked.
+     * @param fieldName fieldName that value is searched against.
+     * @param value value that is compared against each record.
+     * @return boolean Whether or not record is found. 
+     */
     static boolean isValue(String tableName, String fieldName, String value)
     {
         // If a connection to the query does not already exist, we need to create that connection. 
@@ -110,6 +143,15 @@ public class Backend {
         return false;
     }
 
+    
+    /**
+     * Retrives a value from the database.
+     * 
+     * @param tableName Table in the database which needs to be checked.
+     * @param fieldName fieldName that value is searched against.
+     * @param value value that is compared against each record.
+     * @return HashMap<String, String> Returns null if nothing is found. 
+     */
     static HashMap<String, String> getValue(String tableName, String fieldName, String value)
     {
         // If a connection to the query does not already exist, we need to create that connection. 
@@ -143,6 +185,16 @@ public class Backend {
         return null;
     }
 
+    
+    /** 
+     * Retrieves n values from the database.
+     * 
+     * @param tableName Table in the database which needs to be checked.
+     * @param fieldName fieldName that value is searched against.
+     * @param value     value that is compared against each record.
+     * @param n         Number of values wanted.
+     * @return ArrayList<HashMap<String, String>> Returns list of matches found to value.
+     */
     static ArrayList<HashMap<String, String>> getNValues(String tableName, String fieldName, String value, int n)
     {
         // If a connection to the query does not already exist, we need to create that connection. 
@@ -175,6 +227,14 @@ public class Backend {
         return null;
     }
 
+    
+    /** 
+     * Adds a value to tableName
+     * 
+     * @param tableName Table in the database which needs to be added to.
+     * @param record    HashMap containing record that needs to be added. Keys represent the fields.
+     * @return boolean  True if successfully added.
+     */
     static boolean addValue(String tableName, HashMap<String, String> record)
     {
         // If a connection to the query does not already exist, we need to create that connection. 
@@ -205,15 +265,31 @@ public class Backend {
         return false;
     }
 
-
+    
+    
+    /** 
+     * Adds n values to the database table: tableName
+     * 
+     * @param records HashMap containing record that needs to be added. Keys represent the fields.
+     * @param n Number of values to be added.
+     * @return boolean[] Array of True of False depending on succesful or unsuccesful submission.
+     */
     static boolean[] addNValues(String tableName, ArrayList<HashMap<String, String>> records, int n)
     {
+        
         // If a connection to the query does not already exist, we need to create that connection. 
         if(conn == null || stmt == null) createConnection();
 
         return null;
     }
     
+    
+    /** 
+     * Runs query for which an existing function does not exist.
+     * 
+     * @param sqlQuery The query as a string.
+     * @return ResultSet Object that contains result of query running.
+     */
     static ResultSet runQuery(String sqlQuery)
     {
         // If a connection to the query does not already exist, we need to create that connection. 
@@ -222,26 +298,28 @@ public class Backend {
         return null;
     }
     
+    
+
     // Built for testing purposes. Should be commented out in the final version. 
-    public static void main(String args[]) 
-    {
-        createConnection();
-        // System.out.println(isValue("employees", "firstname","Tom")); // In Employees Table
-        // System.out.println(isValue("employees", "lastname","Quincy")); // In Employees Table
-        // System.out.println(isValue("employees", "firstname","Grace")); // Not in Employees Table
-        // System.out.println(isValue("employees", "lastname","George")); // In Employees Table
-        // HashMap<String, String> temp = getValue("employees", "firstname", "Tom");
-        // ArrayList<HashMap<String, String>> temp = getNValues("employees", "firstname", "Tom", 2);
-        // for(HashMap<String, String> x : temp)
-            // System.out.println(x);
-        HashMap<String, String> temp = new HashMap<>();
-        String[] keys = new String[]{"customerid", "firstname", "lastname"};
-        String[] vals = new String[]{"19", "Estella", "Chen"};
-        for(int i = 0; i < keys.length; ++i)
-            temp.put(keys[i], vals[i]);
+    // public static void main(String args[]) 
+    // {
+    //     createConnection();
+    //     // System.out.println(isValue("employees", "firstname","Tom")); // In Employees Table
+    //     // System.out.println(isValue("employees", "lastname","Quincy")); // In Employees Table
+    //     // System.out.println(isValue("employees", "firstname","Grace")); // Not in Employees Table
+    //     // System.out.println(isValue("employees", "lastname","George")); // In Employees Table
+    //     // HashMap<String, String> temp = getValue("employees", "firstname", "Tom");
+    //     // ArrayList<HashMap<String, String>> temp = getNValues("employees", "firstname", "Tom", 2);
+    //     // for(HashMap<String, String> x : temp)
+    //         // System.out.println(x);
+    //     HashMap<String, String> temp = new HashMap<>();
+    //     String[] keys = new String[]{"customerid", "firstname", "lastname"};
+    //     String[] vals = new String[]{"19", "Estella", "Chen"};
+    //     for(int i = 0; i < keys.length; ++i)
+    //         temp.put(keys[i], vals[i]);
 
-        System.out.println(addValue("customers", temp));
-        // System.out.println(temp);
+    //     System.out.println(addValue("customers", temp));
+    //     // System.out.println(temp);
 
-    }
+    // }
 }
