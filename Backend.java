@@ -1,5 +1,10 @@
+/**
+ * This class establishes the backend for connecting to the SQL database
+ * and populating it with tables containing data to track Chick-Fil-A operations
+ * @author Krishnan Prashanth
+ */
 import java.sql.*;
-import java.io.*;  
+import java.io.*;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -10,14 +15,14 @@ import java.util.Collections.*;
 import java.util.List;
 
 public class Backend {
-    
-    static Connection conn; // This is the connection that will be utilized by the rest of the Java Connections. 
+
+    static Connection conn; // This is the connection that will be utilized by the rest of the Java Connections.
     static PreparedStatement stmt;
     static HashMap<String, String[]> tableFields = new HashMap<>();
     // static HashMap<String, Integer> primaryKeys = new HashMap<>();
 
-    /** 
-     * Populates the tableFiields hashmap
+    /**
+     * Populates the tableFields hashmap
      */
     private static void populateFields()
     {
@@ -38,17 +43,18 @@ public class Backend {
         tableFields.put("orders", orders);
     }
 
-    /** 
-     * @param query Establishes a connection with the database.
+
+    /**
+     * Establishes connection with database and populates it with tables
      */
-    private static void createConnection() 
+    private static void createConnection()
     {
         //Building the connection with your credentials
         String teamNumber = "54";
         String sectionNumber = "904";
-        String dbName = "csce331_" + sectionNumber + "_" + teamNumber; 
+        String dbName = "csce331_" + sectionNumber + "_" + teamNumber;
         String dbConnectionString = "jdbc:postgresql://csce-315-db.engr.tamu.edu/" + dbName;
-        dbSetup myCredentials = new dbSetup(); 
+        dbSetup myCredentials = new dbSetup();
         System.out.println("Username" + myCredentials.user);
         System.out.println("Password" + myCredentials.pswd);
         //Connecting to the database
@@ -65,13 +71,12 @@ public class Backend {
         populateFields(); // Since a connection is only established once, we can populate all fields once.
     }
 
-    
-    /** 
-     * Generates a PreparedStatement object that embodies a SQL query and can then be executed on database 
+
+    /**
+     * Generates a PreparedStatement object that embodies a SQL query and can then be executed on database
      * for which connection already exists.
-     *  
-     * @param query  SQL query to be run on database.
-     * @return PreparedStatement : object that can then be executed on database.
+     * @param  query               SQL query to be run on database.
+     * @return       object that can then be executedo n database.
      */
     private static PreparedStatement createStatement(String query)
     {
@@ -88,15 +93,13 @@ public class Backend {
         return null;
     }
 
-    
     /**
-     * outputs the list of objects in a format required for SQL queries. 
-     * If quotes == False then the output would look like (vals[0], vals[1], vals[2], ..., vals[n]) 
+     * outputs the list of objects in a format required for SQL queries.
+     * If quotes == False then the output would look like (vals[0], vals[1], vals[2], ..., vals[n])
      * else the output would look like ('vals[0]', 'vals[1]', 'vals[2]', ..., 'vals[n]').
-     *  
-     * @param vals    values that need to be processes.
-     * @param quotes  Whether or not you want quotes surronding each object in the list.
-     * @return String Return formatted String. 
+     * @param  vals                 values that need to be processed.
+     * @param  quotes               Whether or not you want quotes surrounding each object in the list.
+     * @return        Return formatted String
      */
     private static String QueryFormat(Object[] vals, boolean quotes)
     {
@@ -111,23 +114,22 @@ public class Backend {
         return output;
     }
 
-    
-    /** 
+
+    /**
      * Checks to see if there is a record in database where value == record[fieldName].
-     * 
-     * @param tableName Table in the database which needs to be checked.
-     * @param fieldName fieldName that value is searched against.
-     * @param value value that is compared against each record.
-     * @return boolean Whether or not record is found. 
+     * @param  tableName               Table in the database which needs to be checked.
+     * @param  fieldName               The field that value is searched against.
+     * @param  value                   The value compared against each record.
+     * @return           Whether or not record is found.
      */
     static boolean isValue(String tableName, String fieldName, String value)
     {
-        // If a connection to the query does not already exist, we need to create that connection. 
+        // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
-        
+
         String query = "nothing";
         try {
-            // The Query to check if a record exists within the table where fieldName = value. 
+            // The Query to check if a record exists within the table where fieldName = value.
             query = String.format("SELECT * FROM %s WHERE %s = \'%s\';", tableName, fieldName, value);
             stmt = createStatement(query);
             ResultSet result = stmt.executeQuery();
@@ -143,23 +145,22 @@ public class Backend {
         return false;
     }
 
-    
+
     /**
-     * Retrives a value from the database.
-     * 
-     * @param tableName Table in the database which needs to be checked.
-     * @param fieldName fieldName that value is searched against.
-     * @param value value that is compared against each record.
-     * @return HashMap<String, String> Returns null if nothing is found. 
+     * Retrieves a value from the database.
+     * @param  tableName               Table in the database which needs to be checked.
+     * @param  fieldName               the field that value is searched against.
+     * @param  value                   Value that is compared against each record.
+     * @return           desired database value, null if nothing is found.
      */
     static HashMap<String, String> getValue(String tableName, String fieldName, String value)
     {
-        // If a connection to the query does not already exist, we need to create that connection. 
+        // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
-        
+
         String query = "nothing";
         try {
-            // The Query to check if a record exists within the table where fieldName = value. 
+            // The Query to check if a record exists within the table where fieldName = value.
             query = String.format("SELECT * FROM %s WHERE %s = \'%s\';", tableName, fieldName, value);
             stmt = createStatement(query);
             ResultSet result = stmt.executeQuery();
@@ -173,7 +174,7 @@ public class Backend {
             }
 
             return record;
-            
+
 
         } catch (Exception e) {
             System.err.println("QUERY :: " + query);
@@ -185,24 +186,23 @@ public class Backend {
         return null;
     }
 
-    
-    /** 
-     * Retrieves n values from the database.
-     * 
-     * @param tableName Table in the database which needs to be checked.
-     * @param fieldName fieldName that value is searched against.
-     * @param value     value that is compared against each record.
-     * @param n         Number of values wanted.
-     * @return ArrayList<HashMap<String, String>> Returns list of matches found to value.
+
+    /**
+     * Retrives n values from the database.
+     * @param  tableName               table in the database to check.
+     * @param  fieldName               Field in which to search for the value
+     * @param  value                   Value to look for.
+     * @param  n                       Number of values wanted.
+     * @return           List of matches found to value.
      */
     static ArrayList<HashMap<String, String>> getNValues(String tableName, String fieldName, String value, int n)
     {
-        // If a connection to the query does not already exist, we need to create that connection. 
+        // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
-        
+
         String query = "nothing";
         try {
-            // The Query to check if a record exists within the table where fieldName = value. 
+            // The Query to check if a record exists within the table where fieldName = value.
             query = String.format("SELECT * FROM %s WHERE %s = \'%s\' LIMIT %d;", tableName, fieldName, value, n);
             stmt = createStatement(query);
             ResultSet result = stmt.executeQuery();
@@ -227,22 +227,21 @@ public class Backend {
         return null;
     }
 
-    
-    /** 
-     * Adds a value to tableName
-     * 
-     * @param tableName Table in the database which needs to be added to.
-     * @param record    HashMap containing record that needs to be added. Keys represent the fields.
-     * @return boolean  True if successfully added.
+
+    /**
+     * Adds a value to a table
+     * @param  tableName               Table in the database to add the value to.
+     * @param  record                  Hashmap containing record to add. Keys represent the fields.
+     * @return           True if successfully added, false if not.
      */
     static boolean addValue(String tableName, HashMap<String, String> record)
     {
-        // If a connection to the query does not already exist, we need to create that connection. 
+        // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
 
         String query = "nothing";
         try {
-            // Inserting a record into the table 
+            // Inserting a record into the table
             // INSERT INTO table_name (column1, column2, column3, ...)
             // VALUES (value1, value2, value3, ...);
             String fields = QueryFormat(record.keySet().toArray(), false);
@@ -265,43 +264,40 @@ public class Backend {
         return false;
     }
 
-    
-    
-    /** 
-     * Adds n values to the database table: tableName
-     * 
-     * @param records HashMap containing record that needs to be added. Keys represent the fields.
-     * @param n Number of values to be added.
-     * @return boolean[] Array of True of False depending on succesful or unsuccesful submission.
+
+    /**
+     * Adds n values to a given database table.
+     * @param  tableName               Table to add values to.
+     * @param  records                 The values to add. Keys represent the fields.
+     * @param  n                       Number of values to be added.
+     * @return           Array of true or false depending on successful or unsuccessful addition.
      */
     static boolean[] addNValues(String tableName, ArrayList<HashMap<String, String>> records, int n)
     {
-        
-        // If a connection to the query does not already exist, we need to create that connection. 
+
+        // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
 
         return null;
     }
     
-    
-    /** 
-     * Runs query for which an existing function does not exist.
-     * 
-     * @param sqlQuery The query as a string.
-     * @return ResultSet Object that contains result of query running.
+    /**
+     * Runs query for which on existing function does not exist.
+     * @param  sqlQuery               The query to use as a string.
+     * @return          object the contains the result of running the query.
      */
     static ResultSet runQuery(String sqlQuery)
     {
-        // If a connection to the query does not already exist, we need to create that connection. 
+        // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
 
         return null;
     }
-    
-    
 
-    // Built for testing purposes. Should be commented out in the final version. 
-    // public static void main(String args[]) 
+
+
+    // Built for testing purposes. Should be commented out in the final version.
+    // public static void main(String args[])
     // {
     //     createConnection();
     //     // System.out.println(isValue("employees", "firstname","Tom")); // In Employees Table
