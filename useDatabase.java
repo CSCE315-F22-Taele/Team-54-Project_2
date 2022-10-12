@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 /*
  * Function to read in data from csv files and store in database
+ * @return ArrayList of ArrayList of strings of parsed CSV data
  */
 public class useDatabase {
 
