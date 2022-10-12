@@ -472,9 +472,6 @@ public class Cashier implements ActionListener {
     }
 
     
-    /** 
-     * @return JPanel
-     */
     // starter code for middleware functions for updating orders list and payment box
 
     // private void updateOrderPanel() {
@@ -522,6 +519,9 @@ public class Cashier implements ActionListener {
 		
 	// }
 
+    /** 
+     * @return JPanel
+     */
     private JPanel paymentPanel()
     {
         JPanel p = new JPanel();
