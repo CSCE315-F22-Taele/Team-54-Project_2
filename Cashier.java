@@ -1,3 +1,10 @@
+/**
+ * This class creates the Cashier GUI using Swing and AWT libraries.
+ * Allows the cashier to view menu items with their prices and add
+ * items to a customer order and get the total order price.
+ * @author Estella Chen
+ * @author Neha Sujith
+ */
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
