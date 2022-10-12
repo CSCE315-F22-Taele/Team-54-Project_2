@@ -48,7 +48,7 @@ public class LaunchPage implements ActionListener {
     /** 
      * Overrides the actionPerformed function from the ActionListener class.
      * This makes it so that when certain buttons are clicked, they link to either the Cashier GUI or Manager GUI.
-     * @param e the action performed, which is an ActionListener
+     * @param e the action performed by the user, which is an ActionListener
      */
     @Override
     public void actionPerformed(ActionEvent e) {
