@@ -121,7 +121,7 @@ month = '10'
 
 finances = []
 dayTotal = 0
-i = 0
+ordernum = 0
 for w in range(3): # Iterate through the weeks
     for d in range(7): # Iterate through the days in a week
         day = 4 + (7 * w) + d
@@ -136,11 +136,11 @@ for w in range(3): # Iterate through the weeks
         for order in range(n):
             total = (var:=uniform(5, 20))
             dayTotal += total
-            i += 1
+            ordernum += 1
             customerOrdersList = []
             for i in range(randint(1, 5)):
                 customerOrdersList.append(choice(list(menu_items.keys())).replace('–',''))
-            orders.append([getRandomID(3), i, f"{var:.2f}", currDay, str(randint(2, 3)), str(randint(1, 299)), True, customerOrdersList])  
+            orders.append([getRandomID(3), ordernum, f"{var:.2f}", currDay, str(randint(2, 3)), str(randint(1, 299)), True, customerOrdersList])  
         
         finances.append(dayTotal)      
 
