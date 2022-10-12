@@ -2,7 +2,6 @@ from datetime import datetime
 import csv
 from random import choice, randint, uniform
 
-# CATEGORY NOT ADDED, PLS ADD IT PLSSSSSSS
 menu_items = {
     "Chick-fil-A Chicken Sandwich":	[3.05, "Entree", {"Bread": 1, "Chicken Breast": 1, "Peanut Oil": 0.03125, "Pickle": 2}],
     "Chick-fil-A Chicken Sandwich – Combo":	[5.95, "Entree", {"Bread": 1, "Chicken Breast": 1, "Peanut Oil": 0.03125, "Pickle": 2, "Waffle Fries": 0.25, "Coca-cola": 0.125}],
