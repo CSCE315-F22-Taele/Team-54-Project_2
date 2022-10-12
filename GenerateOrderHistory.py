@@ -12,13 +12,8 @@ menu_items = {
     "Spicy Chicken Deluxe Sandwich": 3.89,
     "Spicy Chicken Deluxe Sandwich – Combo": 6.79,
     "Chick-fil-A Nuggets 8 Pc.": 3.05,
-    # "Chick-fil-A Nuggets	12 Pc.	4.45
     "Chick-fil-A Nuggets – Combo 8 Pc.": 5.95,
-    # "Chick-fil-A Nuggets – Combo	12 Pc.	8.59
     "Chick-fil-A Nuggets (Grilled) 8 Pc.": 3.85,
-    # "Chick-fil-A Nuggets (Grilled)	12 Pc.	5.75
-    # "Chick-fil-A Nuggets (Grilled) – Combo	8 Pc.	6.75
-    # "Chick-fil-A Nuggets (Grilled) – Combo	12 Pc.	8.59
     "Chick-n-Strips	3 Pc.":	3.35,
     "Chick-n-Strips – Combo	3 Pc.":	6.25,
     "Grilled Chicken Sandwich":	4.39,
@@ -28,23 +23,78 @@ menu_items = {
     "Chicken Salad Sandwich": 3.99,
     "Chicken Salad Sandwich – Combo": 6.79,
     "Grilled Chicken Cool Wrap": 5.19,
-    "Soup & Salad (Large Chicken Soup and Side Salad)":	8.35,
-    "Substitute Medium Premium Side": 1.00,
-    "Upsize Fries & Drink": 0.46,
-    "Yogurt Parfait": 2.45,
-    # Fruit Cup	Small	$2.05
-    # Fruit Cup	Medium	$2.75
-    # Fruit Cup	Large	$4.25
-    "Side Salad": 2.89,
+    "Grilled Chicken Cool Wrap - Combo": 8.15,
+    "Greek Yogurt Parfait": 2.45,
+    "Fruit Cup Small": 2.05,
+    "Fruit Cup Medium": 2.75,
+    "Fruit Cup Large": 4.25,
     "Chicken Soup":	2.65,
-    # Chicken Soup	Large	$4.35
-    # Chicken Tortilla Soup (Limited Time)	Medium	$3.75
-    # Chicken Tortilla Soup (Limited Time)	Large	$6.05
-    # Superfood Salad (Limited Time)	Medium	$2.89
-    # Superfood Salad (Limited Time)	Large	$3.89
-   "Chicken Salad Cup": 3.19, 
-    # Chicken Salad Cup	Large	$5.1
-    # Loaded Baked Potato (Limited Time)		$2.65
+    "Waffle Potato Fries - Small": 1.55,
+    "Waffle Potato Fries - Medium": 1.65,
+    "Waffle Potato Fries - Large": 1.85,
+    "Chick-n-Minis": 4.99,
+    "Hash Browns": 1.69,
+    "Chicken Biscuit": 2.26,
+    "Spicy Chicken Biscuit": 2.50,
+    "Hash Brown Scramble Bowl": 5.59,
+    "Hash Brown Scramble Burrito": 5.59,
+    "Chicken, Egg, & Cheese Biscuit": 4.99,
+    "Breakfast Filets": 2.19,
+    "Buttered Biscuit": 1.59,
+    "Egg White Grill": 3.64,
+    "Bacon, Egg, & Cheese Biscuit": 4.35,
+    "English Muffin": 1.95,
+    "Sausage, Egg, & Cheese Biscuit": 4.65,
+    "Chicken, Egg, & Cheese Muffin": 5.29,
+    "Bacon, Egg, & Cheese Muffin": 4.65,
+    "Kale Crunch": 2.79,
+    "Waffle Potato Chips": 2.59,
+    "Buddy Fruits Apple Sauce": 2.85,
+    "Coca-Cola": 2.45,
+    "Diet Coke": 2.45,
+    "Dr Pepper": 2.45,
+    "Iced Coffee": 3.85,
+    "Sprite": 2.45,
+    "Freshly Brewed Iced Tea Sweetened": 2.45,
+    "Gallon Beverage": 15.59,
+    "Simply Orange": 3.59,
+    "Lemonade": 2.89,
+    "Diet Lemonade": 2.89,
+    "Freshly Brewed Iced Tea Unsweetened": 2.45,
+    "Sunjoy (1/2 Sweet Tea, 1/2 Lemonade)": 2.89,
+    "Sunjoy (1/2 Sweet Tea, 1/2 Diet Lemonade)": 2.89,
+    "1/2 Sweet Tea, 1/2 Unsweet Tea": 2.45,
+    "1% Chocolate Milk": 1.99,
+    "Honest Kids Apple Juice": 1.99,
+    "Sunjoy (1/2 Unsweet Tea, 1/2 Diet Lemonade)": 2.89,
+    "Sunjoy (1/2 Unsweet Tea, 1/2 Lemonade)": 2.89,
+    "1/2 Lemonade, 1/2 Diet Lemonade": 2.89,
+    "Dasani Bottled Water": 2.59,
+    "Cobb Salad": 11.69,
+    "Spicy Southwest Salad": 11.95,
+    "Grilled Market Salad": 7.19,
+    "Grilled Market Salad w/ Chick-fil-A Filet": 8.19,
+    "Grilled Market Salad w/ Chick-n-Strips": 8.19,
+    "Grilled Market Salad w/ Grilled Filet": 8.19,
+    "Grilled Market Salad w/ Grilled Nuggets": 8.19,
+    "Grilled Market Salad w/ Nuggets": 8.19,
+    "Grilled Market Salad w/ Spicy Filet": 8.19,
+    "Grilled Market Salad w/ Spicy Grilled Filet": 8.19,
+    "Frosted Coffee": 5.05,
+    "Cookies & Cream Milkshake": 5.19,
+    "Chocolate Fudge Brownie": 2.59,
+    "Chocolate Chunk Cookie": 1.89,
+    "Strawberry Milkshake": 5.19,
+    "Autumn Spice Milkshake": 5.59,
+    "Frosted Lemonade": 5.05,
+    "Chocolate Milkshake": 5.19,
+    "Vanilla Milkshake": 5.19,
+    "Nuggets - 4 Pc.": 3.35,
+    "Nuggets - 6 Pc.": 4.05,
+    "Nuggets - 4 Pc.": 3.75,
+    "Nuggets - 6 Pc.": 4.65,
+    "Chick-n-Strips 1 Pc.": 3.05,
+    "Chick-n-Strips 2 Pc.": 4.09,
 }
 
 print("Number of items in the menu:", len(menu_items))
@@ -60,8 +110,6 @@ cWrite = csv.writer(csvFile)
 # Parameters required to fill up the order table.
 IDlength = 6
 getRandomID = lambda IDlength: randint(10 ** (IDlength - 1), 10 ** (IDlength))
-getRandomEmployeeID = randint(2, 3)
-getRandomCustomerID = randint(1, 299)
 
 # Week 1 - 9/4 to 9/10 and 9/10 is a gameday
 orders = []
@@ -89,7 +137,10 @@ for w in range(3): # Iterate through the weeks
             total = (var:=uniform(5, 20))
             dayTotal += total
             i += 1
-            orders.append([getRandomID(3), i, f"{var:.2f}", currDay, str(getRandomEmployeeID), str(getRandomCustomerID), True, choice(list(menu_items.keys())).replace('–','')])  
+            customerOrdersList = []
+            for i in range(randint(1, 5)):
+                customerOrdersList.append(choice(list(menu_items.keys())).replace('–',''))
+            orders.append([getRandomID(3), i, f"{var:.2f}", currDay, str(randint(2, 3)), str(randint(1, 299)), True, customerOrdersList])  
         
         finances.append(dayTotal)      
 
