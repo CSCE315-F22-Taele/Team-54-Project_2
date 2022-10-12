@@ -1,3 +1,11 @@
+/**
+ * This class implements the Manager GUI using the Swing and AWT libraries.
+ * At a high level, the GUI lets the manager switch between different views that
+ * allow them to view and edit inventory, view and edit the store menu, and 
+ * view order trends with parameter filtration capacity.
+ * 
+ * @author Mohona Ghosh
+ */
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
