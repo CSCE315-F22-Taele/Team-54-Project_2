@@ -51,7 +51,7 @@ print("Number of items in the menu:", len(menu_items))
 
 
 # The orders table needs to be: Order ID, Order Number, Total Price Due, Date, Employee ID, Customer ID, Order Satisfied, Items Ordered
-csvFile = open("Orders.csv", "a", newline = "")
+csvFile = open("Orders.csv", "w", newline = "")
 cWrite = csv.writer(csvFile)
 # cWrite.writerow(["Order",,,,,,])
 # cWrite.writerow(["Order ID", "Order Number", "Total Price Due", "Date", "Employee ID", "Customer ID", "Order Satisfied", "Items Ordered"])
@@ -60,7 +60,8 @@ cWrite = csv.writer(csvFile)
 # Parameters required to fill up the order table.
 IDlength = 6
 getRandomID = lambda IDlength: randint(10 ** (IDlength - 1), 10 ** (IDlength))
-
+getRandomEmployeeID = randint(2, 3)
+getRandomCustomerID = randint(1, 299)
 
 # Week 1 - 9/4 to 9/10 and 9/10 is a gameday
 orders = []
@@ -72,7 +73,7 @@ month = '10'
 
 finances = []
 dayTotal = 0
-
+i = 0
 for w in range(3): # Iterate through the weeks
     for d in range(7): # Iterate through the days in a week
         day = 4 + (7 * w) + d
@@ -87,8 +88,8 @@ for w in range(3): # Iterate through the weeks
         for order in range(n):
             total = (var:=uniform(5, 20))
             dayTotal += total
-            # print(choice(list(menu_items.keys())))
-            orders.append([getRandomID(3), getRandomID(3), f"{var:.2f}", currDay, str(getRandomID(6)), getRandomID(6), True, choice(list(menu_items.keys())).replace('–','')])  
+            i += 1
+            orders.append([getRandomID(3), i, f"{var:.2f}", currDay, str(getRandomEmployeeID), str(getRandomCustomerID), True, choice(list(menu_items.keys())).replace('–','')])  
         
         finances.append(dayTotal)      
 
