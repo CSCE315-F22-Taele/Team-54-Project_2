@@ -89,8 +89,8 @@ menu_items = {
     "Vanilla Milkshake": 5.19,
     "Nuggets - 4 Pc.": 3.35,
     "Nuggets - 6 Pc.": 4.05,
-    "Nuggets - 4 Pc.": 3.75,
-    "Nuggets - 6 Pc.": 4.65,
+    "Grilled Nuggets - 4 Pc.": 3.75,
+    "Grilled Nuggets - 6 Pc.": 4.65,
     "Chick-n-Strips 1 Pc.": 3.05,
     "Chick-n-Strips 2 Pc.": 4.09,
 }
@@ -101,6 +101,7 @@ print("Number of items in the menu:", len(menu_items))
 # The orders table needs to be: Order ID, Order Number, Total Price Due, Date, Employee ID, Customer ID, Order Satisfied, Items Ordered
 csvFile = open("Orders.csv", "w", newline = "")
 cWrite = csv.writer(csvFile)
+cWrite.writerow(["Order ID","Order Number","Total Price Due","Date","Employee ID","Customer ID","Order Satisfied","Items Ordered"])
 # cWrite.writerow(["Order",,,,,,])
 # cWrite.writerow(["Order ID", "Order Number", "Total Price Due", "Date", "Employee ID", "Customer ID", "Order Satisfied", "Items Ordered"])
 # For now, we are going to let Order ID == Order Number
