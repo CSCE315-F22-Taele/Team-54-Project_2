@@ -62,6 +62,10 @@ public class Manager implements ActionListener {
 
     }
 
+    
+    /** 
+     * @param e the action performed by the user
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == inventoryButton) {
@@ -76,6 +80,10 @@ public class Manager implements ActionListener {
         }
     }
 
+    
+    /** 
+     * @return JPanel containing the inventory data with editing capabilities
+     */
     /*
      * Functions to create panels for each functionality: inventory, menu editing, and trends
      */
@@ -100,6 +108,10 @@ public class Manager implements ActionListener {
         return inventoryPanel;
     }
 
+    
+    /** 
+     * @return JPanel containing data from SQL menu items table with editing capabilities
+     */
     private JPanel menuPanel() {
         Object[][] data = { // see inventoryPanel(); also we need a menu table in SQL ASAP
                             };
@@ -117,6 +129,11 @@ public class Manager implements ActionListener {
         return menuPanel;
     }
 
+    
+    /** 
+     * @return JPanel containing interface to view order trends, filtering
+     * on parameters like item name
+     */
     // NOTE: will not be implemented until Phase 4
     private JPanel trendsPanel() {
         JPanel trendsPanel = new JPanel ();
@@ -124,6 +141,10 @@ public class Manager implements ActionListener {
         return trendsPanel;
     }
 
+    
+    /** 
+     * @return JPanel containing the default view for the Manager GUI
+     */
     private JPanel controlPanel()
     {
         JPanel p = new JPanel(new BorderLayout());
