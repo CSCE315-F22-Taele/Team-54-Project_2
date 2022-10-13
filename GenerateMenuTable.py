@@ -4,22 +4,22 @@ from random import choice, randint, uniform
 
 menu_items = {
     "Chick-fil-A Chicken Sandwich":	[3.05, "Entree", ["Bread 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Pickle 2"]],
-    "Chick-fil-A Chicken Sandwich – Combo":	[5.95, "Entree", ["Bread 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Pickle 2", "Waffle Fries 0.25", "Coca-cola 0.125"]],
+    "Chick-fil-A Chicken Sandwich - Combo":	[5.95, "Entree", ["Bread 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Pickle 2", "Waffle Fries 0.25", "Coca-cola 0.125"]],
     "Chick-fil-A Chicken Deluxe Sandwich":	[3.65, "Entree", ["Bread 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Pickles 2", "Lettuce 2", "Tomato 0.5", "American Cheese 1"]],
-    "Chick-fil-A Chicken Deluxe Sandwich – Combo": [6.55, "Entree", ["Bread 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Pickles 2", "Lettuce 1", "Tomato 0.5", "American Cheese 1", "Waffle Fries 0.25", "Coca-cola 0.125"]],
+    "Chick-fil-A Chicken Deluxe Sandwich - Combo": [6.55, "Entree", ["Bread 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Pickles 2", "Lettuce 1", "Tomato 0.5", "American Cheese 1", "Waffle Fries 0.25", "Coca-cola 0.125"]],
     "Spicy Chicken Sandwich":  [3.29, "Entree", ["Bread 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Pickle 2"]],
-    "Spicy Chicken Sandwich – Combo": [6.19, "Entree", ["Bread 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Pickle 2", "Waffle Fries 0.25", "Coca-cola 0.125"]],
+    "Spicy Chicken Sandwich - Combo": [6.19, "Entree", ["Bread 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Pickle 2", "Waffle Fries 0.25", "Coca-cola 0.125"]],
     "Spicy Chicken Deluxe Sandwich": [3.89, "Entree", ["Bread 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Pickles 2", "Lettuce 1", "Tomato 0.5", "Pepper Jack Cheese 1"]],
-    "Spicy Chicken Deluxe Sandwich – Combo": [6.79, "Entree", ["Bread 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Pickles 2", "Lettuce 1", "Tomato 0.5", "Pepper Jack Cheese 1", "Waffle Fries 0.25", "Coca-cola 0.125"]],
+    "Spicy Chicken Deluxe Sandwich - Combo": [6.79, "Entree", ["Bread 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Pickles 2", "Lettuce 1", "Tomato 0.5", "Pepper Jack Cheese 1", "Waffle Fries 0.25", "Coca-cola 0.125"]],
     "Chick-fil-A Nuggets 8 Pc.": [3.05, "Entree", ["Chicken nuggets 8"]],
-    "Chick-fil-A Nuggets – Combo 8 Pc.": [5.95, "Entree", ["Chicken nuggets 8", "Waffle Fries 0.25", "Coca-cola 0.125"]],
+    "Chick-fil-A Nuggets - Combo 8 Pc.": [5.95, "Entree", ["Chicken nuggets 8", "Waffle Fries 0.25", "Coca-cola 0.125"]],
     "Chick-fil-A Nuggets (Grilled) 8 Pc.": [3.85, "Entree", ["Chicken nuggets 8"]],
     "Chick-n-Strips 3 Pc.":	[3.35, "Sides", ["Chicken strips 3"]],
-    "Chick-n-Strips – Combo 3 Pc.":	[6.25, "Sides", ["Chicken strips 3", "Waffle Fries 0.25", "Coca-cola 0.125"]],
+    "Chick-n-Strips - Combo 3 Pc.":	[6.25, "Sides", ["Chicken strips 3", "Waffle Fries 0.25", "Coca-cola 0.125"]],
     "Grilled Chicken Sandwich":	[4.39, "Entree", ["Sesame Bread 1", "Chicken Breast 1", "Lettuce 1", "Tomato 0.5", "Honey BBQ sauce 1"]],
-    "Grilled Chicken Sandwich – Combo":	[7.19, "Entree", ["Sesame Bread 1", "Chicken Breast 1", "Lettuce 1", "Tomato 0.5", "Honey BBQ sauce 1", "Waffle Fries 0.25", "Coca-cola 0.125"]],
+    "Grilled Chicken Sandwich - Combo":	[7.19, "Entree", ["Sesame Bread 1", "Chicken Breast 1", "Lettuce 1", "Tomato 0.5", "Honey BBQ sauce 1", "Waffle Fries 0.25", "Coca-cola 0.125"]],
     "Grilled Chicken Club Sandwich": [5.59, "Entree", ["Sesame Bread 1", "Chicken Breast 1", "Lettuce 1", "Tomato 0.5", "Honey BBQ sauce 1", "Colby Jack Cheese 1", "Bacon 0.125"]],
-    "Grilled Chicken Club Sandwich – Combo": [8.39, "Entree", ["Sesame Bread 1", "Chicken Breast 1", "Lettuce 1", "Tomato 0.5", "Honey BBQ sauce 1", "Colby Jack Cheese 1", "Bacon 0.125", "Waffle Fries 0.125", "Coca-cola 0.125"]],
+    "Grilled Chicken Club Sandwich - Combo": [8.39, "Entree", ["Sesame Bread 1", "Chicken Breast 1", "Lettuce 1", "Tomato 0.5", "Honey BBQ sauce 1", "Colby Jack Cheese 1", "Bacon 0.125", "Waffle Fries 0.125", "Coca-cola 0.125"]],
     "Grilled Chicken Cool Wrap": [5.19, "Entree", ["Flat bread 1", "Lettuce 1", "Cheddar Cheese 0.05", "Avocado Lime Ranch 1"]],
     "Grilled Chicken Cool Wrap - Combo": [8.15, "Entree", ["Flat bread 1", "Lettuce 1", "Cheddar Cheese 0.05", "Avocado Lime Ranch 1", "Waffle Fries 0.25", "Coca-cola 0.125"]],
     "Greek Yogurt Parfait": [2.45, "Breakfast", ["Greek Yogurt 0.125", "Granola 0.05", "Cookie crumbs 0.05", "Fresh berries 0.05"]],
@@ -105,7 +105,7 @@ menu_list = []
 menu_num = 0
 for key in menu_items:
     menu_num += 1
-    menu_list.append([menu_num, key.replace('–',''), menu_items[key][0], menu_items[key][1], menu_items[key][2]])  
+    menu_list.append([menu_num, key.replace('-',''), menu_items[key][0], menu_items[key][1], menu_items[key][2]])  
 
 cWrite.writerows(menu_list)
 csvFile.close()
