@@ -113,6 +113,20 @@ public class useDatabase {
         return parsedData;
     }
 
+    /**
+     * 
+     * @param rawData the comma-delimited row from the CSV
+     */
+    public static ArrayList<String> makeIngredientsArray(ArrayList<String> rawData) {
+        ArrayList<String> parsed = new ArrayList<String>();
+
+        for (int i = 0; i < rawData.size(); i++) {
+            
+        }
+
+        return parsed;
+    }
+
   //Commands to run this script
   //This will compile all java files in this directory
   //javac *.java
