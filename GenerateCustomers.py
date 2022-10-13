@@ -13,7 +13,7 @@ with open('Customers.csv', 'a', newline='') as f:
 
     genders = ["Male", "Female"] # Only options provided by the library. Do not reflect my views.
 
-    for i in range(19, 300):
+    for i in range(300, 1001):
         g = choice(genders)
         customers.append([i, names.get_first_name(gender = g), names.get_last_name()])
 
