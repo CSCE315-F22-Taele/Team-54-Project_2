@@ -1,28 +1,27 @@
 Finances,,,,
 Transaction ID,Debit,Credit,Transaction Details,Amount
-1,true,false,Initial Fund ,20000
-2,true,false,Week 1 Day 1 Orders,2490.80
-3,true,false,Week 1 Day 2 Orders,2510.71
-4,true,false,Week 1 Day 3 Orders,2579.46
-5,true,false,Week 1 Day 4 Orders,2549.63
-6,true,false,Week 1 Day 5 Orders,2550.62
-7,true,false,Week 1 Day 6 Orders,2462.93
-8,true,false,Week 1 Day 7 Orders,5390.73
-9,false,true,Supply Order,5000
-10,true,false,Week 2 Day 1 Orders,2538.51
-11,true,false,Week 2 Day 2 Orders,2571.74
-12,true,false,Week 2 Day 3 Orders,2507.79
-13,true,false,Week 2 Day 4 Orders,2435.15
-14,true,false,Week 2 Day 5 Orders,2501.43
-15,true,false,Week 2 Day 6 Orders,2513.28
-16,true,false,Week 2 Day 7 Orders,5731.43
-17,false,true,Supply Order,5000
-18,false,true,Employee Payroll,2400
-19,false,true,Manager Payroll,1600
-20,true,false,Week 3 Day 1 Orders,2474.95
-21,true,false,Week 3 Day 2 Orders,2398.33
-22,true,false,Week 3 Day 3 Orders,2337.15
-23,true,false,Week 3 Day 4 Orders,2429.50
-24,true,false,Week 3 Day 5 Orders,2479.45
-25,true,false,Week 3 Day 6 Orders,2446.40
-26,true,false,Week 3 Day 7 Orders,2433.11
+1,true,false,Initial Fund,20000
+3,true,false,Week 0 Day 0 Orders,1516.79
+4,true,false,Week 0 Day 1 Orders,1513.33
+5,true,false,Week 0 Day 2 Orders,1501.07
+6,true,false,Week 0 Day 3 Orders,1502.17
+7,true,false,Week 0 Day 4 Orders,1504.31
+8,true,false,Week 0 Day 5 Orders,1502.10
+9,true,false,Week 0 Day 6 Orders,6008.21
+10,false,true,Supply Order,5000.00
+11,true,false,Week 1 Day 0 Orders,1509.63
+12,true,false,Week 1 Day 1 Orders,1510.62
+13,true,false,Week 1 Day 2 Orders,1513.07
+14,true,false,Week 1 Day 3 Orders,1510.30
+15,true,false,Week 1 Day 4 Orders,1513.73
+16,true,false,Week 1 Day 5 Orders,1504.19
+17,true,false,Week 1 Day 6 Orders,6000.76
+18,false,true,Supply Order,5000.00
+19,true,false,Week 2 Day 0 Orders,1504.60
+20,true,false,Week 2 Day 1 Orders,1503.81
+21,true,false,Week 2 Day 2 Orders,1512.82
+22,true,false,Week 2 Day 3 Orders,1510.71
+23,true,false,Week 2 Day 4 Orders,1519.04
+24,true,false,Week 2 Day 5 Orders,1501.83
+25,true,false,Week 2 Day 6 Orders,1511.47
+26,false,true,Supply Order,5000.00

@@ -1,5 +1,6 @@
 from datetime import datetime
 import csv
+from functools import total_ordering
 from random import choice, randint, uniform, sample
 
 menu_items = {
@@ -101,57 +102,53 @@ print("Number of items in the menu:", len(menu_items))
 # The orders table needs to be: Order ID, Order Number, Total Price Due, Date, Employee ID, Customer ID, Order Satisfied, Items Ordered
 csvFile = open("Orders.csv", "w", newline = "")
 cWrite = csv.writer(csvFile)
-cWrite.writerow(["Order ID","Order Number","Total Price Due","Date","Employee ID","Customer ID","Order Satisfied","Items Ordered"])
-# cWrite.writerow(["Order",,,,,,])
-# cWrite.writerow(["Order ID", "Order Number", "Total Price Due", "Date", "Employee ID", "Customer ID", "Order Satisfied", "Items Ordered"])
+# cWrite.writerow(["Order ID","Order Number","Total Price Due","Date","Employee ID","Customer ID","Order Satisfied","Items Ordered"])
+cWrite.writerow(["Order",'','','','','',''])
+cWrite.writerow(["Order ID", "Order Number", "Total Price Due", "Date", "Employee ID", "Customer ID", "Order Satisfied", "Items Ordered"])
 # For now, we are going to let Order ID == Order Number
 
 # Parameters required to fill up the order table.
 IDlength = 6
 OrderID = 10 ** (IDlength - 1)
+ordernum = 0
 
 # getRandomID = lambda IDlength: randint(10 ** (IDlength - 1), 10 ** (IDlength))
 # Week 1 - 9/4 to 9/10 and 9/10 is a gameday
 orders = []
 ordersPerDay = 200
-orderID = 0
-total =  0
 year = '2022'
 month = '10'
-
-finances = []
-dayTotal = 0
-ordernum = 0
+employeeIDs = [871008, 106478, 699912, 706968, 415480,908714, 274617, 528785, 738176, 871851, 721405, 727301, 669838, 865465, 486708, 714610, 150541, 493194, 748375]
+finances = [['Finances','','','','']]
+finances.append(["Transaction ID","Debit","Credit","Transaction Details","Amount"])
+finances.append([1,"true","false","Initial Fund",20000])
+dayReq = 0
 for w in range(3): # Iterate through the weeks
     for d in range(7): # Iterate through the days in a week
         day = 4 + (7 * w) + d
-        dayTotal = 0
-
+        dayTotal, dayReq = 0, 6000 if d == 6 and w != 2 else 1500 
         currDay = month + "/" + str(day) + "/" + year
-        if d == 6 and w != 2: # (4 + (7 * w) + d)
-            n = 450
-        else:
-            n = ordersPerDay
-
-        while dayTotal = 0
-        for order in range(n):
-            dayTotal += total
-            ordernum += 1
-            customerOrdersList = []
-            itemsinOrder = randint(1,5)
-            customerOrdersList = sample(list(menu_items.keys(), itemsinOrder))
-            # (           ["Order ID", "Order Number", "Total Price Due", "Date", "Employee ID", "Customer ID", "Order Satisfied", "Items Ordered"]
-            orders.append([OrderID   , ordernum      , f"{var:.2f}"    , currDay, str(randint(2, 3)), str(randint(1, 299)), True, customerOrdersList])  
-            OrderID += 1
-        finances.append(dayTotal)      
-
-cWrite.writerows(orders)
         
-print(total)
-print('finances:', finances)
-# Week 2 - 9/11 - 9/17 and 9/17 is a gameday
-
-# Week 3 - 9/18 - 9/24
-
-
+        while dayTotal <= dayReq: 
+            itemsinOrder = randint(1,5)
+            customerOrdersList = sample(list(menu_items.keys()), itemsinOrder)
+            orderCost = sum([menu_items[item] for item in customerOrdersList])
+            dayTotal += orderCost
+            
+            # (           ["Order ID", "Order Number", "Total Price Due",   "Date",    "Employee ID"   ,      "Customer ID", "Order Satisfied", "Items Ordered"]
+            orders.append([OrderID   , ordernum      , f"{orderCost:.2f}", currDay, choice(employeeIDs), randint(1, 1001)  , True, customerOrdersList])
+            ordernum += 1 
+            OrderID += 1 
+        finances.append([len(finances), "true", "false", f"Week {w} Day {d} Orders",f"{dayTotal:.2f}"])
+    
+    finances.append([len(finances), "false", "true", f"Supply Order",f"{5000:.2f}"])
+    
+cWrite.writerows(orders)
 csvFile.close()
+
+fsvFile = open("Finances.csv", "w", newline = "")
+fWrite = csv.writer(fsvFile)
+
+print(finances)
+fWrite.writerows(finances)
+fsvFile.close()
