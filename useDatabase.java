@@ -137,7 +137,7 @@ public class useDatabase {
                 data.add(rows);
             }
 
-            data.remove(0); // removes title row from CSV
+            // data.remove(0); // removes title row from CSV
             data.remove(0); // removes attributes list
             sc.close();  //closes the scanner
         } catch (FileNotFoundException e) {
@@ -314,7 +314,7 @@ public class useDatabase {
 
         // // For Menu
         ArrayList<ArrayList<String>> menuList = makeIngredientsArray("Menu.csv");
-        for (int i = 2; i < menuList.size(); i++) {
+        for (int i = 0; i < menuList.size(); i++) {
             String menuID = menuList.get(i).get(0);
             String name = menuList.get(i).get(1);
             String price = menuList.get(i).get(2);
