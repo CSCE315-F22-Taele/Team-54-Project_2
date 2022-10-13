@@ -1,4 +1,3 @@
-Employees,,,,,,
 Employee ID,First Name,Last Name,Pay Rate,Role,Start Date,Manager
 1,Tom,Johnson,20,Manager,08/01/2022,true
 871008,Lynn,Setzer,15,Cashier,8/18/2021,False

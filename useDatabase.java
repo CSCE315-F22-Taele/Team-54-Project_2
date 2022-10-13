@@ -42,13 +42,75 @@ public class useDatabase {
                 data.add(rows);
             }
 
-            data.remove(0); // removes title row from CSV
+            // data.remove(0); // removes title row from CSV
             data.remove(0); // removes attributes list
         sc.close();  //closes the scanner
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         return data;
+    }
+
+    /**
+     * Function used specifically to parse Orders.csv and return an array of items ordered for each order
+     * in the CSV file.
+     * @param rawData one row in the CSV file, split by the comma delimiter
+     * @return An array of everything after a certain number of elements grouped together
+     */
+    public static ArrayList<String> makeItemsArray(ArrayList<String> rawData, int startIdx) {
+        ArrayList<String> parsedData = new ArrayList<String>();
+        // boolean pastPrice = false;
+
+        for (int i = startIdx; i < rawData.size(); i++) {
+            if (rawData.get(i).indexOf(39) != -1 && rawData.get(i).indexOf(39) == rawData.get(i).lastIndexOf(39)) { // if a menu item got split during CSV read
+                    // merge this element with the next element to get the full menu item in one element
+                // System.out.println("Split item: " + rawData.get(i));
+
+                int counter = 1;
+                for (int k = i + 1; rawData.get(k).indexOf(39) == -1; k++) {
+                    counter++;
+                }
+                
+                // Merge elements
+                if (counter == 1) {
+                    rawData.set(i, rawData.get(i) + ", " + rawData.get(i + 1));
+                } else if (counter == 2) {
+                    rawData.set(i, rawData.get(i) + ", " + rawData.get(i + 1) + ", " + rawData.get(i + 2));
+                }
+
+                // System.out.println("Merged element:" + rawData.get(i));
+                
+                // Shift array
+                int bounds = rawData.size() - 1;
+                if (counter == 2) {
+                    bounds--;
+                }
+                for (int j = i + 1; j < bounds; j++) {
+                    rawData.set(j, rawData.get(j + counter)); // shift elements left to remove the second half
+                }
+                rawData.remove(rawData.size() - 1);
+                if (counter == 2) {
+                    rawData.remove(rawData.size() - 1);
+                }
+
+                // System.out.println("Shifted array: " + rawData);
+            }
+
+            // if (isMenu && !pastPrice) {
+            //     continue;
+            // } else if (rawData.get(i).indexOf('.') != -1) {
+            //     pastPrice = true;
+            //     continue;
+            // }
+
+            String parsedString = rawData.get(i).substring((rawData.get(i).indexOf(39)) + 1, rawData.get(i).lastIndexOf(39));
+            // System.out.println(parsedString);
+            parsedData.add(parsedString);
+        }
+
+        // System.out.println(parsedData);
+
+        return parsedData;
     }
 
   //Commands to run this script
@@ -88,22 +150,32 @@ public class useDatabase {
         // Customers
         String createCustomerTable = "CREATE TABLE customers (customerID int, firstName text, lastName text);";
         stmt.executeUpdate(createCustomerTable);
+        System.out.println("Created customers table");
 
         // Employees
         String createEmployeeTable = "CREATE TABLE employees (employeeID int, firstName varchar, lastName varchar, payRate float, role varchar, startDate date, isManager boolean);";
         stmt.executeUpdate(createEmployeeTable);
+        System.out.println("Created employees table");
 
         // //Inventory
-        String createInventoryTable = "CREATE TABLE inventory (itemID int, name text, category text, expirationDate date, fridgeRequired boolean, quantity int, unit text);";
+        String createInventoryTable = "CREATE TABLE inventory (itemID int, name text, category text, expirationDate date, fridgeRequired boolean, quantity float, unit text);";
         stmt.executeUpdate(createInventoryTable);
+        System.out.println("Created inventory table");
 
         // Finances
         String createFinanceTable = "CREATE TABLE finances (transactionID int, isDebit boolean, isCredit boolean, details text, amount float);";
         stmt.executeUpdate(createFinanceTable);
+        System.out.println("Created finances table");
 
         // Orders
-        String createOrdersTable = "CREATE TABLE orders (orderID int, orderNumber int, totalPrice float, saleDate date, employeeID int, customerID int, satisfied boolean, itemsOrdered text);";
+        String createOrdersTable = "CREATE TABLE orders (orderID int, orderNumber int, totalPrice float, saleDate date, employeeID int, customerID int, satisfied boolean, itemsOrdered text[]);";
         stmt.executeUpdate(createOrdersTable);
+        System.out.println("Created orders table");
+
+        // Menu
+        // String createMenuTable = "CREATE TABLE menu (menuID int, name text, price float, category text, ingredients text[]);";
+        // stmt.executeUpdate(createMenuTable);
+        // System.out.println("Created menu table");
 
         // POPULATE TABLES IN DATABASE
         // For Customers
@@ -119,6 +191,8 @@ public class useDatabase {
             // Execute the query on the server
             stmt.executeUpdate(query);
         }
+
+        System.out.println("Populated customers table");
 
         // For Employees
         ArrayList<ArrayList<String>> employeeList = readCSVFileName("Employees.csv");
@@ -138,6 +212,8 @@ public class useDatabase {
             stmt.executeUpdate(query);
         }
 
+        System.out.println("Populated employees table");
+
         // For Inventory
         ArrayList<ArrayList<String>> inventoryList = readCSVFileName("Inventory.csv");
         for (int i = 0; i < inventoryList.size(); i++) {
@@ -156,6 +232,8 @@ public class useDatabase {
             stmt.executeUpdate(query);
         }
 
+        System.out.println("Populated inventory table");
+
         // For Finances
         ArrayList<ArrayList<String>> financesList = readCSVFileName("Finances.csv");
         for (int i = 0; i < financesList.size(); i++) {
@@ -172,6 +250,8 @@ public class useDatabase {
             stmt.executeUpdate(query);
         }
 
+        System.out.println("Populated finances table");
+
         // For Orders
         ArrayList<ArrayList<String>> ordersList = readCSVFileName("Orders.csv");
         for (int i = 0; i < ordersList.size(); i++) {
@@ -182,7 +262,10 @@ public class useDatabase {
             String empID = ordersList.get(i).get(4);
             String custID = ordersList.get(i).get(5);
             String satisfied = ordersList.get(i).get(6);
-            String items = ordersList.get(i).get(7);
+
+            // System.out.println(ordersList.get(i));
+
+            String items = makeItemsArray(ordersList.get(i), 7).toString().replace('[', '{').replace(']', '}');
 
             // Query string
             String query = String.format("INSERT INTO orders VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');", orderID, orderNum, totPrice, date, empID, custID, satisfied, items);
@@ -191,7 +274,27 @@ public class useDatabase {
             stmt.executeUpdate(query);
         }
 
-       System.out.println("--------------------Query Results--------------------");
+        System.out.println("Populated orders table");
+
+        // // For Menu
+        // ArrayList<ArrayList<String>> menuList = readCSVFileName("Menu.csv");
+        // for (int i = 0; i < menuList.size(); i++) {
+        //     String menuID = menuList.get(i).get(0);
+        //     String name = menuList.get(i).get(1);
+        //     String price = menuList.get(i).get(2);
+        //     String category = menuList.get(i).get(3);
+        //     String ingredients = menuList.get(i).get(4);
+
+        //     // Query string
+        //     String query = String.format("INSERT INTO menu VALUES ('%s', '%s', '%s', '%s', '%s')", menuID, name, price, category, ingredients);
+
+        //     // Execute query
+        //     stmt.executeUpdate(query);
+        // }
+
+        // System.out.println("Populated menu table");
+
+       System.out.println("--------------------Sucessfully Completed Database Construction--------------------");
    } catch (Exception e) {
        e.printStackTrace();
        System.err.println(e.getClass().getName()+": "+e.getMessage());
