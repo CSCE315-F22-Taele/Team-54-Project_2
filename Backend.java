@@ -277,6 +277,8 @@ public class Backend {
 
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
+        
+        
 
         return null;
     }
