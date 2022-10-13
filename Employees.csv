@@ -1,7 +1,22 @@
 Employees,,,,,,
 Employee ID,First Name,Last Name,Pay Rate,Role,Start Date,Manager
 1,Tom,Johnson,20,Manager,08/01/2022,true
-2,Bob,Mathew,15,Cashier,08/01/2022,false
-3,Scarlett,Smith,15,Cashier,05/02/2021,false
-4,Beth,Stewart,15,Kitchen staff,08/14/2021,false
-5,John,Quincy,15,Kitchen staff,01/25/2022,false
+871008,Lynn,Setzer,15,Cashier,8/18/2021,False
+106478,Frank,Jenkins,15,Cashier,8/18/2021,False
+699912,Katrina,Johnson,15,Cashier,8/18/2021,False
+706968,Charles,Ott,15,Cashier,8/18/2021,False
+415480,Brandon,Meredith,15,Kitchen staff,8/18/2021,False
+908714,Juan,Ward,15,Kitchen staff,8/18/2021,False
+274617,James,Kelly,15,Kitchen staff,8/18/2021,False
+528785,Marianne,Colicchio,15,Kitchen staff,8/18/2021,False
+738176,Christopher,Cintron,15,Kitchen staff,8/18/2021,False
+871851,Leslie,Mcnair,15,Kitchen staff,8/18/2021,False
+721405,Ann,Washington,15,Kitchen staff,8/18/2021,False
+727301,Nathan,Jacquez,15,Kitchen staff,8/18/2021,False
+669838,Patricia,Mccartney,15,Kitchen staff,8/18/2021,False
+865465,Katrina,Spoon,15,Kitchen staff,8/18/2021,False
+486708,Mandy,Hays,15,Kitchen staff,8/18/2021,False
+714610,Timothy,Dunbar,15,Kitchen staff,8/18/2021,False
+150541,Kimberly,Swihart,15,Kitchen staff,8/18/2021,False
+493194,William,Brown,15,Kitchen staff,8/18/2021,False
+748375,Calvin,Bullock,15,Kitchen staff,8/18/2021,False

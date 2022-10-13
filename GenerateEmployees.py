@@ -15,13 +15,12 @@ import names # pip install names
 # 4,Beth,Stewart,15,Kitchen staff,08/14/2021,false
 # 5,John,Quincy,15,Kitchen staff,01/25/2022,false
 
-f = open("Employees.csv", "a") # Appends to the file
+f = open("Employees.csv", "a", newline="") # Appends to the file
 csvWrite = csv.writer(f)
 # Uncomment if building file from scratch
 # csvWrite.writerow(['Employees'])
 # csvWrite.writerow(['Employee ID, First Name, Last Name, Pay Rate, Role, Start Date, Manager'])
 
-# Example Format - 4,Beth,Stewart,15,Kitchen staff,08/14/2021,false
 
 # Fields: Employee ID,First Name,Last Name,Pay Rate,Role,Start Date,Manager
 
@@ -34,15 +33,17 @@ getRandomID = lambda IDlength: randint(10 ** (IDlength - 1), 10 ** (IDlength))
 
 genders = ["Male", "Female"] # Only options provided by the library. Do not reflect my views.
 
-currDay = datetime.day(year = '2021', month = '8', day = str(randint(1, 31)))
+# currDay = datetime.day(year = '2021', month = '8', day = str(randint(1, 31)))
 
-for i in range(2): # We need 2 more cashiers
+currDay = f"8/{randint(1, 31)}/2021"
+
+for i in range(4): # We need 2 more cashiers
     g = choice(genders)
-    employees.append([getRandomID(6), names.get_first_name(gender = g), names.get_last_name(),  CASHIERPAYRATE, "Cashier", currDay, False])
+    employees.append([getRandomID(6), names.get_first_name(gender = g), names.get_last_name(),  CASHIERPAYRATE, "Cashier", str(currDay), False])
 
 for i in range(15):
     g = choice(genders)
-    employees.append([getRandomID(6), names.get_first_name(gender = g), names.get_last_name(),  KITCHENPAYRATE, "Kitchen staff", currDay, False])
+    employees.append([getRandomID(6), names.get_first_name(gender = g), names.get_last_name(),  KITCHENPAYRATE, "Kitchen staff", str(currDay), False])
 
 csvWrite.writerows(employees)
 f.close()
