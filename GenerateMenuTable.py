@@ -105,7 +105,7 @@ menu_list = []
 menu_num = 0
 for key in menu_items:
     menu_num += 1
-    menu_list.append([menu_num, key.replace('-',''), menu_items[key][0], menu_items[key][1], menu_items[key][2]])  
+    menu_list.append([menu_num, key, menu_items[key][0], menu_items[key][1], " | ".join(menu_items[key][2])])  
 
 cWrite.writerows(menu_list)
 csvFile.close()

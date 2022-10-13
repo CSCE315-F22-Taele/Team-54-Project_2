@@ -299,25 +299,25 @@ public class Backend {
 
 
     // Built for testing purposes. Should be commented out in the final version.
-    // public static void main(String args[])
-    // {
-    //     createConnection();
-    //     // System.out.println(isValue("employees", "firstname","Tom")); // In Employees Table
-    //     // System.out.println(isValue("employees", "lastname","Quincy")); // In Employees Table
-    //     // System.out.println(isValue("employees", "firstname","Grace")); // Not in Employees Table
-    //     // System.out.println(isValue("employees", "lastname","George")); // In Employees Table
-    //     // HashMap<String, String> temp = getValue("employees", "firstname", "Tom");
-    //     // ArrayList<HashMap<String, String>> temp = getNValues("employees", "firstname", "Tom", 2);
-    //     // for(HashMap<String, String> x : temp)
-    //         // System.out.println(x);
-    //     HashMap<String, String> temp = new HashMap<>();
-    //     String[] keys = new String[]{"customerid", "firstname", "lastname"};
-    //     String[] vals = new String[]{"19", "Estella", "Chen"};
-    //     for(int i = 0; i < keys.length; ++i)
-    //         temp.put(keys[i], vals[i]);
+    public static void main(String args[])
+    {
+        createConnection();
+        // System.out.println(isValue("employees", "firstname","Tom")); // In Employees Table
+        // System.out.println(isValue("employees", "lastname","Quincy")); // In Employees Table
+        // System.out.println(isValue("employees", "firstname","Grace")); // Not in Employees Table
+        // System.out.println(isValue("employees", "lastname","George")); // In Employees Table
+        // HashMap<String, String> temp = getValue("employees", "firstname", "Tom");
+        // ArrayList<HashMap<String, String>> temp = getNValues("employees", "firstname", "Tom", 2);
+        // for(HashMap<String, String> x : temp)
+            // System.out.println(x);
+        HashMap<String, String> temp = new HashMap<>();
+        String[] keys = new String[]{"customerid", "firstname", "lastname"};
+        String[] vals = new String[]{"19", "Estella", "Chen"};
+        for(int i = 0; i < keys.length; ++i)
+            temp.put(keys[i], vals[i]);
 
-    //     System.out.println(addValue("customers", temp));
-    //     // System.out.println(temp);
+        System.out.println(addValue("customers", temp));
+        // System.out.println(temp);
 
-    // }
+    }
 }
