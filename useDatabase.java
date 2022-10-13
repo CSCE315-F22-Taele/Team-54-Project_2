@@ -62,39 +62,39 @@ public class useDatabase {
         // boolean pastPrice = false;
 
         for (int i = startIdx; i < rawData.size(); i++) {
-            if (rawData.get(i).indexOf(39) != -1 && rawData.get(i).indexOf(39) == rawData.get(i).lastIndexOf(39)) { // if a menu item got split during CSV read
-                    // merge this element with the next element to get the full menu item in one element
-                // System.out.println("Split item: " + rawData.get(i));
+            // if (rawData.get(i).indexOf(39) != -1 && rawData.get(i).indexOf(39) == rawData.get(i).lastIndexOf(39)) { // if a menu item got split during CSV read
+            //         // merge this element with the next element to get the full menu item in one element
+            //     // System.out.println("Split item: " + rawData.get(i));
 
-                int counter = 1;
-                for (int k = i + 1; rawData.get(k).indexOf(39) == -1; k++) {
-                    counter++;
-                }
+            //     int counter = 1;
+            //     for (int k = i + 1; rawData.get(k).indexOf(39) == -1; k++) {
+            //         counter++;
+            //     }
                 
-                // Merge elements
-                if (counter == 1) {
-                    rawData.set(i, rawData.get(i) + ", " + rawData.get(i + 1));
-                } else if (counter == 2) {
-                    rawData.set(i, rawData.get(i) + ", " + rawData.get(i + 1) + ", " + rawData.get(i + 2));
-                }
+            //     // Merge elements
+            //     if (counter == 1) {
+            //         rawData.set(i, rawData.get(i) + ", " + rawData.get(i + 1));
+            //     } else if (counter == 2) {
+            //         rawData.set(i, rawData.get(i) + ", " + rawData.get(i + 1) + ", " + rawData.get(i + 2));
+            //     }
 
-                // System.out.println("Merged element:" + rawData.get(i));
+            //     // System.out.println("Merged element:" + rawData.get(i));
                 
-                // Shift array
-                int bounds = rawData.size() - 1;
-                if (counter == 2) {
-                    bounds--;
-                }
-                for (int j = i + 1; j < bounds; j++) {
-                    rawData.set(j, rawData.get(j + counter)); // shift elements left to remove the second half
-                }
-                rawData.remove(rawData.size() - 1);
-                if (counter == 2) {
-                    rawData.remove(rawData.size() - 1);
-                }
+            //     // Shift array
+            //     int bounds = rawData.size() - 1;
+            //     if (counter == 2) {
+            //         bounds--;
+            //     }
+            //     for (int j = i + 1; j < bounds; j++) {
+            //         rawData.set(j, rawData.get(j + counter)); // shift elements left to remove the second half
+            //     }
+            //     rawData.remove(rawData.size() - 1);
+            //     if (counter == 2) {
+            //         rawData.remove(rawData.size() - 1);
+            //     }
 
-                // System.out.println("Shifted array: " + rawData);
-            }
+            //     // System.out.println("Shifted array: " + rawData);
+            // }
 
             // if (isMenu && !pastPrice) {
             //     continue;
