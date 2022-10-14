@@ -93,6 +93,21 @@ menu_items = {
     "Grilled Nuggets - 6 Pc.": [4.65, "Kids Meals", ["Chicken nuggets 6"]],
     "Chick-n-Strips 1 Pc.": [3.05, "Kids Meals", ["Chicken strips 1"]],
     "Chick-n-Strips 2 Pc.": [4.09, "Kids Meals", ["Chicken strips 2"]],
+    "Chick-fil-A sauce": [1.00, "Sauce", ["Chick-Fil-A Sauce 1"]],
+    "Honey BBQ sauce": [1.00, "Sauce", ["Honey BBQ sauce 1"]],
+    "Cilantro Lime sauce": [1.00, "Sauce", ["Cilantro Lime sauce 1"]],
+    "Avocado Lime Ranch": [1.00, "Sauce", ["Avocado Lime Ranch 1"]],
+    "Jalapeno salsa": [1.00, "Sauce", ["Jalapeno salsa 1"]],
+    "Creamy salsa": [1.00, "Sauce", ["Creamy salsa 1"]],
+    "Apple Cider Vinaigrette": [1.00, "Sauce", ["Apple Cider Vinaigrette 1"]],
+    "BBQ sauce": [1.00, "Sauce", ["BBQ sauce 1"]],
+    "Garden Herb Ranch sauce": [1.00, "Sauce", ["Garden Herb Ranch sauce 1"]],
+    "Honey mustard sauce": [1.00, "Sauce", ["Honey mustard sauce 1"]],
+    "Polynesian sauce": [1.00, "Sauce", ["Polynesian sauce 1"]],
+    "Sweet & Spicy Sriracha sauce": [1.00, "Sauce", ["Sweet & Spicy Sriracha sauce 1"]],
+    "Zesty Buffalo sauce": [1.00, "Sauce", ["Zesty Buffalo sauce 1"]],
+    "Fat free honey mustard": [1.00, "Sauce", ["Fat free honey mustard 1"]],
+    "Light Italian dressing": [1.00, "Sauce", ["Light Italian dressing 1"]],
 }
 
 csvFile = open("Menu.csv", "w", newline = "")
