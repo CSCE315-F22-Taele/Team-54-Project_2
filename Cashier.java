@@ -21,6 +21,7 @@ public class Cashier extends Backend implements ActionListener {
     CardLayout cardLayout;
     JPanel cardPanel;
 
+    static JButton removeButton;
     private JButton backButton = new JButton("Go Back");
 
     // variables for the control panel
@@ -123,32 +124,26 @@ public class Cashier extends Backend implements ActionListener {
     {
         if (e.getSource() == breakfast) {
             cardLayout.show(cardPanel, "breakfast");
-        }
-        else if (e.getSource() == entree) {
+        } else if (e.getSource() == entree) {
             cardLayout.show(cardPanel, "entree");
-        }
-        else if (e.getSource() == salads) {
+        } else if (e.getSource() == salads) {
             cardLayout.show(cardPanel, "salads");
-        }
-        else if (e.getSource() == sides) {
+        } else if (e.getSource() == sides) {
             cardLayout.show(cardPanel, "sides");
-        }
-        else if (e.getSource() == kids) {
+        } else if (e.getSource() == kids) {
             cardLayout.show(cardPanel, "kids");
-        }
-        else if (e.getSource() == treats) {
+        } else if (e.getSource() == treats) {
             cardLayout.show(cardPanel, "treats");
-        }
-        else if (e.getSource() == drinks) {
+        } else if (e.getSource() == drinks) {
             cardLayout.show(cardPanel, "drinks");
-        }
-        else if (e.getSource() == dipping) {
+        } else if (e.getSource() == dipping) {
             cardLayout.show(cardPanel, "sauces");
-        }
-        else if (e.getSource() == backButton) {
+        } else if (e.getSource() == backButton) {
             frame.dispose();
             new LaunchPage();
-        }
+        } else if (e.getSource() == removeButton) {
+            // functionality for this button will be implemented in phase 4
+        } // else if (e.getSource() == )
     }
 
     
@@ -191,9 +186,7 @@ public class Cashier extends Backend implements ActionListener {
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
-            JButton removeButton = new JButton("Remove Item");
-            // removeButton.addActionListener(listener);
-            // removeButton.addActionCommand(Integer.toString(index++));
+            removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -235,9 +228,7 @@ public class Cashier extends Backend implements ActionListener {
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
-            JButton removeButton = new JButton("Remove Item");
-            // removeButton.addActionListener(listener);
-            // removeButton.addActionCommand(Integer.toString(index++));
+            removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -278,9 +269,7 @@ public class Cashier extends Backend implements ActionListener {
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
-            JButton removeButton = new JButton("Remove Item");
-            // removeButton.addActionListener(listener);
-            // removeButton.addActionCommand(Integer.toString(index++));
+            removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -321,9 +310,7 @@ public class Cashier extends Backend implements ActionListener {
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
-            JButton removeButton = new JButton("Remove Item");
-            // removeButton.addActionListener(listener);
-            // removeButton.addActionCommand(Integer.toString(index++));
+            removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -364,9 +351,7 @@ public class Cashier extends Backend implements ActionListener {
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
-            JButton removeButton = new JButton("Remove Item");
-            // removeButton.addActionListener(listener);
-            // removeButton.addActionCommand(Integer.toString(index++));
+            removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -407,9 +392,7 @@ public class Cashier extends Backend implements ActionListener {
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
-            JButton removeButton = new JButton("Remove Item");
-            // removeButton.addActionListener(listener);
-            // removeButton.addActionCommand(Integer.toString(index++));
+            removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -450,9 +433,7 @@ public class Cashier extends Backend implements ActionListener {
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
-            JButton removeButton = new JButton("Remove Item");
-            // removeButton.addActionListener(listener);
-            // removeButton.addActionCommand(Integer.toString(index++));
+            removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -493,9 +474,7 @@ public class Cashier extends Backend implements ActionListener {
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
-            JButton removeButton = new JButton("Remove Item");
-            // removeButton.addActionListener(listener);
-            // removeButton.addActionCommand(Integer.toString(index++));
+            removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
