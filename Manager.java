@@ -92,7 +92,7 @@ public class Manager implements ActionListener, TableModelListener {
             frame.dispose();
             new LaunchPage();
         } else if (e.getSource() == invAddButton) {
-
+            
         } else if (e.getSource() == invRemoveButton) {
 
         } else if (e.getSource() == menAddButton) {
@@ -219,7 +219,16 @@ public class Manager implements ActionListener, TableModelListener {
         TableModel model = (TableModel)e.getSource();
         String columnName = model.getColumnName(column);
         Object data = model.getValueAt(row, column);
-
+        
+        boolean isInv = (model.getColumnCount() == 7);
+        if(isInv)
+        {
+            Backend.editTable("inventory", row, column, columnName, data);
+        }
+        else
+        {
+            Backend.editTable("menu", row, column, columnName, data);
+        }
         // Need backend function to update SQL table at the specified row and column
 
         // Do something with the data...
