@@ -96,9 +96,11 @@ public class Manager implements ActionListener {
      * @return JPanel containing the inventory data with editing capabilities
      */
     private JPanel inventoryPanel() {
-        Object[][] data = { // url: https://docs.oracle.com/javase/tutorial/uiswing/components/table.html
+        // Object[][] data = { // url: https://docs.oracle.com/javase/tutorial/uiswing/components/table.html
                             // url: https://stackoverflow.com/questions/27815400/retrieving-data-from-jdbc-database-into-jtable
-                            }; // import from SQL table????? Function in middleware table?????
+                            // }; // import from SQL table????? Function in middleware table?????
+        
+        String[][] data = Backend.tableView("inventory");
         String[] colNames = {"Item ID",
                              "Name",
                              "Category",
@@ -122,12 +124,12 @@ public class Manager implements ActionListener {
      * @return JPanel containing data from SQL menu items table with editing capabilities
      */
     private JPanel menuPanel() {
-        Object[][] data = { // see inventoryPanel(); also we need a menu table in SQL ASAP
-                            };
+        Object[][] data = Backend.tableView("menu");
         String[] colNames = {"Item ID",
                              "Name",
+                             "Price",
                              "Category",
-                             "Price"};
+                             "Ingredients"};
         
         JTable items = new JTable(data, colNames);                    
         JPanel menuPanel = new JPanel(new BorderLayout());

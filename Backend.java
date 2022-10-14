@@ -232,7 +232,6 @@ public class Backend {
         return null;
     }
 
-
     /**
      * Adds a value to a table
      * @param  tableName               Table in the database to add the value to.
@@ -288,7 +287,10 @@ public class Backend {
         return null;
     }
     
-    static Object[] tableView(String tableName)
+    
+
+
+    static String[][] tableView(String tableName)
     {
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
@@ -296,31 +298,28 @@ public class Backend {
         String query = "nothing";
         try {
             // The Query to check if a record exists within the table where fieldName = value.
-        
             query = String.format("SELECT * FROM %s ;", tableName);
-        
             stmt = createStatement(query);
-        
             ResultSet result = stmt.executeQuery();
-            int row = 0; 
+            String[] fields = tableFields.get(tableName);
+            ArrayList<ArrayList<String>> nRecords =  new ArrayList<ArrayList<String>>();
             while(result.next())
             {
-                row += 1;
+                int i = 0;
+                ArrayList<String> record = new ArrayList<>();
+                for(String field : fields)
+                    {
+                        record.add(result.getString(++i));
+                    }
+                nRecords.add(record);
             }
 
-            query = String.format("SELECT * FROM %s ;", tableName);
-            stmt = createStatement(query);
-            result = stmt.executeQuery();
-            int col = tableFields.get(tableName).length;
-            String[][] vals = new String[row][col];
-            for(int r = 0; r < row; ++r)
-                for(int c = 0; c < col; ++c)
-                {
-                    vals[r][c] = result.getString(c);
-                }
-            
-            return vals;
+            String[][] view = new String[nRecords.size()][nRecords.get(0).size()];
+            for(int r = 0; r < view.length; ++r)
+                for(int c = 0; c < view[0].length; ++c)
+                    view[r][c] = nRecords.get(r).get(c);
 
+            return view;
         } catch (Exception e) {
             System.err.println("QUERY :: " + query);
             e.printStackTrace();
@@ -328,7 +327,8 @@ public class Backend {
             System.exit(0);
         }
         return null;
-    } 
+    }
+
 
 
     /**
