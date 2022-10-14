@@ -36,15 +36,15 @@ menu_items = {
     "Spicy Chicken Biscuit": [2.50, "Breakfast", ["Buttermilk biscuit 1", "Chicken breast 1"]],
     "Hash Brown Scramble Bowl": [5.59, "Breakfast", ["Chicken nuggets 4", "Hash Brown 0.125", "Egg 1", "Cheddar Cheese 0.05", "Jalapeno salsa 1"]],
     "Hash Brown Scramble Burrito": [5.59, "Breakfast", ["Chicken nuggets 4", "Hash Brown 0.125", "Egg 1", "Cheddar Cheese 0.05", "Jalapeno salsa 1", "Tortilla 1"]],
-    "Chicken, Egg, & Cheese Biscuit": [4.99, "Breakfast", ["Buttermilk biscuit 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Egg 1", "American Cheese 1"]],
+    "Chicken and Egg and Cheese Biscuit": [4.99, "Breakfast", ["Buttermilk biscuit 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Egg 1", "American Cheese 1"]],
     "Breakfast Filets": [2.19, "Breakfast", ["Filet 1"]],
     "Buttered Biscuit": [1.59, "Breakfast", ["Buttermilk biscuit 1", "Butter 0.0325"]],
     "Egg White Grill": [3.64, "Breakfast", ["English muffin 1", "Egg 1", "American Cheese 1"]],
-    "Bacon, Egg, & Cheese Biscuit": [4.35, "Breakfast", ["Buttermilk biscuit 1", "Bacon 0.125", "Peanut Oil 0.03125", "Egg 1", "American Cheese 1"]],
+    "Bacon Egg & Cheese Biscuit": [4.35, "Breakfast", ["Buttermilk biscuit 1", "Bacon 0.125", "Peanut Oil 0.03125", "Egg 1", "American Cheese 1"]],
     "English Muffin": [1.95, "Breakfast", ["English muffin 1"]],
-    "Sausage, Egg, & Cheese Biscuit": [4.65, "Breakfast", ["Buttermilk biscuit 1", "Sausage 1", "Peanut Oil 0.03125", "Egg 1", "American Cheese 1"]],
-    "Chicken, Egg, & Cheese Muffin": [5.29, "Breakfast", ["English muffin 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Egg 1", "American Cheese 1"]],
-    "Bacon, Egg, & Cheese Muffin": [4.65, "Breakfast", ["English muffin 1", "Bacon 0.125", "Peanut Oil 0.03125", "Egg 1", "American Cheese 1"]],
+    "Sausage Egg & Cheese Biscuit": [4.65, "Breakfast", ["Buttermilk biscuit 1", "Sausage 1", "Peanut Oil 0.03125", "Egg 1", "American Cheese 1"]],
+    "Chicken Egg & Cheese Muffin": [5.29, "Breakfast", ["English muffin 1", "Chicken Breast 1", "Peanut Oil 0.03125", "Egg 1", "American Cheese 1"]],
+    "Bacon Egg & Cheese Muffin": [4.65, "Breakfast", ["English muffin 1", "Bacon 0.125", "Peanut Oil 0.03125", "Egg 1", "American Cheese 1"]],
     "Kale Crunch": [2.79, "Sides", ["Kale crunch 1"]],
     "Waffle Potato Chips": [2.59, "Sides", ["Waffle potato chips 1"]],
     "Buddy Fruits Apple Sauce": [2.85, "Breakfast", ["Apple sauce 1"]],
@@ -59,14 +59,14 @@ menu_items = {
     "Lemonade": [2.89, "Drinks", ["Lemonade 0.125"]],
     "Diet Lemonade": [2.89, "Drinks", ["Diet lemonade 0.125"]],
     "Freshly Brewed Iced Tea Unsweetened": [2.45, "Drinks", ["Iced-tea unsweetened 0.125"]],
-    "Sunjoy (1/2 Sweet Tea, 1/2 Lemonade)": [2.89, "Drinks", ["Iced-tea sweetened 0.125", "Lemonade 0.125"]],
-    "Sunjoy (1/2 Sweet Tea, 1/2 Diet Lemonade)": [2.89, "Drinks", ["Iced-tea sweetened 0.125", "Diet lemonade 0.125"]],
-    "1/2 Sweet Tea, 1/2 Unsweet Tea": [2.45, "Drinks", ["Iced-tea sweetened 0.125", "Iced-tea unsweetened 0.125"]],
+    "Sunjoy (1/2 Sweet Tea 1/2 Lemonade)": [2.89, "Drinks", ["Iced-tea sweetened 0.125", "Lemonade 0.125"]],
+    "Sunjoy (1/2 Sweet Tea 1/2 Diet Lemonade)": [2.89, "Drinks", ["Iced-tea sweetened 0.125", "Diet lemonade 0.125"]],
+    "1/2 Sweet Tea 1/2 Unsweet Tea": [2.45, "Drinks", ["Iced-tea sweetened 0.125", "Iced-tea unsweetened 0.125"]],
     "1% Chocolate Milk": [1.99, "Drinks", ["Chocolate milk 0.125"]],
     "Honest Kids Apple Juice": [1.99, "Drinks", ["Honest Kids Apple Juice 1"]],
-    "Sunjoy (1/2 Unsweet Tea, 1/2 Diet Lemonade)": [2.89, "Drinks", ["Iced-tea unsweetened 0.125", "Diet lemonade 0.125"]],
-    "Sunjoy (1/2 Unsweet Tea, 1/2 Lemonade)": [2.89, "Drinks", ["Iced-tea unsweetened 0.125", "Lemonade 0.125"]],
-    "1/2 Lemonade, 1/2 Diet Lemonade": [2.89, "Drinks", ["Diet lemonade 0.125", "Lemonade 0.125"]],
+    "Sunjoy (1/2 Unsweet Tea 1/2 Diet Lemonade)": [2.89, "Drinks", ["Iced-tea unsweetened 0.125", "Diet lemonade 0.125"]],
+    "Sunjoy (1/2 Unsweet Tea 1/2 Lemonade)": [2.89, "Drinks", ["Iced-tea unsweetened 0.125", "Lemonade 0.125"]],
+    "1/2 Lemonade 1/2 Diet Lemonade": [2.89, "Drinks", ["Diet lemonade 0.125", "Lemonade 0.125"]],
     "Dasani Bottled Water": [2.59, "Drinks", ["Dasani Bottled water 1"]],
     "Cobb Salad": [11.69, "Salads", ["Cobb salad 1"]],
     "Spicy Southwest Salad": [11.95, "Salads", ["Southwest salad 1"]],
@@ -105,7 +105,10 @@ menu_list = []
 menu_num = 0
 for key in menu_items:
     menu_num += 1
-    menu_list.append([menu_num, key, menu_items[key][0], menu_items[key][1], " | ".join(menu_items[key][2])])  
+    menu_list.append([menu_num, key.replace(",", ""), menu_items[key][0], menu_items[key][1], " | ".join(menu_items[key][2])])  
+
+# print(sorted(list(menu_items.keys())))
+
 
 cWrite.writerows(menu_list)
 csvFile.close()

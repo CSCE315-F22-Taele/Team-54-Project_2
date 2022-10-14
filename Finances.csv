@@ -1,26 +1,27 @@
+Finances,,,,
 Transaction ID,Debit,Credit,Transaction Details,Amount
 1,true,false,Initial Fund,20000
-3,true,false,Week 0 Day 0 Orders,1516.15
-4,true,false,Week 0 Day 1 Orders,1502.94
-5,true,false,Week 0 Day 2 Orders,1509.35
-6,true,false,Week 0 Day 3 Orders,1503.07
-7,true,false,Week 0 Day 4 Orders,1503.66
-8,true,false,Week 0 Day 5 Orders,1521.10
-9,true,false,Week 0 Day 6 Orders,6020.10
+3,true,false,Week 0 Day 0 Orders,1505.36
+4,true,false,Week 0 Day 1 Orders,1504.78
+5,true,false,Week 0 Day 2 Orders,1504.87
+6,true,false,Week 0 Day 3 Orders,1500.04
+7,true,false,Week 0 Day 4 Orders,1513.19
+8,true,false,Week 0 Day 5 Orders,1512.10
+9,true,false,Week 0 Day 6 Orders,6003.65
 10,false,true,Supply Order,5000.00
-11,true,false,Week 1 Day 0 Orders,1505.66
-12,true,false,Week 1 Day 1 Orders,1513.33
-13,true,false,Week 1 Day 2 Orders,1512.05
-14,true,false,Week 1 Day 3 Orders,1502.51
-15,true,false,Week 1 Day 4 Orders,1503.43
-16,true,false,Week 1 Day 5 Orders,1504.58
-17,true,false,Week 1 Day 6 Orders,6003.73
+11,true,false,Week 1 Day 0 Orders,1514.05
+12,true,false,Week 1 Day 1 Orders,1514.94
+13,true,false,Week 1 Day 2 Orders,1504.13
+14,true,false,Week 1 Day 3 Orders,1507.95
+15,true,false,Week 1 Day 4 Orders,1504.03
+16,true,false,Week 1 Day 5 Orders,1521.95
+17,true,false,Week 1 Day 6 Orders,6006.28
 18,false,true,Supply Order,5000.00
-19,true,false,Week 2 Day 0 Orders,1504.61
-20,true,false,Week 2 Day 1 Orders,1512.54
-21,true,false,Week 2 Day 2 Orders,1504.36
-22,true,false,Week 2 Day 3 Orders,1510.68
-23,true,false,Week 2 Day 4 Orders,1500.68
-24,true,false,Week 2 Day 5 Orders,1505.10
-25,true,false,Week 2 Day 6 Orders,1518.00
+19,true,false,Week 2 Day 0 Orders,1508.26
+20,true,false,Week 2 Day 1 Orders,1516.52
+21,true,false,Week 2 Day 2 Orders,1512.39
+22,true,false,Week 2 Day 3 Orders,1505.73
+23,true,false,Week 2 Day 4 Orders,1500.25
+24,true,false,Week 2 Day 5 Orders,1510.74
+25,true,false,Week 2 Day 6 Orders,1505.10
 26,false,true,Supply Order,5000.00

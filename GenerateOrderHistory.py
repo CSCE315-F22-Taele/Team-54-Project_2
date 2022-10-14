@@ -37,15 +37,15 @@ menu_items = {
     "Spicy Chicken Biscuit": 2.50,
     "Hash Brown Scramble Bowl": 5.59,
     "Hash Brown Scramble Burrito": 5.59,
-    "Chicken, Egg, & Cheese Biscuit": 4.99,
+    "Chicken Egg & Cheese Biscuit": 4.99,
     "Breakfast Filets": 2.19,
     "Buttered Biscuit": 1.59,
     "Egg White Grill": 3.64,
-    "Bacon, Egg, & Cheese Biscuit": 4.35,
+    "Bacon Egg & Cheese Biscuit": 4.35,
     "English Muffin": 1.95,
-    "Sausage, Egg, & Cheese Biscuit": 4.65,
-    "Chicken, Egg, & Cheese Muffin": 5.29,
-    "Bacon, Egg, & Cheese Muffin": 4.65,
+    "Sausage Egg & Cheese Biscuit": 4.65,
+    "Chicken Egg & Cheese Muffin": 5.29,
+    "Bacon Egg & Cheese Muffin": 4.65,
     "Kale Crunch": 2.79,
     "Waffle Potato Chips": 2.59,
     "Buddy Fruits Apple Sauce": 2.85,
@@ -60,14 +60,14 @@ menu_items = {
     "Lemonade": 2.89,
     "Diet Lemonade": 2.89,
     "Freshly Brewed Iced Tea Unsweetened": 2.45,
-    "Sunjoy (1/2 Sweet Tea, 1/2 Lemonade)": 2.89,
-    "Sunjoy (1/2 Sweet Tea, 1/2 Diet Lemonade)": 2.89,
-    "1/2 Sweet Tea, 1/2 Unsweet Tea": 2.45,
+    "Sunjoy (1/2 Sweet Tea 1/2 Lemonade)": 2.89,
+    "Sunjoy (1/2 Sweet Tea 1/2 Diet Lemonade)": 2.89,
+    "1/2 Sweet Tea 1/2 Unsweet Tea": 2.45,
     "1% Chocolate Milk": 1.99,
     "Honest Kids Apple Juice": 1.99,
-    "Sunjoy (1/2 Unsweet Tea, 1/2 Diet Lemonade)": 2.89,
-    "Sunjoy (1/2 Unsweet Tea, 1/2 Lemonade)": 2.89,
-    "1/2 Lemonade, 1/2 Diet Lemonade": 2.89,
+    "Sunjoy (1/2 Unsweet Tea 1/2 Diet Lemonade)": 2.89,
+    "Sunjoy (1/2 Unsweet Tea 1/2 Lemonade)": 2.89,
+    "1/2 Lemonade 1/2 Diet Lemonade": 2.89,
     "Dasani Bottled Water": 2.59,
     "Cobb Salad": 11.69,
     "Spicy Southwest Salad": 11.95,
@@ -96,8 +96,8 @@ menu_items = {
     "Chick-n-Strips 2 Pc.": 4.09,
 }
 
-print("Number of items in the menu:", len(menu_items))
-
+# print("Number of items in the menu:", len(menu_items))
+# print(sorted(list(menu_items.keys())))
 
 # The orders table needs to be: Order ID, Order Number, Total Price Due, Date, Employee ID, Customer ID, Order Satisfied, Items Ordered
 csvFile = open("Orders.csv", "w", newline = "")
@@ -131,7 +131,7 @@ for w in range(3): # Iterate through the weeks
         
         while dayTotal <= dayReq: 
             itemsinOrder = randint(1,5)
-            customerOrdersList = sample(list(menu_items.keys()), itemsinOrder)
+            customerOrdersList = sample([x.replace(',','') for x in list(menu_items.keys())], itemsinOrder)
             orderCost = sum([menu_items[item] for item in customerOrdersList])
             dayTotal += orderCost
             
