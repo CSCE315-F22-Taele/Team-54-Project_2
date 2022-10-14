@@ -378,10 +378,11 @@ public class Backend {
         String query = "nothing";
         try {
             // The Query to check if a record exists within the table where fieldName = value.
-            query = String.format("UPDATE %s"+
-            "SET %s = \'%s\', "+
+            query = String.format("UPDATE %s \n"+
+            "SET %s = \'%s\' \n"+
             "WHERE %s = %d;", tableName, colName, (String) data, tableFields.get(tableName)[0], row);
             stmt = createStatement(query);
+            // System.err.println("QUERY :: " + query);
             int result = stmt.executeUpdate();
             return (1 == result);
 
@@ -391,7 +392,7 @@ public class Backend {
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             System.exit(0);
         }
-        
+
         return false;
     }
 
