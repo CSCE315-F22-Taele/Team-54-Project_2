@@ -41,6 +41,9 @@ public class Backend {
 
         String[] orders = new String[]{"orderid", "ordernumber", "totalprice", "saledate", "employeeid", "customerid", "satisfied", "itemsordered"};
         tableFields.put("orders", orders);
+
+        String[] menu = new String[]{"menuid", "name", "price", "category", "ingredients"};
+        tableFields.put("menu", menu);
     }
 
 
@@ -213,7 +216,10 @@ public class Backend {
                 int i = 0;
                 HashMap<String, String> record = new HashMap<>();
                 for(String field : fields)
-                    record.put(field, result.getString(++i));
+                    {
+                        // System.out.pr
+                        record.put(field, result.getString(++i));
+                    }
                 nRecords.add(record);
             }
 

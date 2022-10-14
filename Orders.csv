@@ -1,4 +1,3 @@
-Order,,,,,,
 Order ID,Order Number,Total Price Due,Date,Employee ID,Customer ID,Order Satisfied,Items Ordered
 100000,0,5.78,10/4/2022,486708,27,True,"['Sunjoy (1/2 Sweet Tea 1/2 Diet Lemonade)', 'Sunjoy (1/2 Unsweet Tea 1/2 Diet Lemonade)']"
 100001,1,13.38,10/4/2022,865465,693,True,"['Vanilla Milkshake', 'Grilled Market Salad w/ Spicy Grilled Filet']"

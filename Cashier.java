@@ -12,7 +12,7 @@ import java.awt.event.*;
 import java.util.HashMap;
 import java.util.ArrayList;
 
-public class Cashier implements ActionListener {
+public class Cashier extends Backend implements ActionListener {
     
     static JFrame frame;
     static JToolBar tb;
@@ -25,25 +25,35 @@ public class Cashier implements ActionListener {
 
     // variables for the control panel
     static ArrayList<String> ordersList = new ArrayList<>();
+    private JList<String> orderList;
     private JTextField totalField;
 
-    public static void populateOrderList()
-    {
-        ordersList.add("Item#1");
-        ordersList.add("Item#2");
-        ordersList.add("Item#3");
-        ordersList.add("Item#4");
-        ordersList.add("Item#5");
-    }
+    // private DefaultListModel<String>;
+
+    // public static void populateOrderList()
+    // {
+    //     ordersList.add("Item#1");
+    //     ordersList.add("Item#2");
+    //     ordersList.add("Item#3");
+    //     ordersList.add("Item#4");
+    //     ordersList.add("Item#5");
+    // }
 
     public static void populateHashMap()
     {
         ArrayList<String[]> tempBreakfast = new ArrayList<>();
-        tempBreakfast.add(new String[]{"Item#1", "10.00"});
-        tempBreakfast.add(new String[]{"Item#2", "5.00"});
+        // ResultSet rs = stmt.executeQuery("SELECT * FROM menu WHERE category = 'Breakfast'");
+        ArrayList<HashMap<String, String>> breakfastItems = Backend.getNValues("menu", "category", "Breakfast", 100);
+        for (HashMap<String, String> item : breakfastItems) {
+            tempBreakfast.add(new String[]{item.get("name"), item.get("price")});
+        }
+
+        System.out.println(tempBreakfast.toString());
+
         menuItems.put("Breakfast", tempBreakfast);
 
         ArrayList<String[]> tempEntree = new ArrayList<>();
+        
         tempEntree.add(new String[]{"Item#3", "7.14"});
         tempEntree.add(new String[]{"Item#4", "5.75"});
         menuItems.put("Entree", tempEntree);
@@ -82,7 +92,7 @@ public class Cashier implements ActionListener {
     Cashier()
     {
         populateHashMap();
-        populateOrderList();
+        // populateOrderList();
 
         frame = new JFrame();
         frame.setLayout(new BorderLayout());
@@ -195,6 +205,8 @@ public class Cashier implements ActionListener {
     private JPanel breakfastPanel() {
 
         JPanel breakfastPanel = new JPanel(new GridLayout(10, 3, 10, 10));
+
+        // Adds menu items to the panel
         for (int i = 0; i < menuItems.get("Breakfast").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
@@ -214,8 +226,9 @@ public class Cashier implements ActionListener {
             innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
             breakfastPanel.add(innerPanel);
         }
-        return breakfastPanel;
 
+
+        return breakfastPanel;
     }
 
     
@@ -479,7 +492,7 @@ public class Cashier implements ActionListener {
 
         String[] str = new String[ordersList.size()];
         // Assuming there is data in the list
-        JList<String> orderList = new JList<>(ordersList.toArray(str));
+        orderList = new JList<>(ordersList.toArray(str));
 
 		orderList.setVisibleRowCount(12);
 		JScrollPane scrollPane = new JScrollPane(orderList);
@@ -494,12 +507,12 @@ public class Cashier implements ActionListener {
     // starter code for middleware functions for updating orders list and payment box
 
     // private void updateOrderPanel() {
-	// 	orderListModel.removeAllElements();
+	// 	orderList.removeAllElements();
 		
 	// 	int subTotal = 0;
 	// 	for (Item item : order.getItems()) {
 	// 		subTotal += item.getPrice();
-	// 		orderListModel.addElement(createLine(item.getName(), 
+	// 		orderList.addElement(createLine(item.getName(), 
 	// 				item.getPrice()));
 	// 	}
 		
@@ -579,4 +592,6 @@ public class Cashier implements ActionListener {
 
         return p;
     }
+
+
 }
