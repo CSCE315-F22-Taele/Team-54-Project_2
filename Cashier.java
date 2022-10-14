@@ -210,8 +210,20 @@ public class Cashier implements ActionListener {
             //     }
             // });
             price.setHorizontalAlignment(JLabel.CENTER);
-            innerPanel.add(price);
-            innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            JPanel textPanel = new JPanel(new BorderLayout());
+            textPanel.setBackground(Color.WHITE);
+            textPanel.add(price);
+            textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            innerPanel.add(textPanel, BorderLayout.CENTER);
+
+            JPanel buttonPanel = new JPanel(new FlowLayout());
+			buttonPanel.setBackground(Color.WHITE);
+            JButton removeButton = new JButton("Remove Item");
+            // removeButton.addActionListener(listener);
+            // removeButton.addActionCommand(Integer.toString(index++));
+            buttonPanel.add(removeButton);
+            innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
+
             breakfastPanel.add(innerPanel);
         }
         return breakfastPanel;
@@ -241,8 +253,20 @@ public class Cashier implements ActionListener {
             //     }
             // });
             price.setHorizontalAlignment(JLabel.CENTER);
-            innerPanel.add(price);
-            innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            JPanel textPanel = new JPanel(new BorderLayout());
+            textPanel.setBackground(Color.WHITE);
+            textPanel.add(price);
+            textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            innerPanel.add(textPanel, BorderLayout.CENTER);
+
+            JPanel buttonPanel = new JPanel(new FlowLayout());
+			buttonPanel.setBackground(Color.WHITE);
+            JButton removeButton = new JButton("Remove Item");
+            // removeButton.addActionListener(listener);
+            // removeButton.addActionCommand(Integer.toString(index++));
+            buttonPanel.add(removeButton);
+            innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
+
             entreePanel.add(innerPanel);
         }
         return entreePanel;
@@ -272,8 +296,20 @@ public class Cashier implements ActionListener {
             //     }
             // });
             price.setHorizontalAlignment(JLabel.CENTER);
-            innerPanel.add(price);
-            innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            JPanel textPanel = new JPanel(new BorderLayout());
+            textPanel.setBackground(Color.WHITE);
+            textPanel.add(price);
+            textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            innerPanel.add(textPanel, BorderLayout.CENTER);
+
+            JPanel buttonPanel = new JPanel(new FlowLayout());
+			buttonPanel.setBackground(Color.WHITE);
+            JButton removeButton = new JButton("Remove Item");
+            // removeButton.addActionListener(listener);
+            // removeButton.addActionCommand(Integer.toString(index++));
+            buttonPanel.add(removeButton);
+            innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
+
             saladsPanel.add(innerPanel);
         }
         return saladsPanel;
@@ -303,8 +339,20 @@ public class Cashier implements ActionListener {
             //     }
             // });
             price.setHorizontalAlignment(JLabel.CENTER);
-            innerPanel.add(price);
-            innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            JPanel textPanel = new JPanel(new BorderLayout());
+            textPanel.setBackground(Color.WHITE);
+            textPanel.add(price);
+            textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            innerPanel.add(textPanel, BorderLayout.CENTER);
+
+            JPanel buttonPanel = new JPanel(new FlowLayout());
+			buttonPanel.setBackground(Color.WHITE);
+            JButton removeButton = new JButton("Remove Item");
+            // removeButton.addActionListener(listener);
+            // removeButton.addActionCommand(Integer.toString(index++));
+            buttonPanel.add(removeButton);
+            innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
+
             sidesPanel.add(innerPanel);
         }
         return sidesPanel;
@@ -334,8 +382,20 @@ public class Cashier implements ActionListener {
             //     }
             // });
             price.setHorizontalAlignment(JLabel.CENTER);
-            innerPanel.add(price);
-            innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            JPanel textPanel = new JPanel(new BorderLayout());
+            textPanel.setBackground(Color.WHITE);
+            textPanel.add(price);
+            textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            innerPanel.add(textPanel, BorderLayout.CENTER);
+
+            JPanel buttonPanel = new JPanel(new FlowLayout());
+			buttonPanel.setBackground(Color.WHITE);
+            JButton removeButton = new JButton("Remove Item");
+            // removeButton.addActionListener(listener);
+            // removeButton.addActionCommand(Integer.toString(index++));
+            buttonPanel.add(removeButton);
+            innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
+
             kidsPanel.add(innerPanel);
         }
         return kidsPanel;
@@ -365,8 +425,20 @@ public class Cashier implements ActionListener {
             //     }
             // });
             price.setHorizontalAlignment(JLabel.CENTER);
-            innerPanel.add(price);
-            innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            JPanel textPanel = new JPanel(new BorderLayout());
+            textPanel.setBackground(Color.WHITE);
+            textPanel.add(price);
+            textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            innerPanel.add(textPanel, BorderLayout.CENTER);
+
+            JPanel buttonPanel = new JPanel(new FlowLayout());
+			buttonPanel.setBackground(Color.WHITE);
+            JButton removeButton = new JButton("Remove Item");
+            // removeButton.addActionListener(listener);
+            // removeButton.addActionCommand(Integer.toString(index++));
+            buttonPanel.add(removeButton);
+            innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
+
             treatsPanel.add(innerPanel);
         }
         return treatsPanel;
@@ -396,8 +468,20 @@ public class Cashier implements ActionListener {
             //     }
             // });
             price.setHorizontalAlignment(JLabel.CENTER);
-            innerPanel.add(price);
-            innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            JPanel textPanel = new JPanel(new BorderLayout());
+            textPanel.setBackground(Color.WHITE);
+            textPanel.add(price);
+            textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            innerPanel.add(textPanel, BorderLayout.CENTER);
+
+            JPanel buttonPanel = new JPanel(new FlowLayout());
+			buttonPanel.setBackground(Color.WHITE);
+            JButton removeButton = new JButton("Remove Item");
+            // removeButton.addActionListener(listener);
+            // removeButton.addActionCommand(Integer.toString(index++));
+            buttonPanel.add(removeButton);
+            innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
+
             drinksPanel.add(innerPanel);
         }
         return drinksPanel;
@@ -427,8 +511,20 @@ public class Cashier implements ActionListener {
             //     }
             // });
             price.setHorizontalAlignment(JLabel.CENTER);
-            innerPanel.add(price);
-            innerPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            JPanel textPanel = new JPanel(new BorderLayout());
+            textPanel.setBackground(Color.WHITE);
+            textPanel.add(price);
+            textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+            innerPanel.add(textPanel, BorderLayout.CENTER);
+
+            JPanel buttonPanel = new JPanel(new FlowLayout());
+			buttonPanel.setBackground(Color.WHITE);
+            JButton removeButton = new JButton("Remove Item");
+            // removeButton.addActionListener(listener);
+            // removeButton.addActionCommand(Integer.toString(index++));
+            buttonPanel.add(removeButton);
+            innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
+            
             saucesPanel.add(innerPanel);
         }
         return saucesPanel;
