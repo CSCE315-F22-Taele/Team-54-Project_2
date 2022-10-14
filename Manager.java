@@ -108,10 +108,10 @@ public class Manager implements ActionListener {
                              "Unit"};
 
         JTable items = new JTable(data, colNames);
-        JPanel inventoryPanel = new JPanel();
+        JPanel inventoryPanel = new JPanel(new BorderLayout());
         items.setFillsViewportHeight(true);
 
-        inventoryPanel.add(new JScrollPane(items));
+        inventoryPanel.add(new JScrollPane(items), BorderLayout.CENTER);
 
         return inventoryPanel;
     }
@@ -130,10 +130,10 @@ public class Manager implements ActionListener {
                              "Price"};
         
         JTable items = new JTable(data, colNames);                    
-        JPanel menuPanel = new JPanel();
+        JPanel menuPanel = new JPanel(new BorderLayout());
         items.setFillsViewportHeight(true);
 
-        menuPanel.add(new JScrollPane(items));
+        menuPanel.add(new JScrollPane(items), BorderLayout.CENTER);
 
         return menuPanel;
     }
