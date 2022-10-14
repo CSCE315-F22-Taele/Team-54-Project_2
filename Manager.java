@@ -108,9 +108,8 @@ public class Manager implements ActionListener, TableModelListener {
      * @return JPanel containing the inventory data with editing capabilities
      */
     private JPanel inventoryPanel() {
-        // Object[][] data = { // url: https://docs.oracle.com/javase/tutorial/uiswing/components/table.html
-                            // url: https://stackoverflow.com/questions/27815400/retrieving-data-from-jdbc-database-into-jtable
-                            // }; // import from SQL table????? Function in middleware table?????
+        // url: https://docs.oracle.com/javase/tutorial/uiswing/components/table.html
+        // url: https://stackoverflow.com/questions/27815400/retrieving-data-from-jdbc-database-into-jtable
         
         String[][] data = Backend.tableView("inventory");
         String[] colNames = {"Item ID",
@@ -121,11 +120,15 @@ public class Manager implements ActionListener, TableModelListener {
                              "Quantity",
                              "Unit"};
 
+        // Create table and add listener
         JTable items = new JTable(data, colNames);
         items.getModel().addTableModelListener(this);
+
+        // Create panel to hold full view
         JPanel inventoryPanel = new JPanel(new BorderLayout());
         items.setFillsViewportHeight(true);
 
+        // Create panel to hold edit buttons and add to full panel
         JPanel editPanel = new JPanel();
         invAddButton = new JButton("Add Item");
         invRemoveButton = new JButton("Remove Item");
@@ -157,6 +160,7 @@ public class Manager implements ActionListener, TableModelListener {
                              "Category",
                              "Ingredients"};
         
+        // Create table and add listener
         JTable items = new JTable(data, colNames);                    
         JPanel menuPanel = new JPanel(new BorderLayout());
         items.setFillsViewportHeight(true);
@@ -201,14 +205,13 @@ public class Manager implements ActionListener, TableModelListener {
     {
         JPanel p = new JPanel(new BorderLayout());
 
-        // p.add(orderPanel(), BorderLayout.BEFORE_FIRST_LINE);
-		// p.add(paymentPanel(), BorderLayout.AFTER_LAST_LINE);
-
         return p;
     }
 
     /**
-     * 
+     * This function overrides the tableChange function from TableModelListener.
+     * Detects data changes in a JTable and updates the corresponding SQL table.
+     * @param e the event triggering the listener
      */
     @Override
     public void tableChanged(TableModelEvent e) {
