@@ -16,6 +16,7 @@ public class Manager implements ActionListener {
     private JFrame frame;
     private JToolBar tb;
     static JButton inventoryButton, menuButton, trendsButton;
+    static JButton invAddButton, invRemoveButton, menAddButton, menRemoveButton;
 
     CardLayout cardLayout;
     JPanel cardPanel;
@@ -87,6 +88,14 @@ public class Manager implements ActionListener {
         } else if (e.getSource() == backButton) {
             frame.dispose();
             new LaunchPage();
+        } else if (e.getSource() == invAddButton) {
+
+        } else if (e.getSource() == invRemoveButton) {
+
+        } else if (e.getSource() == menAddButton) {
+
+        } else if (e.getSource() == menRemoveButton) {
+
         }
     }
 
@@ -113,6 +122,17 @@ public class Manager implements ActionListener {
         JPanel inventoryPanel = new JPanel(new BorderLayout());
         items.setFillsViewportHeight(true);
 
+        JPanel editPanel = new JPanel();
+        invAddButton = new JButton("Add Item");
+        invRemoveButton = new JButton("Remove Item");
+
+        editPanel.add(invAddButton);
+        editPanel.add(invRemoveButton);
+
+        invAddButton.addActionListener(this);
+        invRemoveButton.addActionListener(this);
+
+        inventoryPanel.add(editPanel, BorderLayout.BEFORE_FIRST_LINE);
         inventoryPanel.add(new JScrollPane(items), BorderLayout.CENTER);
 
         return inventoryPanel;
@@ -135,6 +155,17 @@ public class Manager implements ActionListener {
         JPanel menuPanel = new JPanel(new BorderLayout());
         items.setFillsViewportHeight(true);
 
+        JPanel editPanel = new JPanel();
+        menAddButton = new JButton("Add Item");
+        menRemoveButton = new JButton("Remove Item");
+
+        editPanel.add(menAddButton);
+        editPanel.add(menRemoveButton);
+
+        menAddButton.addActionListener(this);
+        menRemoveButton.addActionListener(this);
+
+        menuPanel.add(editPanel, BorderLayout.BEFORE_FIRST_LINE);
         menuPanel.add(new JScrollPane(items), BorderLayout.CENTER);
 
         return menuPanel;
