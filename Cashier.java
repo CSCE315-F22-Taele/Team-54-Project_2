@@ -662,9 +662,13 @@ public class Cashier extends Backend implements ActionListener {
                 Random rnd = new Random();
                 order.put("orderid", String.valueOf(rnd.nextInt(1000)));
                 order.put("ordernumber", String.valueOf(rnd.nextInt(100000)));
-                order.put("totalprice", );
-
-                Backend.addValue("orders", );
+                order.put("totalprice", String.valueOf(rnd.nextInt(20)));
+                order.put("saledate", "2022-10-04");
+                order.put("employeeid", String.valueOf(rnd.nextInt(87000)));
+                order.put("customerid", String.valueOf(rnd.nextInt(600)));
+                order.put("satisfied", "t");
+                order.put("itemsordered", "{chicken}");
+                Backend.addValue("orders", order);
             }
         });
 		// button.addActionListener(paymentListener);
