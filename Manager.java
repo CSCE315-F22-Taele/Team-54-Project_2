@@ -227,6 +227,8 @@ public class Manager implements ActionListener, TableModelListener {
         if(isInv)
         {
             Backend.editTable("inventory", row, column, columnName, data);
+            // System.out.println("In inventory");
+            // Backend.getValue("inventory", "quantity", );
         }
         else
         {
