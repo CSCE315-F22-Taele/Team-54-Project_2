@@ -28,17 +28,6 @@ public class Cashier extends Backend implements ActionListener {
     private JList<String> orderList;
     private JTextField totalField;
 
-    // private DefaultListModel<String>;
-
-    // public static void populateOrderList()
-    // {
-    //     ordersList.add("Item#1");
-    //     ordersList.add("Item#2");
-    //     ordersList.add("Item#3");
-    //     ordersList.add("Item#4");
-    //     ordersList.add("Item#5");
-    // 
-
     public static void populateHashMap()
     {
         String[] categoryNames = {"Breakfast", "Entree", "Salads", "Sides", "Kids Meals", "Treats", "Drinks", "Sauce"};
@@ -120,9 +109,10 @@ public class Cashier extends Backend implements ActionListener {
         frame.setLocationByPlatform(true);
         frame.setVisible(true);
 
-    }
+        System.out.println(ordersList.size());
 
-    
+    }
+  
     /** 
      *  This method allows for the logic of panel switching upon
      *  the clicking of a specific menu category.
@@ -179,12 +169,19 @@ public class Cashier extends Backend implements ActionListener {
             JTextField quantity = new JTextField(25);
             name.setHorizontalAlignment(JLabel.CENTER);
 			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
-            // quantity.addActionListener(new ActionListener() {
-            //     public void actionPerformed(ActionEvent e) {
-            //         String input = quantity.getText();
-            //         quantity.setText(input);
-            //     }
-            // });
+            int menuNum = i;
+            quantity.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    String input = quantity.getText();
+                    int num = Integer.valueOf(input);
+                    for (int j = 0; j < num; j++) {
+                        ordersList.add(menuItems.get("Breakfast").get(menuNum)[0]);
+                        JPanel p = orderPanel();
+                        frame.add(controlPanel(), BorderLayout.AFTER_LINE_ENDS);
+                    }
+                    
+                }
+            });
             price.setHorizontalAlignment(JLabel.CENTER);
             JPanel textPanel = new JPanel(new BorderLayout());
             textPanel.setBackground(Color.WHITE);
