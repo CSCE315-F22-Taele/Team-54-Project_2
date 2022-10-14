@@ -284,15 +284,37 @@ public class Backend {
 
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
-        
-        
+        boolean[] bl = new boolean[records.size()];
 
-        return null;
+        String query = "nothing";
+        try {
+            // Inserting a record into the table
+            // INSERT INTO table_name (column1, column2, column3, ...)
+            // VALUES (value1, value2, value3, ...);
+            for (int i = 0; i < records.size(); i++) {
+                bl[i] = addValue(tableName, records.get(i));
+            }
+            // String fields = QueryFormat(record.keySet().toArray(), false);
+            // String vals = QueryFormat(record.values().toArray(), true);
+            // // System.out.println("Fields: " + fields);
+            // // System.out.println("Vals: " + vals);
+            // query =   String.format("INSERT INTO %s %s ", tableName, fields)
+            //         + String.format("VALUES %s ;", vals);
+            // stmt = createStatement(query);
+            // int result = stmt.executeUpdate();
+            // return (1 == result);
+            // // System.out.println("Result: "+ result);
+
+        } catch (Exception e) {
+            System.err.println("QUERY :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+        return bl;
     }
     
     
-
-
     static String[][] tableView(String tableName)
     {
         // If a connection to the query does not already exist, we need to create that connection.
@@ -348,7 +370,30 @@ public class Backend {
     }
 
 
+    static boolean editTable(String tableName, int row, int col, String colName, Object data)
+    {
+        // If a connection to the query does not already exist, we need to create that connection.
+        if(conn == null || stmt == null) createConnection();
 
+        String query = "nothing";
+        try {
+            // The Query to check if a record exists within the table where fieldName = value.
+            query = String.format("UPDATE %s"+
+            "SET %s = \'%s\', "+
+            "WHERE %s = %d;", tableName, colName, (String) data, tableFields.get(tableName)[0], row);
+            stmt = createStatement(query);
+            int result = stmt.executeUpdate();
+            return (1 == result);
+
+        }catch (Exception e) {
+            System.err.println("QUERY :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+        
+        return false;
+    }
 
     // Built for testing purposes. Should be commented out in the final version.
     public static void main(String args[])
