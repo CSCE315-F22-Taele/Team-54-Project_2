@@ -9,8 +9,11 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.TableModel;
 
-public class Manager implements ActionListener {
+public class Manager implements ActionListener, TableModelListener {
     
     // Boilerplate Code
     private JFrame frame;
@@ -110,10 +113,13 @@ public class Manager implements ActionListener {
                              "Unit"};
 
         JTable items = new JTable(data, colNames);
+        items.getModel().addTableModelListener(this);
         JPanel inventoryPanel = new JPanel(new BorderLayout());
         items.setFillsViewportHeight(true);
 
         inventoryPanel.add(new JScrollPane(items), BorderLayout.CENTER);
+
+
 
         return inventoryPanel;
     }
@@ -168,5 +174,23 @@ public class Manager implements ActionListener {
 		// p.add(paymentPanel(), BorderLayout.AFTER_LAST_LINE);
 
         return p;
+    }
+
+    /**
+     * 
+     */
+    @Override
+    public void tableChanged(TableModelEvent e) {
+        int row = e.getFirstRow();
+        int column = e.getColumn();
+
+        System.out.println("Row: " + row + " Column: " + column);
+        TableModel model = (TableModel)e.getSource();
+        String columnName = model.getColumnName(column);
+        Object data = model.getValueAt(row, column);
+
+        // Need backend function to update SQL table at the specified row and column
+
+        // Do something with the data...
     }
 }
