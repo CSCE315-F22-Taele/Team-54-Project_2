@@ -37,56 +37,29 @@ public class Cashier extends Backend implements ActionListener {
     //     ordersList.add("Item#3");
     //     ordersList.add("Item#4");
     //     ordersList.add("Item#5");
-    // }
+    // 
 
     public static void populateHashMap()
     {
-        ArrayList<String[]> tempBreakfast = new ArrayList<>();
-        // ResultSet rs = stmt.executeQuery("SELECT * FROM menu WHERE category = 'Breakfast'");
-        ArrayList<HashMap<String, String>> breakfastItems = Backend.getNValues("menu", "category", "Breakfast", 100);
-        for (HashMap<String, String> item : breakfastItems) {
-            tempBreakfast.add(new String[]{item.get("name"), item.get("price")});
+        String[] categoryNames = {"Breakfast", "Entree", "Salads", "Sides", "Kids Meals", "Treats", "Drinks", "Sauces"};
+        for (String name: categoryNames) {
+            ArrayList<String[]> tempItems = new ArrayList<>();
+            ArrayList<HashMap<String, String>> catItems = Backend.getNValues("menu", "category", name, 100);
+            for (HashMap<String, String> item: catItems) {
+                tempItems.add(new String[]{item.get("name"), item.get("price")});
+            }
+
+            menuItems.put(name, tempItems);
         }
 
-        System.out.println(tempBreakfast.toString());
+        // ArrayList<String[]> tempBreakfast = new ArrayList<>();
+        // // ResultSet rs = stmt.executeQuery("SELECT * FROM menu WHERE category = 'Breakfast'");
+        // ArrayList<HashMap<String, String>> breakfastItems = Backend.getNValues("menu", "category", "Breakfast", 100);
+        // for (HashMap<String, String> item : breakfastItems) {
+        //     tempBreakfast.add(new String[]{item.get("name"), item.get("price")});
+        // }
 
-        menuItems.put("Breakfast", tempBreakfast);
-
-        ArrayList<String[]> tempEntree = new ArrayList<>();
-        
-        tempEntree.add(new String[]{"Item#3", "7.14"});
-        tempEntree.add(new String[]{"Item#4", "5.75"});
-        menuItems.put("Entree", tempEntree);
-
-        ArrayList<String[]> tempSalads = new ArrayList<>();
-        tempSalads.add(new String[]{"Item#5", "6.34"});
-        tempSalads.add(new String[]{"Item#6", "2.89"});
-        menuItems.put("Salads", tempSalads);
-
-        ArrayList<String[]> tempSides = new ArrayList<>();
-        tempSides.add(new String[]{"Item#7", "6.00"});
-        tempSides.add(new String[]{"Item#8", "2.00"});
-        menuItems.put("Sides", tempSides);
-
-        ArrayList<String[]> kidsMeals = new ArrayList<>();
-        kidsMeals.add(new String[]{"Item#9", "2.58"});
-        kidsMeals.add(new String[]{"Item#10", "9.99"});
-        menuItems.put("Kids_Meals", kidsMeals);
-
-        ArrayList<String[]> treats = new ArrayList<>();
-        treats.add(new String[]{"Item#11", "3.71"});
-        treats.add(new String[]{"Item#12", "6.89"});
-        menuItems.put("Treats", treats);
-
-        ArrayList<String[]> drinks = new ArrayList<>();
-        drinks.add(new String[]{"Item#13", "3.71"});
-        drinks.add(new String[]{"Item#14", "6.89"});
-        menuItems.put("Drinks", drinks);
-
-        ArrayList<String[]> sauces = new ArrayList<>();
-        sauces.add(new String[]{"Item#15", "7.91"});
-        sauces.add(new String[]{"Item#16", "5.39"});
-        menuItems.put("Sauces", sauces);
+        // menuItems.put("Breakfast", tempBreakfast);
     }
 
     Cashier()
@@ -380,11 +353,11 @@ public class Cashier extends Backend implements ActionListener {
     private JPanel kidsPanel() {
 
         JPanel kidsPanel = new JPanel(new GridLayout(10, 3, 10, 10));
-        for (int i = 0; i < menuItems.get("Kids_Meals").size(); i++) {
+        for (int i = 0; i < menuItems.get("Kids Meals").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
-            JLabel name = new JLabel(menuItems.get("Kids_Meals").get(i)[0]);
-            JLabel price = new JLabel(menuItems.get("Kids_Meals").get(i)[1]);
+            JLabel name = new JLabel(menuItems.get("Kids Meals").get(i)[0]);
+            JLabel price = new JLabel(menuItems.get("Kids Meals").get(i)[1]);
             JTextField quantity = new JTextField(10);
             name.setHorizontalAlignment(JLabel.CENTER);
 			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
