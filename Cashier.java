@@ -657,16 +657,16 @@ public class Cashier extends Backend implements ActionListener {
 		gbc.gridy++;
         JButton button = new JButton("Take Order");
         button.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-                    HashMap<String,String> order = new HashMap<>();
-                    Random rnd = new Random();
-                    order.put("orderid", String.valueOf(rnd.nextInt(1000)));
-                    order.put("ordernumber", String.valueOf(rnd.nextInt(100000));
-                    order.put("totalprice", )
+            public void actionPerformed(ActionEvent e) {
+                HashMap<String,String> order = new HashMap<>();
+                Random rnd = new Random();
+                order.put("orderid", String.valueOf(rnd.nextInt(1000)));
+                order.put("ordernumber", String.valueOf(rnd.nextInt(100000)));
+                order.put("totalprice", );
 
-                    Backend.addValue("orders", );
-                }
-            });
+                Backend.addValue("orders", );
+            }
+        });
 		// button.addActionListener(paymentListener);
 		innerPanel.add(button, gbc);
 
