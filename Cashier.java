@@ -41,7 +41,7 @@ public class Cashier extends Backend implements ActionListener {
 
     public static void populateHashMap()
     {
-        String[] categoryNames = {"Breakfast", "Entree", "Salads", "Sides", "Kids Meals", "Treats", "Drinks", "Sauces"};
+        String[] categoryNames = {"Breakfast", "Entree", "Salads", "Sides", "Kids Meals", "Treats", "Drinks", "Sauce"};
         for (String name: categoryNames) {
             ArrayList<String[]> tempItems = new ArrayList<>();
             ArrayList<HashMap<String, String>> catItems = Backend.getNValues("menu", "category", name, 100);
@@ -51,15 +51,6 @@ public class Cashier extends Backend implements ActionListener {
 
             menuItems.put(name, tempItems);
         }
-
-        // ArrayList<String[]> tempBreakfast = new ArrayList<>();
-        // // ResultSet rs = stmt.executeQuery("SELECT * FROM menu WHERE category = 'Breakfast'");
-        // ArrayList<HashMap<String, String>> breakfastItems = Backend.getNValues("menu", "category", "Breakfast", 100);
-        // for (HashMap<String, String> item : breakfastItems) {
-        //     tempBreakfast.add(new String[]{item.get("name"), item.get("price")});
-        // }
-
-        // menuItems.put("Breakfast", tempBreakfast);
     }
 
     Cashier()
@@ -482,11 +473,11 @@ public class Cashier extends Backend implements ActionListener {
     private JPanel saucesPanel() {
 
         JPanel saucesPanel = new JPanel(new GridLayout(10, 3, 10, 10));
-        for (int i = 0; i < menuItems.get("Sauces").size(); i++) {
+        for (int i = 0; i < menuItems.get("Sauce").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
-            JLabel name = new JLabel(menuItems.get("Sauces").get(i)[0]);
-            JLabel price = new JLabel(menuItems.get("Sauces").get(i)[1]);
+            JLabel name = new JLabel(menuItems.get("Sauce").get(i)[0]);
+            JLabel price = new JLabel(menuItems.get("Sauce").get(i)[1]);
             JTextField quantity = new JTextField(10);
             name.setHorizontalAlignment(JLabel.CENTER);
 			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
