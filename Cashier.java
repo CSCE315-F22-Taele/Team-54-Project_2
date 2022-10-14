@@ -524,7 +524,7 @@ public class Cashier implements ActionListener {
             // removeButton.addActionCommand(Integer.toString(index++));
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
-            
+
             saucesPanel.add(innerPanel);
         }
         return saucesPanel;
@@ -670,6 +670,14 @@ public class Cashier implements ActionListener {
 		totalField.setEditable(false);
 		totalField.setHorizontalAlignment(JTextField.TRAILING);
 		innerPanel.add(totalField, gbc);
+
+        gbc.gridwidth = 2;
+		gbc.weightx = 1d;
+		gbc.gridx = 0;
+		gbc.gridy++;
+        JButton button = new JButton("Take Order");
+		// button.addActionListener(paymentListener);
+		innerPanel.add(button, gbc);
 
         p.add(innerPanel);
 
