@@ -222,7 +222,6 @@ public class Backend {
                     }
                 nRecords.add(record);
             }
-
             return nRecords;
         } catch (Exception e) {
             System.err.println("QUERY :: " + query);
@@ -289,6 +288,44 @@ public class Backend {
         return null;
     }
     
+    static Object[] tableView(String tableName)
+    {
+        // If a connection to the query does not already exist, we need to create that connection.
+        if(conn == null || stmt == null) createConnection();
+
+        String query = "nothing";
+        try {
+            // The Query to check if a record exists within the table where fieldName = value.
+        
+            query = String.format("SELECT * FROM %s ;", tableName);
+        
+            stmt = createStatement(query);
+        
+            ResultSet result = stmt.executeQuery();
+            String[] fields = tableFields.get(tableName);
+            ArrayList<String[]> records =  new ArrayList<String[]>();
+            while(result.next())
+            {
+                int i = 0;
+                String[] record = new String[fields.length];
+                for(String field : fields)
+                    {
+                        record[i] = result.getString(i);
+                        i += 1;
+                    }
+                records.add(record);
+            }
+            return records.toArray();
+        } catch (Exception e) {
+            System.err.println("QUERY :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+        return null;
+    } 
+
+
     /**
      * Runs query for which on existing function does not exist.
      * @param  sqlQuery               The query to use as a string.
@@ -301,6 +338,7 @@ public class Backend {
 
         return null;
     }
+
 
 
 
