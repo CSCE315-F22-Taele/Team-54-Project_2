@@ -92,7 +92,7 @@ public class Manager implements ActionListener, TableModelListener {
             frame.dispose();
             new LaunchPage();
         } else if (e.getSource() == invAddButton) {
-
+            
         } else if (e.getSource() == invRemoveButton) {
 
         } else if (e.getSource() == menAddButton) {

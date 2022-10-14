@@ -24,7 +24,7 @@ public class Cashier extends Backend implements ActionListener {
     private JButton backButton = new JButton("Go Back");
 
     // variables for the control panel
-    static ArrayList<String> ordersList = new ArrayList<>();
+    public ArrayList<String> ordersList = new ArrayList<>();
     private JList<String> orderList;
     private JTextField totalField;
 
@@ -532,9 +532,17 @@ public class Cashier extends Backend implements ActionListener {
     {
         JPanel p = new JPanel();
 
+        // innerPanel is the panel that keeps track of the current order
         JPanel innerPanel = new JPanel(new GridBagLayout());
 		innerPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 		Font titleFont = p.getFont().deriveFont(Font.BOLD, 16f);
+        // Add a JTable to the Order window
+        String[][] data = Backend.tableView("temp");
+        String[] colNames = {"Name",
+                             "Price"};
+
+        // Create table and add listener
+        JTable currOrder = new JTable(data, colNames);
 		
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.anchor = GridBagConstraints.LINE_START;
@@ -547,6 +555,7 @@ public class Cashier extends Backend implements ActionListener {
 		JLabel label = new JLabel("Order");
 		label.setFont(titleFont);
 		innerPanel.add(label, gbc);
+        innerPanel.add(new JScrollPane(currOrder),gbc);
 		
 		gbc.gridy++;
 

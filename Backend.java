@@ -44,6 +44,9 @@ public class Backend {
 
         String[] menu = new String[]{"menuid", "name", "price", "category", "ingredients"};
         tableFields.put("menu", menu);
+
+        String[] temp = new String[]{"name", "price"};
+        tableFields.put("temp", temp);
     }
 
 
