@@ -302,20 +302,25 @@ public class Backend {
             stmt = createStatement(query);
         
             ResultSet result = stmt.executeQuery();
-            String[] fields = tableFields.get(tableName);
-            ArrayList<String[]> records =  new ArrayList<String[]>();
+            int row = 0; 
             while(result.next())
             {
-                int i = 0;
-                String[] record = new String[fields.length];
-                for(String field : fields)
-                    {
-                        record[i] = result.getString(i);
-                        i += 1;
-                    }
-                records.add(record);
+                row += 1;
             }
-            return records.toArray();
+
+            query = String.format("SELECT * FROM %s ;", tableName);
+            stmt = createStatement(query);
+            result = stmt.executeQuery();
+            int col = tableFields.get(tableName).length;
+            String[][] vals = new String[row][col];
+            for(int r = 0; r < row; ++r)
+                for(int c = 0; c < col; ++c)
+                {
+                    vals[r][c] = result.getString(c);
+                }
+            
+            return vals;
+
         } catch (Exception e) {
             System.err.println("QUERY :: " + query);
             e.printStackTrace();
