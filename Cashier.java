@@ -7,6 +7,9 @@
  */
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
 import java.awt.event.*;
 
 import java.util.HashMap;
@@ -171,9 +174,19 @@ public class Cashier extends Backend implements ActionListener {
                     int num = Integer.valueOf(input);
                     for (int j = 0; j < num; j++) {
                         ordersList.add(menuItems.get("Breakfast").get(menuNum)[0]);
-                        JPanel p = orderPanel();
-                        frame.add(controlPanel(), BorderLayout.AFTER_LINE_ENDS);
+                        //insert into sql table
+                        HashMap<String, String> newItem = new HashMap<String, String>();
+                        newItem.put("name", menuItems.get("Breakfast").get(menuNum)[0]);
+                        newItem.put("price", menuItems.get("Breakfast").get(menuNum)[1]);
+                        Backend.addValue("temp", newItem);
+                        // JPanel p = orderPanel();
+                        // frame.add(controlPanel()/*, BorderLayout.AFTER_LINE_ENDS*/);
                     }
+
+                    frame.dispose();
+                    new Cashier();
+
+                    System.out.println(ordersList);
                     
                 }
             });
@@ -519,6 +532,10 @@ public class Cashier extends Backend implements ActionListener {
 
         // Create table and add listener
         JTable currOrder = new JTable(data, colNames);
+        DefaultTableModel model = new DefaultTableModel(data, colNames);
+        for (int i = 0; i < ordersList.size(); i++) {
+            model.addRow(new String[]{ordersList.get(i), "0"});
+        }
 		
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.anchor = GridBagConstraints.LINE_START;
