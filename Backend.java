@@ -335,9 +335,9 @@ public class Backend {
                 int i = 0;
                 ArrayList<String> record = new ArrayList<>();
                 for(String field : fields)
-                    {
-                        record.add(result.getString(++i));
-                    }
+                {
+                    record.add(result.getString(++i));
+                }
                 nRecords.add(record);
             }
 
@@ -397,16 +397,15 @@ public class Backend {
         String query = "nothing";
         try {
             // The Query to check if a record exists within the table where fieldName = value.
-            HashMap<String, String> record = new HashMap<>();
-            if(tableName == "inventory")
-            {
-                // query = String.format("UPDATE %s SET %s = \'%s\' WHERE %s = %d ;", tableName, colName, (String) data, tableFields.get(tableName)[0], row+1);
-                // stmt = createStatement(query);
-                // // System.err.println("QUERY :: " + query);
-                System.out.println(query);
-
-
-            }} catch (Exception e) {
+            // HashMap<String, String> record = new HashMap<>();
+            query = String.format("SELECT COUNT(*) FROM %s;", tableName);
+            stmt = createStatement(query);
+            ResultSet result = stmt.executeQuery();
+            if(result.next()) {return result.getInt(1);}
+            
+            System.out.println("QUERY :: " + query);
+            
+            } catch (Exception e) {
                 System.err.println("QUERY :: " + query);
                 e.printStackTrace();
                 System.err.println(e.getClass().getName()+": "+e.getMessage());
@@ -452,14 +451,14 @@ public class Backend {
         String query = "nothing";
         try {
             // The Query to check if a record exists within the table where fieldName = value.
-            query = String.format("INSERT INTO %s VALUES (NULL);", tableName);
-            stmt = createStatement(query);
+            // query = String.format("INSERT INTO %s VALUES (NULL);", tableName);
+            // stmt = createStatement(query);
             // System.err.println("QUERY :: " + query);
             HashMap<String, String> record = new HashMap<>();
             if(tableName == "inventory")
             {
                 // []{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"}
-                record.put("itemid", String.valueOf(-1));
+                record.put("itemid", String.valueOf(getSize("inventory")));
                 record.put("name", "NewName");
                 record.put("category", "Meat");
                 record.put("expirationdate", "3003-01-01");
@@ -468,7 +467,7 @@ public class Backend {
                 record.put("unit", "false");
                 addValue(tableName, record);
             } else if (tableName == "menu") {
-
+                
             }
             stmt.executeUpdate();
         } catch (Exception e) {
@@ -494,14 +493,14 @@ public class Backend {
         // ArrayList<HashMap<String, String>> temp = getNValues("employees", "firstname", "Tom", 2);
         // for(HashMap<String, String> x : temp)
             // System.out.println(x);
-        HashMap<String, String> temp = new HashMap<>();
-        String[] keys = new String[]{"customerid", "firstname", "lastname"};
-        String[] vals = new String[]{"19", "Estella", "Chen"};
-        for(int i = 0; i < keys.length; ++i)
-            temp.put(keys[i], vals[i]);
-
-        System.out.println(addValue("customers", temp));
+        // HashMap<String, String> temp = new HashMap<>();
+        // String[] keys = new String[]{"customerid", "firstname", "lastname"};
+        // String[] vals = new String[]{"19", "Estella", "Chen"};
+        // for(int i = 0; i < keys.length; ++i)
+            // temp.put(keys[i], vals[i]);
+        // System.out.println(addValue("customers", temp));
         // System.out.println(temp);
+        // getSize("inventory");
 
     }
 
