@@ -394,6 +394,34 @@ public class Backend {
         return false;
     }
 
+    /**
+     * Adds an empty row to the specified SQL table
+     * @param tableName the table to which to add the new row
+     */
+    static void addEmptyCell(String tableName)
+    {
+        // INSERT INTO table (primary_key) VALUES (NULL);
+        // If a connection to the query does not already exist, we need to create that connection.
+        if(conn == null || stmt == null) createConnection();
+
+        String query = "nothing";
+        try {
+            // The Query to check if a record exists within the table where fieldName = value.
+            query = String.format("INSERT INTO %s VALUES (NULL);", tableName);
+            stmt = createStatement(query);
+            // System.err.println("QUERY :: " + query);
+            stmt.executeUpdate();
+        } catch (Exception e) {
+            System.err.println("QUERY :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+        return ;
+
+
+    }
+
     // Built for testing purposes. Should be commented out in the final version.
     public static void main(String args[])
     {
