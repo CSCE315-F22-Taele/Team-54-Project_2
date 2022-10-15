@@ -29,7 +29,8 @@ public class Cashier extends Backend implements ActionListener {
     private JButton backButton = new JButton("Go Back");
 
     // variables for the control panel
-    public ArrayList<String> ordersList = new ArrayList<>();
+    // public ArrayList<String> ordersList = new ArrayList<>();
+    private DefaultListModel<String> orderListModel;
     private JList<String> orderList;
     private JTextField totalField;
 
@@ -50,12 +51,13 @@ public class Cashier extends Backend implements ActionListener {
     Cashier()
     {
         populateHashMap();
-        if (ordersList.size() == 0) {
-            Backend.createTable("temp");
-            HashMap<String, String> tempVal = new HashMap<>();
-            tempVal.put("price", "0.0");
-            Backend.addValue("temp", tempVal);
-        }
+        this.orderListModel = new DefaultListModel<>();
+        // if (ordersList.size() == 0) {
+        //     Backend.createTable("temp");
+        //     HashMap<String, String> tempVal = new HashMap<>();
+        //     tempVal.put("price", "0.0");
+        //     Backend.addValue("temp", tempVal);
+        // }
 
         frame = new JFrame();
         frame.setLayout(new BorderLayout());
@@ -119,7 +121,7 @@ public class Cashier extends Backend implements ActionListener {
         frame.setLocationByPlatform(true);
         frame.setVisible(true);
 
-        System.out.println(ordersList.size());
+        // System.out.println(ordersList.size());
 
     }
   
@@ -179,19 +181,18 @@ public class Cashier extends Backend implements ActionListener {
                     String input = quantity.getText();
                     int num = Integer.valueOf(input);
                     for (int j = 0; j < num; j++) {
-                        ordersList.add(menuItems.get("Breakfast").get(menuNum)[0]);
+                        orderListModel.addElement(menuItems.get("Breakfast").get(menuNum)[0]);
                         //insert into sql table
                         HashMap<String, String> newItem = new HashMap<String, String>();
                         newItem.put("name", menuItems.get("Breakfast").get(menuNum)[0]);
                         newItem.put("price", menuItems.get("Breakfast").get(menuNum)[1]);
-                        Backend.addValue("temp", newItem);
                         // JPanel p = orderPanel();
                         // frame.add(controlPanel()/*, BorderLayout.AFTER_LINE_ENDS*/);
                     }
 
-                    System.out.println(ordersList);
-                    frame.dispose();
-                    new Cashier();
+                    // System.out.println(ordersList);
+                    // frame.dispose();
+                    // new Cashier();
                     
                 }
             });
@@ -531,16 +532,18 @@ public class Cashier extends Backend implements ActionListener {
 		innerPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 		Font titleFont = p.getFont().deriveFont(Font.BOLD, 16f);
         // Add a JTable to the Order window
-        String[][] data = Backend.tableView("temp");
-        String[] colNames = {"Name",
-                             "Price"};
+        // String[][] data = Backend.tableView("temp");
+        // String[] colNames = {"Name",
+        //                      "Price"};
 
         // Create table and add listener
-        JTable currOrder = new JTable(data, colNames);
-        DefaultTableModel model = new DefaultTableModel(data, colNames);
-        for (int i = 0; i < ordersList.size(); i++) {
-            model.addRow(new String[]{ordersList.get(i), "0"});
-        }
+        // JTable currOrder = new JTable(data, colNames);
+        // DefaultTableModel model = new DefaultTableModel(data, colNames);
+        // for (int i = 0; i < ordersList.size(); i++) {
+        //     model.addRow(new String[]{ordersList.get(i), "0"});
+        // }
+        orderList = new JList<>(orderListModel);
+        // orderListModel.addElement("HAHA");
 		
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.anchor = GridBagConstraints.LINE_START;
@@ -553,13 +556,12 @@ public class Cashier extends Backend implements ActionListener {
 		JLabel label = new JLabel("Order");
 		label.setFont(titleFont);
 		innerPanel.add(label, gbc);
-        innerPanel.add(new JScrollPane(currOrder),gbc);
+        // innerPanel.add(new JScrollPane(currOrder),gbc);
 		
 		gbc.gridy++;
 
-        String[] str = new String[ordersList.size()];
+        // String[] str = new String[ordersList.size()];
         // Assuming there is data in the list
-        orderList = new JList<>(ordersList.toArray(str));
 
 		orderList.setVisibleRowCount(12);
 		JScrollPane scrollPane = new JScrollPane(orderList);
@@ -673,12 +675,13 @@ public class Cashier extends Backend implements ActionListener {
                 order.put("satisfied", "t");
                 order.put("itemsordered", "{chicken}");
                 Backend.addValue("orders", order);
-                ordersList.clear();
-                Backend.dropTable("temp");
-                Backend.createTable("temp");
-                HashMap<String, String> tempVal = new HashMap<>();
-                tempVal.put("price", "0.0");
-                Backend.addValue("temp", tempVal);
+                // ordersList.clear();
+                // Backend.dropTable("temp");
+                // Backend.createTable("temp");
+                // HashMap<String, String> tempVal = new HashMap<>();
+                // tempVal.put("price", "0.0");
+                // Backend.addValue("temp", tempVal);
+                orderListModel.clear();
             }
         });
 		// button.addActionListener(paymentListener);
