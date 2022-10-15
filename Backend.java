@@ -418,4 +418,24 @@ public class Backend {
         // System.out.println(temp);
 
     }
+
+    public static void dropTable(String tableName) {
+
+        if(conn == null || stmt == null) createConnection();
+
+        String query = "nothing";
+        try {
+            // The Query to check if a record exists within the table where fieldName = value.
+            query = String.format("DROP TABLE %s CASCADE;", tableName);
+            stmt = createStatement(query);
+            System.err.println("QUERY :: " + query);
+            stmt.executeUpdate();
+
+        }catch (Exception e) {
+            System.err.println("QUERY :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+    }
 }

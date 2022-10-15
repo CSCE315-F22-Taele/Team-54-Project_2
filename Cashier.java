@@ -669,6 +669,7 @@ public class Cashier extends Backend implements ActionListener {
                 order.put("satisfied", "t");
                 order.put("itemsordered", "{chicken}");
                 Backend.addValue("orders", order);
+                Backend.dropTable("temp");
             }
         });
 		// button.addActionListener(paymentListener);
