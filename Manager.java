@@ -117,13 +117,13 @@ public class Manager implements ActionListener, TableModelListener {
         // url: https://stackoverflow.com/questions/27815400/retrieving-data-from-jdbc-database-into-jtable
         
         String[][] data = Backend.tableView("inventory");
-        String[] colNames = {"Item ID",
-                             "Name",
-                             "Category",
-                             "Expiration Date",
-                             "Refrigeration Required",
-                             "Quantity",
-                             "Unit"};
+        String[] colNames = {"itemid",
+                             "name",
+                             "category",
+                             "expirationdate",
+                             "fridgerequired",
+                             "quantity",
+                             "unit"};
 
         // Create table and add listener
         JTable items = new JTable(data, colNames);
