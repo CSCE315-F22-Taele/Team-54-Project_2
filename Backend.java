@@ -7,6 +7,8 @@ import java.sql.*;
 import java.io.*;
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.ArrayList;
 import java.lang.String.*;
 import java.lang.reflect.Field;
@@ -338,7 +340,16 @@ public class Backend {
                     }
                 nRecords.add(record);
             }
-
+            
+            Collections.sort(nRecords, new Comparator<ArrayList<String>> () {
+                @Override
+                public int compare(ArrayList<String> a, ArrayList<String> b) {
+                    int id1 = Integer.parseInt(a.get(0));
+                    int id2 = Integer.parseInt(b.get(0));
+                    return id1-id2;
+                }
+            });
+            
             String[][] view = new String[nRecords.size()][nRecords.get(0).size()];
             for(int r = 0; r < view.length; ++r)
                 for(int c = 0; c < view[0].length; ++c)
