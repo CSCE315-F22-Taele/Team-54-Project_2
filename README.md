@@ -25,5 +25,5 @@ All store data is stored and maintained in a SQL database. The GUI and any inter
 1. Clone this repo locally
 2. Compile all java files using the command `javac *.java`
 3. Run Program!
-        1. Run on Windows: `java -cp ".;postgresql-42.2.8.jar" LaunchPage`
-        2. Run on Mac: `java -cp ".:postgresql-42.2.8.jar" LaunchPage`
+4.      Run on Windows: `java -cp ".;postgresql-42.2.8.jar" LaunchPage`
+5.      Run on Mac: Run on Mac: `java -cp ".:postgresql-42.2.8.jar" LaunchPage`
