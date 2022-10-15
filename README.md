@@ -1,4 +1,4 @@
-# Project2
+# Project 2
 
 This is the repository for CSCE 331 Team 54's Project 2. It contains code to implement a Chick-Fil-A POS System, usable by both cashiers and the store manager.
 
@@ -20,5 +20,5 @@ All store data is stored and maintained in a SQL database. The GUI and any inter
 ### To run:
 1. Clone this repo locally
 2. Compile all java files using the command `javac *.java`
-3a. Run on Windows: `java -cp ".;postgresql-42.2.8.jar" LaunchPage`
-3b. Run on Mac: `java -cp ".:postgresql-42.2.8.jar" LaunchPage`
+3. a) Run on Windows: `java -cp ".;postgresql-42.2.8.jar" LaunchPage`
+3. b) Run on Mac: `java -cp ".:postgresql-42.2.8.jar" LaunchPage`
