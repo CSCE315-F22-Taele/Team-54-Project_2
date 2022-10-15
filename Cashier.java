@@ -50,7 +50,12 @@ public class Cashier extends Backend implements ActionListener {
     Cashier()
     {
         populateHashMap();
-        // populateOrderList();
+        if (ordersList.size() == 0) {
+            Backend.createTable("temp");
+            HashMap<String, String> tempVal = new HashMap<>();
+            tempVal.put("price", "0.0");
+            Backend.addValue("temp", tempVal);
+        }
 
         frame = new JFrame();
         frame.setLayout(new BorderLayout());
@@ -184,10 +189,9 @@ public class Cashier extends Backend implements ActionListener {
                         // frame.add(controlPanel()/*, BorderLayout.AFTER_LINE_ENDS*/);
                     }
 
+                    System.out.println(ordersList);
                     frame.dispose();
                     new Cashier();
-
-                    System.out.println(ordersList);
                     
                 }
             });
@@ -669,7 +673,12 @@ public class Cashier extends Backend implements ActionListener {
                 order.put("satisfied", "t");
                 order.put("itemsordered", "{chicken}");
                 Backend.addValue("orders", order);
+                ordersList.clear();
                 Backend.dropTable("temp");
+                Backend.createTable("temp");
+                HashMap<String, String> tempVal = new HashMap<>();
+                tempVal.put("price", "0.0");
+                Backend.addValue("temp", tempVal);
             }
         });
 		// button.addActionListener(paymentListener);

@@ -436,4 +436,25 @@ public class Backend {
             System.exit(0);
         }
     }
+
+    public static void createTable(String tableName) {
+        if(conn == null || stmt == null) createConnection();
+
+        String query = "nothing";
+        try {
+            // The Query to check if a record exists within the table where fieldName = value.
+            String menuName = tableFields.get("temp")[0];
+            String price = tableFields.get("temp")[1];
+            query = String.format("CREATE TABLE %s (%s text, %s float);", tableName, menuName, price);
+            stmt = createStatement(query);
+            System.err.println("QUERY :: " + query);
+            stmt.executeUpdate();
+
+        }catch (Exception e) {
+            System.err.println("QUERY :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+    }
 }
