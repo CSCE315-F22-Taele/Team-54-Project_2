@@ -706,12 +706,12 @@ public class Cashier extends Backend implements ActionListener {
                 }
                 items += "}";
                 order.put("totalprice", String.valueOf(cost));
-                order.put("saledate", "2022-10-30");
+                order.put("saledate", "2022-11-30");
 
                 order.put("employeeid", String.valueOf(rnd.nextInt(87000)));
                 order.put("customerid", String.valueOf(rnd.nextInt(600)));
                 
-                order.put("satisfied", "t"); // useless wow, krishnaaan??
+                order.put("satisfied", "t");
                 order.put("itemsordered", items);
                 // System.out.println(Backend.addValue("orders", order));
 
