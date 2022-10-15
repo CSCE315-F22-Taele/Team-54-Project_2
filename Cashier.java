@@ -197,6 +197,11 @@ public class Cashier extends Backend implements ActionListener {
 
 			buttonPanel.setBackground(Color.WHITE);
             removeButton = new JButton("Remove Item");
+            removeButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    while (orderListModel.removeElement(menuItems.get("Breakfast").get(menuNum)[0])) {}
+                }
+            });
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -253,6 +258,11 @@ public class Cashier extends Backend implements ActionListener {
 			buttonPanel.setBackground(Color.WHITE);
 
             removeButton = new JButton("Remove Item");
+            removeButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    while (orderListModel.removeElement(menuItems.get("Entree").get(menuNum)[0])) {}
+                }
+            });
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -309,6 +319,11 @@ public class Cashier extends Backend implements ActionListener {
 			buttonPanel.setBackground(Color.WHITE);
 
             removeButton = new JButton("Remove Item");
+            removeButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    while (orderListModel.removeElement(menuItems.get("Salads").get(menuNum)[0])) {}
+                }
+            });
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -365,6 +380,11 @@ public class Cashier extends Backend implements ActionListener {
 			buttonPanel.setBackground(Color.WHITE);
 
             removeButton = new JButton("Remove Item");
+            removeButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    while (orderListModel.removeElement(menuItems.get("Sides").get(menuNum)[0])) {}
+                }
+            });
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -421,6 +441,11 @@ public class Cashier extends Backend implements ActionListener {
 			buttonPanel.setBackground(Color.WHITE);
 
             removeButton = new JButton("Remove Item");
+            removeButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    while (orderListModel.removeElement(menuItems.get("Kids Meals").get(menuNum)[0])) {}
+                }
+            });
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -477,6 +502,11 @@ public class Cashier extends Backend implements ActionListener {
 			buttonPanel.setBackground(Color.WHITE);
 
             removeButton = new JButton("Remove Item");
+            removeButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    while (orderListModel.removeElement(menuItems.get("Treats").get(menuNum)[0])) {}  
+                }
+            });
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -533,6 +563,11 @@ public class Cashier extends Backend implements ActionListener {
 			buttonPanel.setBackground(Color.WHITE);
 
             removeButton = new JButton("Remove Item");
+            removeButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    while (orderListModel.removeElement(menuItems.get("Drinks").get(menuNum)[0])) {}
+                }
+            });
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -589,6 +624,12 @@ public class Cashier extends Backend implements ActionListener {
 			buttonPanel.setBackground(Color.WHITE);
 
             removeButton = new JButton("Remove Item");
+            removeButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    while (orderListModel.removeElement(menuItems.get("Sauce").get(menuNum)[0])) {}
+                    
+                }
+            });
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
