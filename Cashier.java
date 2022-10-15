@@ -713,7 +713,8 @@ public class Cashier extends Backend implements ActionListener {
                 
                 order.put("satisfied", "t");
                 order.put("itemsordered", items);
-                // System.out.println(Backend.addValue("orders", order));
+                Boolean didWeInsert  = Backend.addValue("orders", order);
+                System.out.println(didWeInsert);
 
                 orderListModel.clear();
                 cost = 0.0;
