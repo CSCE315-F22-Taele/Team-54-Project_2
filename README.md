@@ -4,13 +4,13 @@ This is the repository for CSCE 331 Team 54's Project 2. It contains code to imp
 
 All store data is stored and maintained in a SQL database. The GUI and any interaction with the database is coded in Java.
 
-## Cashier Functionality:
+#### Cashier Functionality:
 - View store menu items and prices, sorted by categories
 - Add quantities of menu items to an order and view updated order in real-time
 - View total price of order, updating in real-time
 - Finalize order and update SQL database
 
-## Manager Functionality:
+#### Manager Functionality:
 - View complete store inventory and menu
 - Add, edit, and remove inventory items
 - View sale trends for a menu item for a specified window of time
