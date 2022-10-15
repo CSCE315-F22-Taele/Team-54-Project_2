@@ -2,7 +2,14 @@
 
 This is the repository for CSCE 331 Team 54's Project 2.
 
-Current stage: Phase 3, GUI Validation
+Current stage: Phase 4, Final Release
+
+To run:
+1. Clone this repo locally
+2. Compile all java files using the command `javac *.java`
+3. Run!
+  - on Windows: `java -cp ".;postgresql-42.2.8.jar" LaunchPage`
+  - on Mac: `java -cp ".:postgresql-42.2.8.jar" LaunchPage`
 
 The following are the backend functions and their respective purpose.
 ## Backend Breakdown:
