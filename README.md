@@ -17,8 +17,6 @@ All store data is stored and maintained in a SQL database. The GUI and any inter
 - Add, edit, and remove menu items, with updates persisting on the cashier side
 - View reports of excess and understocked inventory items
 
-## Current stage: Phase 4, Final Release
-
 ### To run:
 1. Clone this repo locally
 2. Compile all java files using the command `javac *.java`
