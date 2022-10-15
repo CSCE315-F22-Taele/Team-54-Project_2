@@ -29,7 +29,6 @@ public class Cashier extends Backend implements ActionListener {
     private JButton backButton = new JButton("Go Back");
 
     // variables for the control panel
-    // public ArrayList<String> ordersList = new ArrayList<>();
     private DefaultListModel<String> orderListModel;
     private JList<String> orderList;
     private JTextField totalField;
@@ -116,8 +115,6 @@ public class Cashier extends Backend implements ActionListener {
         frame.setLocationByPlatform(true);
         frame.setVisible(true);
 
-        // System.out.println(ordersList.size());
-
     }
   
     /** 
@@ -149,7 +146,7 @@ public class Cashier extends Backend implements ActionListener {
             new LaunchPage();
         } else if (e.getSource() == removeButton) {
             // functionality for this button will be implemented in phase 4
-        } // else if (e.getSource() == )
+        }
     }
 
     
@@ -165,16 +162,20 @@ public class Cashier extends Backend implements ActionListener {
         for (int i = 0; i < menuItems.get("Breakfast").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
+
             JLabel name = new JLabel(menuItems.get("Breakfast").get(i)[0]);
             JLabel price = new JLabel(menuItems.get("Breakfast").get(i)[1]);
             JTextField quantity = new JTextField(25);
+
             name.setHorizontalAlignment(JLabel.CENTER);
 			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
+
             int menuNum = i;
             quantity.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     String input = quantity.getText();
                     int num = Integer.valueOf(input);
+
                     for (int j = 0; j < num; j++) {
                         orderListModel.addElement(menuItems.get("Breakfast").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Breakfast").get(menuNum)[1]);
@@ -182,14 +183,18 @@ public class Cashier extends Backend implements ActionListener {
                     
                 }
             });
+
             price.setHorizontalAlignment(JLabel.CENTER);
+
             JPanel textPanel = new JPanel(new BorderLayout());
             textPanel.setBackground(Color.WHITE);
             textPanel.add(price);
             textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+
             innerPanel.add(textPanel, BorderLayout.CENTER);
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
+
 			buttonPanel.setBackground(Color.WHITE);
             removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
@@ -210,14 +215,18 @@ public class Cashier extends Backend implements ActionListener {
     private JPanel entreePanel() {
 
         JPanel entreePanel = new JPanel(new GridLayout(10, 3, 10, 10));
+
         for (int i = 0; i < menuItems.get("Entree").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
+
             JLabel name = new JLabel(menuItems.get("Entree").get(i)[0]);
             JLabel price = new JLabel(menuItems.get("Entree").get(i)[1]);
             JTextField quantity = new JTextField(10);
+
             name.setHorizontalAlignment(JLabel.CENTER);
 			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
+
             int menuNum = i;
             quantity.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
@@ -230,15 +239,19 @@ public class Cashier extends Backend implements ActionListener {
                     // System.out.println("COST: " + cost);
                 }
             });
+
             price.setHorizontalAlignment(JLabel.CENTER);
+
             JPanel textPanel = new JPanel(new BorderLayout());
             textPanel.setBackground(Color.WHITE);
             textPanel.add(price);
             textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+
             innerPanel.add(textPanel, BorderLayout.CENTER);
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
+
             removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
@@ -257,19 +270,24 @@ public class Cashier extends Backend implements ActionListener {
     private JPanel saladsPanel() {
 
         JPanel saladsPanel = new JPanel(new GridLayout(10, 3, 10, 10));
+
         for (int i = 0; i < menuItems.get("Salads").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
+
             JLabel name = new JLabel(menuItems.get("Salads").get(i)[0]);
             JLabel price = new JLabel(menuItems.get("Salads").get(i)[1]);
             JTextField quantity = new JTextField(10);
+
             name.setHorizontalAlignment(JLabel.CENTER);
 			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
+
             int menuNum = i;
             quantity.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     String input = quantity.getText();
                     int num = Integer.valueOf(input);
+
                     for (int j = 0; j < num; j++) {
                         orderListModel.addElement(menuItems.get("Salads").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Salads").get(menuNum)[1]);
@@ -277,15 +295,19 @@ public class Cashier extends Backend implements ActionListener {
                     // System.out.println("COST: " + cost);
                 }
             });
+
             price.setHorizontalAlignment(JLabel.CENTER);
+
             JPanel textPanel = new JPanel(new BorderLayout());
             textPanel.setBackground(Color.WHITE);
             textPanel.add(price);
             textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+
             innerPanel.add(textPanel, BorderLayout.CENTER);
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
+
             removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
@@ -304,19 +326,24 @@ public class Cashier extends Backend implements ActionListener {
     private JPanel sidesPanel() {
 
         JPanel sidesPanel = new JPanel(new GridLayout(10, 3, 10, 10));
+
         for (int i = 0; i < menuItems.get("Sides").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
+
             JLabel name = new JLabel(menuItems.get("Sides").get(i)[0]);
             JLabel price = new JLabel(menuItems.get("Sides").get(i)[1]);
             JTextField quantity = new JTextField(10);
+
             name.setHorizontalAlignment(JLabel.CENTER);
 			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
+
             int menuNum = i;
             quantity.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     String input = quantity.getText();
                     int num = Integer.valueOf(input);
+
                     for (int j = 0; j < num; j++) {
                         orderListModel.addElement(menuItems.get("Sides").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Sides").get(menuNum)[1]);
@@ -324,15 +351,19 @@ public class Cashier extends Backend implements ActionListener {
                     // System.out.println("COST: " + cost);
                 }
             });
+
             price.setHorizontalAlignment(JLabel.CENTER);
+
             JPanel textPanel = new JPanel(new BorderLayout());
             textPanel.setBackground(Color.WHITE);
             textPanel.add(price);
             textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+
             innerPanel.add(textPanel, BorderLayout.CENTER);
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
+
             removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
@@ -351,19 +382,24 @@ public class Cashier extends Backend implements ActionListener {
     private JPanel kidsPanel() {
 
         JPanel kidsPanel = new JPanel(new GridLayout(10, 3, 10, 10));
+
         for (int i = 0; i < menuItems.get("Kids Meals").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
+
             JLabel name = new JLabel(menuItems.get("Kids Meals").get(i)[0]);
             JLabel price = new JLabel(menuItems.get("Kids Meals").get(i)[1]);
             JTextField quantity = new JTextField(10);
+
             name.setHorizontalAlignment(JLabel.CENTER);
 			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
+
             int menuNum = i;
             quantity.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     String input = quantity.getText();
                     int num = Integer.valueOf(input);
+
                     for (int j = 0; j < num; j++) {
                         orderListModel.addElement(menuItems.get("Kids Meals").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Kids Meals").get(menuNum)[1]);
@@ -371,15 +407,19 @@ public class Cashier extends Backend implements ActionListener {
                     // System.out.println("COST: " + cost);
                 }
             });
+
             price.setHorizontalAlignment(JLabel.CENTER);
+
             JPanel textPanel = new JPanel(new BorderLayout());
             textPanel.setBackground(Color.WHITE);
             textPanel.add(price);
             textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+
             innerPanel.add(textPanel, BorderLayout.CENTER);
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
+
             removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
@@ -398,19 +438,24 @@ public class Cashier extends Backend implements ActionListener {
     private JPanel treatsPanel() {
 
         JPanel treatsPanel = new JPanel(new GridLayout(10, 3, 10, 10));
+
         for (int i = 0; i < menuItems.get("Treats").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
+
             JLabel name = new JLabel(menuItems.get("Treats").get(i)[0]);
             JLabel price = new JLabel(menuItems.get("Treats").get(i)[1]);
             JTextField quantity = new JTextField(10);
+
             name.setHorizontalAlignment(JLabel.CENTER);
 			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
+
             int menuNum = i;
             quantity.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     String input = quantity.getText();
                     int num = Integer.valueOf(input);
+
                     for (int j = 0; j < num; j++) {
                         orderListModel.addElement(menuItems.get("Treats").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Treats").get(menuNum)[1]);
@@ -418,15 +463,19 @@ public class Cashier extends Backend implements ActionListener {
                     // System.out.println("COST: " + cost);
                 }
             });
+
             price.setHorizontalAlignment(JLabel.CENTER);
+
             JPanel textPanel = new JPanel(new BorderLayout());
             textPanel.setBackground(Color.WHITE);
             textPanel.add(price);
             textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+
             innerPanel.add(textPanel, BorderLayout.CENTER);
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
+
             removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
@@ -445,19 +494,24 @@ public class Cashier extends Backend implements ActionListener {
     private JPanel drinksPanel() {
 
         JPanel drinksPanel = new JPanel(new GridLayout(10, 3, 10, 10));
+
         for (int i = 0; i < menuItems.get("Drinks").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
+
             JLabel name = new JLabel(menuItems.get("Drinks").get(i)[0]);
             JLabel price = new JLabel(menuItems.get("Drinks").get(i)[1]);
             JTextField quantity = new JTextField(10);
+
             name.setHorizontalAlignment(JLabel.CENTER);
 			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
+
             int menuNum = i;
             quantity.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     String input = quantity.getText();
                     int num = Integer.valueOf(input);
+
                     for (int j = 0; j < num; j++) {
                         orderListModel.addElement(menuItems.get("Drinks").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Drinks").get(menuNum)[1]);
@@ -465,15 +519,19 @@ public class Cashier extends Backend implements ActionListener {
                     // System.out.println("COST: " + cost);
                 }
             });
+
             price.setHorizontalAlignment(JLabel.CENTER);
+
             JPanel textPanel = new JPanel(new BorderLayout());
             textPanel.setBackground(Color.WHITE);
             textPanel.add(price);
             textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+
             innerPanel.add(textPanel, BorderLayout.CENTER);
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
+
             removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
@@ -492,19 +550,24 @@ public class Cashier extends Backend implements ActionListener {
     private JPanel saucesPanel() {
 
         JPanel saucesPanel = new JPanel(new GridLayout(10, 3, 10, 10));
+
         for (int i = 0; i < menuItems.get("Sauce").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
+
             JLabel name = new JLabel(menuItems.get("Sauce").get(i)[0]);
             JLabel price = new JLabel(menuItems.get("Sauce").get(i)[1]);
             JTextField quantity = new JTextField(10);
+
             name.setHorizontalAlignment(JLabel.CENTER);
 			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
+
             int menuNum = i;
             quantity.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     String input = quantity.getText();
                     int num = Integer.valueOf(input);
+
                     for (int j = 0; j < num; j++) {
                         orderListModel.addElement(menuItems.get("Sauce").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Sauce").get(menuNum)[1]);
@@ -512,15 +575,19 @@ public class Cashier extends Backend implements ActionListener {
                     // System.out.println("COST: " + cost);
                 }
             });
+
             price.setHorizontalAlignment(JLabel.CENTER);
+
             JPanel textPanel = new JPanel(new BorderLayout());
             textPanel.setBackground(Color.WHITE);
             textPanel.add(price);
             textPanel.add(quantity, BorderLayout.AFTER_LAST_LINE);
+
             innerPanel.add(textPanel, BorderLayout.CENTER);
 
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
+
             removeButton = new JButton("Remove Item");
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
@@ -559,19 +626,8 @@ public class Cashier extends Backend implements ActionListener {
         JPanel innerPanel = new JPanel(new GridBagLayout());
 		innerPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 		Font titleFont = p.getFont().deriveFont(Font.BOLD, 16f);
-        // Add a JTable to the Order window
-        // String[][] data = Backend.tableView("temp");
-        // String[] colNames = {"Name",
-        //                      "Price"};
 
-        // Create table and add listener
-        // JTable currOrder = new JTable(data, colNames);
-        // DefaultTableModel model = new DefaultTableModel(data, colNames);
-        // for (int i = 0; i < ordersList.size(); i++) {
-        //     model.addRow(new String[]{ordersList.get(i), "0"});
-        // }
         orderList = new JList<>(orderListModel);
-        // orderListModel.addElement("HAHA");
 		
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.anchor = GridBagConstraints.LINE_START;
@@ -584,12 +640,8 @@ public class Cashier extends Backend implements ActionListener {
 		JLabel label = new JLabel("Order");
 		label.setFont(titleFont);
 		innerPanel.add(label, gbc);
-        // innerPanel.add(new JScrollPane(currOrder),gbc);
 		
 		gbc.gridy++;
-
-        // String[] str = new String[ordersList.size()];
-        // Assuming there is data in the list
 
 		orderList.setVisibleRowCount(12);
 		JScrollPane scrollPane = new JScrollPane(orderList);
@@ -600,53 +652,6 @@ public class Cashier extends Backend implements ActionListener {
         return p;
     }
 
-    
-    // starter code for middleware functions for updating orders list and payment box
-
-    // private void updateOrderPanel() {
-	// 	orderList.removeAllElements();
-		
-	// 	int subTotal = 0;
-	// 	for (Item item : order.getItems()) {
-	// 		subTotal += item.getPrice();
-	// 		orderList.addElement(createLine(item.getName(), 
-	// 				item.getPrice()));
-	// 	}
-		
-	// 	double total = subTotal * 0.01d;
-	// 	double tax = total * 0.09d;
-	// 	total += tax;
-	// 	order.setOrderTotal(total);
-	// 	totalField.setText(String.format("%#.2f", total)); 
-		
-		
-	// 	paymentListener.makeChange();
-	// }
-
-    // public class OrderListener implements ActionListener {
-
-	// 	@Override
-	// 	public void actionPerformed(ActionEvent event) {
-	// 		JButton button = (JButton) event.getSource();
-	// 		if (button.getText().equals("Remove Item")) {
-	// 			removeItem(Integer.valueOf(event.getActionCommand()));
-	// 		} else {
-	// 			addItem(Integer.valueOf(event.getActionCommand()));
-	// 		}
-	// 		updateOrderPanel();
-	// 	}
-		
-	// 	private void removeItem(int index) {
-	// 		Item item = inventory.getItem(index);
-	// 		order.removeItem(item);
-	// 	}
-		
-	// 	private void addItem(int index) {
-	// 		Item item = inventory.getItem(index);
-	// 		order.addItem(item);
-	// 	}
-		
-	// }
 
     /** 
      * Creates and returns the payment panel, which shows the total payment of all the ordered items the user made.
@@ -689,11 +694,13 @@ public class Cashier extends Backend implements ActionListener {
 		gbc.weightx = 1d;
 		gbc.gridx = 0;
 		gbc.gridy++;
+
         JButton button = new JButton("Take Order");
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 HashMap<String,String> order = new HashMap<>();
                 Random rnd = new Random();
+
                 order.put("orderid", String.valueOf(rnd.nextInt(1000)));
                 order.put("ordernumber", String.valueOf(rnd.nextInt(100000)));
 
@@ -705,6 +712,7 @@ public class Cashier extends Backend implements ActionListener {
                     }
                 }
                 items += "}";
+
                 order.put("totalprice", String.valueOf(cost));
                 order.put("saledate", "2022-11-30");
 
@@ -713,6 +721,7 @@ public class Cashier extends Backend implements ActionListener {
                 
                 order.put("satisfied", "t");
                 order.put("itemsordered", items);
+
                 Boolean didWeInsert  = Backend.addValue("orders", order);
                 System.out.println(didWeInsert);
 
@@ -720,7 +729,7 @@ public class Cashier extends Backend implements ActionListener {
                 cost = 0.0;
             }
         });
-		// button.addActionListener(paymentListener);
+
 		innerPanel.add(button, gbc);
 
         p.add(innerPanel);
