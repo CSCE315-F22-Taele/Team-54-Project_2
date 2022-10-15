@@ -11,7 +11,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
-import javax.swing.table.DefaultTableModel;
+// import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
 public class Manager implements ActionListener, TableModelListener {
@@ -22,9 +22,6 @@ public class Manager implements ActionListener, TableModelListener {
     static JButton inventoryButton, menuButton, trendsButton;
     static JButton invAddButton, invRemoveButton, menAddButton, menRemoveButton;
 
-    DefaultTableModel invModel;
-    DefaultTableModel menuModel;
-
     CardLayout cardLayout;
     JPanel cardPanel;
 
@@ -34,9 +31,6 @@ public class Manager implements ActionListener, TableModelListener {
         frame = new JFrame();
         frame.setLayout(new BorderLayout());
         tb = new JToolBar();
-
-        invModel = new DefaultTableModel();
-        menuModel = new DefaultTableModel();
 
         // create panel to hold function switches
         JPanel functionPanel = new JPanel();
@@ -134,8 +128,7 @@ public class Manager implements ActionListener, TableModelListener {
 
         // Create table and add listener
         JTable items = new JTable(data, colNames);
-        items.setModel(invModel);
-        invModel.addTableModelListener(this);
+        items.getModel().addTableModelListener(this);
 
         // Create panel to hold full view
         JPanel inventoryPanel = new JPanel(new BorderLayout());
@@ -176,8 +169,7 @@ public class Manager implements ActionListener, TableModelListener {
         // Create table and add listener
         // menTableModel = new DefaultTableModel(data, colNames);
         JTable items = new JTable(data, colNames);  
-        items.setModel(menuModel);
-        menuModel.addTableModelListener(this);                  
+        items.getModel().addTableModelListener(this);                  
         JPanel menuPanel = new JPanel(new BorderLayout());
         items.setFillsViewportHeight(true);
 
@@ -235,7 +227,7 @@ public class Manager implements ActionListener, TableModelListener {
         int column = e.getColumn();
 
         // System.out.println("Row: " + row + " Column: " + column);
-        DefaultTableModel model = (DefaultTableModel)e.getSource();
+        TableModel model = (TableModel)e.getSource();
         String columnName = model.getColumnName(column);
         Object data = model.getValueAt(row, column);
         
