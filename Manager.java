@@ -92,10 +92,15 @@ public class Manager implements ActionListener, TableModelListener {
             frame.dispose();
             new LaunchPage();
         } else if (e.getSource() == invAddButton) {
-            
+            Backend.addEmptyCell("inventory");
+            frame.dispose();
+            new Manager();
         } else if (e.getSource() == invRemoveButton) {
 
         } else if (e.getSource() == menAddButton) {
+            Backend.addEmptyCell("menu");
+            frame.dispose();
+            new Manager();
 
         } else if (e.getSource() == menRemoveButton) {
 
@@ -161,6 +166,7 @@ public class Manager implements ActionListener, TableModelListener {
                              "Ingredients"};
         
         // Create table and add listener
+        // menTableModel = new DefaultTableModel(data, colNames);
         JTable items = new JTable(data, colNames);                    
         JPanel menuPanel = new JPanel(new BorderLayout());
         items.setFillsViewportHeight(true);
@@ -218,7 +224,7 @@ public class Manager implements ActionListener, TableModelListener {
         int row = e.getFirstRow();
         int column = e.getColumn();
 
-        System.out.println("Row: " + row + " Column: " + column);
+        // System.out.println("Row: " + row + " Column: " + column);
         TableModel model = (TableModel)e.getSource();
         String columnName = model.getColumnName(column);
         Object data = model.getValueAt(row, column);
@@ -227,6 +233,11 @@ public class Manager implements ActionListener, TableModelListener {
         if(isInv)
         {
             Backend.editTable("inventory", row, column, columnName, data);
+
+            // inventoryPanel();
+            cardPanel.add(inventoryPanel(), "inventory");
+            // invTableModel.fireTableDataChanged();
+
             // System.out.println("In inventory");
             // Backend.getValue("inventory", "quantity", );
         }
