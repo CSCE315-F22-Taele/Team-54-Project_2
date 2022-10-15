@@ -246,9 +246,8 @@ public class Manager implements ActionListener, TableModelListener {
                 columnName = "fridgerequired";
             } else {
                 columnName.toLowerCase();
-                if (columnName.contains(" ")) {
+                if (columnName.contains(" "))
                     columnName.replace(" ", "");
-                }
             }
 
             Backend.editTable("inventory", row, column, columnName, data);
