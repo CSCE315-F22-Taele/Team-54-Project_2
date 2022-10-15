@@ -369,6 +369,35 @@ public class Backend {
         return null;
     }
 
+    /**
+     * Returns the size of the specified SQL table
+     * @param tableName the name to SQL table we want the size of
+     * @return the size of the SQL table named tableName
+     */
+    static int getSize(String tableName)
+    {
+        if(conn == null || stmt == null) createConnection();
+
+        String query = "nothing";
+        try {
+            // The Query to check if a record exists within the table where fieldName = value.
+            HashMap<String, String> record = new HashMap<>();
+            if(tableName == "inventory")
+            {
+                // query = String.format("UPDATE %s SET %s = \'%s\' WHERE %s = %d ;", tableName, colName, (String) data, tableFields.get(tableName)[0], row+1);
+                // stmt = createStatement(query);
+                // // System.err.println("QUERY :: " + query);
+                System.out.println(query);
+
+
+            }} catch (Exception e) {
+                System.err.println("QUERY :: " + query);
+                e.printStackTrace();
+                System.err.println(e.getClass().getName()+": "+e.getMessage());
+                System.exit(0);
+            }
+        return -1;
+    }
 
     static boolean editTable(String tableName, int row, int col, String colName, Object data)
     {
@@ -378,7 +407,7 @@ public class Backend {
         String query = "nothing";
         try {
             // The Query to check if a record exists within the table where fieldName = value.
-            query = String.format("UPDATE %s SET %s = \'%s\' WHERE %s = %d", tableName, colName, (String) data, tableFields.get(tableName)[0], row);
+            query = String.format("UPDATE %s SET %s = \'%s\' WHERE %s = %d ;", tableName, colName, (String) data, tableFields.get(tableName)[0], row+1);
             stmt = createStatement(query);
             // System.err.println("QUERY :: " + query);
             int result = stmt.executeUpdate();
@@ -410,6 +439,21 @@ public class Backend {
             query = String.format("INSERT INTO %s VALUES (NULL);", tableName);
             stmt = createStatement(query);
             // System.err.println("QUERY :: " + query);
+            HashMap<String, String> record = new HashMap<>();
+            if(tableName == "inventory")
+            {
+                // []{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"}
+                record.put("itemid", String.valueOf(-1));
+                record.put("name", "NewName");
+                record.put("category", "Meat");
+                record.put("expirationdate", "3003-01-01");
+                record.put("fridgerequired", "false");
+                record.put("quantity", "-1");
+                record.put("unit", "false");
+                addValue(tableName, record);
+            } else if (tableName == "menu") {
+                
+            }
             stmt.executeUpdate();
         } catch (Exception e) {
             System.err.println("QUERY :: " + query);
