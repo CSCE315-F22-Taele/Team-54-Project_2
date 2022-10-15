@@ -133,7 +133,7 @@ public class useDatabase {
                 rows = new ArrayList<String> (Arrays.asList(line.split(",")));
                 String parse = rows.get(rows.size()-1).replace('|', ',');
                 rows.set(rows.size()-1, "{"+parse+"}"); 
-                System.out.println(rows.toString());
+                // System.out.println(rows.toString());
                 data.add(rows);
             }
 
@@ -145,6 +145,53 @@ public class useDatabase {
         }
         System.out.print("Done reading the file");
         return data;
+    }
+
+    /**
+     * Drops specified tables from the SQL database, along with any dependencies
+     * @param tableNames the list of table to drop
+     * @param stmt the statement object to run the SQL query
+     * @return whether or not the function was successful
+     */
+    static void dropTables(String[] tableNames, Statement stmt) {
+        try {
+            for (String table : tableNames) {
+                String query = String.format("DROP TABLE %s CASCADE;", table);
+                stmt.executeUpdate(query);
+                // ResultSet result = stmt.executeQuery();
+                // return result.next(); 
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+            System.exit(0);
+        }
+
+        // return false;
+    }
+
+    /**
+     * Grants full privileges to each member of the team--use whenever 1+ tables are repopulated
+     * @param tableName the name of the table to grant privileges to
+     * @param users the users to grant privileges to--FIRST NAMES ONLY, in lowercase
+     * @param stmt the SQL statement object that runs the query
+     * @return whether or not the privileges were granted
+     */
+    static void grantPrivileges(String tableName, String[] users, Statement stmt) {
+        try {
+            for (String user : users) {
+                String query = String.format("GRANT ALL PRIVILEGES ON %s TO csce331_904_%s", tableName, user);
+                stmt.executeUpdate(query);
+                // ResultSet result = stmt.executeQuery();
+                // return result.next(); 
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+            System.exit(0);
+        }
+
+        // return false;
     }
 
   //Commands to run this script
@@ -180,137 +227,150 @@ public class useDatabase {
        // Create a statement object
        Statement stmt = conn.createStatement();
 
+       // List of users for privileges
+       String[] users = {"krishnan", "estella", "neha"}; // edit depending on who is running this 
+     String[] dropTables = {"customers", "employees", /*"menu", "orders",*/"inventory", "finances"}; // edit depending on which tables you want to drop
+       
+       // Drop existing tables
+        dropTables(dropTables, stmt);
+        System.out.println ("Tables dropped successfully");
+
        // Create tables (create strings and execute)
         // Customers
-        // String createCustomerTable = "CREATE TABLE customers (customerID int, firstName text, lastName text);";
-        // stmt.executeUpdate(createCustomerTable);
-        // System.out.println("Created customers table");
+        String createCustomerTable = "CREATE TABLE customers (customerID int, firstName text, lastName text);";
+        stmt.executeUpdate(createCustomerTable);
+        grantPrivileges("customers", users, stmt);
+        System.out.println("Created customers table");
 
         // // Employees
-        // String createEmployeeTable = "CREATE TABLE employees (employeeID int, firstName varchar, lastName varchar, payRate float, role varchar, startDate date, isManager boolean);";
-        // stmt.executeUpdate(createEmployeeTable);
-        // System.out.println("Created employees table");
+        String createEmployeeTable = "CREATE TABLE employees (employeeID int, firstName varchar, lastName varchar, payRate float, role varchar, startDate date, isManager boolean);";
+        stmt.executeUpdate(createEmployeeTable);
+        grantPrivileges("employees", users, stmt);
+        System.out.println("Created employees table");
 
         // // //Inventory
-        // String createInventoryTable = "CREATE TABLE inventory (itemID int, name text, category text, expirationDate date, fridgeRequired boolean, quantity float, unit text);";
-        // stmt.executeUpdate(createInventoryTable);
-        // System.out.println("Created inventory table");
+        String createInventoryTable = "CREATE TABLE inventory (itemID int, name text, category text, expirationDate date, fridgeRequired boolean, quantity float, unit text);";
+        stmt.executeUpdate(createInventoryTable);
+        grantPrivileges("inventory", users, stmt);
+        System.out.println("Created inventory table");
 
         // // Finances
-        // String createFinanceTable = "CREATE TABLE finances (transactionID int, isDebit boolean, isCredit boolean, details text, amount float);";
-        // stmt.executeUpdate(createFinanceTable);
-        // System.out.println("Created finances table");
+        String createFinanceTable = "CREATE TABLE finances (transactionID int, isDebit boolean, isCredit boolean, details text, amount float);";
+        stmt.executeUpdate(createFinanceTable);
+        grantPrivileges("finances", users, stmt);
+        System.out.println("Created finances table");
 
         // Orders
-        // String createOrdersTable = "CREATE TABLE orders (orderID int, orderNumber int, totalPrice float, saleDate date, employeeID int, customerID int, satisfied boolean, itemsOrdered text[]);";
-        // stmt.executeUpdate(createOrdersTable);
-        // System.out.println("Created orders table");
+        String createOrdersTable = "CREATE TABLE orders (orderID int, orderNumber int, totalPrice float, saleDate date, employeeID int, customerID int, satisfied boolean, itemsOrdered text[]);";
+        stmt.executeUpdate(createOrdersTable);
+        grantPrivileges("orders", users, stmt);
+        System.out.println("Created orders table");
 
         // Menu
-        
         String createMenuTable = "CREATE TABLE menu (menuID int, name text, price float, category text, ingredients text[]);";
         stmt.executeUpdate(createMenuTable);
+        grantPrivileges("menu", users, stmt);
         System.out.println("Created menu table");
 
         // POPULATE TABLES IN DATABASE
         // For Customers
-        // ArrayList<ArrayList<String>> customerList = readCSVFileName("Customers.csv");
-        // for (int i = 0; i < customerList.size(); i++) {
-        //     String customerID = customerList.get(i).get(0);
-        //     String firstName = customerList.get(i).get(1);
-        //     String lastName = customerList.get(i).get(2);
+        ArrayList<ArrayList<String>> customerList = readCSVFileName("Customers.csv");
+        for (int i = 0; i < customerList.size(); i++) {
+            String customerID = customerList.get(i).get(0);
+            String firstName = customerList.get(i).get(1);
+            String lastName = customerList.get(i).get(2);
 
-        //     // Query String
-        //     String query = String.format("INSERT INTO customers VALUES ('%s', '%s', '%s');", customerID, firstName, lastName);
+            // Query String
+            String query = String.format("INSERT INTO customers VALUES ('%s', '%s', '%s');", customerID, firstName, lastName);
 
-        //     // Execute the query on the server
-        //     stmt.executeUpdate(query);
-        // }
+            // Execute the query on the server
+            stmt.executeUpdate(query);
+        }
 
-        // System.out.println("Populated customers table");
+        System.out.println("Populated customers table");
 
-        // // For Employees
-        // ArrayList<ArrayList<String>> employeeList = readCSVFileName("Employees.csv");
-        // for (int i = 0; i < employeeList.size(); i++) {
-        //     String employeeID = employeeList.get(i).get(0);
-        //     String firstName = employeeList.get(i).get(1);
-        //     String lastName = employeeList.get(i).get(2);
-        //     String payRate = employeeList.get(i).get(3); 
-        //     String role = employeeList.get(i).get(4);
-        //     String startDate = employeeList.get(i).get(5);
-        //     String isManager = employeeList.get(i).get(6);
+        // For Employees
+        ArrayList<ArrayList<String>> employeeList = readCSVFileName("Employees.csv");
+        for (int i = 0; i < employeeList.size(); i++) {
+            String employeeID = employeeList.get(i).get(0);
+            String firstName = employeeList.get(i).get(1);
+            String lastName = employeeList.get(i).get(2);
+            String payRate = employeeList.get(i).get(3); 
+            String role = employeeList.get(i).get(4);
+            String startDate = employeeList.get(i).get(5);
+            String isManager = employeeList.get(i).get(6);
 
-        //     // Query String
-        //     String query = String.format("INSERT INTO employees VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s');", employeeID, firstName, lastName, payRate, role, startDate, isManager);
+            // Query String
+            String query = String.format("INSERT INTO employees VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s');", employeeID, firstName, lastName, payRate, role, startDate, isManager);
 
-        //     // Execute query
-        //     stmt.executeUpdate(query);
-        // }
+            // Execute query
+            stmt.executeUpdate(query);
+        }
 
-        // System.out.println("Populated employees table");
+        System.out.println("Populated employees table");
 
-        // // For Inventory
-        // ArrayList<ArrayList<String>> inventoryList = readCSVFileName("Inventory.csv");
-        // for (int i = 0; i < inventoryList.size(); i++) {
-        //     String itemID = inventoryList.get(i).get(0);
-        //     String name = inventoryList.get(i).get(1);
-        //     String category = inventoryList.get(i).get(2);
-        //     String expDate = inventoryList.get(i).get(3);
-        //     String needsFridge = inventoryList.get(i).get(4);
-        //     String quantity = inventoryList.get(i).get(5);
-        //     String unit = inventoryList.get(i).get(6);
+        // For Inventory
+        ArrayList<ArrayList<String>> inventoryList = readCSVFileName("Inventory.csv");
+        for (int i = 0; i < inventoryList.size(); i++) {
+            String itemID = inventoryList.get(i).get(0);
+            String name = inventoryList.get(i).get(1);
+            String category = inventoryList.get(i).get(2);
+            String expDate = inventoryList.get(i).get(3);
+            String needsFridge = inventoryList.get(i).get(4);
+            String quantity = inventoryList.get(i).get(5);
+            String unit = inventoryList.get(i).get(6);
 
-        //     // Query String
-        //     String query = String.format("INSERT INTO inventory VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s');", itemID, name, category, expDate, needsFridge, quantity, unit);
+            // Query String
+            String query = String.format("INSERT INTO inventory VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s');", itemID, name, category, expDate, needsFridge, quantity, unit);
 
-        //     // Execute query
-        //     stmt.executeUpdate(query);
-        // }
+            // Execute query
+            stmt.executeUpdate(query);
+        }
 
-        // System.out.println("Populated inventory table");
+        System.out.println("Populated inventory table");
 
-        // // For Finances
-        // ArrayList<ArrayList<String>> financesList = readCSVFileName("Finances.csv");
-        // for (int i = 0; i < financesList.size(); i++) {
-        //     String tranID = financesList.get(i).get(0);
-        //     String isDebit = financesList.get(i).get(1);
-        //     String isCredit = financesList.get(i).get(2);
-        //     String details = financesList.get(i).get(3);
-        //     String amount = financesList.get(i).get(4);
+        // For Finances
+        ArrayList<ArrayList<String>> financesList = readCSVFileName("Finances.csv");
+        for (int i = 0; i < financesList.size(); i++) {
+            String tranID = financesList.get(i).get(0);
+            String isDebit = financesList.get(i).get(1);
+            String isCredit = financesList.get(i).get(2);
+            String details = financesList.get(i).get(3);
+            String amount = financesList.get(i).get(4);
 
-        //     // Query String
-        //     String query = String.format("INSERT INTO finances VALUES ('%s', '%s', '%s', '%s', '%s');", tranID, isDebit, isCredit, details, amount);
+            // Query String
+            String query = String.format("INSERT INTO finances VALUES ('%s', '%s', '%s', '%s', '%s');", tranID, isDebit, isCredit, details, amount);
 
-        //     // Execute query
-        //     stmt.executeUpdate(query);
-        // }
+            // Execute query
+            stmt.executeUpdate(query);
+        }
 
-        // System.out.println("Populated finances table");
+        System.out.println("Populated finances table");
 
-        // // For Orders
-        // ArrayList<ArrayList<String>> ordersList = readCSVFileName("Orders.csv");
-        // for (int i = 0; i < ordersList.size(); i++) {
-        //     String orderID = ordersList.get(i).get(0);
-        //     String orderNum = ordersList.get(i).get(1);
-        //     String totPrice = ordersList.get(i).get(2);
-        //     String date = ordersList.get(i).get(3);
-        //     String empID = ordersList.get(i).get(4);
-        //     String custID = ordersList.get(i).get(5);
-        //     String satisfied = ordersList.get(i).get(6);
+        // For Orders
+        ArrayList<ArrayList<String>> ordersList = readCSVFileName("Orders.csv");
+        for (int i = 0; i < ordersList.size(); i++) {
+            String orderID = ordersList.get(i).get(0);
+            String orderNum = ordersList.get(i).get(1);
+            String totPrice = ordersList.get(i).get(2);
+            String date = ordersList.get(i).get(3);
+            String empID = ordersList.get(i).get(4);
+            String custID = ordersList.get(i).get(5);
+            String satisfied = ordersList.get(i).get(6);
 
-        //     // System.out.println(ordersList.get(i));
+            // System.out.println(ordersList.get(i));
 
-        //     String items = makeItemsArray(ordersList.get(i), 7).toString().replace('[', '{').replace(']', '}');
+            String items = makeItemsArray(ordersList.get(i), 7).toString().replace('[', '{').replace(']', '}');
 
-        //     // Query string
-        //     String query = String.format("INSERT INTO orders VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');", orderID, orderNum, totPrice, date, empID, custID, satisfied, items);
+            // Query string
+            String query = String.format("INSERT INTO orders VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s');", orderID, orderNum, totPrice, date, empID, custID, satisfied, items);
 
-        //     // Execute query
-        //     stmt.executeUpdate(query);
+            // Execute query
+            stmt.executeUpdate(query);
 
-        // }
+        }
 
-        // System.out.println("Populated orders table");
+        System.out.println("Populated orders table");
 
         // For Menu
         ArrayList<ArrayList<String>> menuList = makeIngredientsArray("Menu.csv");
@@ -333,7 +393,7 @@ public class useDatabase {
        System.out.println("--------------------Sucessfully Completed Database Construction--------------------");
    } catch (Exception e) {
        e.printStackTrace();
-       System.err.println(e.getClass().getName()+": "+e.getMessage());
+       System.err.println(e.getClass().getName() + ": " + e.getMessage());
        System.exit(0);
    }
 
