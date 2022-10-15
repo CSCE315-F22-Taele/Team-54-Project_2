@@ -144,8 +144,6 @@ public class Cashier extends Backend implements ActionListener {
         } else if (e.getSource() == backButton) {
             frame.dispose();
             new LaunchPage();
-        } else if (e.getSource() == removeButton) {
-            // functionality for this button will be implemented in phase 4
         }
     }
 
@@ -181,6 +179,7 @@ public class Cashier extends Backend implements ActionListener {
                         cost += Double.valueOf(menuItems.get("Breakfast").get(menuNum)[1]);
                     }
                     
+                    totalField.setText(String.valueOf(cost));
                 }
             });
 
@@ -197,11 +196,20 @@ public class Cashier extends Backend implements ActionListener {
 
 			buttonPanel.setBackground(Color.WHITE);
             removeButton = new JButton("Remove Item");
+
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    while (orderListModel.removeElement(menuItems.get("Breakfast").get(menuNum)[0])) {}
+                    double tempCost = 0.0;
+
+                    while (orderListModel.removeElement(menuItems.get("Breakfast").get(menuNum)[0])) {
+                        tempCost += Double.valueOf(menuItems.get("Breakfast").get(menuNum)[1]);
+                    }
+
+                    cost -= tempCost;
+                    totalField.setText(String.valueOf(cost));
                 }
             });
+
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -241,7 +249,8 @@ public class Cashier extends Backend implements ActionListener {
                         orderListModel.addElement(menuItems.get("Entree").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Entree").get(menuNum)[1]);
                     }
-                    // System.out.println("COST: " + cost);
+
+                    totalField.setText(String.valueOf(cost));
                 }
             });
 
@@ -258,9 +267,17 @@ public class Cashier extends Backend implements ActionListener {
 			buttonPanel.setBackground(Color.WHITE);
 
             removeButton = new JButton("Remove Item");
+
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    while (orderListModel.removeElement(menuItems.get("Entree").get(menuNum)[0])) {}
+                    double tempCost = 0.0;
+
+                    while (orderListModel.removeElement(menuItems.get("Entree").get(menuNum)[0])) {
+                        tempCost += Double.valueOf(menuItems.get("Entree").get(menuNum)[1]);
+                    }
+
+                    cost -= tempCost;
+                    totalField.setText(String.valueOf(cost));
                 }
             });
             buttonPanel.add(removeButton);
@@ -302,7 +319,8 @@ public class Cashier extends Backend implements ActionListener {
                         orderListModel.addElement(menuItems.get("Salads").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Salads").get(menuNum)[1]);
                     }
-                    // System.out.println("COST: " + cost);
+
+                    totalField.setText(String.valueOf(cost));
                 }
             });
 
@@ -319,9 +337,17 @@ public class Cashier extends Backend implements ActionListener {
 			buttonPanel.setBackground(Color.WHITE);
 
             removeButton = new JButton("Remove Item");
+
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    while (orderListModel.removeElement(menuItems.get("Salads").get(menuNum)[0])) {}
+                    double tempCost = 0.0;
+
+                    while (orderListModel.removeElement(menuItems.get("Salads").get(menuNum)[0])) {
+                        tempCost += Double.valueOf(menuItems.get("Salads").get(menuNum)[1]);
+                    }
+
+                    cost -= tempCost;
+                    totalField.setText(String.valueOf(cost));
                 }
             });
             buttonPanel.add(removeButton);
@@ -363,7 +389,8 @@ public class Cashier extends Backend implements ActionListener {
                         orderListModel.addElement(menuItems.get("Sides").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Sides").get(menuNum)[1]);
                     }
-                    // System.out.println("COST: " + cost);
+
+                    totalField.setText(String.valueOf(cost));
                 }
             });
 
@@ -380,9 +407,17 @@ public class Cashier extends Backend implements ActionListener {
 			buttonPanel.setBackground(Color.WHITE);
 
             removeButton = new JButton("Remove Item");
+
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    while (orderListModel.removeElement(menuItems.get("Sides").get(menuNum)[0])) {}
+                    double tempCost = 0.0;
+
+                    while (orderListModel.removeElement(menuItems.get("Sides").get(menuNum)[0])) {
+                        tempCost += Double.valueOf(menuItems.get("Sides").get(menuNum)[1]);
+                    }
+
+                    cost -= tempCost;
+                    totalField.setText(String.valueOf(cost));
                 }
             });
             buttonPanel.add(removeButton);
@@ -424,7 +459,8 @@ public class Cashier extends Backend implements ActionListener {
                         orderListModel.addElement(menuItems.get("Kids Meals").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Kids Meals").get(menuNum)[1]);
                     }
-                    // System.out.println("COST: " + cost);
+
+                    totalField.setText(String.valueOf(cost));
                 }
             });
 
@@ -443,7 +479,14 @@ public class Cashier extends Backend implements ActionListener {
             removeButton = new JButton("Remove Item");
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    while (orderListModel.removeElement(menuItems.get("Kids Meals").get(menuNum)[0])) {}
+                    double tempCost = 0.0;
+
+                    while (orderListModel.removeElement(menuItems.get("Kids Meals").get(menuNum)[0])) {
+                        tempCost += Double.valueOf(menuItems.get("Kids Meals").get(menuNum)[1]);
+                    }
+
+                    cost -= tempCost;
+                    totalField.setText(String.valueOf(cost));
                 }
             });
             buttonPanel.add(removeButton);
@@ -485,7 +528,8 @@ public class Cashier extends Backend implements ActionListener {
                         orderListModel.addElement(menuItems.get("Treats").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Treats").get(menuNum)[1]);
                     }
-                    // System.out.println("COST: " + cost);
+                    
+                    totalField.setText(String.valueOf(cost));
                 }
             });
 
@@ -502,9 +546,17 @@ public class Cashier extends Backend implements ActionListener {
 			buttonPanel.setBackground(Color.WHITE);
 
             removeButton = new JButton("Remove Item");
+
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    while (orderListModel.removeElement(menuItems.get("Treats").get(menuNum)[0])) {}  
+                    double tempCost = 0.0;
+
+                    while (orderListModel.removeElement(menuItems.get("Treats").get(menuNum)[0])) {
+                        tempCost += Double.valueOf(menuItems.get("Treats").get(menuNum)[1]);
+                    }
+
+                    cost -= tempCost;
+                    totalField.setText(String.valueOf(cost));
                 }
             });
             buttonPanel.add(removeButton);
@@ -546,7 +598,8 @@ public class Cashier extends Backend implements ActionListener {
                         orderListModel.addElement(menuItems.get("Drinks").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Drinks").get(menuNum)[1]);
                     }
-                    // System.out.println("COST: " + cost);
+
+                    totalField.setText(String.valueOf(cost));
                 }
             });
 
@@ -563,11 +616,20 @@ public class Cashier extends Backend implements ActionListener {
 			buttonPanel.setBackground(Color.WHITE);
 
             removeButton = new JButton("Remove Item");
+
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    while (orderListModel.removeElement(menuItems.get("Drinks").get(menuNum)[0])) {}
+                    double tempCost = 0.0;
+
+                    while (orderListModel.removeElement(menuItems.get("Drinks").get(menuNum)[0])) {
+                        tempCost += Double.valueOf(menuItems.get("Drinks").get(menuNum)[1]);
+                    }
+
+                    cost -= tempCost;
+                    totalField.setText(String.valueOf(cost));
                 }
             });
+
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -607,7 +669,8 @@ public class Cashier extends Backend implements ActionListener {
                         orderListModel.addElement(menuItems.get("Sauce").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Sauce").get(menuNum)[1]);
                     }
-                    // System.out.println("COST: " + cost);
+
+                    totalField.setText(String.valueOf(cost));
                 }
             });
 
@@ -624,12 +687,20 @@ public class Cashier extends Backend implements ActionListener {
 			buttonPanel.setBackground(Color.WHITE);
 
             removeButton = new JButton("Remove Item");
+
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    while (orderListModel.removeElement(menuItems.get("Sauce").get(menuNum)[0])) {}
-                    
+                    double tempCost = 0.0;
+
+                    while (orderListModel.removeElement(menuItems.get("Sauce").get(menuNum)[0])) {
+                        tempCost += Double.valueOf(menuItems.get("Sauce").get(menuNum)[1]);
+                    }
+
+                    cost -= tempCost;
+                    totalField.setText(String.valueOf(cost));
                 }
             });
+
             buttonPanel.add(removeButton);
             innerPanel.add(buttonPanel, BorderLayout.AFTER_LINE_ENDS);
 
@@ -655,6 +726,11 @@ public class Cashier extends Backend implements ActionListener {
     }
 
     
+    private void updateOrderPanel() {
+        
+    }
+
+
     /** 
      * Creates and returns the order panel, which shows what the user has selected to order in the GUI.
      * @return JPanel, specifically the order panel
@@ -762,6 +838,8 @@ public class Cashier extends Backend implements ActionListener {
                 
                 order.put("satisfied", "t");
                 order.put("itemsordered", items);
+
+                totalField.setText("");
 
                 Boolean didWeInsert  = Backend.addValue("orders", order);
                 System.out.println(didWeInsert);
