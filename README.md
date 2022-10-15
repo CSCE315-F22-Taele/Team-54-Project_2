@@ -5,6 +5,7 @@ This is the repository for CSCE 331 Team 54's Project 2. It contains code to imp
 All store data is stored and maintained in a SQL database. The GUI and any interaction with the database is coded in Java.
 
 ---
+### Functionality
 
 #### Cashier Functionality:
 - View store menu items and prices, sorted by categories
@@ -20,8 +21,8 @@ All store data is stored and maintained in a SQL database. The GUI and any inter
 - View reports of excess and understocked inventory items
 
 ---
+### How to Run
 
-### To run:
 1. Clone this repo locally
 2. Compile all java files using the command `javac *.java`
 3. Run Program!
