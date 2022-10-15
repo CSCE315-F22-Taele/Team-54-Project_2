@@ -178,8 +178,8 @@ public class Cashier extends Backend implements ActionListener {
                         orderListModel.addElement(menuItems.get("Breakfast").get(menuNum)[0]);
                         cost += Double.valueOf(menuItems.get("Breakfast").get(menuNum)[1]);
                     }
-                    
-                    totalField.setText(String.valueOf(cost));
+
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
 
@@ -206,7 +206,7 @@ public class Cashier extends Backend implements ActionListener {
                     }
 
                     cost -= tempCost;
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
 
@@ -250,7 +250,7 @@ public class Cashier extends Backend implements ActionListener {
                         cost += Double.valueOf(menuItems.get("Entree").get(menuNum)[1]);
                     }
 
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
 
@@ -320,7 +320,7 @@ public class Cashier extends Backend implements ActionListener {
                         cost += Double.valueOf(menuItems.get("Salads").get(menuNum)[1]);
                     }
 
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
 
@@ -347,7 +347,7 @@ public class Cashier extends Backend implements ActionListener {
                     }
 
                     cost -= tempCost;
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
             buttonPanel.add(removeButton);
@@ -390,7 +390,7 @@ public class Cashier extends Backend implements ActionListener {
                         cost += Double.valueOf(menuItems.get("Sides").get(menuNum)[1]);
                     }
 
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
 
@@ -417,7 +417,7 @@ public class Cashier extends Backend implements ActionListener {
                     }
 
                     cost -= tempCost;
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
             buttonPanel.add(removeButton);
@@ -460,7 +460,7 @@ public class Cashier extends Backend implements ActionListener {
                         cost += Double.valueOf(menuItems.get("Kids Meals").get(menuNum)[1]);
                     }
 
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
 
@@ -486,7 +486,7 @@ public class Cashier extends Backend implements ActionListener {
                     }
 
                     cost -= tempCost;
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
             buttonPanel.add(removeButton);
@@ -529,7 +529,7 @@ public class Cashier extends Backend implements ActionListener {
                         cost += Double.valueOf(menuItems.get("Treats").get(menuNum)[1]);
                     }
                     
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
 
@@ -556,7 +556,7 @@ public class Cashier extends Backend implements ActionListener {
                     }
 
                     cost -= tempCost;
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
             buttonPanel.add(removeButton);
@@ -599,7 +599,7 @@ public class Cashier extends Backend implements ActionListener {
                         cost += Double.valueOf(menuItems.get("Drinks").get(menuNum)[1]);
                     }
 
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
 
@@ -626,7 +626,7 @@ public class Cashier extends Backend implements ActionListener {
                     }
 
                     cost -= tempCost;
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
 
@@ -670,7 +670,7 @@ public class Cashier extends Backend implements ActionListener {
                         cost += Double.valueOf(menuItems.get("Sauce").get(menuNum)[1]);
                     }
 
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
 
@@ -697,7 +697,7 @@ public class Cashier extends Backend implements ActionListener {
                     }
 
                     cost -= tempCost;
-                    totalField.setText(String.valueOf(cost));
+                    totalField.setText(String.format("%#.2f", cost));
                 }
             });
 
@@ -723,11 +723,6 @@ public class Cashier extends Backend implements ActionListener {
 		p.add(paymentPanel(), BorderLayout.AFTER_LAST_LINE);
 
         return p;
-    }
-
-    
-    private void updateOrderPanel() {
-        
     }
 
 
