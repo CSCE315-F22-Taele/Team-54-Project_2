@@ -6,13 +6,13 @@ All store data is stored and maintained in a SQL database. The GUI and any inter
 
 ---
 
-*** Cashier Functionality ***:
+#### Cashier Functionality:
 - View store menu items and prices, sorted by categories
 - Add quantities of menu items to an order and view updated order in real-time
 - View total price of order, updating in real-time
 - Finalize order and update SQL database
 
-*** Manager Functionality ***:
+#### Manager Functionality:
 - View complete store inventory and menu
 - Add, edit, and remove inventory items
 - View sale trends for a menu item for a specified window of time
@@ -24,5 +24,6 @@ All store data is stored and maintained in a SQL database. The GUI and any inter
 ### To run:
 1. Clone this repo locally
 2. Compile all java files using the command `javac *.java`
-3. a) Run on Windows: `java -cp ".;postgresql-42.2.8.jar" LaunchPage`
-3. b) Run on Mac: `java -cp ".:postgresql-42.2.8.jar" LaunchPage`
+3. Run Program!
+        a) Run on Windows: `java -cp ".;postgresql-42.2.8.jar" LaunchPage`
+        b) Run on Mac: `java -cp ".:postgresql-42.2.8.jar" LaunchPage`
