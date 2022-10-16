@@ -62,47 +62,6 @@ public class useDatabase {
         // boolean pastPrice = false;
 
         for (int i = startIdx; i < rawData.size(); i++) {
-            // if (rawData.get(i).indexOf(39) != -1 && rawData.get(i).indexOf(39) == rawData.get(i).lastIndexOf(39)) { // if a menu item got split during CSV read
-            //         // merge this element with the next element to get the full menu item in one element
-            //     // System.out.println("Split item: " + rawData.get(i));
-
-            //     int counter = 1;
-            //     for (int k = i + 1; rawData.get(k).indexOf(39) == -1; k++) {
-            //         counter++;
-            //     }
-                
-            //     // Merge elements
-            //     if (counter == 1) {
-            //         rawData.set(i, rawData.get(i) + ", " + rawData.get(i + 1));
-            //     } else if (counter == 2) {
-            //         rawData.set(i, rawData.get(i) + ", " + rawData.get(i + 1) + ", " + rawData.get(i + 2));
-            //     }
-
-            //     // System.out.println("Merged element:" + rawData.get(i));
-                
-            //     // Shift array
-            //     int bounds = rawData.size() - 1;
-            //     if (counter == 2) {
-            //         bounds--;
-            //     }
-            //     for (int j = i + 1; j < bounds; j++) {
-            //         rawData.set(j, rawData.get(j + counter)); // shift elements left to remove the second half
-            //     }
-            //     rawData.remove(rawData.size() - 1);
-            //     if (counter == 2) {
-            //         rawData.remove(rawData.size() - 1);
-            //     }
-
-            //     // System.out.println("Shifted array: " + rawData);
-            // }
-
-            // if (isMenu && !pastPrice) {
-            //     continue;
-            // } else if (rawData.get(i).indexOf('.') != -1) {
-            //     pastPrice = true;
-            //     continue;
-            // }
-
             String parsedString = rawData.get(i).substring((rawData.get(i).indexOf(39)) + 1, rawData.get(i).lastIndexOf(39));
             // System.out.println(parsedString);
             parsedData.add(parsedString);
@@ -129,7 +88,7 @@ public class useDatabase {
             while(sc.hasNextLine()) {
                 // linenum += 1;
                 String line = sc.nextLine();
-                System.out.println("new Line :: " + line);
+                // System.out.println("new Line :: " + line);
                 rows = new ArrayList<String> (Arrays.asList(line.split(",")));
                 String parse = rows.get(rows.size()-1).replace('|', ',');
                 rows.set(rows.size()-1, "{"+parse+"}"); 
@@ -231,16 +190,16 @@ public class useDatabase {
        String[] users = {"krishnan", "estella", "neha"}; // edit depending on who is running this 
      String[] dropTables = {"customers", "employees", "menu", "orders", "inventory", "finances"}; // edit depending on which tables you want to drop
        
-       // Drop existing tables
-        dropTables(dropTables, stmt);
-        System.out.println ("Tables dropped successfully");
+    //    // Drop existing tables
+    //     dropTables(dropTables, stmt);
+    //     System.out.println ("Tables dropped successfully");
 
        // Create tables (create strings and execute)
         // Customers
         String createCustomerTable = "CREATE TABLE customers (customerID int, firstName text, lastName text);";
         stmt.executeUpdate(createCustomerTable);
         grantPrivileges("customers", users, stmt);
-        System.out.println("Created customers table");
+        // System.out.println("Created customers table");
 
         // Employees
         String createEmployeeTable = "CREATE TABLE employees (employeeID int, firstName varchar, lastName varchar, payRate float, role varchar, startDate date, isManager boolean);";
