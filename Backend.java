@@ -422,9 +422,9 @@ public class Backend {
         String query = "nothing";
         try {
             // The Query to check if a record exists within the table where fieldName = value.
-            query = String.format("UPDATE %s SET %s = \'%s\' WHERE %s = %d ;", tableName, colName, (String) data, tableFields.get(tableName)[0], row+1);
+            query = String.format("UPDATE %s SET %s = \'%s\' WHERE %s = %d ;", tableName, colName, (String) data, tableFields.get(tableName)[0], row);
             stmt = createStatement(query);
-            // System.err.println("QUERY :: " + query);
+            System.out.println("QUERY :: " + query);
             int result = stmt.executeUpdate();
             return (1 == result);
 
@@ -448,30 +448,34 @@ public class Backend {
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
 
-        String query = "nothing";
         try {
-            // The Query to check if a record exists within the table where fieldName = value.
-            // query = String.format("INSERT INTO %s VALUES (NULL);", tableName);
-            // stmt = createStatement(query);
-            // System.err.println("QUERY :: " + query);
+            
             HashMap<String, String> record = new HashMap<>();
             if(tableName == "inventory")
             {
                 // []{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"}
-                record.put("itemid", String.valueOf(getSize("inventory")));
-                record.put("name", "NewName");
+                int size = getSize("inventory");
+                record.put("itemid", String.valueOf(size));
+                record.put("name", "MenuItem"+size);
                 record.put("category", "Meat");
                 record.put("expirationdate", "3003-01-01");
                 record.put("fridgerequired", "false");
                 record.put("quantity", "-1");
                 record.put("unit", "false");
-                addValue(tableName, record);
-            } else if (tableName == "menu") {
-                
             }
-            stmt.executeUpdate();
+            
+            if (tableName == "menu") {
+                // []{"menuid", "name", "price", "category", "ingredients"};
+                int size = getSize("menu");
+                record.put("itemid", String.valueOf(size));
+                record.put("name", "MenuItem"+size);
+                record.put("price", "-1.00");
+                record.put("category", "Breakfast");
+                record.put("ingredients", "NULL");
+            }
+            addValue(tableName, record);
         } catch (Exception e) {
-            System.err.println("QUERY :: " + query);
+            // System.err.println("QUERY :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             System.exit(0);

@@ -232,15 +232,16 @@ public class Manager implements ActionListener, TableModelListener {
         Object data = model.getValueAt(row, column);
         
         boolean isInv = (model.getColumnCount() == 7);
+        System.out.println("Name: " + columnName + "\n" + "Row: " + row + "\n" + "Column: " + column);
         if(isInv)
         {
-            if (columnName == "Refrigeration Required") {
-                columnName = "fridgerequired";
-            } else {
-                columnName.toLowerCase();
-                if (columnName.contains(" "))
-                    columnName.replace(" ", "");
-            }
+            // if (columnName == "Refrigeration Required") {
+            //     columnName = "fridgerequired";
+            // } else {
+            //     columnName.toLowerCase();
+            //     if (columnName.contains(" "))
+            //         columnName.replace(" ", "");
+            // }
 
             Backend.editTable("inventory", row, column, columnName, data);
 

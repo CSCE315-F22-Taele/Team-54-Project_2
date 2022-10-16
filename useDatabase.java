@@ -229,7 +229,7 @@ public class useDatabase {
 
        // List of users for privileges
        String[] users = {"krishnan", "estella", "neha"}; // edit depending on who is running this 
-     String[] dropTables = {/*"customers", "employees", "menu", "orders",*/"inventory", /*"finances"*/}; // edit depending on which tables you want to drop
+     String[] dropTables = {"customers", "employees", "menu", "orders", "inventory", "finances"}; // edit depending on which tables you want to drop
        
        // Drop existing tables
         dropTables(dropTables, stmt);
@@ -242,19 +242,19 @@ public class useDatabase {
         grantPrivileges("customers", users, stmt);
         System.out.println("Created customers table");
 
-        // // Employees
+        // Employees
         String createEmployeeTable = "CREATE TABLE employees (employeeID int, firstName varchar, lastName varchar, payRate float, role varchar, startDate date, isManager boolean);";
         stmt.executeUpdate(createEmployeeTable);
         grantPrivileges("employees", users, stmt);
         System.out.println("Created employees table");
 
-        // // //Inventory
+        // Inventory
         String createInventoryTable = "CREATE TABLE inventory (itemID int, name text, category text, expirationDate date, fridgeRequired boolean, quantity float, unit text);";
         stmt.executeUpdate(createInventoryTable);
         grantPrivileges("inventory", users, stmt);
         System.out.println("Created inventory table");
 
-        // // Finances
+        // Finances
         String createFinanceTable = "CREATE TABLE finances (transactionID int, isDebit boolean, isCredit boolean, details text, amount float);";
         stmt.executeUpdate(createFinanceTable);
         grantPrivileges("finances", users, stmt);
