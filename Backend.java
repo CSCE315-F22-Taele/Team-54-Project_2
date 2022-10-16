@@ -459,7 +459,7 @@ public class Backend {
             if(tableName == "inventory")
             {
                 // []{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"}
-                int size = getSize("inventory");
+                int size = getSize("inventory")+1;
                 record.put("itemid", String.valueOf(size));
                 record.put("name", "MenuItem"+size);
                 record.put("category", "Meat");
