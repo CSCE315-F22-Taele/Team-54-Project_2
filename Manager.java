@@ -255,6 +255,7 @@ public class Manager implements ActionListener, TableModelListener {
         else
         {
             Backend.editTable("menu", row, column, columnName, data);
+            cardPanel.add(menuPanel(), "menu");
         }
         // Need backend function to update SQL table at the specified row and column
 

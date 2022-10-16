@@ -467,11 +467,11 @@ public class Backend {
             if (tableName == "menu") {
                 // []{"menuid", "name", "price", "category", "ingredients"};
                 int size = getSize("menu");
-                record.put("itemid", String.valueOf(size));
+                record.put("menuid", String.valueOf(size));
                 record.put("name", "MenuItem"+size);
                 record.put("price", "-1.00");
                 record.put("category", "Breakfast");
-                record.put("ingredients", "NULL");
+                record.put("ingredients", "{}");
             }
             addValue(tableName, record);
         } catch (Exception e) {
