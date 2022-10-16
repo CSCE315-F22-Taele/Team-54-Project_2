@@ -140,11 +140,13 @@ public class Backend {
             // The Query to check if a record exists within the table where fieldName = value.
             query = String.format("SELECT * FROM %s WHERE %s = \'%s\';", tableName, fieldName, value);
             stmt = createStatement(query);
+            
+            System.out.println("Function :: isValue " + "Query :: " + query);
             ResultSet result = stmt.executeQuery();
             return result.next();
 
         } catch (Exception e) {
-            System.err.println("QUERY :: " + query);
+            System.out.println("Function :: isValue " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             System.exit(0);
@@ -171,6 +173,7 @@ public class Backend {
             // The Query to check if a record exists within the table where fieldName = value.
             query = String.format("SELECT * FROM %s WHERE %s = \'%s\';", tableName, fieldName, value);
             stmt = createStatement(query);
+            System.out.println("Function :: getValue " + "Query :: " + query);
             ResultSet result = stmt.executeQuery();
             HashMap<String, String> record = new HashMap<>();
             String[] fields = tableFields.get(tableName);
@@ -185,7 +188,7 @@ public class Backend {
 
 
         } catch (Exception e) {
-            System.err.println("QUERY :: " + query);
+            System.err.println("Function :: isValue " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             System.exit(0);
@@ -260,12 +263,13 @@ public class Backend {
             query =   String.format("INSERT INTO %s %s ", tableName, fields)
                     + String.format("VALUES %s ;", vals);
             stmt = createStatement(query);
+            System.out.println("Function :: addValue " + "Query :: " + query);
             int result = stmt.executeUpdate();
             return (1 == result);
             // System.out.println("Result: "+ result);
 
         } catch (Exception e) {
-            System.err.println("QUERY :: " + query);
+            System.err.println("Function :: addValue " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             System.exit(0);
@@ -327,6 +331,7 @@ public class Backend {
             // The Query to check if a record exists within the table where fieldName = value.
             query = String.format("SELECT * FROM %s ;", tableName);
             stmt = createStatement(query);
+            System.out.println("Function :: tableView " + "Query :: " + query);
             ResultSet result = stmt.executeQuery();
             String[] fields = tableFields.get(tableName);
             ArrayList<ArrayList<String>> nRecords =  new ArrayList<ArrayList<String>>();
@@ -352,17 +357,17 @@ public class Backend {
                     return id1-id2;
                 }
             });
-            int pid = 0;
+            // int pid = 0;
             String[][] view = new String[nRecords.size()][nRecords.get(0).size()];
             for(int r = 0; r < view.length; ++r)
             {
                 for(int c = 0; c < view[0].length; ++c)
                     view[r][c] = nRecords.get(r).get(c);
-                view[r][0] = String.valueOf(pid++);
+                // s
             }
             return view;
         } catch (Exception e) {
-            System.err.println("QUERY :: " + query);
+            System.out.println("Function :: tableView " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             System.exit(0);
@@ -424,12 +429,12 @@ public class Backend {
             // The Query to check if a record exists within the table where fieldName = value.
             query = String.format("UPDATE %s SET %s = \'%s\' WHERE %s = %d ;", tableName, colName, (String) data, tableFields.get(tableName)[0], row);
             stmt = createStatement(query);
-            System.out.println("QUERY :: " + query);
+            System.out.println("Function :: editTable " + "Query :: " + query);
             int result = stmt.executeUpdate();
             return (1 == result);
 
         }catch (Exception e) {
-            System.err.println("QUERY :: " + query);
+            System.err.println("Function :: editTable " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             System.exit(0);
@@ -473,6 +478,7 @@ public class Backend {
                 record.put("category", "Breakfast");
                 record.put("ingredients", "{}");
             }
+
             addValue(tableName, record);
         } catch (Exception e) {
             // System.err.println("QUERY :: " + query);
