@@ -363,7 +363,6 @@ public class Backend {
             {
                 for(int c = 0; c < view[0].length; ++c)
                     view[r][c] = nRecords.get(r).get(c);
-                // s
             }
             return view;
         } catch (Exception e) {
@@ -443,6 +442,35 @@ public class Backend {
         return false;
     }
 
+    static void removeRecord(String tableName, int row)
+    {
+        // If a connection to the query does not already exist, we need to create that connection.
+        if(conn == null || stmt == null) createConnection();
+        String query = "nothing";
+        
+        try {
+            // Removing a record on the table.
+            // DELETE FROM tableName WHERE idTitle=row;
+            // Updating the records after it. 
+            // update tableName
+            // set customer_id = customer_id - 1
+            // where customer_id > row;
+            row += 1; // JTable is 0-indexed and SQL Table in 1-indexed.
+            String idTitle = tableFields.get(tableName)[0];
+            query =  String.format("DELETE FROM %s WHERE %s=%d;", tableName, idTitle, row);
+            query += String.format("update %s set %s = %s - 1 where %s > %d;", tableName, idTitle, idTitle, idTitle, row);
+            stmt = createStatement(query);
+            System.out.println("Function :: removeRecord " + "Query :: " + query);
+            int result = stmt.executeUpdate();
+            // System.out.println("Result: "+ result);
+
+        } catch (Exception e) {
+            System.err.println("Function :: removeRecord " + "Query :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+    }
     /**
      * Adds an empty row to the specified SQL table
      * @param tableName the table to which to add the new row
@@ -495,6 +523,7 @@ public class Backend {
     public static void main(String args[])
     {
         createConnection();
+        removeRecord("inventory", 0);
         // System.out.println(isValue("employees", "firstname","Tom")); // In Employees Table
         // System.out.println(isValue("employees", "lastname","Quincy")); // In Employees Table
         // System.out.println(isValue("employees", "firstname","Grace")); // Not in Employees Table
