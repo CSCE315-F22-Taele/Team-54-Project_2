@@ -11,7 +11,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
-// import javax.swing.table.DefaultTableModel;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
 public class Manager implements ActionListener, TableModelListener {
@@ -96,16 +96,13 @@ public class Manager implements ActionListener, TableModelListener {
             Backend.addEmptyCell("inventory");
             frame.dispose();
             new Manager();
-        } else if (e.getSource() == invRemoveButton) {
-
         } else if (e.getSource() == menAddButton) {
             Backend.addEmptyCell("menu");
             frame.dispose();
             new Manager();
 
-        } else if (e.getSource() == menRemoveButton) {
-
         }
+        // remove buttons are in the functions that create their specific panels
     }
 
     
@@ -143,7 +140,18 @@ public class Manager implements ActionListener, TableModelListener {
         editPanel.add(invRemoveButton);
 
         invAddButton.addActionListener(this);
-        invRemoveButton.addActionListener(this);
+        invRemoveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(items.getSelectedRow());
+                if (items.getSelectedRow() != -1) {
+                    // System.out.println("Inventory, " + items.getSelectedRow());
+                    // Backend.removeRecord("inventory", items.getSelectedRow());
+                    frame.dispose();
+                    new Manager();
+                }
+            }
+        });
 
         inventoryPanel.add(editPanel, BorderLayout.BEFORE_FIRST_LINE);
         inventoryPanel.add(new JScrollPane(items), BorderLayout.CENTER);
@@ -160,7 +168,7 @@ public class Manager implements ActionListener, TableModelListener {
      */
     private JPanel menuPanel() {
         Object[][] data = Backend.tableView("menu");
-        String[] colNames = {"Item ID",
+        String[] colNames = {"Menu ID",
                              "Name",
                              "Price",
                              "Category",
@@ -181,7 +189,17 @@ public class Manager implements ActionListener, TableModelListener {
         editPanel.add(menRemoveButton);
 
         menAddButton.addActionListener(this);
-        menRemoveButton.addActionListener(this);
+        menRemoveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(items.getSelectedRow());
+                if (items.getSelectedRow() != -1) {
+                    // Backend.removeRecord("menu", items.getSelectedRow());
+                    frame.dispose();
+                    new Manager();
+                }
+            }
+        });
 
         menuPanel.add(editPanel, BorderLayout.BEFORE_FIRST_LINE);
         menuPanel.add(new JScrollPane(items), BorderLayout.CENTER);
@@ -235,13 +253,13 @@ public class Manager implements ActionListener, TableModelListener {
         System.out.println("Name: " + columnName + "\n" + "Row: " + row + "\n" + "Column: " + column);
         if(isInv)
         {
-            // if (columnName == "Refrigeration Required") {
-            //     columnName = "fridgerequired";
-            // } else {
-            //     columnName.toLowerCase();
-            //     if (columnName.contains(" "))
-            //         columnName.replace(" ", "");
-            // }
+            if (columnName == "Refrigeration Required") {
+                columnName = "fridgerequired";
+            } else {
+                columnName = columnName.toLowerCase();
+                if (columnName.contains(" "))
+                    columnName = columnName.replace(" ", "");
+            }
 
             Backend.editTable("inventory", row, column, columnName, data);
 
@@ -254,6 +272,10 @@ public class Manager implements ActionListener, TableModelListener {
         }
         else
         {
+            columnName = columnName.toLowerCase();
+            if (columnName.contains(" ")) {
+                columnName = columnName.replace(" ", "");
+            }
             Backend.editTable("menu", row, column, columnName, data);
             cardPanel.add(menuPanel(), "menu");
         }
