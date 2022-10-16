@@ -63,8 +63,8 @@ public class Backend {
         String dbName = "csce331_" + sectionNumber + "_" + teamNumber;
         String dbConnectionString = "jdbc:postgresql://csce-315-db.engr.tamu.edu/" + dbName;
         dbSetup myCredentials = new dbSetup();
-        System.out.println("Username" + myCredentials.user);
-        System.out.println("Password" + myCredentials.pswd);
+        // System.out.println("Username" + myCredentials.user);
+        // System.out.println("Password" + myCredentials.pswd);
         //Connecting to the database
         try {
             conn = DriverManager.getConnection(dbConnectionString, myCredentials.user, myCredentials.pswd);
@@ -471,7 +471,7 @@ public class Backend {
             
             if (tableName == "menu") {
                 // []{"menuid", "name", "price", "category", "ingredients"};
-                int size = getSize("menu");
+                int size = getSize("menu")+1;
                 record.put("menuid", String.valueOf(size));
                 record.put("name", "MenuItem"+size);
                 record.put("price", "-1.00");
