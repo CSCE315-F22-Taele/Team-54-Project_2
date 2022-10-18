@@ -19,7 +19,7 @@ public class Manager implements ActionListener, TableModelListener {
     // Boilerplate Code
     private JFrame frame;
     private JToolBar tb;
-    static JButton inventoryButton, menuButton, trendsButton;
+    static JButton inventoryButton, menuButton, trendsButton, excessButton, restockButton;
     static JButton invAddButton, invRemoveButton, menAddButton, menRemoveButton;
     static JTextField saleStart, saleEnd;
 
@@ -49,11 +49,15 @@ public class Manager implements ActionListener, TableModelListener {
         functionPanel.add(inventoryButton);
         functionPanel.add(menuButton);
         functionPanel.add(trendsButton);
+        functionPanel.add(excessButton);
+        functionPanel.add(restockButton);
 
         inventoryButton.addActionListener(this);
         menuButton.addActionListener(this);
         trendsButton.addActionListener(this);
         backButton.addActionListener(this);
+        excessButton.addActionListener(this);
+        restockButton.addActionListener(this);
 
         // Setting up panel with the frame and displaying frame
         frame.add(functionPanel, BorderLayout.PAGE_START);
@@ -66,6 +70,8 @@ public class Manager implements ActionListener, TableModelListener {
         cardPanel.add(inventoryPanel(), "inventory");
         cardPanel.add(menuPanel(), "menu editor");
         cardPanel.add(trendsPanel(), "trends");
+        cardPanel.add(excessPanel(), "excess");
+        cardPanel.add(restockPanel(), "restock");
 
         frame.add(cardPanel, BorderLayout.CENTER);
         frame.add(controlPanel(), BorderLayout.AFTER_LINE_ENDS);
@@ -105,7 +111,10 @@ public class Manager implements ActionListener, TableModelListener {
             Backend.addEmptyCell("menu");
             frame.dispose();
             new Manager();
-
+        } else if (e.getSource() == excessButton) {
+            cardLayout.show(cardPanel, "excess");
+        } else if (e.getSource() == restockButton) {
+            cardLayout.show(cardPanel, "restock");
         }
         // remove buttons are in the functions that create their specific panels
     }
@@ -279,6 +288,27 @@ public class Manager implements ActionListener, TableModelListener {
         trendsPanel.add(new JScrollPane(sales), BorderLayout.CENTER);
 
         return trendsPanel;
+    }
+
+    /**
+     * Creates GUI for Manager to view excess inventory items, i.e. items of which only 10% of the original stock were used
+     * @return JPanel containing interface to view excess inventory report
+     */
+    private JPanel excessPanel() {
+        JPanel excessReport = new JPanel();
+
+        return excessReport;
+    }
+
+    /**
+     * Cereates GUI for Manager to view inventory items that need to be restocked, i.e. items of which
+     * less that 10% of the original stock remain
+     * @return a JPanel for the interface to view inventory restock needs
+     */
+    private JPanel restockPanel() {
+        JPanel restockReport = new JPanel();
+
+        return restockReport;
     }
 
     
