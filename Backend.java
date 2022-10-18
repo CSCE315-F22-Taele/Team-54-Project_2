@@ -597,8 +597,9 @@ public class Backend {
                 for(int i = 0; i < itemsOrdered.length; ++i)
                 {
                     itemsOrdered[i] = itemsOrdered[i].replace("\"", "");
-                    // System.out.print(itemsOrdered[i] + " ");
+                    System.out.print(itemsOrdered[i] + "_|_|_");
                 }
+
                 
                 System.out.println();
             }
@@ -608,7 +609,6 @@ public class Backend {
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             System.exit(0);
         }
-        
     }
 
     static HashMap<String, Double> menuItemIngredients(String menuItem)
@@ -622,18 +622,15 @@ public class Backend {
             String[] vals = temp.substring(1,temp.length()-1).replace("\"", "").split(",");
             for(String v : vals)
             {
-                String[] l = v.split(" ");
-                ingredients.put(l[0], Double.parseDouble(l[1]));
+                // System.out.println(v);
+                int index = v.lastIndexOf(" ");
+                String item = v.substring(index);
+                double qty = Double.parseDouble(v.substring(index+1));
+                ingredients.put(item, qty);
+                
             }
             
             return ingredients;
-
-            // if (temp.indexOf("|") == -1)
-            //     vals = new String[]{temp};
-            // else
-            //     vals = temp.split("|");
-            
-            // for(String v : vals) System.out.print(v + "%");
         } catch (Exception e) {
             System.out.println("Function :: menuItemIngredients " + "Query :: " + query);
             e.printStackTrace();
