@@ -329,7 +329,7 @@ public class Backend {
         String query = "nothing";
         try {
             // The Query to check if a record exists within the table where fieldName = value.
-            query = String.format("SELECT * FROM %s ;", tableName);
+            query = String.format("SELECT * FROM %s LIMIT 50;", tableName);
             stmt = createStatement(query);
             System.out.println("Function :: tableView " + "Query :: " + query);
             ResultSet result = stmt.executeQuery();
@@ -425,14 +425,18 @@ public class Backend {
             }
             return view;
         } catch (Exception e) {
-            System.out.println("Function :: tableView " + "Query :: " + query);
+            System.out.println("Function :: salesView " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             System.exit(0);
         }
         return null;
     }
-
+    
+    static String[][] excessView()
+    {
+        return null;
+    }
     /**
      * Runs query for which on existing function does not exist.
      * @param  sqlQuery               The query to use as a string.
@@ -576,13 +580,78 @@ public class Backend {
 
     }
 
+    static void invDepletionInitial()
+    {
+        if(conn == null || stmt == null) createConnection();
+
+        String query = "nothing";
+        try {
+            String[][] orders = tableView("orders");
+            int index = orders[0].length-1;
+            for(int o = 0; o < orders.length; ++o)
+            {
+                String[] itemsOrdered = orders[o][index].split(",");
+                itemsOrdered[0] = itemsOrdered[0].substring(2);
+                int cutoff = itemsOrdered[itemsOrdered.length-1].length()-2;
+                itemsOrdered[itemsOrdered.length-1] = itemsOrdered[itemsOrdered.length-1].substring(0, cutoff);   
+                for(int i = 0; i < itemsOrdered.length; ++i)
+                {
+                    itemsOrdered[i] = itemsOrdered[i].replace("\"", "");
+                    // System.out.print(itemsOrdered[i] + " ");
+                }
+                
+                System.out.println();
+            }
+        }catch (Exception e) {
+            System.err.println("QUERY :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+        
+    }
+
+    static HashMap<String, Double> menuItemIngredients(String menuItem)
+    {
+        if(conn == null || stmt == null) createConnection();
+        HashMap<String, Double> ingredients = new HashMap<>();
+        String query = "nothing";
+        try {
+            // The Query is to get how much in ingredients was used for a specfic order.
+            String temp = getValue("menu", "name", menuItem).get("ingredients");
+            String[] vals = temp.substring(1,temp.length()-1).replace("\"", "").split(",");
+            for(String v : vals)
+            {
+                String[] l = v.split(" ");
+                ingredients.put(l[0], Double.parseDouble(l[1]));
+            }
+            
+            return ingredients;
+
+            // if (temp.indexOf("|") == -1)
+            //     vals = new String[]{temp};
+            // else
+            //     vals = temp.split("|");
+            
+            // for(String v : vals) System.out.print(v + "%");
+        } catch (Exception e) {
+            System.out.println("Function :: menuItemIngredients " + "Query :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+
+        return null;
+    }  
     // Built for testing purposes. Should be commented out in the final version.
     public static void main(String args[])
     {
-        createConnection();
-        removeRecord("inventory", 0);
-        String[][] temp = salesView("2022-10-01", "2022-10-10");
-        System.out.println(temp.length);
+        // createConnection();
+        // removeRecord("inventory", 0);
+        // String[][] temp = salesView("2022-10-01", "2022-10-10");
+        // System.out.println(temp.length);
+        menuItemIngredients("Grilled Chicken Club Sandwich");
+        
         // System.out.println(isValue("employees", "firstname","Tom")); // In Employees Table
         // System.out.println(isValue("employees", "lastname","Quincy")); // In Employees Table
         // System.out.println(isValue("employees", "firstname","Grace")); // Not in Employees Table
