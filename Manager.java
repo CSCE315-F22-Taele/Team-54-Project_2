@@ -228,13 +228,31 @@ public class Manager implements ActionListener, TableModelListener {
                              "Items Ordered"};
         
 
-        JPanel editPanel = new JPanel();
+        JPanel editPanel = new JPanel(new BorderLayout());
+        JPanel startPanel = new JPanel(new BorderLayout());
+        JPanel endPanel = new JPanel(new BorderLayout());
+
+        JLabel startLabel = new JLabel();
+        startLabel.setText("Start Date");
         saleStart = new JTextField(10);
+        startPanel.add(startLabel, BorderLayout.BEFORE_FIRST_LINE);
+        startPanel.add(saleStart, BorderLayout.PAGE_END);
+        editPanel.add(startPanel, BorderLayout.BEFORE_FIRST_LINE);
+
+        JLabel endLabel = new JLabel();
+        endLabel.setText("End Date");
+        saleEnd = new JTextField(10);
+        endPanel.add(endLabel, BorderLayout.BEFORE_FIRST_LINE);
+        endPanel.add(saleEnd, BorderLayout.PAGE_END);
+        editPanel.add(endPanel, BorderLayout.PAGE_END);
 
         JTable sales = new JTable(data, colNames);
 
-        JPanel menuPanel = new JPanel(new BorderLayout());
+        // JPanel menuPanel = new JPanel(new BorderLayout());
         sales.setFillsViewportHeight(true);
+
+        // menuPanel.add(editPanel);
+        trendsPanel.add(editPanel);
 
         return trendsPanel;
     }
