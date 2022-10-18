@@ -495,6 +495,15 @@ public class Backend {
         return -1;
     }
 
+    /**
+     * 
+     * @param tableName
+     * @param row
+     * @param col
+     * @param colName
+     * @param data
+     * @return
+     */
     static boolean editTable(String tableName, int row, int col, String colName, Object data)
     {
         // If a connection to the query does not already exist, we need to create that connection.
@@ -519,6 +528,11 @@ public class Backend {
         return false;
     }
 
+    /**
+     * 
+     * @param tableName
+     * @param row
+     */
     static void removeRecord(String tableName, int row)
     {
         // If a connection to the query does not already exist, we need to create that connection.
@@ -548,6 +562,7 @@ public class Backend {
             System.exit(0);
         }
     }
+
     /**
      * Adds an empty row to the specified SQL table
      * @param tableName the table to which to add the new row
@@ -596,6 +611,9 @@ public class Backend {
 
     }
 
+    /**
+     * 
+     */
     static void invDepletionInitial()
     {
         if(conn == null || stmt == null) createConnection();
@@ -627,6 +645,11 @@ public class Backend {
         }
     }
 
+    /**
+     * 
+     * @param menuItem
+     * @return
+     */
     static HashMap<String, Double> menuItemIngredients(String menuItem)
     {
         if(conn == null || stmt == null) createConnection();
@@ -656,6 +679,7 @@ public class Backend {
 
         return null;
     }  
+
     // Built for testing purposes. Should be commented out in the final version.
     public static void main(String args[])
     {
@@ -684,6 +708,10 @@ public class Backend {
 
     }
 
+    /**
+     * 
+     * @param tableName
+     */
     public static void dropTable(String tableName) {
 
         if(conn == null || stmt == null) createConnection();
@@ -704,6 +732,10 @@ public class Backend {
         }
     }
 
+    /**
+     * 
+     * @param tableName
+     */
     public static void createTable(String tableName) {
         if(conn == null || stmt == null) createConnection();
 
