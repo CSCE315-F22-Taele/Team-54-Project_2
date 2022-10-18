@@ -219,7 +219,7 @@ public class Manager implements ActionListener, TableModelListener {
      * @return JPanel containing interface to view sales trends
      */
     private JPanel trendsPanel() {
-        JPanel trendsPanel = new JPanel (); 
+        JPanel trendsPanel = new JPanel (new BorderLayout()); 
     
         String[] colNames = {"Order ID",
                              "Order Number",
@@ -236,9 +236,9 @@ public class Manager implements ActionListener, TableModelListener {
 
         JLabel startLabel = new JLabel();
         startLabel.setText("Start Date");
-        saleStart = new JTextField(10);
+        saleStart = new JTextField();
         startPanel.add(startLabel, BorderLayout.BEFORE_FIRST_LINE);
-        startPanel.add(saleStart, BorderLayout.PAGE_END);
+        startPanel.add(saleStart);
         editPanel.add(startPanel, BorderLayout.BEFORE_FIRST_LINE);
 
         saleStart.addActionListener(new ActionListener() {
@@ -247,6 +247,8 @@ public class Manager implements ActionListener, TableModelListener {
                 saleStartDate = saleStart.getText();
                 if (Integer.valueOf(saleStartDate.substring(saleStartDate.length() - 2)) < Integer.valueOf(saleEndDate.substring(saleEndDate.length() - 2))) {
                     saleData = Backend.salesView(saleStartDate, saleEndDate);
+                    frame.dispose();
+                    new Manager();
                 }
             }
         });
@@ -255,14 +257,16 @@ public class Manager implements ActionListener, TableModelListener {
         endLabel.setText("End Date");
         saleEnd = new JTextField(10);
         endPanel.add(endLabel, BorderLayout.BEFORE_FIRST_LINE);
-        endPanel.add(saleEnd, BorderLayout.PAGE_END);
-        editPanel.add(endPanel, BorderLayout.PAGE_END);
+        endPanel.add(saleEnd);
+        editPanel.add(endPanel);
 
         saleEnd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed (ActionEvent e) {
                 saleEndDate = saleEnd.getText();
                 saleData = Backend.salesView(saleStartDate, saleEndDate);
+                frame.dispose();
+                new Manager();
             }
         });
 
@@ -271,7 +275,8 @@ public class Manager implements ActionListener, TableModelListener {
 
         sales.setFillsViewportHeight(true);
 
-        trendsPanel.add(editPanel);
+        trendsPanel.add(editPanel, BorderLayout.BEFORE_FIRST_LINE);
+        trendsPanel.add(new JScrollPane(sales), BorderLayout.CENTER);
 
         return trendsPanel;
     }
