@@ -188,7 +188,7 @@ public class useDatabase {
 
        // List of users for privileges
        String[] users = {"krishnan", "estella", "neha"}; // edit depending on who is running this 
-     String[] dropTables = {/*"customers", "employees", "menu", "orders", "inventory", "finances"*/}; // edit depending on which tables you want to drop
+       String[] dropTables = {/*"customers", "employees", "menu", "orders", "inventory", "finances"*/}; // edit depending on which tables you want to drop
        
     //    // Drop existing tables
     //     dropTables(dropTables, stmt);

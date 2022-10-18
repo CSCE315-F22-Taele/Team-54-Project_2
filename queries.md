@@ -14,3 +14,5 @@ DELETE FROM finances WHERE details='Week 10 Day 1 Orders';
 DELETE FROM inventory WHERE name='Icecream cup';
 DELETE FROM orders WHERE saleDate='12/4/2022';
 SELECT * FROM finances WHERE Amount>3000;
+SELECT * FROM orders WHERE saledate BETWEEN
+'2022-10-01 00:00:00' AND '2022-11-10 12:00:00';

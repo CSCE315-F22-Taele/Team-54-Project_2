@@ -374,7 +374,64 @@ public class Backend {
         return null;
     }
 
+    static String[][] salesView(String date1, String date2)
+    {
+        // date1 < date2
+        // date format: YYYY-MM-DD
+        // This only for the order history
+        // If a connection to the query does not already exist, we need to create that connection.
+        if(conn == null || stmt == null) createConnection();
+        String tableName = "orders";
+        String query = "nothing";
+        try {
+            // The Query to check if a record exists between date1 and date2.
+            // SELECT * FROM orders WHERE saledate BETWEEN
+            // '2022-10-01 00:00:00' AND '2022-11-10 12:00:00';
+            query  = String.format("SELECT * FROM %s WHERE saledate BETWEEN ", tableName);
+            query += String.format("\'%s 00:00:00\' AND \'%s 12:00:00\';", date1, date2);
+            stmt = createStatement(query);
+            System.out.println("Function :: tableView " + "Query :: " + query);
+            ResultSet result = stmt.executeQuery();
+            String[] fields = tableFields.get(tableName);
+            ArrayList<ArrayList<String>> nRecords =  new ArrayList<ArrayList<String>>();
+            while(result.next())
+            {
+                int i = 0;
+                ArrayList<String> record = new ArrayList<>();
+                for(String field : fields)
+                {
+                    record.add(result.getString(++i));
+                }
+                nRecords.add(record);
+            }
 
+            Collections.sort(nRecords, new Comparator<ArrayList<String>> () {
+                @Override
+                public int compare(ArrayList<String> a, ArrayList<String> b) {
+                    if(a.get(0) == null) return -1;
+                    if(b.get(0) == null) return  1;
+
+                    int id1 = Integer.parseInt(a.get(0));
+                    int id2 = Integer.parseInt(b.get(0));
+                    return id1-id2;
+                }
+            });
+
+            String[][] view = new String[nRecords.size()][nRecords.get(0).size()];
+            for(int r = 0; r < view.length; ++r)
+            {
+                for(int c = 0; c < view[0].length; ++c)
+                    view[r][c] = nRecords.get(r).get(c);
+            }
+            return view;
+        } catch (Exception e) {
+            System.out.println("Function :: tableView " + "Query :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+        return null;
+    }
 
     /**
      * Runs query for which on existing function does not exist.
@@ -524,6 +581,8 @@ public class Backend {
     {
         createConnection();
         removeRecord("inventory", 0);
+        String[][] temp = salesView("2022-10-01", "2022-10-10");
+        System.out.println(temp.length);
         // System.out.println(isValue("employees", "firstname","Tom")); // In Employees Table
         // System.out.println(isValue("employees", "lastname","Quincy")); // In Employees Table
         // System.out.println(isValue("employees", "firstname","Grace")); // Not in Employees Table
