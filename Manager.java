@@ -21,6 +21,7 @@ public class Manager implements ActionListener, TableModelListener {
     private JToolBar tb;
     static JButton inventoryButton, menuButton, trendsButton;
     static JButton invAddButton, invRemoveButton, menAddButton, menRemoveButton;
+    static JTextField saleStart, saleEnd;
 
     CardLayout cardLayout;
     JPanel cardPanel;
@@ -38,7 +39,7 @@ public class Manager implements ActionListener, TableModelListener {
         // create function switches
         inventoryButton = new JButton("Inventory");
         menuButton = new JButton("Menu Editor");
-        trendsButton = new JButton("View Order Trends"); // NOTE: this button does not work yet (coming in Phase 4)
+        trendsButton = new JButton("View Sales Report"); // NOTE: this button does not work yet (coming in Phase 4)
 
         functionPanel.add(backButton);
         functionPanel.add(inventoryButton);
@@ -211,11 +212,29 @@ public class Manager implements ActionListener, TableModelListener {
     /** 
      * Creates GUI view for the Manager to view order trends, filtering data
      * by parameters such as menu item name.
-     * @return JPanel containing interface to view order trends
+     * @return JPanel containing interface to view sales trends
      */
-    // NOTE: will not be implemented until Phase 4
     private JPanel trendsPanel() {
         JPanel trendsPanel = new JPanel ();
+
+        Object[][] data = {};
+        String[] colNames = {"Order ID",
+                             "Order Number",
+                             "Total Price Due",
+                             "Date",
+                             "Employee ID",
+                             "Customer ID",
+                             "Order Satisfied",
+                             "Items Ordered"};
+        
+
+        JPanel editPanel = new JPanel();
+        saleStart = new JTextField(10);
+
+        JTable sales = new JTable(data, colNames);
+
+        JPanel menuPanel = new JPanel(new BorderLayout());
+        sales.setFillsViewportHeight(true);
 
         return trendsPanel;
     }
