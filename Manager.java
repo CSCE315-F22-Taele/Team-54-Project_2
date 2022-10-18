@@ -215,7 +215,7 @@ public class Manager implements ActionListener, TableModelListener {
      * @return JPanel containing interface to view sales trends
      */
     private JPanel trendsPanel() {
-        JPanel trendsPanel = new JPanel ();
+        JPanel trendsPanel = new JPanel(new BorderLayout());
 
         Object[][] data = {};
         String[] colNames = {"Order ID",
@@ -236,23 +236,21 @@ public class Manager implements ActionListener, TableModelListener {
         startLabel.setText("Start Date");
         saleStart = new JTextField(10);
         startPanel.add(startLabel, BorderLayout.BEFORE_FIRST_LINE);
-        startPanel.add(saleStart, BorderLayout.PAGE_END);
+        startPanel.add(saleStart);
         editPanel.add(startPanel, BorderLayout.BEFORE_FIRST_LINE);
 
         JLabel endLabel = new JLabel();
         endLabel.setText("End Date");
-        saleEnd = new JTextField(10);
+        saleEnd = new JTextField();
         endPanel.add(endLabel, BorderLayout.BEFORE_FIRST_LINE);
-        endPanel.add(saleEnd, BorderLayout.PAGE_END);
-        editPanel.add(endPanel, BorderLayout.PAGE_END);
+        endPanel.add(saleEnd);
+        editPanel.add(endPanel);
 
         JTable sales = new JTable(data, colNames);
-
-        // JPanel menuPanel = new JPanel(new BorderLayout());
         sales.setFillsViewportHeight(true);
 
-        // menuPanel.add(editPanel);
-        trendsPanel.add(editPanel);
+        trendsPanel.add(editPanel, BorderLayout.BEFORE_FIRST_LINE);
+        trendsPanel.add(new JScrollPane(sales), BorderLayout.CENTER);
 
         return trendsPanel;
     }
