@@ -23,9 +23,9 @@ public class Manager implements ActionListener, TableModelListener {
     static JButton invAddButton, invRemoveButton, menAddButton, menRemoveButton;
     static JTextField saleStart, saleEnd;
 
-    String saleStartDate = "2022-10-04";
-    String saleEndDate = "2022-10-10";
-    String[][] saleData = Backend.salesView(saleStartDate, saleEndDate);
+    private String saleStartDate = "2022-10-04";
+    private String saleEndDate = "2022-10-10";
+    private String[][] saleData = Backend.salesView(saleStartDate, saleEndDate);
 
     CardLayout cardLayout;
     JPanel cardPanel;
@@ -43,7 +43,9 @@ public class Manager implements ActionListener, TableModelListener {
         // create function switches
         inventoryButton = new JButton("Inventory");
         menuButton = new JButton("Menu Editor");
-        trendsButton = new JButton("View Sales Report"); // NOTE: this button does not work yet (coming in Phase 4)
+        trendsButton = new JButton("View Sales Report");
+        excessButton = new JButton("View Excess Report");
+        restockButton = new JButton("View Restock Report");
 
         functionPanel.add(backButton);
         functionPanel.add(inventoryButton);
