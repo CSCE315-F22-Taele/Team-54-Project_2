@@ -23,6 +23,10 @@ public class Manager implements ActionListener, TableModelListener {
     static JButton invAddButton, invRemoveButton, menAddButton, menRemoveButton;
     static JTextField saleStart, saleEnd;
 
+    String saleStartDate = "2022-10-04";
+    String saleEndDate = "2022-10-10";
+    String[][] saleData = Backend.salesView(saleStartDate, saleEndDate);
+
     CardLayout cardLayout;
     JPanel cardPanel;
 
@@ -215,9 +219,8 @@ public class Manager implements ActionListener, TableModelListener {
      * @return JPanel containing interface to view sales trends
      */
     private JPanel trendsPanel() {
-        JPanel trendsPanel = new JPanel(new BorderLayout());
-
-        Object[][] data = {};
+        JPanel trendsPanel = new JPanel (); 
+    
         String[] colNames = {"Order ID",
                              "Order Number",
                              "Total Price Due",
@@ -226,7 +229,6 @@ public class Manager implements ActionListener, TableModelListener {
                              "Customer ID",
                              "Order Satisfied",
                              "Items Ordered"};
-        
 
         JPanel editPanel = new JPanel(new BorderLayout());
         JPanel startPanel = new JPanel(new BorderLayout());
@@ -236,21 +238,40 @@ public class Manager implements ActionListener, TableModelListener {
         startLabel.setText("Start Date");
         saleStart = new JTextField(10);
         startPanel.add(startLabel, BorderLayout.BEFORE_FIRST_LINE);
-        startPanel.add(saleStart);
+        startPanel.add(saleStart, BorderLayout.PAGE_END);
         editPanel.add(startPanel, BorderLayout.BEFORE_FIRST_LINE);
+
+        saleStart.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed (ActionEvent e) {
+                saleStartDate = saleStart.getText();
+                if (Integer.valueOf(saleStartDate.substring(saleStartDate.length() - 2)) < Integer.valueOf(saleEndDate.substring(saleEndDate.length() - 2))) {
+                    saleData = Backend.salesView(saleStartDate, saleEndDate);
+                }
+            }
+        });
 
         JLabel endLabel = new JLabel();
         endLabel.setText("End Date");
-        saleEnd = new JTextField();
+        saleEnd = new JTextField(10);
         endPanel.add(endLabel, BorderLayout.BEFORE_FIRST_LINE);
-        endPanel.add(saleEnd);
-        editPanel.add(endPanel);
+        endPanel.add(saleEnd, BorderLayout.PAGE_END);
+        editPanel.add(endPanel, BorderLayout.PAGE_END);
 
-        JTable sales = new JTable(data, colNames);
+        saleEnd.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed (ActionEvent e) {
+                saleEndDate = saleEnd.getText();
+                saleData = Backend.salesView(saleStartDate, saleEndDate);
+            }
+        });
+
+        JTable sales = new JTable(saleData, colNames);
+        sales.getModel().addTableModelListener(this);
+
         sales.setFillsViewportHeight(true);
 
-        trendsPanel.add(editPanel, BorderLayout.BEFORE_FIRST_LINE);
-        trendsPanel.add(new JScrollPane(sales), BorderLayout.CENTER);
+        trendsPanel.add(editPanel);
 
         return trendsPanel;
     }
@@ -285,6 +306,7 @@ public class Manager implements ActionListener, TableModelListener {
         Object data = model.getValueAt(row, column);
         
         boolean isInv = (model.getColumnCount() == 7);
+        boolean isMenu = (model.getColumnCount() == 5);
         System.out.println("Name: " + columnName + "\n" + "Row: " + row + "\n" + "Column: " + column);
         if(isInv)
         {
@@ -305,7 +327,7 @@ public class Manager implements ActionListener, TableModelListener {
             // System.out.println("In inventory");
             // Backend.getValue("inventory", "quantity", );
         }
-        else
+        else if (isMenu)
         {
             columnName = columnName.toLowerCase();
             if (columnName.contains(" ")) {
@@ -313,6 +335,8 @@ public class Manager implements ActionListener, TableModelListener {
             }
             Backend.editTable("menu", row, column, columnName, data);
             cardPanel.add(menuPanel(), "menu");
+        } else {
+
         }
         // Need backend function to update SQL table at the specified row and column
 
