@@ -320,7 +320,11 @@ public class Backend {
         return bl;
     }
     
-    
+    /**
+     * Views a table given the name of the database table.
+     * @param tableName         Table to view.
+     * @return                  Runs the query that returns the database table.
+     */
     static String[][] tableView(String tableName)
     {
         // If a connection to the query does not already exist, we need to create that connection.
@@ -374,6 +378,12 @@ public class Backend {
         return null;
     }
 
+    /**
+     * Given a time window, displays the sales by item from the order history.
+     * @param date1     Starting date.
+     * @param date2     End date.
+     * @return          Runs the query that returns the database table that displays the sales in a certain time.
+     */
     static String[][] salesView(String date1, String date2)
     {
         // date1 < date2
@@ -433,10 +443,16 @@ public class Backend {
         return null;
     }
     
+    /**
+     * Given a timestamp, displays the list of items that only sold less than 10% of their inventory
+     * between the timestamp and the current time. This assumes that no restocks have been done during that time.
+     * @return
+     */
     static String[][] excessView()
     {
         return null;
     }
+
     /**
      * Runs query for which on existing function does not exist.
      * @param  sqlQuery               The query to use as a string.
