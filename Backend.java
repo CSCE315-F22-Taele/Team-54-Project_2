@@ -164,8 +164,7 @@ public class Backend {
      * @param  value                   Value that is compared against each record.
      * @return           desired database value, null if nothing is found.
      */
-    static HashMap<String, String> getValue(String tableName, String fieldName, String value)
-    {
+    static HashMap<String, String> getValue(String tableName, String fieldName, String value) {
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
 
@@ -451,6 +450,67 @@ public class Backend {
         return null;
     }
 
+    static String[][] restockView()
+    {
+        // date1 < date2
+        // date format: YYYY-MM-DD
+        // This only for the order history
+        // If a connection to the query does not already exist, we need to create that connection.
+        if(conn == null || stmt == null) createConnection();
+        String tableName = "inventory";
+        String query = "nothing";
+        try {
+            // The Query to check records that are below a certain threshold;
+            // []{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"};
+            query  = String.format("SELECT * FROM inventory WHERE", tableName);
+            query += String.format("(unit='number' AND quantity<100) OR", tableName);
+            query += String.format("(unit='lbs' AND quantity<50) OR", tableName);
+            query += String.format("(unit='gal' AND quantity<1) OR", tableName);
+
+
+            stmt = createStatement(query);
+            // System.out.println("Function :: tableView " + "Query :: " + query);
+            ResultSet result = stmt.executeQuery();
+            String[] fields = tableFields.get(tableName);
+            ArrayList<ArrayList<String>> nRecords =  new ArrayList<ArrayList<String>>();
+            while(result.next())
+            {
+                int i = 0;
+                ArrayList<String> record = new ArrayList<>();
+                for(String field : fields)
+                {
+                    record.add(result.getString(++i));
+                }
+                nRecords.add(record);
+            }
+
+            Collections.sort(nRecords, new Comparator<ArrayList<String>> () {
+                @Override
+                public int compare(ArrayList<String> a, ArrayList<String> b) {
+                    if(a.get(0) == null) return -1;
+                    if(b.get(0) == null) return  1;
+
+                    int id1 = Integer.parseInt(a.get(0));
+                    int id2 = Integer.parseInt(b.get(0));
+                    return id1-id2;
+                }
+            });
+
+            String[][] view = new String[nRecords.size()][nRecords.get(0).size()];
+            for(int r = 0; r < view.length; ++r)
+            {
+                for(int c = 0; c < view[0].length; ++c)
+                    view[r][c] = nRecords.get(r).get(c);
+            }
+            return view;
+        } catch (Exception e) {
+            // System.out.println("Function :: salesView " + "Query :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            // System.exit(0);
+        }
+        return null;
+    }
     /**
      * Runs query for which on existing function does not exist.
      * @param  sqlQuery               The query to use as a string.
@@ -777,7 +837,7 @@ public class Backend {
         // String[][] temp = salesView("2022-10-01", "2022-10-10");
         // System.out.println(temp.length);
         // menuItemIngredients("Grilled Chicken Club Sandwich");
-        invDepletionInitial();
+        // invDepletionInitial();
         
         // System.out.println(isValue("employees", "firstname","Tom")); // In Employees Table
         // System.out.println(isValue("employees", "lastname","Quincy")); // In Employees Table
