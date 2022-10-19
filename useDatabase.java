@@ -68,6 +68,7 @@ public class useDatabase {
     /**
      * Takes in the menu_items
      * @param rawData the comma-delimited row from the CSV
+     * @return ArrayList of ArrayLists containing for the Ingredients.
      */
     public static ArrayList<ArrayList<String>> makeIngredientsArray(String filename) {
         ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
