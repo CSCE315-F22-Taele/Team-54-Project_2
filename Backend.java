@@ -463,9 +463,10 @@ public class Backend {
             // The Query to check records that are below a certain threshold;
             // []{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"};
             query  = String.format("SELECT * FROM inventory WHERE", tableName);
-            query += String.format("(unit='number' AND quantity<100) OR", tableName);
-            query += String.format("(unit='lbs' AND quantity<50) OR", tableName);
-            query += String.format("(unit='gal' AND quantity<1) OR", tableName);
+            query += String.format("(unit='number' AND quantity<100) OR ", tableName);
+            query += String.format("(unit='lbs' AND quantity<50) OR ", tableName);
+            query += String.format("(unit='gal' AND quantity<1);", tableName);
+            System.out.println("Function :: restockView " + "Query :: " + query);
 
 
             stmt = createStatement(query);
@@ -831,6 +832,7 @@ public class Backend {
     // Built for testing purposes. Should be commented out in the final version.
     public static void main(String args[])
     {
+        restockView();
         // depleteInventory("Pickles", 10.);
         // createConnection();
         // removeRecord("inventory", 0);
