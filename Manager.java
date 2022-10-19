@@ -27,7 +27,6 @@ public class Manager implements ActionListener, TableModelListener {
     // variables for making reports
     private String saleStartDate = "2022-10-04";
     private String saleEndDate = "2022-10-10";
-    private String[][] saleData = Backend.salesView(saleStartDate, saleEndDate);
 
     // variables for making the frame of the GUI
     CardLayout cardLayout;
@@ -36,6 +35,11 @@ public class Manager implements ActionListener, TableModelListener {
     // button to go back
     private JButton backButton = new JButton("Go Back");
 
+    /**
+     * Creates initial Manager GUI view with panels for inventory, menu, and reports.
+     * Initializes panel and back buttons, default view is the inventory table.
+     * Also adds event listeners for any buttons on the default panel view.
+     */
     Manager() {
         // creates new frame where entire layout is stored
         frame = new JFrame();
@@ -245,8 +249,8 @@ public class Manager implements ActionListener, TableModelListener {
         JPanel buttonPanel = new JPanel(new BorderLayout());
 
         // creates sales and excess button that will generate those respeective reports
-        JButton salesButton = new JButton("salesButton");
-        JButton excessButton = new JButton("excessButton");
+        JButton salesButton = new JButton("View sales report");
+        JButton excessButton = new JButton("View excess report");
         buttonPanel.add(salesButton, BorderLayout.BEFORE_FIRST_LINE);
         buttonPanel.add(excessButton, BorderLayout.PAGE_END);
         salesButton.addActionListener(this);
@@ -265,11 +269,6 @@ public class Manager implements ActionListener, TableModelListener {
             @Override
             public void actionPerformed (ActionEvent e) {
                 saleStartDate = saleStart.getText();
-                if (Integer.valueOf(saleStartDate.substring(saleStartDate.length() - 2)) < Integer.valueOf(saleEndDate.substring(saleEndDate.length() - 2))) {
-                    saleData = Backend.salesView(saleStartDate, saleEndDate);
-                    // frame.dispose();
-                    // new Manager();
-                }
             }
         });
 
@@ -279,13 +278,12 @@ public class Manager implements ActionListener, TableModelListener {
         saleEnd = new JTextField(10);
         endPanel.add(endLabel, BorderLayout.BEFORE_FIRST_LINE);
         endPanel.add(saleEnd);
-        editPanel.add(endPanel);
+        editPanel.add(endPanel, BorderLayout.AFTER_LAST_LINE);
 
         saleEnd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed (ActionEvent e) {
                 saleEndDate = saleEnd.getText();
-                saleData = Backend.salesView(saleStartDate, saleEndDate);
             }
         });
 
@@ -343,6 +341,7 @@ public class Manager implements ActionListener, TableModelListener {
      */
     private JPanel controlPanel()
     {
+        // Create default empty JPanel
         JPanel p = new JPanel(new BorderLayout());
 
         return p;
@@ -355,18 +354,24 @@ public class Manager implements ActionListener, TableModelListener {
      */
     @Override
     public void tableChanged(TableModelEvent e) {
+        // Get the row and column of the cell that was changed
         int row = e.getFirstRow();
         int column = e.getColumn();
 
+        // Get the the name of the cell's column and the new data to put in the table
         TableModel model = (TableModel)e.getSource();
         String columnName = model.getColumnName(column);
         Object data = model.getValueAt(row, column);
         
+        // Checks if the table being edited is Inventory or Menu, based on column number
         boolean isInv = (model.getColumnCount() == 7);
         boolean isMenu = (model.getColumnCount() == 5);
         System.out.println("Name: " + columnName + "\n" + "Row: " + row + "\n" + "Column: " + column);
+
+        // Updates the appropriate table based on the booleans
         if(isInv)
         {
+            // Edit columnName from user-friendly name displayed in GUI to the name of the column in the SQL table
             if (columnName == "Refrigeration Required") {
                 columnName = "fridgerequired";
             } else {
@@ -375,20 +380,21 @@ public class Manager implements ActionListener, TableModelListener {
                     columnName = columnName.replace(" ", "");
             }
 
+            // Edit table and remake the panel
             Backend.editTable("inventory", row, column, columnName, data);
-
             cardPanel.add(inventoryPanel(), "inventory");
         }
         else if (isMenu)
         {
+            // Edit columnName from user-friendly name displayed in GUI to the name of the column in the SQL table
             columnName = columnName.toLowerCase();
             if (columnName.contains(" ")) {
                 columnName = columnName.replace(" ", "");
             }
+
+            // Edit table and remake the panel
             Backend.editTable("menu", row, column, columnName, data);
             cardPanel.add(menuPanel(), "menu");
-        } else {
-
         }
     }
 }

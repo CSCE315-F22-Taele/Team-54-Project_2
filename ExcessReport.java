@@ -15,7 +15,6 @@ public class ExcessReport implements TableModelListener {
         frame.add(report(startDate, endDate));
 
         // set basic frame dimensions/characteristics
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Excess Report");
         frame.setPreferredSize(new Dimension(700, 700));
         frame.pack();
@@ -45,18 +44,6 @@ public class ExcessReport implements TableModelListener {
     }
 
     @Override
-    public void tableChanged(TableModelEvent e) {
-        int row = e.getFirstRow();
-        int column = e.getColumn();
-
-        // System.out.println("Row: " + row + " Column: " + column);
-        TableModel model = (TableModel)e.getSource();
-        String columnName = model.getColumnName(column);
-        Object data = model.getValueAt(row, column);
-        
-        boolean isInv = (model.getColumnCount() == 7);
-        boolean isMenu = (model.getColumnCount() == 5);
-        System.out.println("Name: " + columnName + "\n" + "Row: " + row + "\n" + "Column: " + column);
-    }
+    public void tableChanged(TableModelEvent e) {}
 
 }
