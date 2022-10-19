@@ -35,6 +35,11 @@ public class Manager implements ActionListener, TableModelListener {
     // button to go back
     private JButton backButton = new JButton("Go Back");
 
+    /**
+     * Creates initial Manager GUI view with panels for inventory, menu, and reports.
+     * Initializes panel and back buttons, default view is the inventory table.
+     * Also adds event listeners for any buttons on the default panel view.
+     */
     Manager() {
         // creates new frame where entire layout is stored
         frame = new JFrame();
@@ -336,6 +341,7 @@ public class Manager implements ActionListener, TableModelListener {
      */
     private JPanel controlPanel()
     {
+        // Create default empty JPanel
         JPanel p = new JPanel(new BorderLayout());
 
         return p;
@@ -348,18 +354,24 @@ public class Manager implements ActionListener, TableModelListener {
      */
     @Override
     public void tableChanged(TableModelEvent e) {
+        // Get the row and column of the cell that was changed
         int row = e.getFirstRow();
         int column = e.getColumn();
 
+        // Get the the name of the cell's column and the new data to put in the table
         TableModel model = (TableModel)e.getSource();
         String columnName = model.getColumnName(column);
         Object data = model.getValueAt(row, column);
         
+        // Checks if the table being edited is Inventory or Menu, based on column number
         boolean isInv = (model.getColumnCount() == 7);
         boolean isMenu = (model.getColumnCount() == 5);
         System.out.println("Name: " + columnName + "\n" + "Row: " + row + "\n" + "Column: " + column);
+
+        // Updates the appropriate table based on the booleans
         if(isInv)
         {
+            // Edit columnName from user-friendly name displayed in GUI to the name of the column in the SQL table
             if (columnName == "Refrigeration Required") {
                 columnName = "fridgerequired";
             } else {
@@ -368,20 +380,21 @@ public class Manager implements ActionListener, TableModelListener {
                     columnName = columnName.replace(" ", "");
             }
 
+            // Edit table and remake the panel
             Backend.editTable("inventory", row, column, columnName, data);
-
             cardPanel.add(inventoryPanel(), "inventory");
         }
         else if (isMenu)
         {
+            // Edit columnName from user-friendly name displayed in GUI to the name of the column in the SQL table
             columnName = columnName.toLowerCase();
             if (columnName.contains(" ")) {
                 columnName = columnName.replace(" ", "");
             }
+
+            // Edit table and remake the panel
             Backend.editTable("menu", row, column, columnName, data);
             cardPanel.add(menuPanel(), "menu");
-        } else {
-
         }
     }
 }
