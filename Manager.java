@@ -12,7 +12,6 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
 public class Manager implements ActionListener, TableModelListener {
@@ -336,8 +335,7 @@ public class Manager implements ActionListener, TableModelListener {
      * empty JPanel with only the button toolbar showing.
      * @return JPanel containing the default view for the Manager GUI
      */
-    private JPanel controlPanel()
-    {
+    private JPanel controlPanel() {
         // Create default empty JPanel
         JPanel p = new JPanel(new BorderLayout());
 
@@ -366,8 +364,7 @@ public class Manager implements ActionListener, TableModelListener {
         System.out.println("Name: " + columnName + "\n" + "Row: " + row + "\n" + "Column: " + column);
 
         // Updates the appropriate table based on the booleans
-        if(isInv)
-        {
+        if(isInv) {
             // Edit columnName from user-friendly name displayed in GUI to the name of the column in the SQL table
             if (columnName == "Refrigeration Required") {
                 columnName = "fridgerequired";
@@ -381,8 +378,7 @@ public class Manager implements ActionListener, TableModelListener {
             Backend.editTable("inventory", row, column, columnName, data);
             cardPanel.add(inventoryPanel(), "inventory");
         }
-        else if (isMenu)
-        {
+        else if (isMenu) {
             // Edit columnName from user-friendly name displayed in GUI to the name of the column in the SQL table
             columnName = columnName.toLowerCase();
             if (columnName.contains(" ")) {
