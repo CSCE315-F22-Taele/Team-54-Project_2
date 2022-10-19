@@ -169,8 +169,6 @@ public class Manager implements ActionListener, TableModelListener {
             public void actionPerformed(ActionEvent e) {
                 System.out.println(items.getSelectedRow());
                 if (items.getSelectedRow() != -1) {
-                    // System.out.println("Inventory, " + items.getSelectedRow());
-                    // Backend.removeRecord("inventory", items.getSelectedRow());
                     frame.dispose();
                     new Manager();
                 }
@@ -219,7 +217,6 @@ public class Manager implements ActionListener, TableModelListener {
             public void actionPerformed(ActionEvent e) {
                 System.out.println(items.getSelectedRow());
                 if (items.getSelectedRow() != -1) {
-                    // Backend.removeRecord("menu", items.getSelectedRow());
                     frame.dispose();
                     new Manager();
                 }
@@ -361,7 +358,6 @@ public class Manager implements ActionListener, TableModelListener {
         int row = e.getFirstRow();
         int column = e.getColumn();
 
-        // System.out.println("Row: " + row + " Column: " + column);
         TableModel model = (TableModel)e.getSource();
         String columnName = model.getColumnName(column);
         Object data = model.getValueAt(row, column);
@@ -381,12 +377,7 @@ public class Manager implements ActionListener, TableModelListener {
 
             Backend.editTable("inventory", row, column, columnName, data);
 
-            // inventoryPanel();
             cardPanel.add(inventoryPanel(), "inventory");
-            // invTableModel.fireTableDataChanged();
-
-            // System.out.println("In inventory");
-            // Backend.getValue("inventory", "quantity", );
         }
         else if (isMenu)
         {
@@ -399,8 +390,5 @@ public class Manager implements ActionListener, TableModelListener {
         } else {
 
         }
-        // Need backend function to update SQL table at the specified row and column
-
-        // Do something with the data...
     }
 }
