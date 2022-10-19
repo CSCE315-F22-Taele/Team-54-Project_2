@@ -1,10 +1,10 @@
 Menu ID,Name,Price,Category,Ingredients used
-1,Chick-fil-A Chicken Sandwich,3.05,Entree,Bread 1 | Chicken Breast 1 | Peanut Oil 0.03125 | Pickle 2
-2,Chick-fil-A Chicken Sandwich - Combo,5.95,Entree,Bread 1 | Chicken Breast 1 | Peanut Oil 0.03125 | Pickle 2 | Waffle Fries 0.25 | Coca-cola 0.125
+1,Chick-fil-A Chicken Sandwich,3.05,Entree,Bread 1 | Chicken Breast 1 | Peanut Oil 0.03125 | Pickles 2
+2,Chick-fil-A Chicken Sandwich - Combo,5.95,Entree,Bread 1 | Chicken Breast 1 | Peanut Oil 0.03125 | Pickles 2 | Waffle Fries 0.25 | Coca-cola 0.125
 3,Chick-fil-A Chicken Deluxe Sandwich,3.65,Entree,Bread 1 | Chicken Breast 1 | Peanut Oil 0.03125 | Pickles 2 | Lettuce 2 | Tomato 0.5 | American Cheese 1
 4,Chick-fil-A Chicken Deluxe Sandwich - Combo,6.55,Entree,Bread 1 | Chicken Breast 1 | Peanut Oil 0.03125 | Pickles 2 | Lettuce 1 | Tomato 0.5 | American Cheese 1 | Waffle Fries 0.25 | Coca-cola 0.125
-5,Spicy Chicken Sandwich,3.29,Entree,Bread 1 | Chicken Breast 1 | Peanut Oil 0.03125 | Pickle 2
-6,Spicy Chicken Sandwich - Combo,6.19,Entree,Bread 1 | Chicken Breast 1 | Peanut Oil 0.03125 | Pickle 2 | Waffle Fries 0.25 | Coca-cola 0.125
+5,Spicy Chicken Sandwich,3.29,Entree,Bread 1 | Chicken Breast 1 | Peanut Oil 0.03125 | Pickles 2
+6,Spicy Chicken Sandwich - Combo,6.19,Entree,Bread 1 | Chicken Breast 1 | Peanut Oil 0.03125 | Pickles 2 | Waffle Fries 0.25 | Coca-cola 0.125
 7,Spicy Chicken Deluxe Sandwich,3.89,Entree,Bread 1 | Chicken Breast 1 | Peanut Oil 0.03125 | Pickles 2 | Lettuce 1 | Tomato 0.5 | Pepper Jack Cheese 1
 8,Spicy Chicken Deluxe Sandwich - Combo,6.79,Entree,Bread 1 | Chicken Breast 1 | Peanut Oil 0.03125 | Pickles 2 | Lettuce 1 | Tomato 0.5 | Pepper Jack Cheese 1 | Waffle Fries 0.25 | Coca-cola 0.125
 9,Chick-fil-A Nuggets 8 Pc.,3.05,Entree,Chicken nuggets 8
@@ -28,8 +28,8 @@ Menu ID,Name,Price,Category,Ingredients used
 27,Waffle Potato Fries - Large,1.85,Sides,Waffle Fries 0.5
 28,Chick-n-Minis,4.99,Breakfast,Chicken nuggets 4 | Yeast roll 4
 29,Hash Browns,1.69,Breakfast,Hash Brown 0.125
-30,Chicken Biscuit,2.26,Breakfast,Buttermilk biscuit 1 | Chicken breast 1
-31,Spicy Chicken Biscuit,2.5,Breakfast,Buttermilk biscuit 1 | Chicken breast 1
+30,Chicken Biscuit,2.26,Breakfast,Buttermilk biscuit 1 | Chicken Breast 1
+31,Spicy Chicken Biscuit,2.5,Breakfast,Buttermilk biscuit 1 | Chicken Breast 1
 32,Hash Brown Scramble Bowl,5.59,Breakfast,Chicken nuggets 4 | Hash Brown 0.125 | Egg 1 | Cheddar Cheese 0.05 | Jalapeno salsa 1
 33,Hash Brown Scramble Burrito,5.59,Breakfast,Chicken nuggets 4 | Hash Brown 0.125 | Egg 1 | Cheddar Cheese 0.05 | Jalapeno salsa 1 | Tortilla 1
 34,Chicken and Egg and Cheese Biscuit,4.99,Breakfast,Buttermilk biscuit 1 | Chicken Breast 1 | Peanut Oil 0.03125 | Egg 1 | American Cheese 1

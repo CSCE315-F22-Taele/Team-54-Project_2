@@ -465,8 +465,9 @@ public class Backend {
                 
                 if(curr/init > 0.9)
                 {
-                    HashMap<String, String> t = getValue("inventory", "name", "itemName");
+                    HashMap<String, String> t = getValue("inventory", "name", itemName);
                     notUsed.add(new String[]{t.get("name"), t.get("category"), t.get("quantity"), t.get("unit")});
+                    // System.out.println(t.toString());
                 }
 
             }
@@ -912,9 +913,9 @@ public class Backend {
     // Built for testing purposes. Should be commented out in the final version.
     public static void main(String args[])
     {
-        // excessView();
+        excessView("","");
         // restockView();
-        invDepletionInitial();
+        // invDepletionInitial();
         // depleteInventory("Pickles", 10.);
         // createConnection();
         // removeRecord("inventory", 0);
