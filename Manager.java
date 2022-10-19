@@ -35,6 +35,11 @@ public class Manager implements ActionListener, TableModelListener {
     // button to go back
     private JButton backButton = new JButton("Go Back");
 
+    /**
+     * Creates initial Manager GUI view with panels for inventory, menu, and reports.
+     * Initializes panel and back buttons, default view is the inventory table.
+     * Also adds event listeners for any buttons on the default panel view.
+     */
     Manager() {
         // creates new frame where entire layout is stored
         frame = new JFrame();
@@ -131,10 +136,7 @@ public class Manager implements ActionListener, TableModelListener {
      * Creates GUI view for the Manager to view inventory data and edit inventory records.
      * @return JPanel containing the inventory data with editing capabilities
      */
-    private JPanel inventoryPanel() {
-        // url: https://docs.oracle.com/javase/tutorial/uiswing/components/table.html
-        // url: https://stackoverflow.com/questions/27815400/retrieving-data-from-jdbc-database-into-jtable
-        
+    private JPanel inventoryPanel() {        
         String[][] data = Backend.tableView("inventory");
         String[] colNames = {"Item ID",
                              "Name",
@@ -231,9 +233,9 @@ public class Manager implements ActionListener, TableModelListener {
 
     
     /** 
-     * Creates GUI view for the Manager to view order trends, filtering data
-     * by parameters such as menu item name.
-     * @return JPanel containing interface to view sales trends
+     * Creates GUI view for the Manager to choose whether to view sales data or the excess report,
+     * and set a time interval for which to view this data.
+     * @return JPanel containing interface to set dates and choose to view either sales or excess reports
      */
     private JPanel trendsPanel() {
         // creates a bunch of different panels that will store labels and buttons used later
@@ -241,13 +243,13 @@ public class Manager implements ActionListener, TableModelListener {
         JPanel editPanel = new JPanel(new BorderLayout());
         JPanel startPanel = new JPanel(new BorderLayout());
         JPanel endPanel = new JPanel(new BorderLayout());
-        JPanel buttonPanel = new JPanel(new BorderLayout());
+        JPanel buttonPanel = new JPanel(new GridBagLayout());
 
         // creates sales and excess button that will generate those respeective reports
         JButton salesButton = new JButton("View sales report");
         JButton excessButton = new JButton("View excess report");
-        buttonPanel.add(salesButton, BorderLayout.BEFORE_FIRST_LINE);
-        buttonPanel.add(excessButton, BorderLayout.PAGE_END);
+        buttonPanel.add(salesButton);
+        buttonPanel.add(excessButton);
         salesButton.addActionListener(this);
         excessButton.addActionListener(this);
 
@@ -299,7 +301,7 @@ public class Manager implements ActionListener, TableModelListener {
         });
 
         trendsPanel.add(editPanel, BorderLayout.BEFORE_FIRST_LINE);
-        trendsPanel.add(buttonPanel, BorderLayout.SOUTH);
+        trendsPanel.add(buttonPanel, BorderLayout.CENTER);
 
         return trendsPanel;
     }
@@ -310,8 +312,8 @@ public class Manager implements ActionListener, TableModelListener {
      * @return a JPanel for the interface to view inventory restock needs
      */
     private JPanel restockPanel() {
-        JPanel restockReport = new JPanel();
-        JButton restockButton = new JButton("restockButton");
+        JPanel restockReport = new JPanel(new GridBagLayout());
+        JButton restockButton = new JButton("View restock report");
         restockButton.addActionListener(this);
 
         // generates the restock report with a new frame
@@ -336,6 +338,7 @@ public class Manager implements ActionListener, TableModelListener {
      */
     private JPanel controlPanel()
     {
+        // Create default empty JPanel
         JPanel p = new JPanel(new BorderLayout());
 
         return p;
@@ -348,18 +351,24 @@ public class Manager implements ActionListener, TableModelListener {
      */
     @Override
     public void tableChanged(TableModelEvent e) {
+        // Get the row and column of the cell that was changed
         int row = e.getFirstRow();
         int column = e.getColumn();
 
+        // Get the the name of the cell's column and the new data to put in the table
         TableModel model = (TableModel)e.getSource();
         String columnName = model.getColumnName(column);
         Object data = model.getValueAt(row, column);
         
+        // Checks if the table being edited is Inventory or Menu, based on column number
         boolean isInv = (model.getColumnCount() == 7);
         boolean isMenu = (model.getColumnCount() == 5);
         System.out.println("Name: " + columnName + "\n" + "Row: " + row + "\n" + "Column: " + column);
+
+        // Updates the appropriate table based on the booleans
         if(isInv)
         {
+            // Edit columnName from user-friendly name displayed in GUI to the name of the column in the SQL table
             if (columnName == "Refrigeration Required") {
                 columnName = "fridgerequired";
             } else {
@@ -368,20 +377,21 @@ public class Manager implements ActionListener, TableModelListener {
                     columnName = columnName.replace(" ", "");
             }
 
+            // Edit table and remake the panel
             Backend.editTable("inventory", row, column, columnName, data);
-
             cardPanel.add(inventoryPanel(), "inventory");
         }
         else if (isMenu)
         {
+            // Edit columnName from user-friendly name displayed in GUI to the name of the column in the SQL table
             columnName = columnName.toLowerCase();
             if (columnName.contains(" ")) {
                 columnName = columnName.replace(" ", "");
             }
+
+            // Edit table and remake the panel
             Backend.editTable("menu", row, column, columnName, data);
             cardPanel.add(menuPanel(), "menu");
-        } else {
-
         }
     }
 }

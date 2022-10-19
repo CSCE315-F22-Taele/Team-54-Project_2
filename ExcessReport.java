@@ -25,20 +25,17 @@ public class ExcessReport implements TableModelListener {
     private JPanel report(String startDate, String endDate) {
         JPanel excessPanel = new JPanel(new BorderLayout());
 
-        String[] colNames = {"Item ID",
-                             "Name",
+        String[] colNames = {"Name",
                              "Category",
-                             "Expiration Date",
-                             "Refrigeration Required",
                              "Quantity",
                              "Unit"};
 
-        // String[][] excessData = Backend.excessView(startDate, endDate);
-        // JTable excess = new JTable(excessData, colNames);
-        // excess.getModel().addTableModelListener(this);
-        // excess.setFillsViewportHeight(true);
+        String[][] excessData = Backend.excessView(startDate, endDate);
+        JTable excess = new JTable(excessData, colNames);
+        excess.getModel().addTableModelListener(this);
+        excess.setFillsViewportHeight(true);
 
-        // excessPanel.add(new JScrollPane(excess), BorderLayout.CENTER);
+        excessPanel.add(new JScrollPane(excess), BorderLayout.CENTER);
 
         return excessPanel;
     }

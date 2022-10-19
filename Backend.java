@@ -22,6 +22,7 @@ public class Backend {
     static Connection conn; // This is the connection that will be utilized by the rest of the Java Connections.
     static PreparedStatement stmt;
     static HashMap<String, String[]> tableFields = new HashMap<>();
+    static HashMap<String, Double> intialInventory = loadRemaining(); 
     // static HashMap<String, Integer> primaryKeys = new HashMap<>();
 
     /**
@@ -173,7 +174,7 @@ public class Backend {
             // The Query to check if a record exists within the table where fieldName = value.
             query = String.format("SELECT * FROM %s WHERE %s = \'%s\';", tableName, fieldName, value);
             stmt = createStatement(query);
-            System.out.println("Function :: getValue " + "Query :: " + query);
+            // System.out.println("Function :: getValue " + "Query :: " + query);
             ResultSet result = stmt.executeQuery();
             HashMap<String, String> record = new HashMap<>();
             String[] fields = tableFields.get(tableName);
@@ -445,8 +446,48 @@ public class Backend {
      * between the timestamp and the current time. This assumes that no restocks have been done during that time.
      * @return a 2D list of Strings containing the name, category, quantity, and units of any items stored in excess
      */
-    static String[][] excessView()
-    {
+    static String[][] excessView(String date1, String date2)
+    {   
+        // Need to show the name, category, quantity, and units for the items remaining. 
+        //[]{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"};
+        // Indices Wanted: 1, 2, 5, 6 
+        // String query = "nothing";
+        try {
+            HashMap<String, Double> currInventory = loadRemaining();
+            ArrayList<String[]> notUsed = new ArrayList<String[]>();
+            Object[] inventoryItems = intialInventory.keySet().toArray();
+
+            for(Object item : inventoryItems)
+            {
+                String itemName = (String) item;
+                double curr = currInventory.get(itemName);
+                double init = intialInventory.get(itemName);
+                
+                if(curr/init > 0.9)
+                {
+                    HashMap<String, String> t = getValue("inventory", "name", "itemName");
+                    notUsed.add(new String[]{t.get("name"), t.get("category"), t.get("quantity"), t.get("unit")});
+                }
+
+            }
+            String[][] output = new String[notUsed.size()][4];
+            int i = 0;
+            for(String[] vals : notUsed)
+            {
+                output[i][0] = vals[0]; // name
+                output[i][1] = vals[1]; // category
+                output[i][2] = vals[2]; // quantity
+                output[i][3] = vals[3]; // unit
+            }
+            
+            return output;
+
+        } catch (Exception e) {
+            // System.out.println("Function :: tableView " + "Query :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            // System.exit(0);
+        }
         return null;
     }
 
@@ -455,6 +496,21 @@ public class Backend {
      * Assumes no restocks have been done since the initial inventory was populated.
      * @return a 2D list of Strings containing the name, category, quantity, and units of any items that need to be restocked
      */
+    static HashMap<String, Double> loadRemaining()
+    {
+        HashMap<String, Double> var = new HashMap<>();
+        // Name of HashMap that needs to be populated: intialInventory
+        if(conn == null || stmt == null) createConnection();
+        String[][] vals = tableView("inventory");
+        //[]{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"};
+        // Need index 0 -> 5
+        for(int i = 0; i < vals.length; ++i)
+        {
+            var.put(vals[i][1], Double.parseDouble(vals[i][5]));
+        }
+        return var;   
+    }
+
     static String[][] restockView()
     {
         // date1 < date2
@@ -695,7 +751,7 @@ public class Backend {
             //     return;
             double remaining = Double.parseDouble(temp.get("quantity"));
             // System.out.println("Currently Depleting");
-            if (remaining - qty > 0)
+            if (remaining - qty < qty)
             {
                 //[]{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"};
                 query = String.format("UPDATE %s SET quantity = %s WHERE name = \'%s\';", tableName, String.valueOf(remaining-qty), ingredient);
@@ -706,7 +762,11 @@ public class Backend {
             }
             else
             {
-                System.out.println("Restock needed :: " + ingredient);   
+                query = String.format("UPDATE %s SET quantity = %s WHERE name = \'%s\';", tableName, String.valueOf(remaining+20*qty), ingredient);
+                stmt = createStatement(query);
+                int result = stmt.executeUpdate();  
+                
+                System.out.println("Restock completed");   
             }
         }catch (Exception e) {
             System.err.println("Function :: depleteInventory " + "Query :: " + query);
@@ -773,9 +833,9 @@ public class Backend {
             String[][] orders = tableView("orders");
             int index = orders[0].length-1;
             System.out.println("Orders::"+orders.length);
-            for(int o = 0; o < orders.length; ++o)
+            for(int o = 0; o < orders.length/10; ++o)
             {
-                
+                System.out.println(o);
                 String[] itemsOrdered = orders[o][index].split(",");
                 itemsOrdered[0] = itemsOrdered[0].substring(2);
                 int cutoff = itemsOrdered[itemsOrdered.length-1].length()-2;
@@ -791,7 +851,7 @@ public class Backend {
                     Object[] vals = ingredientsUsed.keySet().toArray();
                     for(Object ingrid : vals)
                     {
-                        // System.out.println(ingrid + "--" +ingredientsUsed.get(ingrid));
+                        System.out.println(ingrid + "--" +ingredientsUsed.get(ingrid));
                         depleteInventory((String)ingrid, ingredientsUsed.get(ingrid)); 
                     }
                 }    
@@ -852,7 +912,9 @@ public class Backend {
     // Built for testing purposes. Should be commented out in the final version.
     public static void main(String args[])
     {
-        restockView();
+        // excessView();
+        // restockView();
+        invDepletionInitial();
         // depleteInventory("Pickles", 10.);
         // createConnection();
         // removeRecord("inventory", 0);

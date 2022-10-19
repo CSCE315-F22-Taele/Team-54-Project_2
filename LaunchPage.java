@@ -16,7 +16,6 @@ public class LaunchPage implements ActionListener {
     JButton managerButton = new JButton("Manager");
 
     public LaunchPage() {
-
         frame = new JFrame();
         panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 30));

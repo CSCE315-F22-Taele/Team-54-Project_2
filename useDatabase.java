@@ -188,11 +188,11 @@ public class useDatabase {
 
        // List of users for privileges
        String[] users = {"krishnan", "estella", "neha"}; // edit depending on who is running this 
-       String[] dropTables = {/*"customers", "employees", "menu", "orders", */"inventory", /*"finances"*/}; // edit depending on which tables you want to drop
+       String[] dropTables = {/*"customers", "employees", "menu", "orders", "inventory", "finances"*/}; // edit depending on which tables you want to drop
        
-       // Drop existing tables
-        dropTables(dropTables, stmt);
-        System.out.println ("Tables dropped successfully");
+    //    // Drop existing tables
+    //     dropTables(dropTables, stmt);
+    //     System.out.println ("Tables dropped successfully");
 
        // Create tables (create strings and execute)
         // // Customers
@@ -207,11 +207,11 @@ public class useDatabase {
         // grantPrivileges("employees", users, stmt);
         // System.out.println("Created employees table");
 
-        // Inventory
-        String createInventoryTable = "CREATE TABLE inventory (itemID int, name text, category text, expirationDate date, fridgeRequired boolean, quantity float, unit text);";
-        stmt.executeUpdate(createInventoryTable);
-        grantPrivileges("inventory", users, stmt);
-        System.out.println("Created inventory table");
+        // // Inventory
+        // String createInventoryTable = "CREATE TABLE inventory (itemID int, name text, category text, expirationDate date, fridgeRequired boolean, quantity float, unit text);";
+        // stmt.executeUpdate(createInventoryTable);
+        // grantPrivileges("inventory", users, stmt);
+        // System.out.println("Created inventory table");
 
         // // Finances
         // String createFinanceTable = "CREATE TABLE finances (transactionID int, isDebit boolean, isCredit boolean, details text, amount float);";
@@ -268,25 +268,25 @@ public class useDatabase {
 
         // System.out.println("Populated employees table");
 
-        // For Inventory
-        ArrayList<ArrayList<String>> inventoryList = readCSVFileName("Inventory.csv");
-        for (int i = 0; i < inventoryList.size(); i++) {
-            String itemID = inventoryList.get(i).get(0);
-            String name = inventoryList.get(i).get(1);
-            String category = inventoryList.get(i).get(2);
-            String expDate = inventoryList.get(i).get(3);
-            String needsFridge = inventoryList.get(i).get(4);
-            String quantity = inventoryList.get(i).get(5);
-            String unit = inventoryList.get(i).get(6);
+        // // For Inventory
+        // ArrayList<ArrayList<String>> inventoryList = readCSVFileName("Inventory.csv");
+        // for (int i = 0; i < inventoryList.size(); i++) {
+        //     String itemID = inventoryList.get(i).get(0);
+        //     String name = inventoryList.get(i).get(1);
+        //     String category = inventoryList.get(i).get(2);
+        //     String expDate = inventoryList.get(i).get(3);
+        //     String needsFridge = inventoryList.get(i).get(4);
+        //     String quantity = inventoryList.get(i).get(5);
+        //     String unit = inventoryList.get(i).get(6);
 
-            // Query String
-            String query = String.format("INSERT INTO inventory VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s');", itemID, name, category, expDate, needsFridge, quantity, unit);
+        //     // Query String
+        //     String query = String.format("INSERT INTO inventory VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s');", itemID, name, category, expDate, needsFridge, quantity, unit);
 
-            // Execute query
-            stmt.executeUpdate(query);
-        }
+        //     // Execute query
+        //     stmt.executeUpdate(query);
+        // }
 
-        System.out.println("Populated inventory table");
+        // System.out.println("Populated inventory table");
 
         // // For Finances
         // ArrayList<ArrayList<String>> financesList = readCSVFileName("Finances.csv");
