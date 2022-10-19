@@ -13,82 +13,77 @@ Item ID,Name,Category,Expiration Date,Refrigeration required,Quantity,Unit
 12,Chicken nuggets,Meat,11/30/2022,TRUE,5000,number
 13,Chicken strips,Meat,11/30/2022,TRUE,1100,number
 14,Cheddar Cheese,Dairy,12/21/2022,TRUE,2,lbs
-15,Cherry Tomatoes,Vegetables,12/21/2022,TRUE,2,lbs
-16,Lemonade,Drink,12/21/2022,TRUE,20,gal
-17,Chocolate milkshake,Drink,12/21/2022,TRUE,20,gal
-18,Milk,Drink,12/21/2022,TRUE,20,gal
-19,Icecream Cone,Dry,12/21/2022,FALSE,100,number
-20,Vanilla Icecream,Dairy,12/21/2022,TRUE,20,gal
-21,Chick-Fil-A Sauce,Sauce,12/21/2022,FALSE,100,number
-22,Waffle Fries,Vegetables,11/30/2022,TRUE,100,lbs
-23,Napkins,Utensils,1/1/3000,FALSE,100,number
-24,Forks,Utensils,1/1/3000,FALSE,100,number
-25,Spoons,Utensils,1/1/3000,FALSE,100,number
-26,Honey BBQ sauce,Sauce,11/30/2025,FALSE,100,number
-27,Cilantro Lime sauce,Sauce,12/21/2022,FALSE,100,number
-28,Flat bread,Dry,12/21/2022,FALSE,100,number
-29,Avocado Lime Ranch,Sauce,11/30/2025,FALSE,100,number
-30,Buttermilk biscuit,Dry,12/21/2022,FALSE,100,number
-31,Yeast roll,Dry,12/21/2022,FALSE,100,number
-32,Honey butter spread,Sauce,11/30/2025,FALSE,100,number
-33,English muffin,Dry,12/21/2022,FALSE,100,number
-34,Egg,Meat,11/30/2022,TRUE,100,number
-35,Hash Brown,Vegetables,11/30/2022,TRUE,100,lbs
-36,Tortilla,Dry,12/21/2022,FALSE,100,number
-37,Jalapeno salsa,Sauce,11/30/2025,FALSE,100,number
-38,Sausage,Meat,11/30/2022,TRUE,100,number
-39,Butter,Sauce,11/30/2022,TRUE,50,sticks
-40,Canola oil,Oil,11/30/2023,FALSE,20,gal
-41,Greek Yogurt,Dairy,12/21/2022,TRUE,50,lbs
-42,Fresh berries,Fruit,11/30/2022,TRUE,50,lbs
-43,Granola,Dry,12/21/2022,FALSE,50,lbs
-44,Cookie crumbs,Dry,12/21/2022,FALSE,50,lbs
-45,Mixed fruits,Fruit,11/30/2022,TRUE,50,lbs
-46,Filet,Meat,11/30/2022,TRUE,100,number
-47,Creamy salsa,Sauce,11/30/2025,FALSE,100,number
-48,Blue cheese,Dairy,12/21/2022,TRUE,100,lbs
-49,Apple Cider Vinaigrette,Sauce,11/30/2025,FALSE,100,number
-50,Mac & cheese,Dairy,12/21/2022,TRUE,100,lbs
-51,Cobb salad,Ready,12/21/2022,TRUE,100,number
-52,Southwest salad,Ready,12/21/2022,TRUE,100,number
-53,Market salad,Ready,12/21/2022,TRUE,100,number
-54,Chicken noodle soup,Ready,12/21/2022,TRUE,100,number
-55,Chicken tortilla soup,Ready,12/21/2022,TRUE,100,number
-56,Kale crunch,Ready,12/21/2022,TRUE,100,number
-57,Waffle potato chips,Dry,12/21/2022,FALSE,100,number
-58,Apple sauce,Fruit,12/21/2022,TRUE,100,number
-59,Diet lemonade,Drink,12/21/2022,TRUE,20,gal
-60,Frosted coffee,Drink,12/21/2022,TRUE,20,gal
-61,Autumn spice milkshake,Drink,12/21/2022,TRUE,20,gal
-62,Cookies and Cream milkshake,Drink,12/21/2022,TRUE,20,gal
-63,Strawberry milkshake,Drink,12/21/2022,TRUE,20,gal
-64,Vanilla milkshake,Drink,12/21/2022,TRUE,20,gal
-65,Chocolate chunk cookie,Dry,12/21/2022,FALSE,100,number
-66,Chocolate fudge brownie,Dry,12/21/2022,FALSE,100,number
-67,Iced-tea sweetened,Drink,12/21/2022,TRUE,20,gal
-68,Iced-tea unsweetened,Drink,12/21/2022,TRUE,20,gal
-69,Iced coffee,Drink,12/21/2022,TRUE,20,gal
-70,Coca-cola,Drink,12/21/2022,TRUE,20,gal
-71,Dr Pepper,Drink,12/21/2022,TRUE,20,gal
-72,Dasani Bottled water,Drink,12/21/2022,TRUE,100,number
-73,Honest Kids Apple Juice,Drink,12/21/2022,TRUE,100,number
-74,Simply orange,Drink,12/21/2022,TRUE,20,gal
-75,Chocolate milk,Drink,12/21/2022,TRUE,20,gal
-76,Milk,Drink,12/21/2022,TRUE,20,gal
-77,Gallon beverage,Drink,12/21/2022,TRUE,20,gal
-78,BBQ sauce,Sauce,11/30/2025,FALSE,100,number
-79,Garden Herb Ranch sauce,Sauce,12/1/2025,FALSE,100,number
-80,Honey mustard sauce,Sauce,12/2/2025,FALSE,100,number
-81,Polynesian sauce,Sauce,12/3/2025,FALSE,100,number
-82,Sweet & Spicy Sriracha sauce,Sauce,12/4/2025,FALSE,100,number
-83,Zesty Buffalo sauce,Sauce,12/5/2025,FALSE,100,number
-84,Fat free honey mustard,Sauce,12/6/2025,FALSE,100,number
-85,Light Italian dressing,Sauce,12/7/2025,FALSE,100,number
-86,Straw,Utensils,1/1/3000,FALSE,100,number
-86,Plastic bag,Utensils,1/2/3000,FALSE,100,number
-86,Boats,Utensils,1/3/3000,FALSE,100,number
-86,Paper bags,Utensils,1/4/3000,FALSE,100,number
-86,Sandwich bag,Utensils,1/5/3000,FALSE,100,number
+15,Lemonade,Drink,12/21/2022,TRUE,20,gal
+16,Chocolate milkshake,Drink,12/21/2022,TRUE,20,gal
+17,Vanilla Icecream,Dairy,12/21/2022,TRUE,20,gal
+18,Chick-Fil-A Sauce,Sauce,12/21/2022,FALSE,100,number
+19,Waffle Fries,Vegetables,11/30/2022,TRUE,100,lbs
+20,Napkins,Utensils,1/1/3000,FALSE,100,number
+21,Forks,Utensils,1/1/3000,FALSE,100,number
+22,Spoons,Utensils,1/1/3000,FALSE,100,number
+23,Honey BBQ sauce,Sauce,11/30/2025,FALSE,100,number
+24,Cilantro Lime sauce,Sauce,12/21/2022,FALSE,100,number
+25,Flat bread,Dry,12/21/2022,FALSE,100,number
+26,Avocado Lime Ranch,Sauce,11/30/2025,FALSE,100,number
+27,Buttermilk biscuit,Dry,12/21/2022,FALSE,100,number
+28,Yeast roll,Dry,12/21/2022,FALSE,100,number
+29,English muffin,Dry,12/21/2022,FALSE,100,number
+30,Egg,Meat,11/30/2022,TRUE,100,number
+31,Hash Brown,Vegetables,11/30/2022,TRUE,100,lbs
+32,Tortilla,Dry,12/21/2022,FALSE,100,number
+33,Jalapeno salsa,Sauce,11/30/2025,FALSE,100,number
+34,Sausage,Meat,11/30/2022,TRUE,100,number
+35,Butter,Sauce,11/30/2022,TRUE,50,sticks
+36,Canola oil,Oil,11/30/2023,FALSE,20,gal
+37,Greek Yogurt,Dairy,12/21/2022,TRUE,50,lbs
+38,Fresh berries,Fruit,11/30/2022,TRUE,50,lbs
+39,Granola,Dry,12/21/2022,FALSE,50,lbs
+40,Cookie crumbs,Dry,12/21/2022,FALSE,50,lbs
+41,Mixed fruits,Fruit,11/30/2022,TRUE,50,lbs
+42,Filet,Meat,11/30/2022,TRUE,100,number
+43,Creamy salsa,Sauce,11/30/2025,FALSE,100,number
+44,Apple Cider Vinaigrette,Sauce,11/30/2025,FALSE,100,number
+45,Mac & cheese,Dairy,12/21/2022,TRUE,100,lbs
+46,Cobb salad,Ready,12/21/2022,TRUE,100,number
+47,Southwest salad,Ready,12/21/2022,TRUE,100,number
+48,Market salad,Ready,12/21/2022,TRUE,100,number
+49,Chicken noodle soup,Ready,12/21/2022,TRUE,100,number
+50,Chicken tortilla soup,Ready,12/21/2022,TRUE,100,number
+51,Kale crunch,Ready,12/21/2022,TRUE,100,number
+52,Waffle potato chips,Dry,12/21/2022,FALSE,100,number
+53,Apple sauce,Fruit,12/21/2022,TRUE,100,number
+54,Diet lemonade,Drink,12/21/2022,TRUE,20,gal
+55,Frosted coffee,Drink,12/21/2022,TRUE,20,gal
+56,Autumn spice milkshake,Drink,12/21/2022,TRUE,20,gal
+57,Cookies and Cream milkshake,Drink,12/21/2022,TRUE,20,gal
+58,Strawberry milkshake,Drink,12/21/2022,TRUE,20,gal
+59,Vanilla milkshake,Drink,12/21/2022,TRUE,20,gal
+60,Chocolate chunk cookie,Dry,12/21/2022,FALSE,100,number
+61,Chocolate fudge brownie,Dry,12/21/2022,FALSE,100,number
+62,Iced-tea sweetened,Drink,12/21/2022,TRUE,20,gal
+63,Iced-tea unsweetened,Drink,12/21/2022,TRUE,20,gal
+64,Iced coffee,Drink,12/21/2022,TRUE,20,gal
+65,Coca-cola,Drink,12/21/2022,TRUE,20,gal
+66,Dr Pepper,Drink,12/21/2022,TRUE,20,gal
+67,Dasani Bottled water,Drink,12/21/2022,TRUE,100,number
+68,Honest Kids Apple Juice,Drink,12/21/2022,TRUE,100,number
+69,Simply orange,Drink,12/21/2022,TRUE,20,gal
+70,Chocolate milk,Drink,12/21/2022,TRUE,20,gal
+71,Milk,Drink,12/21/2022,TRUE,20,gal
+72,Gallon beverage,Drink,12/21/2022,TRUE,20,gal
+73,BBQ sauce,Sauce,11/30/2025,FALSE,100,number
+74,Garden Herb Ranch sauce,Sauce,12/1/2025,FALSE,100,number
+75,Honey mustard sauce,Sauce,12/2/2025,FALSE,100,number
+76,Polynesian sauce,Sauce,12/3/2025,FALSE,100,number
+77,Sweet & Spicy Sriracha sauce,Sauce,12/4/2025,FALSE,100,number
+78,Zesty Buffalo sauce,Sauce,12/5/2025,FALSE,100,number
+79,Fat free honey mustard,Sauce,12/6/2025,FALSE,100,number
+80,Light Italian dressing,Sauce,12/7/2025,FALSE,100,number
+81,Straw,Utensils,1/1/3000,FALSE,100,number
+82,Plastic bag,Utensils,1/2/3000,FALSE,100,number
+83,Boats,Utensils,1/3/3000,FALSE,100,number
+84,Paper bags,Utensils,1/4/3000,FALSE,100,number
+85,Sandwich bag,Utensils,1/5/3000,FALSE,100,number
 86,Nugget box,Utensils,1/6/3000,FALSE,100,number
 87,Drink cup,Utensils,1/7/3000,FALSE,100,number
 88,Diet coke,Drink,12/21/2022,TRUE,20,gal
