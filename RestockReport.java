@@ -13,7 +13,6 @@ public class RestockReport implements TableModelListener {
         frame.add(report());
 
         // set basic frame dimensions/characteristics
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Restock Report");
         frame.setPreferredSize(new Dimension(700, 700));
         frame.pack();

@@ -15,7 +15,6 @@ public class ExcessReport implements TableModelListener {
         frame.add(report(startDate, endDate));
 
         // set basic frame dimensions/characteristics
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Excess Report");
         frame.setPreferredSize(new Dimension(700, 700));
         frame.pack();
