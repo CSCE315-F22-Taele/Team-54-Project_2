@@ -1,3 +1,8 @@
+/**
+ * This class creates the launch page, which is the first page that the GUI
+ * opens upon launching. It redirects between cashier and manager.
+ * @author Neha Sujith
+ */
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
