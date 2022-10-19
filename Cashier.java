@@ -132,7 +132,7 @@ public class Cashier extends Backend implements ActionListener {
   
     /** 
      *  This method switches panel based on selected menu category.
-     *  @param ActionEvent of buttons
+     *  @param e of buttons
      */
     @Override
     public void actionPerformed(ActionEvent e){
