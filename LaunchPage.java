@@ -1,8 +1,8 @@
-// import java.awt.LayoutManager;
-
-// import javax.swing.BorderFactory;
-// import javax.swing.JFrame;
-// import javax.swing.JPanel;
+/**
+ * This class creates the launch page, which is the first page that the GUI
+ * opens upon launching. It redirects between cashier and manager.
+ * @author Neha Sujith
+ */
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -43,12 +43,6 @@ public class LaunchPage implements ActionListener {
         new LaunchPage();
     }
 
-
-    // /**
-    //  * Overrides the actionPerformed function from the ActionListener class.
-    //  * This makes it so that when certain buttons are clicked, they link to either the Cashier GUI or Manager GUI.
-    //  * @param e the action performed by the u>ser, which is an ActionListener
-    //  */
      /**
       * opens Cashier or Manager view based on user button choice
       * @param e  action performed by the user

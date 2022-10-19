@@ -1,3 +1,8 @@
+/**
+ * This class creates the restock report, which displays the list of items whose
+ * inventory is less than the item's minimum amount before needing to restock.
+ * @author Estella Chen
+ */
 import java.awt.*;
 import javax.swing.*;
 
