@@ -27,7 +27,6 @@ public class Manager implements ActionListener, TableModelListener {
     // variables for making reports
     private String saleStartDate = "2022-10-04";
     private String saleEndDate = "2022-10-10";
-    private String[][] saleData = Backend.salesView(saleStartDate, saleEndDate);
 
     // variables for making the frame of the GUI
     CardLayout cardLayout;
@@ -245,8 +244,8 @@ public class Manager implements ActionListener, TableModelListener {
         JPanel buttonPanel = new JPanel(new BorderLayout());
 
         // creates sales and excess button that will generate those respeective reports
-        JButton salesButton = new JButton("salesButton");
-        JButton excessButton = new JButton("excessButton");
+        JButton salesButton = new JButton("View sales report");
+        JButton excessButton = new JButton("View excess report");
         buttonPanel.add(salesButton, BorderLayout.BEFORE_FIRST_LINE);
         buttonPanel.add(excessButton, BorderLayout.PAGE_END);
         salesButton.addActionListener(this);
@@ -265,11 +264,6 @@ public class Manager implements ActionListener, TableModelListener {
             @Override
             public void actionPerformed (ActionEvent e) {
                 saleStartDate = saleStart.getText();
-                if (Integer.valueOf(saleStartDate.substring(saleStartDate.length() - 2)) < Integer.valueOf(saleEndDate.substring(saleEndDate.length() - 2))) {
-                    saleData = Backend.salesView(saleStartDate, saleEndDate);
-                    // frame.dispose();
-                    // new Manager();
-                }
             }
         });
 
@@ -279,13 +273,12 @@ public class Manager implements ActionListener, TableModelListener {
         saleEnd = new JTextField(10);
         endPanel.add(endLabel, BorderLayout.BEFORE_FIRST_LINE);
         endPanel.add(saleEnd);
-        editPanel.add(endPanel);
+        editPanel.add(endPanel, BorderLayout.AFTER_LAST_LINE);
 
         saleEnd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed (ActionEvent e) {
                 saleEndDate = saleEnd.getText();
-                saleData = Backend.salesView(saleStartDate, saleEndDate);
             }
         });
 
