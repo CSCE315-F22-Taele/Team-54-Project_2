@@ -6,42 +6,58 @@ import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
-// public class ExcessReport implements ActionListener, TableModelListener {
+public class ExcessReport implements TableModelListener {
     
-//     ExcessReport(String startDate, String endDate) {
-//         frame = new JFrame();
-//         frame.add(report(startDate, endDate));
+    ExcessReport() {}
 
-//         // set basic frame dimensions/characteristics
-//         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//         frame.setTitle("Excess Report GUI");
-//         frame.setPreferredSize(new Dimension(700, 700));
-//         frame.pack();
-//         frame.setLocationByPlatform(true);
-//         frame.setVisible(true);
-//     }
+    ExcessReport(String startDate, String endDate) {
+        JFrame frame = new JFrame();
+        frame.add(report(startDate, endDate));
 
-//     private JPanel report(String startDate, String endDate) {
-//         JPanel excessPanel = new JPanel(new BorderLayout());
+        // set basic frame dimensions/characteristics
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setTitle("Sales Report GUI");
+        frame.setPreferredSize(new Dimension(700, 700));
+        frame.pack();
+        frame.setLocationByPlatform(true);
+        frame.setVisible(true);
+    }
 
-//         String[] colNames = {"Order ID",
-//                              "Order Number",
-//                              "Total Price Due",
-//                              "Date",
-//                              "Employee ID",
-//                              "Customer ID",
-//                              "Order Satisfied",
-//                              "Items Ordered"};
+    private JPanel report(String startDate, String endDate) {
+        JPanel excessPanel = new JPanel(new BorderLayout());
+
+        String[] colNames = {"Item ID",
+                             "Name",
+                             "Category",
+                             "Expiration Date",
+                             "Refrigeration Required",
+                             "Quantity",
+                             "Unit"};
 
 
-//         JTable sales = new JTable(saleData, colNames);
-//         sales.getModel().addTableModelListener(this);
+        String[][] excessData = Backend.excessView(startDate, endDate);
+        JTable excess = new JTable(excessData, colNames);
+        excess.getModel().addTableModelListener(this);
+        excess.setFillsViewportHeight(true);
 
-//         String[][] saleData = Backend.salesView(startDate, endDate);
-//         sales.setFillsViewportHeight(true);
+        excessPanel.add(new JScrollPane(excess), BorderLayout.CENTER);
 
-//         excessPanel.add(new JScrollPane(sales), BorderLayout.CENTER);
+        return excessPanel;
+    }
 
-//         return salesPanel;
-//     }
-// }
+    @Override
+    public void tableChanged(TableModelEvent e) {
+        int row = e.getFirstRow();
+        int column = e.getColumn();
+
+        // System.out.println("Row: " + row + " Column: " + column);
+        TableModel model = (TableModel)e.getSource();
+        String columnName = model.getColumnName(column);
+        Object data = model.getValueAt(row, column);
+        
+        boolean isInv = (model.getColumnCount() == 7);
+        boolean isMenu = (model.getColumnCount() == 5);
+        System.out.println("Name: " + columnName + "\n" + "Row: " + row + "\n" + "Column: " + column);
+    }
+
+}
