@@ -446,7 +446,7 @@ public class Backend {
      * between the timestamp and the current time. This assumes that no restocks have been done during that time.
      * @return a 2D list of Strings containing the name, category, quantity, and units of any items stored in excess
      */
-    static String[][] excessView()
+    static String[][] excessView(String date1, String date2)
     {   
         // Need to show the name, category, quantity, and units for the items remaining. 
         //[]{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"};
@@ -474,10 +474,10 @@ public class Backend {
             int i = 0;
             for(String[] vals : notUsed)
             {
-                output[i][1] = vals[1]; // name
-                output[i][2] = vals[2]; // category
-                output[i][5] = vals[5]; // quantity
-                output[i][6] = vals[6]; // unit
+                output[i][0] = vals[0]; // name
+                output[i][1] = vals[1]; // category
+                output[i][2] = vals[2]; // quantity
+                output[i][3] = vals[3]; // unit
             }
             
             return output;
