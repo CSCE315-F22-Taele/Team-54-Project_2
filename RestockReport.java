@@ -1,13 +1,11 @@
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
 
-public class RestockReport implements TableModelListener {
+public class RestockReport {
     
+    /**
+     * Creates default Restock GUI view with basic frame dimensions/characteristics
+     */
     RestockReport() {
         JFrame frame = new JFrame();
         frame.add(report());
@@ -20,9 +18,15 @@ public class RestockReport implements TableModelListener {
         frame.setVisible(true);
     }
     
+    /**
+     * Creates the panel to display the restock report. Generates a JTable that pulls depleted items from
+     * the SQL inventory table.
+     * @return a JPanel displaying the items that need to be restocked.
+     */
     private JPanel report() {
         JPanel p = new JPanel(new BorderLayout());
 
+        // Generate data and make JTable
         String[] colNames = {"Item ID",
                              "Name",
                              "Category",
@@ -33,14 +37,11 @@ public class RestockReport implements TableModelListener {
 
         String[][] restockData = Backend.restockView();
         JTable t = new JTable(restockData, colNames);
-        t.getModel().addTableModelListener(this);
         t.setFillsViewportHeight(true);
 
+        // Add table to scrollable panel
         p.add(new JScrollPane(t), BorderLayout.CENTER);
 
         return p;
     }
-
-    @Override
-    public void tableChanged(TableModelEvent e) {}
 }

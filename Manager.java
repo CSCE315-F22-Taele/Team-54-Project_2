@@ -233,9 +233,9 @@ public class Manager implements ActionListener, TableModelListener {
 
     
     /** 
-     * Creates GUI view for the Manager to view order trends, filtering data
-     * by parameters such as menu item name.
-     * @return JPanel containing interface to view sales trends
+     * Creates GUI view for the Manager to choose whether to view sales data or the excess report,
+     * and set a time interval for which to view this data.
+     * @return JPanel containing interface to set dates and choose to view either sales or excess reports
      */
     private JPanel trendsPanel() {
         // creates a bunch of different panels that will store labels and buttons used later

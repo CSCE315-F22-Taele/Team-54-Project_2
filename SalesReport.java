@@ -1,15 +1,18 @@
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
 
-public class SalesReport implements TableModelListener {
+public class SalesReport {
     
+    /**
+     * Default constructor
+     */
     SalesReport() {}
 
+    /**
+     * Creates sales report view based on given start and end data interval.
+     * @param startDate the date to start pulling reports from
+     * @param endDate the end date of the time report
+     */
     SalesReport(String startDate, String endDate) {
         JFrame frame = new JFrame();
         frame.add(report(startDate, endDate));
@@ -22,9 +25,17 @@ public class SalesReport implements TableModelListener {
         frame.setVisible(true);
     }
 
+    /**
+     * Creates JPanel to show the sales report with a JTable that pulls the data
+     * from the SQL tables
+     * @param startDate the starting date of the time interval to pull data from
+     * @param endDate the ending date of the time interval to pull data from
+     * @return a JPanel showing a report of sales from the specified time interval
+     */
     private JPanel report(String startDate, String endDate) {
         JPanel salesPanel = new JPanel(new BorderLayout());
 
+        // Create JTable with sale data pulled from SQL table
         String[] colNames = {"Order ID",
                              "Order Number",
                              "Total Price Due",
@@ -37,15 +48,10 @@ public class SalesReport implements TableModelListener {
 
         String[][] saleData = Backend.salesView(startDate, endDate);
         JTable sales = new JTable(saleData, colNames);
-        sales.getModel().addTableModelListener(this);
         sales.setFillsViewportHeight(true);
 
         salesPanel.add(new JScrollPane(sales), BorderLayout.CENTER);
 
         return salesPanel;
     }
-
-    @Override
-    public void tableChanged(TableModelEvent e) {}
-
 }
