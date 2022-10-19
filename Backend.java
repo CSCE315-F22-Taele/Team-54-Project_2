@@ -72,7 +72,7 @@ public class Backend {
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
 
         System.out.println("Opened database successfully");
@@ -97,7 +97,7 @@ public class Backend {
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
         return null;
     }
@@ -150,7 +150,7 @@ public class Backend {
             System.out.println("Function :: isValue " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
 
         return false;
@@ -184,15 +184,15 @@ public class Backend {
                 for(String field : fields)
                     record.put(field, result.getString(++i));
             }
-
-            return record;
-
-
+            if(record.size() > 0)
+                return record;
+            else
+                return null;
         } catch (Exception e) {
             System.err.println("Function :: isValue " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
 
         return null;
@@ -233,7 +233,7 @@ public class Backend {
             }
             return nRecords;
         } catch (Exception e) {
-            System.err.println("QUERY :: " + query);
+            System.err.println("Function :: addNvalues QUERY :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             System.exit(0);
@@ -273,7 +273,7 @@ public class Backend {
             System.err.println("Function :: addValue " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
         return false;
     }
@@ -316,7 +316,7 @@ public class Backend {
             System.err.println("QUERY :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
         return bl;
     }
@@ -374,7 +374,7 @@ public class Backend {
             System.out.println("Function :: tableView " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
         return null;
     }
@@ -439,7 +439,7 @@ public class Backend {
             System.out.println("Function :: salesView " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
         return null;
     }
@@ -485,13 +485,13 @@ public class Backend {
             ResultSet result = stmt.executeQuery();
             if(result.next()) {return result.getInt(1);}
             
-            System.out.println("QUERY :: " + query);
+            System.out.println("Function :: getSize QUERY :: " + query);
             
             } catch (Exception e) {
-                System.err.println("QUERY :: " + query);
+                System.err.println("Function :: getSize QUERY :: " + query);
                 e.printStackTrace();
                 System.err.println(e.getClass().getName()+": "+e.getMessage());
-                System.exit(0);
+                // System.exit(0);
             }
         return -1;
     }
@@ -523,7 +523,7 @@ public class Backend {
             System.err.println("Function :: editTable " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
 
         return false;
@@ -560,7 +560,7 @@ public class Backend {
             System.err.println("Function :: removeRecord " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
     }
 
@@ -605,7 +605,7 @@ public class Backend {
             // System.err.println("QUERY :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
         return ;
 
@@ -619,9 +619,10 @@ public class Backend {
         String query = "nothing";
         try {
             String tableName = "inventory";
+            
             HashMap<String, String> temp = getValue(tableName, tableFields.get(tableName)[1], ingredient);
-            // if(temp.get("quantity") == null)
-            //     return;
+            if(temp == null || temp.get("quantity") == null)
+                return;
             double remaining = Double.parseDouble(temp.get("quantity"));
             
             if (remaining - qty > 0)
@@ -640,7 +641,7 @@ public class Backend {
             System.err.println("Function :: depleteInventory " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
     }
 
@@ -666,11 +667,13 @@ public class Backend {
                     itemsOrdered[i] = itemsOrdered[i].replace("\"", "");
                     // System.out.print(itemsOrdered[i] + "");
                     HashMap<String, Double> ingredientsUsed = menuItemIngredients(itemsOrdered[i]);
+                    if(ingredientsUsed == null || ingredientsUsed.size() == 0)
+                        continue;
                     Object[] vals = ingredientsUsed.keySet().toArray();
                     for(Object ingrid : vals)
                     {
-                        System.out.println(ingrid + "--" +ingredientsUsed.get(ingrid));
-                        // depleteInventory((String)ingrid, ingredientsUsed.get(ingrid)); 
+                        // System.out.println(ingrid + "--" +ingredientsUsed.get(ingrid));
+                        depleteInventory((String)ingrid, ingredientsUsed.get(ingrid)); 
                     }
                 }    
                 System.out.println();
@@ -695,24 +698,32 @@ public class Backend {
         String query = "nothing";
         try {
             // The Query is to get how much in ingredients was used for a specfic order.
-            String temp = getValue("menu", "name", menuItem).get("ingredients");
-            String[] vals = temp.substring(1,temp.length()-1).replace("\"", "").split(",");
+            HashMap<String, String> temp = getValue("menu", "name", menuItem);
+            String val = ""; 
+            String[] vals = new String[]{};
+            if(temp != null)
+            {
+                val = temp.get("ingredients");
+                vals = val.substring(1,val.length()-1).replace("\"", "").split(",");
+            }
             for(String v : vals)
             {
                 // System.out.println(v);
                 int index = v.lastIndexOf(" ");
-                String item = v.substring(index);
+                String item = v.substring(0, index);
                 double qty = Double.parseDouble(v.substring(index+1));
+                // System.out.println("item :: " + item + " Qty :: " + qty);
                 ingredients.put(item, qty);
-                
             }
-            
-            return ingredients;
+            if(ingredients.size() > 0)
+                return ingredients;
+            else
+                return null;
         } catch (Exception e) {
             System.out.println("Function :: menuItemIngredients " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
 
         return null;
@@ -768,7 +779,7 @@ public class Backend {
             System.err.println("QUERY :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
     }
 
@@ -793,7 +804,7 @@ public class Backend {
             System.err.println("QUERY :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
+            // System.exit(0);
         }
     }
 }
