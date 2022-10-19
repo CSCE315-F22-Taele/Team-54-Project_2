@@ -7,7 +7,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
 public class SalesReport implements ActionListener, TableModelListener {
-
+    
     SalesReport(String startDate, String endDate) {
         JFrame frame = new JFrame();
         frame.add(report(startDate, endDate));
@@ -34,10 +34,9 @@ public class SalesReport implements ActionListener, TableModelListener {
                              "Items Ordered"};
 
 
+        String[][] saleData = Backend.salesView(startDate, endDate);
         JTable sales = new JTable(saleData, colNames);
         sales.getModel().addTableModelListener(this);
-
-        String[][] saleData = Backend.salesView(startDate, endDate);
         sales.setFillsViewportHeight(true);
 
         salesPanel.add(new JScrollPane(sales), BorderLayout.CENTER);
