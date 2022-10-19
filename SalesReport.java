@@ -6,12 +6,12 @@ import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
-public class SalesReport implements ActionListener, TableModelListener {
+public class SalesReport implements TableModelListener {
     
-    private JFrame frame;
-    
+    SalesReport() {}
+
     SalesReport(String startDate, String endDate) {
-        frame = new JFrame();
+        JFrame frame = new JFrame();
         frame.add(report(startDate, endDate));
 
         // set basic frame dimensions/characteristics
@@ -45,4 +45,20 @@ public class SalesReport implements ActionListener, TableModelListener {
 
         return salesPanel;
     }
+
+    @Override
+    public void tableChanged(TableModelEvent e) {
+        int row = e.getFirstRow();
+        int column = e.getColumn();
+
+        // System.out.println("Row: " + row + " Column: " + column);
+        TableModel model = (TableModel)e.getSource();
+        String columnName = model.getColumnName(column);
+        Object data = model.getValueAt(row, column);
+        
+        boolean isInv = (model.getColumnCount() == 7);
+        boolean isMenu = (model.getColumnCount() == 5);
+        System.out.println("Name: " + columnName + "\n" + "Row: " + row + "\n" + "Column: " + column);
+    }
+
 }

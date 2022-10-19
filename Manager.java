@@ -269,8 +269,8 @@ public class Manager implements ActionListener, TableModelListener {
             public void actionPerformed (ActionEvent e) {
                 saleEndDate = saleEnd.getText();
                 saleData = Backend.salesView(saleStartDate, saleEndDate);
-                frame.dispose();
-                new Manager();
+                // frame.dispose();
+                // new Manager();
             }
         });
 
