@@ -6,6 +6,7 @@
 import java.sql.*;
 import java.io.*;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -333,7 +334,7 @@ public class Backend {
         String query = "nothing";
         try {
             // The Query to check if a record exists within the table where fieldName = value.
-            query = String.format("SELECT * FROM %s LIMIT 50;", tableName);
+            query = String.format("SELECT * FROM %s;", tableName);
             stmt = createStatement(query);
             System.out.println("Function :: tableView " + "Query :: " + query);
             ResultSet result = stmt.executeQuery();
@@ -611,6 +612,38 @@ public class Backend {
 
     }
 
+    static void depleteInventory(String ingredient, Double qty)
+    {
+        if(conn == null || stmt == null) createConnection();
+
+        String query = "nothing";
+        try {
+            String tableName = "inventory";
+            HashMap<String, String> temp = getValue(tableName, tableFields.get(tableName)[1], ingredient);
+            // if(temp.get("quantity") == null)
+            //     return;
+            double remaining = Double.parseDouble(temp.get("quantity"));
+            
+            if (remaining - qty > 0)
+            {
+                //[]{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"};
+                query = String.format("UPDATE %s SET quantity = %s WHERE name = \'%s\';", tableName, String.valueOf(remaining-qty), ingredient);
+                stmt = createStatement(query);
+                System.out.println("Function :: depleteInventory " + "Query :: " + query);
+                int result = stmt.executeUpdate();  
+            }
+            else
+            {
+                System.out.println("Restock needed :: " + ingredient);   
+            }
+        }catch (Exception e) {
+            System.err.println("Function :: depleteInventory " + "Query :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+    }
+
     /**
      * 
      */
@@ -631,10 +664,15 @@ public class Backend {
                 for(int i = 0; i < itemsOrdered.length; ++i)
                 {
                     itemsOrdered[i] = itemsOrdered[i].replace("\"", "");
-                    System.out.print(itemsOrdered[i] + "_|_|_");
-                }
-
-                
+                    // System.out.print(itemsOrdered[i] + "");
+                    HashMap<String, Double> ingredientsUsed = menuItemIngredients(itemsOrdered[i]);
+                    Object[] vals = ingredientsUsed.keySet().toArray();
+                    for(Object ingrid : vals)
+                    {
+                        System.out.println(ingrid + "--" +ingredientsUsed.get(ingrid));
+                        // depleteInventory((String)ingrid, ingredientsUsed.get(ingrid)); 
+                    }
+                }    
                 System.out.println();
             }
         }catch (Exception e) {
@@ -683,11 +721,13 @@ public class Backend {
     // Built for testing purposes. Should be commented out in the final version.
     public static void main(String args[])
     {
+        // depleteInventory("Pickles", 10.);
         // createConnection();
         // removeRecord("inventory", 0);
         // String[][] temp = salesView("2022-10-01", "2022-10-10");
         // System.out.println(temp.length);
-        menuItemIngredients("Grilled Chicken Club Sandwich");
+        // menuItemIngredients("Grilled Chicken Club Sandwich");
+        invDepletionInitial();
         
         // System.out.println(isValue("employees", "firstname","Tom")); // In Employees Table
         // System.out.println(isValue("employees", "lastname","Quincy")); // In Employees Table
