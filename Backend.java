@@ -443,13 +443,18 @@ public class Backend {
     /**
      * Given a timestamp, displays the list of items that only sold less than 10% of their inventory
      * between the timestamp and the current time. This assumes that no restocks have been done during that time.
-     * @return
+     * @return a 2D list of Strings containing the name, category, quantity, and units of any items stored in excess
      */
     static String[][] excessView()
     {
         return null;
     }
 
+    /**
+     * Displays the list of items that have less than 10% of their original stock remaining in the store inventory.
+     * Assumes no restocks have been done since the initial inventory was populated.
+     * @return a 2D list of Strings containing the name, category, quantity, and units of any items that need to be restocked
+     */
     static String[][] restockView()
     {
         // date1 < date2
@@ -555,13 +560,13 @@ public class Backend {
     }
 
     /**
-     * 
-     * @param tableName
-     * @param row
-     * @param col
-     * @param colName
-     * @param data
-     * @return
+     * Updates the specified table at the specified row and column with a specified value.
+     * @param tableName the name of the table to update
+     * @param row the row number of the table to update
+     * @param col the column number the table to update
+     * @param colName the name of the column of the cell that needs to be updated
+     * @param data the data to put in the table at the specified row and column
+     * @return whether or not the table was successfully updated
      */
     static boolean editTable(String tableName, int row, int col, String colName, Object data)
     {
@@ -588,9 +593,9 @@ public class Backend {
     }
 
     /**
-     * 
-     * @param tableName
-     * @param row
+     * Removes a row from the specified table. Used when removing items from the inventory or menu.
+     * @param tableName the name of the table from which to remove a row
+     * @param row the row number to remove from the table
      */
     static void removeRecord(String tableName, int row)
     {
@@ -670,6 +675,12 @@ public class Backend {
 
     }
 
+    /**
+     * Helper function for updateInventoryFromOrder. Depletes a specified amount of the given ingredient from
+     * the store inventory.
+     * @param ingredient the ingredient to deplete stock from
+     * @param qty the amount of the ingredient to deplete from the inventory
+     */
     static void depleteInventory(String ingredient, Double qty)
     {
         if(conn == null || stmt == null) createConnection();
@@ -705,6 +716,12 @@ public class Backend {
         }
     }
 
+    /**
+     * Primary function for depleting inventory based on a customer order. Looks at the customer order to determine
+     * the menu items ordered, then maps to menu table to decide how much of which ingredients to deplete from the store
+     * inventory. Calls depleteInventory on each ingredient used up by the order.
+     * @param order the customer's order, specifying the specific menu items they chose.
+     */
     static void updateInventoryFromOrder(String order)
     {
         if(conn == null || stmt == null) createConnection();
@@ -743,7 +760,9 @@ public class Backend {
     }
 
     /**
-     * 
+     * Looks at all of the past orders (orders that initially populate the database) and depletes the base inventory.
+     * This is what creates the "original inventory" used to calculate excess and restock reports.
+     * Only called when setting up the database for the first time.
      */
     static void invDepletionInitial()
     {
@@ -787,9 +806,10 @@ public class Backend {
     }
 
     /**
-     * 
-     * @param menuItem
-     * @return
+     * Helper function used in inventory depletion. Given a menu item, returns a list of ingredients 
+     * used to create that menu item.
+     * @param menuItem the menu item for which to return ingredients
+     * @return a HashMap of ingredients used to create the given menu item, along with amounts of each ingredient used
      */
     static HashMap<String, Double> menuItemIngredients(String menuItem)
     {
@@ -861,8 +881,9 @@ public class Backend {
     }
 
     /**
-     * 
-     * @param tableName
+     * Drops the specified table from the SQL database. Called in the useDatabase.java file, during database
+     * population.
+     * @param tableName the name of the table to drop
      */
     public static void dropTable(String tableName) {
 
@@ -885,8 +906,9 @@ public class Backend {
     }
 
     /**
-     * 
-     * @param tableName
+     * Called in the useDatabase file to populate the SQL database. Creates a table in the database
+     * with the given name.
+     * @param tableName the name of the table to create
      */
     public static void createTable(String tableName) {
         if(conn == null || stmt == null) createConnection();
