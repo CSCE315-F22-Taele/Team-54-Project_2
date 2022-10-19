@@ -22,12 +22,12 @@ public class Cashier extends Backend implements ActionListener {
     static JToolBar tb;
     // defining categories of Chick-fil-A menu items here
     static JButton breakfast, entree, salads, sides, kids, treats, drinks, dipping;
-    static HashMap<String, ArrayList<String[]>> menuItems = new HashMap<>();
-    CardLayout cardLayout;
-    JPanel cardPanel;
-
     static JButton removeButton;
     private JButton backButton = new JButton("Go Back");
+    static HashMap<String, ArrayList<String[]>> menuItems = new HashMap<>();
+
+    CardLayout cardLayout;
+    JPanel cardPanel;
 
     // variables for the control panel
     private DefaultListModel<String> orderListModel;
@@ -35,6 +35,10 @@ public class Cashier extends Backend implements ActionListener {
     private JTextField totalField;
     private double cost;
 
+    /**
+     * Populates the menuItems HashMap of menu items sorted by category. Used to populate the Cashier GUI view by panel.
+     * Called in the Cashier constructor, meaning the Cashier GUI will always mirror an updated inventory.
+     */
     public static void populateHashMap()
     {
         String[] categoryNames = {"Breakfast", "Entree", "Salads", "Sides", "Kids Meals", "Treats", "Drinks", "Sauce"};
@@ -49,6 +53,12 @@ public class Cashier extends Backend implements ActionListener {
         }
     }
 
+    /**
+     * Constructs an initial view of the Cashier GUI. Sets frame dimensions and adds panels for each menu
+     * category, current order, and payment. Also adds buttons for each menu category panel and checkout.
+     * Adds event listeners and populates menuItems hashmap. Default view of Cashier GUI is set to menu items
+     * in the Breakfast category; order and payment panels are persistent.
+     */
     Cashier()
     {
         populateHashMap();
@@ -56,11 +66,12 @@ public class Cashier extends Backend implements ActionListener {
 
         frame = new JFrame();
         frame.setLayout(new BorderLayout());
-        tb = new JToolBar();
+        tb = new JToolBar(); // toolbar to hold category buttons
  
         // Create a menu panel
         JPanel menuPanel = new JPanel();
 
+        // make buttons for each menu category to display items under that category listing
         breakfast = new JButton("Breakfast");
         entree = new JButton("Entree");
         salads = new JButton("Salads");
@@ -84,6 +95,7 @@ public class Cashier extends Backend implements ActionListener {
         menuPanel.add(drinks);
         menuPanel.add(dipping);
 
+        // Add event listeners for each menu category button
         breakfast.addActionListener(this);
         entree.addActionListener(this);
         salads.addActionListener(this);
@@ -95,6 +107,7 @@ public class Cashier extends Backend implements ActionListener {
         
         frame.add(menuPanel, BorderLayout.PAGE_START);
         frame.add(tb, BorderLayout.NORTH);
+
         // All panels are added to cardLayout, which will display specific panels based on which menu category
         // is selected.
         cardLayout = new CardLayout();
@@ -111,6 +124,7 @@ public class Cashier extends Backend implements ActionListener {
         frame.add(cardPanel, BorderLayout.CENTER);
         frame.add(controlPanel(), BorderLayout.AFTER_LINE_ENDS);
 
+        // set basic Cashier frame dimensions and characteristics
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Cashier GUI");
         frame.setPreferredSize(new Dimension(700, 700));
@@ -127,6 +141,7 @@ public class Cashier extends Backend implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e)
     {
+        // Switch the displayed menu items based on button pressed
         if (e.getSource() == breakfast) {
             cardLayout.show(cardPanel, "breakfast");
         } else if (e.getSource() == entree) {
@@ -594,6 +609,7 @@ public class Cashier extends Backend implements ActionListener {
 
         JPanel drinksPanel = new JPanel(new GridLayout(10, 3, 10, 10));
 
+        // display each menu item under the Drinks category
         for (int i = 0; i < menuItems.get("Drinks").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
@@ -809,6 +825,7 @@ public class Cashier extends Backend implements ActionListener {
 		gbc.gridx = 0;
 		gbc.gridy = 0;
 		
+        // Create labels for total payment
 		JLabel label = new JLabel("Payment");
 		label.setFont(titleFont);
 		innerPanel.add(label, gbc);
@@ -818,6 +835,7 @@ public class Cashier extends Backend implements ActionListener {
 		JLabel totalLabel = new JLabel("Total:");
 		innerPanel.add(totalLabel, gbc);
 		
+        // set dimensions of the payment panel
 		gbc.weightx = 1d;
 		gbc.gridx++;
 		totalField = new JTextField(10);
@@ -880,6 +898,4 @@ public class Cashier extends Backend implements ActionListener {
 
         return p;
     }
-
-
 }
