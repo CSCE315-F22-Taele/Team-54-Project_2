@@ -833,6 +833,9 @@ public class Cashier extends Backend implements ActionListener {
                 
                 order.put("satisfied", "t");
                 order.put("itemsordered", items);
+                System.out.println(items);
+
+                Backend.updateInventoryFromOrder(items);
 
                 totalField.setText("");
 

@@ -16,7 +16,7 @@ public class SalesReport implements TableModelListener {
 
         // set basic frame dimensions/characteristics
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("Sales Report GUI");
+        frame.setTitle("Sales Report");
         frame.setPreferredSize(new Dimension(700, 700));
         frame.pack();
         frame.setLocationByPlatform(true);

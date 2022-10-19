@@ -16,7 +16,7 @@ public class ExcessReport implements TableModelListener {
 
         // set basic frame dimensions/characteristics
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("Sales Report GUI");
+        frame.setTitle("Excess Report");
         frame.setPreferredSize(new Dimension(700, 700));
         frame.pack();
         frame.setLocationByPlatform(true);
@@ -34,15 +34,15 @@ public class ExcessReport implements TableModelListener {
                              "Quantity",
                              "Unit"};
 
+        // String[][] excessData = Backend.excessView(startDate, endDate);
+        // JTable excess = new JTable(excessData, colNames);
+        // excess.getModel().addTableModelListener(this);
+        // excess.setFillsViewportHeight(true);
 
-        String[][] excessData = Backend.excessView(startDate, endDate);
-        JTable excess = new JTable(excessData, colNames);
-        excess.getModel().addTableModelListener(this);
-        excess.setFillsViewportHeight(true);
+        // excessPanel.add(new JScrollPane(excess), BorderLayout.CENTER);
 
-        excessPanel.add(new JScrollPane(excess), BorderLayout.CENTER);
-
-        return excessPanel;
+        // return excessPanel;
+        return null;
     }
 
     @Override
