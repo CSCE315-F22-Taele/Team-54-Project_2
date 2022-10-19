@@ -474,10 +474,10 @@ public class Backend {
             int i = 0;
             for(String[] vals : notUsed)
             {
-                output[i][1] = vals[1]; // name
-                output[i][2] = vals[2]; // category
-                output[i][5] = vals[5]; // quantity
-                output[i][6] = vals[6]; // unit
+                output[i][0] = vals[1]; // name
+                output[i][1] = vals[2]; // category
+                output[i][2] = vals[5]; // quantity
+                output[i][3] = vals[6]; // unit
             }
             
             return output;
