@@ -1,3 +1,7 @@
+/**
+ * This class creates the sales by item from the order history given a time window
+ * @author Estella Chen
+ */
 import java.awt.*;
 import javax.swing.*;
 

@@ -1,3 +1,9 @@
+/**
+ * This class creates the excess report, which displays the list of items that
+ * only sold less than 10% of the inventory between the given timestamp and the
+ * current time.
+ * @author Estella Chen
+ */
 import java.awt.*;
 import javax.swing.*;
 
