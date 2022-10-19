@@ -19,7 +19,7 @@ public class Manager implements ActionListener, TableModelListener {
     // Boilerplate Code
     private JFrame frame;
     private JToolBar tb;
-    static JButton inventoryButton, menuButton, trendsButton, excessButton, restockButton;
+    static JButton inventoryButton, menuButton, trendsButton, restockButton;
     static JButton invAddButton, invRemoveButton, menAddButton, menRemoveButton;
     static JTextField saleStart, saleEnd;
 
@@ -43,22 +43,19 @@ public class Manager implements ActionListener, TableModelListener {
         // create function switches
         inventoryButton = new JButton("Inventory");
         menuButton = new JButton("Menu Editor");
-        trendsButton = new JButton("View Sales Report");
-        excessButton = new JButton("View Excess Report");
+        trendsButton = new JButton("Sales/Excess Reports");
         restockButton = new JButton("View Restock Report");
 
         functionPanel.add(backButton);
         functionPanel.add(inventoryButton);
         functionPanel.add(menuButton);
         functionPanel.add(trendsButton);
-        functionPanel.add(excessButton);
         functionPanel.add(restockButton);
 
         inventoryButton.addActionListener(this);
         menuButton.addActionListener(this);
         trendsButton.addActionListener(this);
         backButton.addActionListener(this);
-        excessButton.addActionListener(this);
         restockButton.addActionListener(this);
 
         // Setting up panel with the frame and displaying frame
@@ -113,8 +110,6 @@ public class Manager implements ActionListener, TableModelListener {
             Backend.addEmptyCell("menu");
             frame.dispose();
             new Manager();
-        } else if (e.getSource() == excessButton) {
-            cardLayout.show(cardPanel, "excess");
         } else if (e.getSource() == restockButton) {
             cardLayout.show(cardPanel, "restock");
         }
@@ -231,19 +226,17 @@ public class Manager implements ActionListener, TableModelListener {
      */
     private JPanel trendsPanel() {
         JPanel trendsPanel = new JPanel (new BorderLayout()); 
-    
-        String[] colNames = {"Order ID",
-                             "Order Number",
-                             "Total Price Due",
-                             "Date",
-                             "Employee ID",
-                             "Customer ID",
-                             "Order Satisfied",
-                             "Items Ordered"};
-
         JPanel editPanel = new JPanel(new BorderLayout());
         JPanel startPanel = new JPanel(new BorderLayout());
         JPanel endPanel = new JPanel(new BorderLayout());
+        JPanel buttonPanel = new JPanel(new BorderLayout());
+
+        JButton salesButton = new JButton("salesButton");
+        JButton excessButton = new JButton("excessButton");
+        buttonPanel.add(salesButton, BorderLayout.BEFORE_FIRST_LINE);
+        buttonPanel.add(excessButton, BorderLayout.PAGE_END);
+        salesButton.addActionListener(this);
+        excessButton.addActionListener(this);
 
         JLabel startLabel = new JLabel();
         startLabel.setText("Start Date");
@@ -281,13 +274,22 @@ public class Manager implements ActionListener, TableModelListener {
             }
         });
 
-        JTable sales = new JTable(saleData, colNames);
-        sales.getModel().addTableModelListener(this);
+        // salesButton.addActionListener(new ActionListener() {
+        //     @Override
+        //     public void actionPerformed (ActionEvent e) {
+        //         new SalesReport();
+        //     }
+        // });
 
-        sales.setFillsViewportHeight(true);
+        // salesButton.addActionListener(new ActionListener() {
+        //     @Override
+        //     public void actionPerformed (ActionEvent e) {
+        //         new ExcessReport();
+        //     }
+        // });
 
         trendsPanel.add(editPanel, BorderLayout.BEFORE_FIRST_LINE);
-        trendsPanel.add(new JScrollPane(sales), BorderLayout.CENTER);
+        trendsPanel.add(buttonPanel, BorderLayout.SOUTH);
 
         return trendsPanel;
     }
