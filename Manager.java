@@ -27,7 +27,6 @@ public class Manager implements ActionListener, TableModelListener {
     // variables for making reports
     private String saleStartDate = "2022-10-04";
     private String saleEndDate = "2022-10-10";
-    private String[][] saleData = Backend.salesView(saleStartDate, saleEndDate);
 
     // variables for making the frame of the GUI
     CardLayout cardLayout;
@@ -265,9 +264,6 @@ public class Manager implements ActionListener, TableModelListener {
             @Override
             public void actionPerformed (ActionEvent e) {
                 saleStartDate = saleStart.getText();
-                if (Integer.valueOf(saleStartDate.substring(saleStartDate.length() - 2)) < Integer.valueOf(saleEndDate.substring(saleEndDate.length() - 2))) {
-                    saleData = Backend.salesView(saleStartDate, saleEndDate);
-                }
             }
         });
 
@@ -283,7 +279,6 @@ public class Manager implements ActionListener, TableModelListener {
             @Override
             public void actionPerformed (ActionEvent e) {
                 saleEndDate = saleEnd.getText();
-                saleData = Backend.salesView(saleStartDate, saleEndDate);
             }
         });
 

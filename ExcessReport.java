@@ -44,18 +44,6 @@ public class ExcessReport implements TableModelListener {
     }
 
     @Override
-    public void tableChanged(TableModelEvent e) {
-        int row = e.getFirstRow();
-        int column = e.getColumn();
-
-        // System.out.println("Row: " + row + " Column: " + column);
-        TableModel model = (TableModel)e.getSource();
-        String columnName = model.getColumnName(column);
-        Object data = model.getValueAt(row, column);
-        
-        boolean isInv = (model.getColumnCount() == 7);
-        boolean isMenu = (model.getColumnCount() == 5);
-        System.out.println("Name: " + columnName + "\n" + "Row: " + row + "\n" + "Column: " + column);
-    }
+    public void tableChanged(TableModelEvent e) {}
 
 }
