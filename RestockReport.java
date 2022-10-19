@@ -32,12 +32,12 @@ public class RestockReport implements TableModelListener {
                              "Quantity",
                              "Unit"};
 
-        // String[][] restockData = Backend.restockView(startDate, endDate);
-        // JTable t = new JTable(restockData, colNames);
-        // t.getModel().addTableModelListener(this);
-        // t.setFillsViewportHeight(true);
+        String[][] restockData = Backend.restockView();
+        JTable t = new JTable(restockData, colNames);
+        t.getModel().addTableModelListener(this);
+        t.setFillsViewportHeight(true);
 
-        // p.add(new JScrollPane(t), BorderLayout.CENTER);
+        p.add(new JScrollPane(t), BorderLayout.CENTER);
 
         return p;
     }
