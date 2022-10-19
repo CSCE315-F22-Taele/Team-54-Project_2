@@ -33,12 +33,12 @@ public class ExcessReport implements TableModelListener {
                              "Quantity",
                              "Unit"};
 
-        // String[][] excessData = Backend.excessView(startDate, endDate);
-        // JTable excess = new JTable(excessData, colNames);
-        // excess.getModel().addTableModelListener(this);
-        // excess.setFillsViewportHeight(true);
+        String[][] excessData = Backend.excessView(startDate, endDate);
+        JTable excess = new JTable(excessData, colNames);
+        excess.getModel().addTableModelListener(this);
+        excess.setFillsViewportHeight(true);
 
-        // excessPanel.add(new JScrollPane(excess), BorderLayout.CENTER);
+        excessPanel.add(new JScrollPane(excess), BorderLayout.CENTER);
 
         return excessPanel;
     }

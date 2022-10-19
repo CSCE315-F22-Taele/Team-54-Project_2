@@ -136,10 +136,7 @@ public class Manager implements ActionListener, TableModelListener {
      * Creates GUI view for the Manager to view inventory data and edit inventory records.
      * @return JPanel containing the inventory data with editing capabilities
      */
-    private JPanel inventoryPanel() {
-        // url: https://docs.oracle.com/javase/tutorial/uiswing/components/table.html
-        // url: https://stackoverflow.com/questions/27815400/retrieving-data-from-jdbc-database-into-jtable
-        
+    private JPanel inventoryPanel() {        
         String[][] data = Backend.tableView("inventory");
         String[] colNames = {"Item ID",
                              "Name",
