@@ -41,8 +41,7 @@ public class ExcessReport implements TableModelListener {
 
         // excessPanel.add(new JScrollPane(excess), BorderLayout.CENTER);
 
-        // return excessPanel;
-        return null;
+        return excessPanel;
     }
 
     @Override
