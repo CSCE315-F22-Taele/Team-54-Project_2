@@ -8,8 +8,10 @@ import javax.swing.table.TableModel;
 
 public class SalesReport implements ActionListener, TableModelListener {
     
+    private JFrame frame;
+    
     SalesReport(String startDate, String endDate) {
-        JFrame frame = new JFrame();
+        frame = new JFrame();
         frame.add(report(startDate, endDate));
 
         // set basic frame dimensions/characteristics

@@ -274,14 +274,14 @@ public class Manager implements ActionListener, TableModelListener {
             }
         });
 
-        // salesButton.addActionListener(new ActionListener() {
-        //     @Override
-        //     public void actionPerformed (ActionEvent e) {
-        //         new SalesReport();
-        //     }
-        // });
+        salesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed (ActionEvent e) {
+                new SalesReport(saleStartDate, saleEndDate);
+            }
+        });
 
-        // salesButton.addActionListener(new ActionListener() {
+        // excessButton.addActionListener(new ActionListener() {
         //     @Override
         //     public void actionPerformed (ActionEvent e) {
         //         new ExcessReport();

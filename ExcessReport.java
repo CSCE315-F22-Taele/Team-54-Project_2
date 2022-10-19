@@ -7,7 +7,9 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
 public class ExcessReport implements ActionListener, TableModelListener {
-    
+
+    private JFrame frame;
+
     ExcessReport(String startDate, String endDate) {
         frame = new JFrame();
         frame.add(report(startDate, endDate));
@@ -34,14 +36,14 @@ public class ExcessReport implements ActionListener, TableModelListener {
                              "Items Ordered"};
 
 
-        JTable sales = new JTable(saleData, colNames);
-        sales.getModel().addTableModelListener(this);
 
         String[][] saleData = Backend.salesView(startDate, endDate);
-        sales.setFillsViewportHeight(true);
+        JTable excess = new JTable(saleData, colNames);
+        excess.getModel().addTableModelListener(this);
+        excess.setFillsViewportHeight(true);
 
-        excessPanel.add(new JScrollPane(sales), BorderLayout.CENTER);
+        excessPanel.add(new JScrollPane(excess), BorderLayout.CENTER);
 
-        return salesPanel;
+        return excessPanel;
     }
 }
