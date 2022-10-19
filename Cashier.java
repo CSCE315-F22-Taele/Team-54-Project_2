@@ -20,6 +20,7 @@ public class Cashier extends Backend implements ActionListener {
     
     static JFrame frame;
     static JToolBar tb;
+    // defining categories of Chick-fil-A menu items here
     static JButton breakfast, entree, salads, sides, kids, treats, drinks, dipping;
     static HashMap<String, ArrayList<String[]>> menuItems = new HashMap<>();
     CardLayout cardLayout;
@@ -57,7 +58,7 @@ public class Cashier extends Backend implements ActionListener {
         frame.setLayout(new BorderLayout());
         tb = new JToolBar();
  
-        // create a panel
+        // Create a menu panel
         JPanel menuPanel = new JPanel();
 
         breakfast = new JButton("Breakfast");
@@ -94,6 +95,8 @@ public class Cashier extends Backend implements ActionListener {
         
         frame.add(menuPanel, BorderLayout.PAGE_START);
         frame.add(tb, BorderLayout.NORTH);
+        // All panels are added to cardLayout, which will display specific panels based on which menu category
+        // is selected.
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
         cardPanel.add(breakfastPanel(), "breakfast");
@@ -118,8 +121,7 @@ public class Cashier extends Backend implements ActionListener {
     }
   
     /** 
-     *  This method allows for the logic of panel switching upon
-     *  the clicking of a specific menu category.
+     *  This method switches panel based on selected menu category.
      *  @param ActionEvent of buttons
      */
     @Override
@@ -156,7 +158,7 @@ public class Cashier extends Backend implements ActionListener {
 
         JPanel breakfastPanel = new JPanel(new GridLayout(10, 3, 10, 10));
 
-        // Adds menu items to the panel
+        // Adds breakfast menu items to breakfast panel
         for (int i = 0; i < menuItems.get("Breakfast").size(); i++) {
             JPanel innerPanel = new JPanel(new BorderLayout());
 			innerPanel.setBackground(Color.WHITE);
@@ -169,6 +171,7 @@ public class Cashier extends Backend implements ActionListener {
 			innerPanel.add(name, BorderLayout.BEFORE_FIRST_LINE);
 
             int menuNum = i;
+            // Allows a quantity to be entered which will add to the customer's order.
             quantity.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     String input = quantity.getText();
@@ -195,8 +198,11 @@ public class Cashier extends Backend implements ActionListener {
             JPanel buttonPanel = new JPanel(new FlowLayout());
 
 			buttonPanel.setBackground(Color.WHITE);
-            removeButton = new JButton("Remove Item");
 
+            // Removes every instance of selected order item from customer's order
+            // If customer wants to change quantity of an item, this remove button must be selected,
+            // and cashier must enter the correct quantity again to add to customer's order
+            removeButton = new JButton("Remove Item");
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     double tempCost = 0.0;
@@ -266,8 +272,10 @@ public class Cashier extends Backend implements ActionListener {
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
 
+            // Removes every instance of selected order item from customer's order
+            // If customer wants to change quantity of an item, this remove button must be selected,
+            // and cashier must enter the correct quantity again to add to customer's order
             removeButton = new JButton("Remove Item");
-
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     double tempCost = 0.0;
@@ -336,8 +344,10 @@ public class Cashier extends Backend implements ActionListener {
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
 
+            // Removes every instance of selected order item from customer's order
+            // If customer wants to change quantity of an item, this remove button must be selected,
+            // and cashier must enter the correct quantity again to add to customer's order
             removeButton = new JButton("Remove Item");
-
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     double tempCost = 0.0;
@@ -406,8 +416,10 @@ public class Cashier extends Backend implements ActionListener {
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
 
+            // Removes every instance of selected order item from customer's order
+            // If customer wants to change quantity of an item, this remove button must be selected,
+            // and cashier must enter the correct quantity again to add to customer's order
             removeButton = new JButton("Remove Item");
-
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     double tempCost = 0.0;
@@ -476,6 +488,9 @@ public class Cashier extends Backend implements ActionListener {
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
 
+            // Removes every instance of selected order item from customer's order
+            // If customer wants to change quantity of an item, this remove button must be selected,
+            // and cashier must enter the correct quantity again to add to customer's order
             removeButton = new JButton("Remove Item");
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
@@ -545,8 +560,10 @@ public class Cashier extends Backend implements ActionListener {
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
 
+            // Removes every instance of selected order item from customer's order
+            // If customer wants to change quantity of an item, this remove button must be selected,
+            // and cashier must enter the correct quantity again to add to customer's order
             removeButton = new JButton("Remove Item");
-
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     double tempCost = 0.0;
@@ -615,8 +632,10 @@ public class Cashier extends Backend implements ActionListener {
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
 
+            // Removes every instance of selected order item from customer's order
+            // If customer wants to change quantity of an item, this remove button must be selected,
+            // and cashier must enter the correct quantity again to add to customer's order
             removeButton = new JButton("Remove Item");
-
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     double tempCost = 0.0;
@@ -686,8 +705,10 @@ public class Cashier extends Backend implements ActionListener {
             JPanel buttonPanel = new JPanel(new FlowLayout());
 			buttonPanel.setBackground(Color.WHITE);
 
+            // Removes every instance of selected order item from customer's order
+            // If customer wants to change quantity of an item, this remove button must be selected,
+            // and cashier must enter the correct quantity again to add to customer's order
             removeButton = new JButton("Remove Item");
-
             removeButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     double tempCost = 0.0;
@@ -741,6 +762,7 @@ public class Cashier extends Backend implements ActionListener {
 
         orderList = new JList<>(orderListModel);
 		
+        // this chunk of code places the order panel to the right of the screen
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.anchor = GridBagConstraints.LINE_START;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -777,6 +799,7 @@ public class Cashier extends Backend implements ActionListener {
 		innerPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 		Font titleFont = p.getFont().deriveFont(Font.BOLD, 16f);
 		
+        // this chunk of code places the payment panel to the right of the screen
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.anchor = GridBagConstraints.LINE_START;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -807,6 +830,10 @@ public class Cashier extends Backend implements ActionListener {
 		gbc.gridx = 0;
 		gbc.gridy++;
 
+        // this order button has three functions:
+        // - add customer's order to order SQL table
+        // - clear order panel for next customer order
+        // - deplete inventory table when order is made
         JButton button = new JButton("Take Order");
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
