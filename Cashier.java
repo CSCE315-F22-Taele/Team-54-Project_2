@@ -7,8 +7,6 @@
  */
 import java.awt.*;
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
 
 import java.awt.event.*;
 
@@ -39,8 +37,7 @@ public class Cashier extends Backend implements ActionListener {
      * Populates the menuItems HashMap of menu items sorted by category. Used to populate the Cashier GUI view by panel.
      * Called in the Cashier constructor, meaning the Cashier GUI will always mirror an updated inventory.
      */
-    public static void populateHashMap()
-    {
+    public static void populateHashMap(){
         String[] categoryNames = {"Breakfast", "Entree", "Salads", "Sides", "Kids Meals", "Treats", "Drinks", "Sauce"};
         for (String name: categoryNames) {
             ArrayList<String[]> tempItems = new ArrayList<>();
@@ -59,8 +56,7 @@ public class Cashier extends Backend implements ActionListener {
      * Adds event listeners and populates menuItems hashmap. Default view of Cashier GUI is set to menu items
      * in the Breakfast category; order and payment panels are persistent.
      */
-    Cashier()
-    {
+    Cashier(){
         populateHashMap();
         this.orderListModel = new DefaultListModel<>();
 
@@ -139,8 +135,7 @@ public class Cashier extends Backend implements ActionListener {
      *  @param ActionEvent of buttons
      */
     @Override
-    public void actionPerformed(ActionEvent e)
-    {
+    public void actionPerformed(ActionEvent e){
         // Switch the displayed menu items based on button pressed
         if (e.getSource() == breakfast) {
             cardLayout.show(cardPanel, "breakfast");
@@ -236,8 +231,6 @@ public class Cashier extends Backend implements ActionListener {
 
             breakfastPanel.add(innerPanel);
         }
-
-
         return breakfastPanel;
     }
 
@@ -309,7 +302,6 @@ public class Cashier extends Backend implements ActionListener {
             entreePanel.add(innerPanel);
         }
         return entreePanel;
-
     }
 
     
@@ -381,7 +373,6 @@ public class Cashier extends Backend implements ActionListener {
             saladsPanel.add(innerPanel);
         }
         return saladsPanel;
-
     }
 
     
@@ -453,7 +444,6 @@ public class Cashier extends Backend implements ActionListener {
             sidesPanel.add(innerPanel);
         }
         return sidesPanel;
-
     }
 
     
@@ -525,7 +515,6 @@ public class Cashier extends Backend implements ActionListener {
             kidsPanel.add(innerPanel);
         }
         return kidsPanel;
-
     }
 
     
@@ -597,7 +586,6 @@ public class Cashier extends Backend implements ActionListener {
             treatsPanel.add(innerPanel);
         }
         return treatsPanel;
-
     }
 
     
@@ -671,7 +659,6 @@ public class Cashier extends Backend implements ActionListener {
             drinksPanel.add(innerPanel);
         }
         return drinksPanel;
-
     }
 
     
@@ -744,7 +731,6 @@ public class Cashier extends Backend implements ActionListener {
             saucesPanel.add(innerPanel);
         }
         return saucesPanel;
-
     }
 
     
@@ -752,8 +738,7 @@ public class Cashier extends Backend implements ActionListener {
      * Creates the control panel, which is the panel on the side that shows the order and payment panels.
      * @return JPanel, specifically the control panel that contains order and payment
      */
-    private JPanel controlPanel()
-    {
+    private JPanel controlPanel(){
         JPanel p = new JPanel(new BorderLayout());
 
         p.add(orderPanel(), BorderLayout.BEFORE_FIRST_LINE);
@@ -767,8 +752,7 @@ public class Cashier extends Backend implements ActionListener {
      * Creates and returns the order panel, which shows what the user has selected to order in the GUI.
      * @return JPanel, specifically the order panel
      */
-    private JPanel orderPanel()
-    {
+    private JPanel orderPanel(){
         JPanel p = new JPanel();
 
         // innerPanel is the panel that keeps track of the current order
@@ -807,8 +791,7 @@ public class Cashier extends Backend implements ActionListener {
      * Creates and returns the payment panel, which shows the total payment of all the ordered items the user made.
      * @return JPanel, specifically the payment panel
      */
-    private JPanel paymentPanel()
-    {
+    private JPanel paymentPanel(){
         JPanel p = new JPanel();
 
         JPanel innerPanel = new JPanel(new GridBagLayout());

@@ -28,8 +28,7 @@ public class Backend {
     /**
      * Populates the tableFields hashmap
      */
-    private static void populateFields()
-    {
+    private static void populateFields(){
         // THIS FUNCTION NEEDS TO MODIFIED WHENEVER ANY CHANGES TO THE TABLES ARE BEING MADE OR ANY TABLES ARE ADDED TO THE DATABASE.
         String[] customers = new String[]{"customerid", "firstname", "lastname"};
         tableFields.put("customers", customers);
@@ -57,8 +56,7 @@ public class Backend {
     /**
      * Establishes connection with database and populates it with tables
      */
-    private static void createConnection()
-    {
+    private static void createConnection(){
         //Building the connection with your credentials
         String teamNumber = "54";
         String sectionNumber = "904";
@@ -88,8 +86,7 @@ public class Backend {
      * @param  query               SQL query to be run on database.
      * @return       object that can then be executedo n database.
      */
-    private static PreparedStatement createStatement(String query)
-    {
+    private static PreparedStatement createStatement(String query){
         PreparedStatement temp;
         try {
             // Create a statement object
@@ -97,7 +94,7 @@ public class Backend {
             return temp;
         } catch (Exception e) {
             e.printStackTrace();
-            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
             // System.exit(0);
         }
         return null;
@@ -111,13 +108,12 @@ public class Backend {
      * @param  quotes               Whether or not you want quotes surrounding each object in the list.
      * @return        Return formatted String
      */
-    private static String QueryFormat(Object[] vals, boolean quotes)
-    {
+    private static String QueryFormat(Object[] vals, boolean quotes){
         String output = "(";
         String temp;
         for(Object x : vals)
         {
-            temp = quotes ? '\''+x.toString()+'\'' : x.toString();
+            temp = quotes ? '\'' + x.toString() + '\'' : x.toString();
             output += temp + ", ";
         }
         output = output.substring(0, output.length()-2) + ')';
@@ -132,8 +128,7 @@ public class Backend {
      * @param  value                   The value compared against each record.
      * @return           Whether or not record is found.
      */
-    static boolean isValue(String tableName, String fieldName, String value)
-    {
+    static boolean isValue(String tableName, String fieldName, String value){
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
 
@@ -150,7 +145,7 @@ public class Backend {
         } catch (Exception e) {
             // System.out.println("Function :: isValue " + "Query :: " + query);
             e.printStackTrace();
-            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
             // System.exit(0);
         }
 
@@ -188,7 +183,7 @@ public class Backend {
         } catch (Exception e) {
             System.err.println("Function :: isValue " + "Query :: " + query);
             e.printStackTrace();
-            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
         }
 
@@ -204,8 +199,7 @@ public class Backend {
      * @param  n                       Number of values wanted.
      * @return           List of matches found to value.
      */
-    static ArrayList<HashMap<String, String>> getNValues(String tableName, String fieldName, String value, int n)
-    {
+    static ArrayList<HashMap<String, String>> getNValues(String tableName, String fieldName, String value, int n){
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
 
@@ -217,12 +211,10 @@ public class Backend {
             ResultSet result = stmt.executeQuery();
             String[] fields = tableFields.get(tableName);
             ArrayList<HashMap<String, String>> nRecords =  new ArrayList<HashMap<String, String>>();
-            while(result.next())
-            {
+            while(result.next()){
                 int i = 0;
                 HashMap<String, String> record = new HashMap<>();
-                for(String field : fields)
-                    {
+                for(String field : fields){
                         // System.out.pr
                         record.put(field, result.getString(++i));
                     }
@@ -232,7 +224,7 @@ public class Backend {
         } catch (Exception e) {
             System.err.println("Function :: addNvalues QUERY :: " + query);
             e.printStackTrace();
-            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
         }
         return null;
@@ -244,8 +236,7 @@ public class Backend {
      * @param  record                  Hashmap containing record to add. Keys represent the fields.
      * @return           True if successfully added, false if not.
      */
-    static boolean addValue(String tableName, HashMap<String, String> record)
-    {
+    static boolean addValue(String tableName, HashMap<String, String> record){
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
 
@@ -264,12 +255,12 @@ public class Backend {
             // System.out.println("Function :: addValue " + "Query :: " + query);
             int result = stmt.executeUpdate();
             return (1 == result);
-            // System.out.println("Result: "+ result);
+            // System.out.println("Result: " + result);
 
         } catch (Exception e) {
             System.err.println("Function :: addValue " + "Query :: " + query);
             e.printStackTrace();
-            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
             // System.exit(0);
         }
         return false;
@@ -283,8 +274,7 @@ public class Backend {
      * @param  n                       Number of values to be added.
      * @return           Array of true or false depending on successful or unsuccessful addition.
      */
-    static boolean[] addNValues(String tableName, ArrayList<HashMap<String, String>> records, int n)
-    {
+    static boolean[] addNValues(String tableName, ArrayList<HashMap<String, String>> records, int n){
 
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
@@ -312,7 +302,7 @@ public class Backend {
         } catch (Exception e) {
             System.err.println("QUERY :: " + query);
             e.printStackTrace();
-            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
             // System.exit(0);
         }
         return bl;
@@ -323,8 +313,7 @@ public class Backend {
      * @param tableName         Table to view.
      * @return                  Runs the query that returns the database table.
      */
-    static String[][] tableView(String tableName)
-    {
+    static String[][] tableView(String tableName){
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
 
@@ -382,8 +371,7 @@ public class Backend {
      * @param date2     End date.
      * @return          Runs the query that returns the database table that displays the sales in a certain time.
      */
-    static String[][] salesView(String date1, String date2)
-    {
+    static String[][] salesView(String date1, String date2){
         // date1 < date2
         // date format: YYYY-MM-DD
         // This only for the order history
@@ -446,8 +434,7 @@ public class Backend {
      * between the timestamp and the current time. This assumes that no restocks have been done during that time.
      * @return a 2D list of Strings containing the name, category, quantity, and units of any items stored in excess
      */
-    static String[][] excessView(String date1, String date2)
-    {   
+    static String[][] excessView(String date1, String date2){   
         // Need to show the name, category, quantity, and units for the items remaining. 
         //[]{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"};
         // Indices Wanted: 1, 2, 5, 6 
@@ -497,16 +484,14 @@ public class Backend {
      * Assumes no restocks have been done since the initial inventory was populated.
      * @return a 2D list of Strings containing the name, category, quantity, and units of any items that need to be restocked
      */
-    static HashMap<String, Double> loadRemaining()
-    {
+    static HashMap<String, Double> loadRemaining(){
         HashMap<String, Double> var = new HashMap<>();
         // Name of HashMap that needs to be populated: intialInventory
         if(conn == null || stmt == null) createConnection();
         String[][] vals = tableView("inventory");
         //[]{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"};
         // Need index 0 -> 5
-        for(int i = 0; i < vals.length; ++i)
-        {
+        for(int i = 0; i < vals.length; ++i){
             var.put(vals[i][1], Double.parseDouble(vals[i][5]));
         }
         return var;   
@@ -536,12 +521,10 @@ public class Backend {
             ResultSet result = stmt.executeQuery();
             String[] fields = tableFields.get(tableName);
             ArrayList<ArrayList<String>> nRecords =  new ArrayList<ArrayList<String>>();
-            while(result.next())
-            {
+            while(result.next()){
                 int i = 0;
                 ArrayList<String> record = new ArrayList<>();
-                for(String field : fields)
-                {
+                for(String field : fields){
                     record.add(result.getString(++i));
                 }
                 nRecords.add(record);
@@ -560,8 +543,7 @@ public class Backend {
             });
 
             String[][] view = new String[nRecords.size()][nRecords.get(0).size()];
-            for(int r = 0; r < view.length; ++r)
-            {
+            for(int r = 0; r < view.length; ++r){
                 for(int c = 0; c < view[0].length; ++c)
                     view[r][c] = nRecords.get(r).get(c);
             }
@@ -579,8 +561,7 @@ public class Backend {
      * @param  sqlQuery               The query to use as a string.
      * @return          object the contains the result of running the query.
      */
-    static ResultSet runQuery(String sqlQuery)
-    {
+    static ResultSet runQuery(String sqlQuery){
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
 
@@ -592,8 +573,7 @@ public class Backend {
      * @param tableName the name to SQL table we want the size of
      * @return the size of the SQL table named tableName
      */
-    static int getSize(String tableName)
-    {
+    static int getSize(String tableName){
         if(conn == null || stmt == null) createConnection();
 
         String query = "nothing";
@@ -610,7 +590,7 @@ public class Backend {
             } catch (Exception e) {
                 // System.err.println("Function :: getSize QUERY :: " + query);
                 e.printStackTrace();
-                System.err.println(e.getClass().getName()+": "+e.getMessage());
+                System.err.println(e.getClass().getName() + ": " + e.getMessage());
                 // System.exit(0);
             }
         return -1;
@@ -625,8 +605,7 @@ public class Backend {
      * @param data the data to put in the table at the specified row and column
      * @return whether or not the table was successfully updated
      */
-    static boolean editTable(String tableName, int row, int col, String colName, Object data)
-    {
+    static boolean editTable(String tableName, int row, int col, String colName, Object data) {
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
 
@@ -654,8 +633,7 @@ public class Backend {
      * @param tableName the name of the table from which to remove a row
      * @param row the row number to remove from the table
      */
-    static void removeRecord(String tableName, int row)
-    {
+    static void removeRecord(String tableName, int row) {
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
         String query = "nothing";
@@ -688,8 +666,7 @@ public class Backend {
      * Adds an empty row to the specified SQL table
      * @param tableName the table to which to add the new row
      */
-    static void addEmptyCell(String tableName)
-    {
+    static void addEmptyCell(String tableName){
         // INSERT INTO table (primary_key) VALUES (NULL);
         // If a connection to the query does not already exist, we need to create that connection.
         if(conn == null || stmt == null) createConnection();
@@ -738,8 +715,7 @@ public class Backend {
      * @param ingredient the ingredient to deplete stock from
      * @param qty the amount of the ingredient to deplete from the inventory
      */
-    static void depleteInventory(String ingredient, Double qty)
-    {
+    static void depleteInventory(String ingredient, Double qty){
         if(conn == null || stmt == null) createConnection();
 
         String query = "nothing";
@@ -783,8 +759,7 @@ public class Backend {
      * inventory. Calls depleteInventory on each ingredient used up by the order.
      * @param order the customer's order, specifying the specific menu items they chose.
      */
-    static void updateInventoryFromOrder(String order)
-    {
+    static void updateInventoryFromOrder(String order){
         if(conn == null || stmt == null) createConnection();
         System.out.println("Inside update inventory");
         String query = "nothing";
@@ -825,8 +800,7 @@ public class Backend {
      * This is what creates the "original inventory" used to calculate excess and restock reports.
      * Only called when setting up the database for the first time.
      */
-    static void invDepletionInitial()
-    {
+    static void invDepletionInitial(){
         if(conn == null || stmt == null) createConnection();
 
         String query = "nothing";
@@ -834,16 +808,14 @@ public class Backend {
             String[][] orders = tableView("orders");
             int index = orders[0].length-1;
             System.out.println("Orders::"+orders.length);
-            for(int o = 0; o < orders.length/10; ++o)
-            {
+            for(int o = 0; o < orders.length/10; ++o){
                 System.out.println(o);
                 String[] itemsOrdered = orders[o][index].split(",");
                 itemsOrdered[0] = itemsOrdered[0].substring(2);
                 int cutoff = itemsOrdered[itemsOrdered.length-1].length()-2;
                 itemsOrdered[itemsOrdered.length-1] = itemsOrdered[itemsOrdered.length-1].substring(0, cutoff);   
                 
-                for(int i = 0; i < itemsOrdered.length; ++i)
-                {
+                for(int i = 0; i < itemsOrdered.length; ++i){
                     itemsOrdered[i] = itemsOrdered[i].replace("\"", "");
                     // System.out.print(itemsOrdered[i] + "");
                     HashMap<String, Double> ingredientsUsed = menuItemIngredients(itemsOrdered[i]);
@@ -872,8 +844,7 @@ public class Backend {
      * @param menuItem the menu item for which to return ingredients
      * @return a HashMap of ingredients used to create the given menu item, along with amounts of each ingredient used
      */
-    static HashMap<String, Double> menuItemIngredients(String menuItem)
-    {
+    static HashMap<String, Double> menuItemIngredients(String menuItem){
         if(conn == null || stmt == null) createConnection();
         HashMap<String, Double> ingredients = new HashMap<>();
         String query = "nothing";
@@ -911,9 +882,9 @@ public class Backend {
     }  
 
     // Built for testing purposes. Should be commented out in the final version.
-    public static void main(String args[])
-    {
-        excessView("","");
+    // public static void main(String args[])
+    // {
+        // excessView("","");
         // restockView();
         // invDepletionInitial();
         // depleteInventory("Pickles", 10.);
@@ -941,7 +912,7 @@ public class Backend {
         // System.out.println(temp);
         // getSize("inventory");
 
-    }
+    // }
 
     /**
      * Drops the specified table from the SQL database. Called in the useDatabase.java file, during database
