@@ -246,13 +246,13 @@ public class Manager implements ActionListener, TableModelListener {
         JPanel editPanel = new JPanel(new BorderLayout());
         JPanel startPanel = new JPanel(new BorderLayout());
         JPanel endPanel = new JPanel(new BorderLayout());
-        JPanel buttonPanel = new JPanel(new BorderLayout());
+        JPanel buttonPanel = new JPanel(new GridBagLayout());
 
         // creates sales and excess button that will generate those respeective reports
         JButton salesButton = new JButton("View sales report");
         JButton excessButton = new JButton("View excess report");
-        buttonPanel.add(salesButton, BorderLayout.BEFORE_FIRST_LINE);
-        buttonPanel.add(excessButton, BorderLayout.PAGE_END);
+        buttonPanel.add(salesButton);
+        buttonPanel.add(excessButton);
         salesButton.addActionListener(this);
         excessButton.addActionListener(this);
 
@@ -304,7 +304,7 @@ public class Manager implements ActionListener, TableModelListener {
         });
 
         trendsPanel.add(editPanel, BorderLayout.BEFORE_FIRST_LINE);
-        trendsPanel.add(buttonPanel, BorderLayout.SOUTH);
+        trendsPanel.add(buttonPanel, BorderLayout.CENTER);
 
         return trendsPanel;
     }
@@ -315,8 +315,8 @@ public class Manager implements ActionListener, TableModelListener {
      * @return a JPanel for the interface to view inventory restock needs
      */
     private JPanel restockPanel() {
-        JPanel restockReport = new JPanel();
-        JButton restockButton = new JButton("restockButton");
+        JPanel restockReport = new JPanel(new GridBagLayout());
+        JButton restockButton = new JButton("View restock report");
         restockButton.addActionListener(this);
 
         // generates the restock report with a new frame
