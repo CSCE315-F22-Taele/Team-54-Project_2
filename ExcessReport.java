@@ -25,11 +25,8 @@ public class ExcessReport implements TableModelListener {
     private JPanel report(String startDate, String endDate) {
         JPanel excessPanel = new JPanel(new BorderLayout());
 
-        String[] colNames = {"Item ID",
-                             "Name",
+        String[] colNames = {"Name",
                              "Category",
-                             "Expiration Date",
-                             "Refrigeration Required",
                              "Quantity",
                              "Unit"};
 
