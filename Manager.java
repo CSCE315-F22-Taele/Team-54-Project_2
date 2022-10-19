@@ -5,6 +5,7 @@
  * view order trends with parameter filtration capacity.
  * 
  * @author Mohona Ghosh
+ * @author Estella Chen
  */
 import java.awt.*;
 import java.awt.event.*;
@@ -23,16 +24,20 @@ public class Manager implements ActionListener, TableModelListener {
     static JButton invAddButton, invRemoveButton, menAddButton, menRemoveButton;
     static JTextField saleStart, saleEnd;
 
+    // variables for making reports
     private String saleStartDate = "2022-10-04";
     private String saleEndDate = "2022-10-10";
     private String[][] saleData = Backend.salesView(saleStartDate, saleEndDate);
 
+    // variables for making the frame of the GUI
     CardLayout cardLayout;
     JPanel cardPanel;
 
+    // button to go back
     private JButton backButton = new JButton("Go Back");
 
     Manager() {
+        // creates new frame where entire layout is stored
         frame = new JFrame();
         frame.setLayout(new BorderLayout());
         tb = new JToolBar();
@@ -46,12 +51,14 @@ public class Manager implements ActionListener, TableModelListener {
         trendsButton = new JButton("Sales/Excess Reports");
         restockButton = new JButton("View Restock Report");
 
+        // adds all functions to the panel
         functionPanel.add(backButton);
         functionPanel.add(inventoryButton);
         functionPanel.add(menuButton);
         functionPanel.add(trendsButton);
         functionPanel.add(restockButton);
 
+        // adds actionlisteners to all functions
         inventoryButton.addActionListener(this);
         menuButton.addActionListener(this);
         trendsButton.addActionListener(this);
@@ -66,11 +73,13 @@ public class Manager implements ActionListener, TableModelListener {
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
 
+        // calls the respective functions and adds them to the panel
         cardPanel.add(inventoryPanel(), "inventory");
         cardPanel.add(menuPanel(), "menu editor");
         cardPanel.add(trendsPanel(), "trends");
         cardPanel.add(restockPanel(), "restock");
 
+        // adds the functions to the final frame
         frame.add(cardPanel, BorderLayout.CENTER);
         frame.add(controlPanel(), BorderLayout.AFTER_LINE_ENDS);
 
@@ -92,6 +101,7 @@ public class Manager implements ActionListener, TableModelListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
+        // action listeners for the different card panels
         if (e.getSource() == inventoryButton) {
             cardLayout.show(cardPanel, "inventory");
         } else if (e.getSource() == menuButton) {
@@ -102,10 +112,12 @@ public class Manager implements ActionListener, TableModelListener {
             frame.dispose();
             new LaunchPage();
         } else if (e.getSource() == invAddButton) {
+            // adds items to inventory
             Backend.addEmptyCell("inventory");
             frame.dispose();
             new Manager();
         } else if (e.getSource() == menAddButton) {
+            // adds items to the menu
             Backend.addEmptyCell("menu");
             frame.dispose();
             new Manager();
@@ -150,6 +162,8 @@ public class Manager implements ActionListener, TableModelListener {
         editPanel.add(invRemoveButton);
 
         invAddButton.addActionListener(this);
+
+        // adds functionality to removing items in the inventory
         invRemoveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -165,8 +179,6 @@ public class Manager implements ActionListener, TableModelListener {
 
         inventoryPanel.add(editPanel, BorderLayout.BEFORE_FIRST_LINE);
         inventoryPanel.add(new JScrollPane(items), BorderLayout.CENTER);
-
-
 
         return inventoryPanel;
     }
@@ -184,21 +196,24 @@ public class Manager implements ActionListener, TableModelListener {
                              "Category",
                              "Ingredients"};
         
-        // Create table and add listener
-        // menTableModel = new DefaultTableModel(data, colNames);
+        // creates a table that displays the items in the database
         JTable items = new JTable(data, colNames);  
         items.getModel().addTableModelListener(this);                  
         JPanel menuPanel = new JPanel(new BorderLayout());
         items.setFillsViewportHeight(true);
 
+        // creates the panel that shows the buttons to edit the table
         JPanel editPanel = new JPanel();
         menAddButton = new JButton("Add Item");
         menRemoveButton = new JButton("Remove Item");
 
+        // adds buttons to the panel
         editPanel.add(menAddButton);
         editPanel.add(menRemoveButton);
 
         menAddButton.addActionListener(this);
+
+        // action listener that will remove the items from the table
         menRemoveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -211,6 +226,7 @@ public class Manager implements ActionListener, TableModelListener {
             }
         });
 
+        // adds the buttons and table to the panel
         menuPanel.add(editPanel, BorderLayout.BEFORE_FIRST_LINE);
         menuPanel.add(new JScrollPane(items), BorderLayout.CENTER);
 
@@ -224,12 +240,14 @@ public class Manager implements ActionListener, TableModelListener {
      * @return JPanel containing interface to view sales trends
      */
     private JPanel trendsPanel() {
+        // creates a bunch of different panels that will store labels and buttons used later
         JPanel trendsPanel = new JPanel (new BorderLayout()); 
         JPanel editPanel = new JPanel(new BorderLayout());
         JPanel startPanel = new JPanel(new BorderLayout());
         JPanel endPanel = new JPanel(new BorderLayout());
         JPanel buttonPanel = new JPanel(new BorderLayout());
 
+        // creates sales and excess button that will generate those respeective reports
         JButton salesButton = new JButton("salesButton");
         JButton excessButton = new JButton("excessButton");
         buttonPanel.add(salesButton, BorderLayout.BEFORE_FIRST_LINE);
@@ -237,6 +255,7 @@ public class Manager implements ActionListener, TableModelListener {
         salesButton.addActionListener(this);
         excessButton.addActionListener(this);
 
+        // adds labels and text fields that store the start and end dates
         JLabel startLabel = new JLabel();
         startLabel.setText("Start Date");
         saleStart = new JTextField();
@@ -244,16 +263,20 @@ public class Manager implements ActionListener, TableModelListener {
         startPanel.add(saleStart);
         editPanel.add(startPanel, BorderLayout.BEFORE_FIRST_LINE);
 
+        // adds actionlisteners that will create a new frame that show the sales report
         saleStart.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed (ActionEvent e) {
                 saleStartDate = saleStart.getText();
                 if (Integer.valueOf(saleStartDate.substring(saleStartDate.length() - 2)) < Integer.valueOf(saleEndDate.substring(saleEndDate.length() - 2))) {
                     saleData = Backend.salesView(saleStartDate, saleEndDate);
+                    // frame.dispose();
+                    // new Manager();
                 }
             }
         });
 
+        // creates new label for the end date
         JLabel endLabel = new JLabel();
         endLabel.setText("End Date");
         saleEnd = new JTextField(10);
@@ -269,6 +292,7 @@ public class Manager implements ActionListener, TableModelListener {
             }
         });
 
+        // generates the sales report with a new window
         salesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed (ActionEvent e) {
@@ -276,10 +300,11 @@ public class Manager implements ActionListener, TableModelListener {
             }
         });
 
+        // generates the excess report with a new window
         excessButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed (ActionEvent e) {
-                new ExcessReport();
+                new ExcessReport(saleStartDate, saleEndDate);
             }
         });
 
@@ -299,6 +324,7 @@ public class Manager implements ActionListener, TableModelListener {
         JButton restockButton = new JButton("restockButton");
         restockButton.addActionListener(this);
 
+        // generates the restock report with a new frame
         restockButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed (ActionEvent e) {
