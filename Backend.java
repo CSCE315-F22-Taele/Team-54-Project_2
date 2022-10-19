@@ -142,12 +142,12 @@ public class Backend {
             query = String.format("SELECT * FROM %s WHERE %s = \'%s\';", tableName, fieldName, value);
             stmt = createStatement(query);
             
-            System.out.println("Function :: isValue " + "Query :: " + query);
+            // System.out.println("Function :: isValue " + "Query :: " + query);
             ResultSet result = stmt.executeQuery();
             return result.next();
 
         } catch (Exception e) {
-            System.out.println("Function :: isValue " + "Query :: " + query);
+            // System.out.println("Function :: isValue " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             // System.exit(0);
@@ -184,15 +184,12 @@ public class Backend {
                 for(String field : fields)
                     record.put(field, result.getString(++i));
             }
-            if(record.size() > 0)
                 return record;
-            else
-                return null;
         } catch (Exception e) {
             System.err.println("Function :: isValue " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
-            // System.exit(0);
+            System.exit(0);
         }
 
         return null;
@@ -264,7 +261,7 @@ public class Backend {
             query =   String.format("INSERT INTO %s %s ", tableName, fields)
                     + String.format("VALUES %s ;", vals);
             stmt = createStatement(query);
-            System.out.println("Function :: addValue " + "Query :: " + query);
+            // System.out.println("Function :: addValue " + "Query :: " + query);
             int result = stmt.executeUpdate();
             return (1 == result);
             // System.out.println("Result: "+ result);
@@ -336,7 +333,7 @@ public class Backend {
             // The Query to check if a record exists within the table where fieldName = value.
             query = String.format("SELECT * FROM %s;", tableName);
             stmt = createStatement(query);
-            System.out.println("Function :: tableView " + "Query :: " + query);
+            // System.out.println("Function :: tableView " + "Query :: " + query);
             ResultSet result = stmt.executeQuery();
             String[] fields = tableFields.get(tableName);
             ArrayList<ArrayList<String>> nRecords =  new ArrayList<ArrayList<String>>();
@@ -371,7 +368,7 @@ public class Backend {
             }
             return view;
         } catch (Exception e) {
-            System.out.println("Function :: tableView " + "Query :: " + query);
+            // System.out.println("Function :: tableView " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             // System.exit(0);
@@ -401,7 +398,7 @@ public class Backend {
             query  = String.format("SELECT * FROM %s WHERE saledate BETWEEN ", tableName);
             query += String.format("\'%s 00:00:00\' AND \'%s 12:00:00\';", date1, date2);
             stmt = createStatement(query);
-            System.out.println("Function :: tableView " + "Query :: " + query);
+            // System.out.println("Function :: tableView " + "Query :: " + query);
             ResultSet result = stmt.executeQuery();
             String[] fields = tableFields.get(tableName);
             ArrayList<ArrayList<String>> nRecords =  new ArrayList<ArrayList<String>>();
@@ -436,7 +433,7 @@ public class Backend {
             }
             return view;
         } catch (Exception e) {
-            System.out.println("Function :: salesView " + "Query :: " + query);
+            // System.out.println("Function :: salesView " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             // System.exit(0);
@@ -485,10 +482,10 @@ public class Backend {
             ResultSet result = stmt.executeQuery();
             if(result.next()) {return result.getInt(1);}
             
-            System.out.println("Function :: getSize QUERY :: " + query);
+            // System.out.println("Function :: getSize QUERY :: " + query);
             
             } catch (Exception e) {
-                System.err.println("Function :: getSize QUERY :: " + query);
+                // System.err.println("Function :: getSize QUERY :: " + query);
                 e.printStackTrace();
                 System.err.println(e.getClass().getName()+": "+e.getMessage());
                 // System.exit(0);
@@ -515,12 +512,12 @@ public class Backend {
             // The Query to check if a record exists within the table where fieldName = value.
             query = String.format("UPDATE %s SET %s = \'%s\' WHERE %s = %d ;", tableName, colName, (String) data, tableFields.get(tableName)[0], row);
             stmt = createStatement(query);
-            System.out.println("Function :: editTable " + "Query :: " + query);
+            // System.out.println("Function :: editTable " + "Query :: " + query);
             int result = stmt.executeUpdate();
             return (1 == result);
 
         }catch (Exception e) {
-            System.err.println("Function :: editTable " + "Query :: " + query);
+            // System.err.println("Function :: editTable " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             // System.exit(0);
@@ -552,12 +549,12 @@ public class Backend {
             query =  String.format("DELETE FROM %s WHERE %s=%d;", tableName, idTitle, row);
             query += String.format("update %s set %s = %s - 1 where %s > %d;", tableName, idTitle, idTitle, idTitle, row);
             stmt = createStatement(query);
-            System.out.println("Function :: removeRecord " + "Query :: " + query);
+            // System.out.println("Function :: removeRecord " + "Query :: " + query);
             int result = stmt.executeUpdate();
             // System.out.println("Result: "+ result);
 
         } catch (Exception e) {
-            System.err.println("Function :: removeRecord " + "Query :: " + query);
+            // System.err.println("Function :: removeRecord " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             // System.exit(0);
@@ -621,17 +618,19 @@ public class Backend {
             String tableName = "inventory";
             
             HashMap<String, String> temp = getValue(tableName, tableFields.get(tableName)[1], ingredient);
-            if(temp == null || temp.get("quantity") == null)
-                return;
+
+            // if(temp == null || temp.get("quantity") == null)
+            //     return;
             double remaining = Double.parseDouble(temp.get("quantity"));
-            
+            // System.out.println("Currently Depleting");
             if (remaining - qty > 0)
             {
                 //[]{"itemid", "name", "category", "expirationdate", "fridgerequired", "quantity", "unit"};
                 query = String.format("UPDATE %s SET quantity = %s WHERE name = \'%s\';", tableName, String.valueOf(remaining-qty), ingredient);
                 stmt = createStatement(query);
-                System.out.println("Function :: depleteInventory " + "Query :: " + query);
+                // System.out.println("Function :: depleteInventory " + "Query :: " + query);
                 int result = stmt.executeUpdate();  
+                // System.out.println("Depleted :: " + result);
             }
             else
             {
@@ -645,6 +644,43 @@ public class Backend {
         }
     }
 
+    static void updateInventoryFromOrder(String order)
+    {
+        if(conn == null || stmt == null) createConnection();
+        System.out.println("Inside update inventory");
+        String query = "nothing";
+        try {
+            String[] itemsOrdered = order.split(",");
+            itemsOrdered[0] = itemsOrdered[0].substring(1);
+            int cutoff = itemsOrdered[itemsOrdered.length-1].length()-2;
+            itemsOrdered[itemsOrdered.length-1] = itemsOrdered[itemsOrdered.length-1].substring(0, cutoff+1);   
+            
+            for(int i = 0; i < itemsOrdered.length; ++i)
+            {
+                itemsOrdered[i] = itemsOrdered[i].replace("\"", "");
+                // System.out.print(itemsOrdered[i] + "||");
+                HashMap<String, Double> ingredientsUsed = menuItemIngredients(itemsOrdered[i]);
+                if(ingredientsUsed == null || ingredientsUsed.size() == 0)
+                    {
+                        System.out.println("EXIT" + itemsOrdered[i]);
+                        continue;
+                    }
+                Object[] vals = ingredientsUsed.keySet().toArray();
+                for(Object ingrid : vals)
+                {
+                    depleteInventory((String)ingrid, ingredientsUsed.get(ingrid)); 
+                }
+            }    
+            // System.out.println();
+        }catch (Exception e) {
+            System.err.println("QUERY :: " + query);
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
+        }
+        
+    }
+
     /**
      * 
      */
@@ -656,12 +692,15 @@ public class Backend {
         try {
             String[][] orders = tableView("orders");
             int index = orders[0].length-1;
+            System.out.println("Orders::"+orders.length);
             for(int o = 0; o < orders.length; ++o)
             {
+                
                 String[] itemsOrdered = orders[o][index].split(",");
                 itemsOrdered[0] = itemsOrdered[0].substring(2);
                 int cutoff = itemsOrdered[itemsOrdered.length-1].length()-2;
                 itemsOrdered[itemsOrdered.length-1] = itemsOrdered[itemsOrdered.length-1].substring(0, cutoff);   
+                
                 for(int i = 0; i < itemsOrdered.length; ++i)
                 {
                     itemsOrdered[i] = itemsOrdered[i].replace("\"", "");
@@ -676,7 +715,7 @@ public class Backend {
                         depleteInventory((String)ingrid, ingredientsUsed.get(ingrid)); 
                     }
                 }    
-                System.out.println();
+                // System.out.println();
             }
         }catch (Exception e) {
             System.err.println("QUERY :: " + query);
@@ -698,7 +737,7 @@ public class Backend {
         String query = "nothing";
         try {
             // The Query is to get how much in ingredients was used for a specfic order.
-            HashMap<String, String> temp = getValue("menu", "name", menuItem);
+            HashMap<String, String> temp = getValue("menu", "name", menuItem.trim());
             String val = ""; 
             String[] vals = new String[]{};
             if(temp != null)
@@ -720,7 +759,7 @@ public class Backend {
             else
                 return null;
         } catch (Exception e) {
-            System.out.println("Function :: menuItemIngredients " + "Query :: " + query);
+            // System.out.println("Function :: menuItemIngredients " + "Query :: " + query);
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             // System.exit(0);
