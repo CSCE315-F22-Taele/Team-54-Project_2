@@ -69,7 +69,6 @@ public class Manager implements ActionListener, TableModelListener {
         cardPanel.add(inventoryPanel(), "inventory");
         cardPanel.add(menuPanel(), "menu editor");
         cardPanel.add(trendsPanel(), "trends");
-        cardPanel.add(excessPanel(), "excess");
         cardPanel.add(restockPanel(), "restock");
 
         frame.add(cardPanel, BorderLayout.CENTER);
@@ -251,8 +250,6 @@ public class Manager implements ActionListener, TableModelListener {
                 saleStartDate = saleStart.getText();
                 if (Integer.valueOf(saleStartDate.substring(saleStartDate.length() - 2)) < Integer.valueOf(saleEndDate.substring(saleEndDate.length() - 2))) {
                     saleData = Backend.salesView(saleStartDate, saleEndDate);
-                    frame.dispose();
-                    new Manager();
                 }
             }
         });
@@ -269,8 +266,6 @@ public class Manager implements ActionListener, TableModelListener {
             public void actionPerformed (ActionEvent e) {
                 saleEndDate = saleEnd.getText();
                 saleData = Backend.salesView(saleStartDate, saleEndDate);
-                // frame.dispose();
-                // new Manager();
             }
         });
 
@@ -281,27 +276,17 @@ public class Manager implements ActionListener, TableModelListener {
             }
         });
 
-        // excessButton.addActionListener(new ActionListener() {
-        //     @Override
-        //     public void actionPerformed (ActionEvent e) {
-        //         new ExcessReport();
-        //     }
-        // });
+        excessButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed (ActionEvent e) {
+                new ExcessReport();
+            }
+        });
 
         trendsPanel.add(editPanel, BorderLayout.BEFORE_FIRST_LINE);
         trendsPanel.add(buttonPanel, BorderLayout.SOUTH);
 
         return trendsPanel;
-    }
-
-    /**
-     * Creates GUI for Manager to view excess inventory items, i.e. items of which only 10% of the original stock were used
-     * @return JPanel containing interface to view excess inventory report
-     */
-    private JPanel excessPanel() {
-        JPanel excessReport = new JPanel();
-
-        return excessReport;
     }
 
     /**
@@ -311,7 +296,18 @@ public class Manager implements ActionListener, TableModelListener {
      */
     private JPanel restockPanel() {
         JPanel restockReport = new JPanel();
+        JButton restockButton = new JButton("restockButton");
+        restockButton.addActionListener(this);
 
+        restockButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed (ActionEvent e) {
+                new RestockReport();
+            }
+        });
+
+        restockReport.add(restockButton);
+        
         return restockReport;
     }
 

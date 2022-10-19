@@ -1,19 +1,19 @@
 Item ID,Name,Category,Expiration Date,Refrigeration required,Quantity,Unit
-1,Chicken Breast,Meat,11/30/2022,TRUE,2000,number
-2,Bread,Dry,12/21/2022,FALSE,2000,number
-3,Pickles,Vegtables,12/21/2022,TRUE,2000,number
+1,Chicken Breast,Meat,11/30/2022,TRUE,700,number
+2,Bread,Dry,12/21/2022,FALSE,700,number
+3,Pickles,Vegtables,12/21/2022,TRUE,700,number
 4,Peanut Oil,Oil,11/30/2023,FALSE,1,gal
 5,Sesame Bread,Dry,12/21/2022,FALSE,200,number
 6,American Cheese,Dairy,12/21/2022,TRUE,200,number
 7,Tomato,Vegetables,12/21/2022,TRUE,100,number
 8,Lettuce,Vegetables,12/21/2022,TRUE,100,number
 9,Pepper Jack Cheese,Dairy,12/21/2022,TRUE,100,number
-10,Bacon,Meat,11/30/2022,TRUE,5,lbs
+10,Bacon,Meat,11/30/2022,TRUE,2,lbs
 11,Colby Jack Cheese,Dairy,12/21/2022,TRUE,100,number
-12,Chicken nuggets,Meat,11/30/2022,TRUE,1000,number
-13,Chicken strips,Meat,11/30/2022,TRUE,500,number
-14,Cheddar Cheese,Dairy,12/21/2022,TRUE,5,lbs
-15,Cherry Tomatoes,Vegetables,12/21/2022,TRUE,5,lbs
+12,Chicken nuggets,Meat,11/30/2022,TRUE,5000,number
+13,Chicken strips,Meat,11/30/2022,TRUE,1100,number
+14,Cheddar Cheese,Dairy,12/21/2022,TRUE,2,lbs
+15,Cherry Tomatoes,Vegetables,12/21/2022,TRUE,2,lbs
 16,Lemonade,Drink,12/21/2022,TRUE,1,gal
 17,Chocolate milkshake,Drink,12/21/2022,TRUE,1,gal
 18,Milk,Drink,12/21/2022,TRUE,1,gal
@@ -39,11 +39,11 @@ Item ID,Name,Category,Expiration Date,Refrigeration required,Quantity,Unit
 38,Sausage,Meat,11/30/2022,TRUE,100,number
 39,Butter,Sauce,11/30/2022,TRUE,50,sticks
 40,Canola oil,Oil,11/30/2023,FALSE,1,gal
-41,Greek Yogurt,Dairy,12/21/2022,TRUE,100,lbs
-42,Fresh berries,Fruit,11/30/2022,TRUE,100,lbs
-43,Granola,Dry,12/21/2022,FALSE,100,lbs
-44,Cookie crumbs,Dry,12/21/2022,FALSE,100,lbs
-45,Mixed fruits,Fruit,11/30/2022,TRUE,100,lbs
+41,Greek Yogurt,Dairy,12/21/2022,TRUE,50,lbs
+42,Fresh berries,Fruit,11/30/2022,TRUE,50,lbs
+43,Granola,Dry,12/21/2022,FALSE,50,lbs
+44,Cookie crumbs,Dry,12/21/2022,FALSE,50,lbs
+45,Mixed fruits,Fruit,11/30/2022,TRUE,50,lbs
 46,Filet,Meat,11/30/2022,TRUE,100,number
 47,Creamy salsa,Sauce,11/30/2025,FALSE,100,number
 48,Blue cheese,Dairy,12/21/2022,TRUE,100,lbs
