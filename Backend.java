@@ -4,18 +4,10 @@
  * @author Krishnan Prashanth
  */
 import java.sql.*;
-import java.io.*;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.ArrayList;
-import java.lang.String.*;
-import java.lang.reflect.Field;
 import java.util.HashMap;
-import java.util.Collections.*;
-import java.util.List;
 
 public class Backend {
 
@@ -74,7 +66,7 @@ public class Backend {
             // System.exit(0);
         }
 
-        System.out.println("Opened database successfully");
+        // System.out.println("Opened database successfully");
 
         populateFields(); // Since a connection is only established once, we can populate all fields once.
     }
@@ -513,7 +505,7 @@ public class Backend {
             query += String.format("(unit='number' AND quantity<100) OR ", tableName);
             query += String.format("(unit='lbs' AND quantity<50) OR ", tableName);
             query += String.format("(unit='gal' AND quantity<1);", tableName);
-            System.out.println("Function :: restockView " + "Query :: " + query);
+            // System.out.println("Function :: restockView " + "Query :: " + query);
 
 
             stmt = createStatement(query);
@@ -743,7 +735,7 @@ public class Backend {
                 stmt = createStatement(query);
                 int result = stmt.executeUpdate();  
                 
-                System.out.println("Restock completed");   
+                // System.out.println("Restock completed");   
             }
         }catch (Exception e) {
             System.err.println("Function :: depleteInventory " + "Query :: " + query);
@@ -761,7 +753,7 @@ public class Backend {
      */
     static void updateInventoryFromOrder(String order){
         if(conn == null || stmt == null) createConnection();
-        System.out.println("Inside update inventory");
+        // System.out.println("Inside update inventory");
         String query = "nothing";
         try {
             String[] itemsOrdered = order.split(",");
@@ -776,7 +768,7 @@ public class Backend {
                 HashMap<String, Double> ingredientsUsed = menuItemIngredients(itemsOrdered[i]);
                 if(ingredientsUsed == null || ingredientsUsed.size() == 0)
                     {
-                        System.out.println("EXIT" + itemsOrdered[i]);
+                        // System.out.println("EXIT" + itemsOrdered[i]);
                         continue;
                     }
                 Object[] vals = ingredientsUsed.keySet().toArray();
@@ -807,9 +799,9 @@ public class Backend {
         try {
             String[][] orders = tableView("orders");
             int index = orders[0].length-1;
-            System.out.println("Orders::"+orders.length);
-            for(int o = 0; o < orders.length/10; ++o){
-                System.out.println(o);
+            // System.out.println("Orders::"+orders.length);
+            for(int o = 0; o < orders.length; ++o){
+                // System.out.println(o);
                 String[] itemsOrdered = orders[o][index].split(",");
                 itemsOrdered[0] = itemsOrdered[0].substring(2);
                 int cutoff = itemsOrdered[itemsOrdered.length-1].length()-2;
@@ -824,7 +816,7 @@ public class Backend {
                     Object[] vals = ingredientsUsed.keySet().toArray();
                     for(Object ingrid : vals)
                     {
-                        System.out.println(ingrid + "--" +ingredientsUsed.get(ingrid));
+                        // System.out.println(ingrid + "--" +ingredientsUsed.get(ingrid));
                         depleteInventory((String)ingrid, ingredientsUsed.get(ingrid)); 
                     }
                 }    
